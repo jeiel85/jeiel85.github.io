@@ -80,8 +80,15 @@
       "name": "베베컵",
       "package": "com.bebecup.app",
       "platform": "android",
-      "status": "draft",
+      "status": "closed_testing",
       "iconUrl": "icons/com.bebecup.app.png"
+    },
+    {
+      "name": "MarkScene",
+      "package": "com.markscene.app",
+      "platform": "android",
+      "status": "draft",
+      "iconUrl": "icons/com.markscene.app.png"
     },
     {
       "name": "Score Fetcher — 찬양팀 콘티 & 악보 PWA",
