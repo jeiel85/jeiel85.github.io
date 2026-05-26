@@ -10,66 +10,77 @@
       "name": "BrioDo — Do it with brio.",
       "package": "app.briodo",
       "status": "production",
+      "iconUrl": "icons/app.briodo.png",
       "optInUrl": null
     },
     {
       "name": "DockMode - Standby Clock",
       "package": "io.jeiel85.dockmode",
       "status": "closed_testing",
+      "iconUrl": "icons/io.jeiel85.dockmode.png",
       "optInUrl": null
     },
     {
       "name": "Lumina Daily - 오늘의 명언",
       "package": "com.jeiel85.luminadaily",
       "status": "closed_testing",
+      "iconUrl": "icons/com.jeiel85.luminadaily.png",
       "optInUrl": null
     },
     {
       "name": "Markleaf",
       "package": "com.markleaf.notes",
       "status": "closed_testing",
+      "iconUrl": "icons/com.markleaf.notes.png",
       "optInUrl": null
     },
     {
       "name": "Nightseed Bastion",
       "package": "com.jeiel85.nightseedbastion",
       "status": "closed_testing",
+      "iconUrl": "icons/com.jeiel85.nightseedbastion.png",
       "optInUrl": null
     },
     {
       "name": "Nightseed Survivor",
       "package": "com.nightseed.survivor",
       "status": "closed_testing",
+      "iconUrl": "icons/com.nightseed.survivor.png",
       "optInUrl": null
     },
     {
       "name": "Pulpit Ink — 설교 녹음·필기",
       "package": "io.pulpit.ink",
       "status": "closed_testing",
+      "iconUrl": "icons/io.pulpit.ink.png",
       "optInUrl": null
     },
     {
       "name": "Veritas Bible — 오프라인 관주 성경",
       "package": "com.veritasbible.app",
       "status": "closed_testing",
+      "iconUrl": "icons/com.veritasbible.app.png",
       "optInUrl": null
     },
     {
       "name": "Wild Haven Idle",
       "package": "com.jeiel85.wildhavenidle",
       "status": "closed_testing",
+      "iconUrl": "icons/com.jeiel85.wildhavenidle.png",
       "optInUrl": null
     },
     {
       "name": "Zephyr Sky",
       "package": "com.jeiel.zephyr_sky",
       "status": "closed_testing",
+      "iconUrl": "icons/com.jeiel.zephyr_sky.png",
       "optInUrl": null
     },
     {
       "name": "베베컵",
       "package": "com.bebecup.app",
       "status": "draft",
+      "iconUrl": "icons/com.bebecup.app.png",
       "optInUrl": null
     }
   ]

@@ -1,6 +1,7 @@
 const gplay = require('google-play-scraper');
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
 // ─── Paths ───────────────────────────────────────────
 const ROOT = path.resolve(__dirname, '..');
@@ -46,6 +47,72 @@ async function scrapeApp(packageName) {
     };
   } catch (err) {
     console.warn(`  ⚠ Failed to scrape ${packageName}: ${err.message}`);
+    return null;
+  }
+}
+
+// ─── Direct Play Store HTML Scraping (fallback) ─────
+function fetchPage(url, redirectCount = 0) {
+  if (redirectCount > 5) return Promise.reject(new Error('Too many redirects'));
+  return new Promise((resolve, reject) => {
+    https.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept-Language': 'ko-KR,ko;q=0.9,en;q=0.8',
+        'Accept': 'text/html,application/xhtml+xml',
+      }
+    }, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        const loc = res.headers.location;
+        const redirectUrl = loc.startsWith('http') ? loc : new URL(loc, url).href;
+        res.resume();
+        return fetchPage(redirectUrl, redirectCount + 1).then(resolve).catch(reject);
+      }
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve({ status: res.statusCode, html: data }));
+      res.on('error', reject);
+    }).on('error', reject);
+  });
+}
+
+async function scrapePlayStoreHTML(packageName) {
+  try {
+    const url = `https://play.google.com/store/apps/details?id=${packageName}&hl=ko&gl=kr`;
+    console.log(`  Fallback HTML scraping: ${packageName}...`);
+    const { status, html } = await fetchPage(url);
+
+    if (status !== 200) {
+      console.warn(`  \u26a0 Play Store returned ${status} for ${packageName}`);
+      return null;
+    }
+
+    const result = {};
+
+    // Extract icon (first play-lh image, without size params = original icon)
+    const iconMatches = html.match(/https:\/\/play-lh\.googleusercontent\.com\/[^"'\s\])>]+/gi) || [];
+    if (iconMatches.length > 0) {
+      // First match is usually the app icon; pick the shortest URL (no size suffix)
+      const iconBase = iconMatches[0].split('=')[0];
+      result.icon = iconBase + '=w240-h240-rw';
+    }
+
+    // Extract title from og:title
+    const titleMatch = html.match(/property=["']og:title["']\s+content=["']([^"']+)["']/i)
+      || html.match(/content=["']([^"']+)["']\s+property=["']og:title["']/i);
+    if (titleMatch) result.title = titleMatch[1];
+
+    // Extract description from og:description
+    const descMatch = html.match(/property=["']og:description["']\s+content=["']([^"']+)["']/i)
+      || html.match(/content=["']([^"']+)["']\s+property=["']og:description["']/i);
+    if (descMatch) result.summary = descMatch[1];
+
+    if (Object.keys(result).length > 0) {
+      return result;
+    }
+    return null;
+  } catch (err) {
+    console.warn(`  \u26a0 Fallback scraping failed for ${packageName}: ${err.message}`);
     return null;
   }
 }
@@ -106,10 +173,11 @@ function getCardHTML(app, scraped, index) {
   const playStoreUrl = `https://play.google.com/store/apps/details?id=${app.package}`;
   const optInUrl = app.optInUrl || `https://play.google.com/apps/testing/${app.package}`;
 
-  // Icon
+  // Icon: check app.iconUrl override first, then scraped data, then letter avatar
   let iconHTML;
-  if (scraped && scraped.icon) {
-    iconHTML = `<img class="app-icon" src="${scraped.icon}" alt="${escapeHtml(app.name)}" loading="lazy" />`;
+  const iconSrc = app.iconUrl || (scraped && scraped.icon);
+  if (iconSrc) {
+    iconHTML = `<img class="app-icon" src="${iconSrc}" alt="${escapeHtml(app.name)}" loading="lazy" />`;
   } else {
     const gradient = GRADIENTS[index % GRADIENTS.length];
     const letter = app.name.charAt(0).toUpperCase();
@@ -883,32 +951,53 @@ async function main() {
   const config = JSON.parse(fs.readFileSync(APPS_JSON, 'utf-8'));
   const cache = loadCache();
 
-  // Scrape production apps
+  // 1. Scrape production apps (full data from Play Store)
   const productionApps = config.apps.filter(a => a.status === 'production');
   if (productionApps.length > 0) {
-    console.log(`🔍 Scraping ${productionApps.length} production app(s)...`);
+    console.log(`🔍 Scraping ${productionApps.length} production app(s) from Play Store...`);
     for (const app of productionApps) {
-      const data = await scrapeApp(app.package);
+      // Try google-play-scraper first
+      let data = await scrapeApp(app.package);
+
+      // Fallback: direct HTML parsing
+      if (!data) {
+        data = await scrapePlayStoreHTML(app.package);
+      }
+
       if (data) {
         cache[app.package] = { ...data, _lastScraped: new Date().toISOString() };
         console.log(`  ✓ ${app.name}`);
-      } else if (cache[app.package]) {
-        console.log(`  ↻ Using cached data for ${app.name}`);
+      } else {
+        console.log(`  ✗ No data for ${app.name}`);
       }
     }
-    saveCache(cache);
     console.log('');
   }
+
+  // 2. For non-production apps, use iconUrl from config (no server-side scraping possible)
+  const nonProductionApps = config.apps.filter(a => a.status !== 'production');
+  const appsWithIcon = nonProductionApps.filter(a => a.iconUrl);
+  const appsWithoutIcon = nonProductionApps.filter(a => !a.iconUrl);
+  if (appsWithIcon.length > 0) {
+    console.log(`🖼️  ${appsWithIcon.length} non-production app(s) have custom iconUrl`);
+  }
+  if (appsWithoutIcon.length > 0) {
+    console.log(`🔤 ${appsWithoutIcon.length} non-production app(s) will use letter avatars`);
+    console.log('   (Add "iconUrl" to apps.json to set custom icons)');
+  }
+  if (nonProductionApps.length > 0) console.log('');
+
+  saveCache(cache);
 
   // Generate HTML
   console.log('🎨 Generating HTML...');
   const html = generateHTML(config, cache);
   fs.writeFileSync(OUTPUT_HTML, html, 'utf-8');
 
+  const iconCount = config.apps.filter(a => a.iconUrl).length + Object.values(cache).filter(c => c.icon).length;
   console.log(`✅ Portfolio saved: ${OUTPUT_HTML}`);
   console.log(`   Total apps: ${config.apps.length}`);
-  console.log(`   Production: ${productionApps.length}`);
-  console.log(`   Scraped data cached: ${Object.keys(cache).length} app(s)`);
+  console.log(`   Icons: ${iconCount}/${config.apps.length}`);
 }
 
 main().catch(err => {
