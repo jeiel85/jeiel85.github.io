@@ -96,7 +96,8 @@
       "status": "production",
       "description": "예배 콘티 작성, 악보 검색, 통합 PDF 악보집 생성, 실시간 공유와 푸시 알림을 제공하는 스마트 찬양팀용 Progressive Web App (PWA).",
       "url": "https://score-fetcher.vercel.app",
-      "githubUrl": "https://github.com/jeiel85/score-fetcher-web"
+      "githubUrl": "https://github.com/jeiel85/score-fetcher-web",
+      "iconUrl": "icons/score-fetcher-web.png"
     },
     {
       "name": "ScriptureFlux — 성경 교차 참조 시각화 네트워크",
@@ -113,7 +114,8 @@
       "status": "production",
       "description": "넷마블 '몬스터길들이기' 쿠폰들을 일괄적으로 수집하여 복잡한 과정 없이 한 번에 편리하게 자동 등록해 주는 웹 서비스.",
       "url": "https://mongil-coupon.vercel.app",
-      "githubUrl": "https://github.com/jeiel85/mongil-coupon-web"
+      "githubUrl": "https://github.com/jeiel85/mongil-coupon-web",
+      "iconUrl": "icons/mongil-coupon-web.ico"
     },
     {
       "name": "Ruby Momentum — 루비 온 레일즈 소셜 포스팅",
@@ -121,49 +123,56 @@
       "status": "production",
       "description": "Google OAuth 인증 연동, 실시간 글 업데이트, 클라우드 이미지 업로드 기능을 탑재한 Ruby on Rails 기반의 모던 소셜 포스팅 웹 애플리케이션.",
       "url": "https://ruby-momentum.onrender.com",
-      "githubUrl": "https://github.com/jeiel85/ruby-momentum-web"
+      "githubUrl": "https://github.com/jeiel85/ruby-momentum-web",
+      "iconUrl": "icons/ruby-momentum-web.png"
     },
     {
       "name": "LocalPDF Studio — 개인정보 안전 로컬 PDF 편집기",
       "platform": "desktop",
       "status": "production",
       "description": "광고나 회원가입, 클라우드 전송 없이 모든 PDF 처리를 PC 안에서 로컬로 완벽하게 해결하는 Tauri + Rust 기반의 가볍고 현대적인 PDF 편집 및 변환 프로그램.",
-      "githubUrl": "https://github.com/jeiel85/localpdf-studio-desktop"
+      "githubUrl": "https://github.com/jeiel85/localpdf-studio-desktop",
+      "iconUrl": "icons/localpdf-studio-desktop.png"
     },
     {
       "name": "Claude Usage Tray — AI 사용량 모니터링",
       "platform": "desktop",
       "status": "production",
       "description": "Windows 작업 표시줄 트레이에서 Claude Code, Gemini CLI, OpenCode 등 다양한 AI 에이전트 도구들의 실시간 크레딧 사용량과 알림을 백그라운드에서 편리하게 감시하고 모니터링해 주는 WPF 유틸리티 앱.",
-      "githubUrl": "https://github.com/jeiel85/claude-usage-tray-windows"
+      "githubUrl": "https://github.com/jeiel85/claude-usage-tray-windows",
+      "iconUrl": "icons/claude-usage-tray-windows.ico"
     },
     {
       "name": "LinkDock — 데스크톱 분석형 영상 다운로더",
       "platform": "desktop",
       "status": "production",
       "description": "강력한 yt-dlp 엔진을 데스크톱 GUI 환경으로 래핑하여, 단순 일괄 다운로드가 아닌 영상 분석, 선택적 화질 추출 및 편리한 다운로드 흐름을 제공하는 다운로드 워크벤치.",
-      "githubUrl": "https://github.com/jeiel85/link-dock-windows"
+      "githubUrl": "https://github.com/jeiel85/link-dock-windows",
+      "iconUrl": "icons/link-dock-windows.png"
     },
     {
       "name": "UpdIO — AI 기반 비디오 업스케일러 & 플레이어",
       "platform": "desktop",
       "status": "production",
       "description": "영상의 화질을 한 단계 극대화하는 비디오 업스케일링(Upscaling) 보정 기술과 현대적이고 직관적인 동영상 재생 플레이어 환경을 결합한 Windows 전용 미디어 데스크톱 프로그램.",
-      "githubUrl": "https://github.com/jeiel85/updio-windows"
+      "githubUrl": "https://github.com/jeiel85/updio-windows",
+      "iconUrl": "icons/updio-windows.png"
     },
     {
       "name": "Process Guardian — 프로세스 실시간 종료 감시자",
       "platform": "desktop",
       "status": "production",
       "description": "중요한 시스템 프로세스나 백그라운드 서비스가 예기치 않게 종료되는 현상을 실시간으로 감시하고, 이상 발생 시 즉각적으로 프로세스를 복구하여 시스템 연속성을 보장하는 강력하고 가벼운 가드독 프로그램.",
-      "githubUrl": "https://github.com/jeiel85/process-guardian-windows"
+      "githubUrl": "https://github.com/jeiel85/process-guardian-windows",
+      "iconUrl": "icons/process-guardian-windows.png"
     },
     {
       "name": "CLI Here — 탐색기 AI 코딩 에이전트 빠른 실행기",
       "platform": "desktop",
       "status": "production",
       "description": "Windows 탐색기 우클릭 콘텍스트 메뉴에 바로가기를 추가하여, 현재 폴더 경로에서 클릭 한 번으로 Anthropic Claude Code나 개발용 AI CLI 에이전트를 터미널에 즉시 실행시켜 주는 쾌속 개발 생산성 유틸리티.",
-      "githubUrl": "https://github.com/jeiel85/cli-here-windows"
+      "githubUrl": "https://github.com/jeiel85/cli-here-windows",
+      "iconUrl": "icons/cli-here-windows.png"
     }
   ]
 }
