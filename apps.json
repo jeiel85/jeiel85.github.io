@@ -99,6 +99,15 @@
       "githubUrl": "https://github.com/jeiel85/score-fetcher-web"
     },
     {
+      "name": "ScriptureFlux — 성경 교차 참조 시각화 네트워크",
+      "platform": "web",
+      "status": "production",
+      "description": "성경 66권 전체의 긴밀한 상호 연관성(34만 개 이상의 교차 참조)을 HTML5 Canvas 2D 기반의 수려한 무지개 곡선 네트워크로 시각화해 주는 모던 인터랙티브 웹앱 (SPA).",
+      "url": "https://jeiel85.github.io/scripture-flux-web/",
+      "githubUrl": "https://github.com/jeiel85/scripture-flux-web",
+      "iconUrl": "icons/scripture-flux-web.png"
+    },
+    {
       "name": "Mongil Coupon — 몬길 쿠폰 자동 등록기",
       "platform": "web",
       "status": "production",
