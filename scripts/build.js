@@ -83,26 +83,22 @@ async function scrapePlayStoreHTML(packageName) {
     const { status, html } = await fetchPage(url);
 
     if (status !== 200) {
-      console.warn(`  \u26a0 Play Store returned ${status} for ${packageName}`);
+      console.warn(`  ⚠ Play Store returned ${status} for ${packageName}`);
       return null;
     }
 
     const result = {};
 
-    // Extract icon (first play-lh image, without size params = original icon)
     const iconMatches = html.match(/https:\/\/play-lh\.googleusercontent\.com\/[^"'\s\])>]+/gi) || [];
     if (iconMatches.length > 0) {
-      // First match is usually the app icon; pick the shortest URL (no size suffix)
       const iconBase = iconMatches[0].split('=')[0];
       result.icon = iconBase + '=w240-h240-rw';
     }
 
-    // Extract title from og:title
     const titleMatch = html.match(/property=["']og:title["']\s+content=["']([^"']+)["']/i)
       || html.match(/content=["']([^"']+)["']\s+property=["']og:title["']/i);
     if (titleMatch) result.title = titleMatch[1];
 
-    // Extract description from og:description
     const descMatch = html.match(/property=["']og:description["']\s+content=["']([^"']+)["']/i)
       || html.match(/content=["']([^"']+)["']\s+property=["']og:description["']/i);
     if (descMatch) result.summary = descMatch[1];
@@ -112,7 +108,7 @@ async function scrapePlayStoreHTML(packageName) {
     }
     return null;
   } catch (err) {
-    console.warn(`  \u26a0 Fallback scraping failed for ${packageName}: ${err.message}`);
+    console.warn(`  ⚠ Fallback scraping failed for ${packageName}: ${err.message}`);
     return null;
   }
 }
@@ -132,6 +128,7 @@ function saveCache(cache) {
 
 // ─── Helpers ─────────────────────────────────────────
 function escapeHtml(str) {
+  if (!str) return '';
   return str
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -145,17 +142,39 @@ function getStatusLabel(status) {
     case 'production': return 'Production';
     case 'closed_testing': return 'Closed Testing';
     case 'draft': return 'Draft';
+    case 'development': return 'In Dev';
+    case 'active': return 'Active';
     default: return status;
   }
 }
 
 function getStatusClass(status) {
   switch (status) {
-    case 'production': return 'status-production';
-    case 'closed_testing': return 'status-testing';
-    case 'draft': return 'status-draft';
-    default: return '';
+    case 'production':
+    case 'active':
+      return 'status-production';
+    case 'closed_testing':
+    case 'development':
+      return 'status-testing';
+    case 'draft':
+      return 'status-draft';
+    default:
+      return '';
   }
+}
+
+function getPlatformLabel(platform) {
+  switch (platform) {
+    case 'android': return '📱 Android';
+    case 'web': return '🌐 Web App';
+    case 'desktop': return '💻 Desktop';
+    case 'ios': return '🍎 iOS';
+    default: return platform;
+  }
+}
+
+function getPlatformClass(platform) {
+  return `platform-${platform || 'android'}`;
 }
 
 function getStars(score) {
@@ -169,30 +188,45 @@ function getStars(score) {
 }
 
 // ─── Card HTML Generator ─────────────────────────────
-function getCardHTML(app, scraped, index) {
-  const playStoreUrl = `https://play.google.com/store/apps/details?id=${app.package}`;
-  const optInUrl = app.optInUrl || `https://play.google.com/apps/testing/${app.package}`;
+function getCardHTML(project, scraped, index) {
+  const isAndroid = project.platform === 'android' || !project.platform;
+  const isWeb = project.platform === 'web';
+  const isDesktop = project.platform === 'desktop';
 
-  // Icon: check app.iconUrl override first, then scraped data, then letter avatar
+  // 1. Icon configuration with existence check
   let iconHTML;
-  const iconSrc = app.iconUrl || (scraped && scraped.icon);
+  let hasLocalIcon = false;
+  if (project.iconUrl) {
+    const fullIconPath = path.join(ROOT, project.iconUrl);
+    if (fs.existsSync(fullIconPath)) {
+      hasLocalIcon = true;
+    }
+  }
+
+  const iconSrc = hasLocalIcon ? project.iconUrl : (scraped && scraped.icon);
   if (iconSrc) {
-    iconHTML = `<img class="app-icon" src="${iconSrc}" alt="${escapeHtml(app.name)}" loading="lazy" />`;
+    iconHTML = `<img class="app-icon" src="${iconSrc}" alt="${escapeHtml(project.name)}" loading="lazy" />`;
   } else {
     const gradient = GRADIENTS[index % GRADIENTS.length];
-    const letter = app.name.charAt(0).toUpperCase();
+    const letter = project.name.charAt(0).toUpperCase();
     iconHTML = `<div class="app-icon-letter" style="background: ${gradient}">${letter}</div>`;
   }
 
-  // Description
-  let descHTML = '';
-  if (scraped && scraped.summary) {
-    descHTML = `<p class="app-desc">${escapeHtml(scraped.summary)}</p>`;
-  }
+  // 2. Title & Package/Repo Area
+  const subLabel = isAndroid 
+    ? project.package 
+    : (project.githubUrl ? project.githubUrl.replace('https://github.com/', '') : 'Open Source');
 
-  // Stats (rating, downloads)
+  // 3. Description (manual has priority for non-Android, scraped for Android)
+  let descriptionText = project.description || '';
+  if (isAndroid && scraped && scraped.summary) {
+    descriptionText = scraped.summary;
+  }
+  const descHTML = descriptionText ? `<p class="app-desc">${escapeHtml(descriptionText)}</p>` : '';
+
+  // 4. Stats (rating, downloads - Android only)
   let statsHTML = '';
-  if (scraped && scraped.score) {
+  if (isAndroid && scraped && scraped.score) {
     statsHTML = `
       <div class="app-stats">
         <span class="stat-rating" title="Rating: ${scraped.score ? scraped.score.toFixed(1) : 'N/A'}">
@@ -203,50 +237,79 @@ function getCardHTML(app, scraped, index) {
       </div>`;
   }
 
-  // Genre badge
+  // 5. Category/Genre badge
   let genreHTML = '';
-  if (scraped && scraped.genre) {
+  if (isAndroid && scraped && scraped.genre) {
     genreHTML = `<span class="app-genre">${escapeHtml(scraped.genre)}</span>`;
   }
 
-  // Action buttons
+  // 6. Action buttons
   let buttonsHTML = '';
-  if (app.status === 'production') {
+  if (isAndroid) {
+    const playStoreUrl = `https://play.google.com/store/apps/details?id=${project.package}`;
+    const optInUrl = project.optInUrl || `https://play.google.com/apps/testing/${project.package}`;
+    if (project.status === 'production') {
+      buttonsHTML = `
+        <div class="app-actions">
+          <a href="${playStoreUrl}" target="_blank" rel="noopener" class="btn btn-android">
+            <span class="btn-icon">▶</span> Play Store
+          </a>
+        </div>`;
+    } else if (project.status === 'closed_testing') {
+      buttonsHTML = `
+        <div class="app-actions">
+          <a href="${optInUrl}" target="_blank" rel="noopener" class="btn btn-secondary">
+            🧪 Join Beta
+          </a>
+          <a href="${playStoreUrl}" target="_blank" rel="noopener" class="btn btn-ghost">
+            ▶ Play Store
+          </a>
+        </div>`;
+    } else {
+      buttonsHTML = `
+        <div class="app-actions">
+          <span class="btn btn-disabled">🚧 Coming Soon</span>
+        </div>`;
+    }
+  } else if (isWeb) {
     buttonsHTML = `
       <div class="app-actions">
-        <a href="${playStoreUrl}" target="_blank" rel="noopener" class="btn btn-primary">
-          <span class="btn-icon">▶</span> Play Store
-        </a>
+        ${project.url ? `
+        <a href="${project.url}" target="_blank" rel="noopener" class="btn btn-web">
+          🌐 Launch Web App
+        </a>` : ''}
+        ${project.githubUrl ? `
+        <a href="${project.githubUrl}" target="_blank" rel="noopener" class="btn btn-ghost">
+          💻 GitHub
+        </a>` : ''}
       </div>`;
-  } else if (app.status === 'closed_testing') {
+  } else if (isDesktop) {
     buttonsHTML = `
       <div class="app-actions">
-        <a href="${optInUrl}" target="_blank" rel="noopener" class="btn btn-secondary">
-          🧪 Join Beta
-        </a>
-        <a href="${playStoreUrl}" target="_blank" rel="noopener" class="btn btn-ghost">
-          ▶ Play Store
-        </a>
-      </div>`;
-  } else if (app.status === 'draft') {
-    buttonsHTML = `
-      <div class="app-actions">
-        <span class="btn btn-disabled">🚧 Coming Soon</span>
+        ${project.githubUrl ? `
+        <a href="${project.githubUrl}" target="_blank" rel="noopener" class="btn btn-desktop">
+          💾 Download / GitHub
+        </a>` : ''}
+        ${project.url ? `
+        <a href="${project.url}" target="_blank" rel="noopener" class="btn btn-ghost">
+          📥 Direct Download
+        </a>` : ''}
       </div>`;
   }
 
   return `
-    <article class="app-card" data-status="${app.status}" style="animation-delay: ${index * 0.06}s">
+    <article class="app-card" data-platform="${project.platform || 'android'}" style="animation-delay: ${index * 0.05}s">
       <div class="card-header">
         ${iconHTML}
         <div class="card-title-area">
-          <h3 class="app-name" title="${escapeHtml(app.name)}">${escapeHtml(app.name)}</h3>
-          <span class="app-package">${app.package}</span>
+          <h3 class="app-name" title="${escapeHtml(project.name)}">${escapeHtml(project.name)}</h3>
+          <span class="app-package" title="${subLabel}">${subLabel}</span>
         </div>
       </div>
       ${descHTML}
       <div class="card-meta">
-        <span class="status-badge ${getStatusClass(app.status)}">${getStatusLabel(app.status)}</span>
+        <span class="platform-badge ${getPlatformClass(project.platform)}">${getPlatformLabel(project.platform)}</span>
+        <span class="status-badge ${getStatusClass(project.status)}">${getStatusLabel(project.status)}</span>
         ${genreHTML}
       </div>
       ${statsHTML}
@@ -258,30 +321,45 @@ function getCardHTML(app, scraped, index) {
 function getCSS() {
   return `
     :root {
-      --bg-base: #06070a;
-      --bg-surface: #0c0d12;
-      --bg-card: rgba(255, 255, 255, 0.025);
+      --bg-base: #040508;
+      --bg-surface: #0a0b10;
+      --bg-card: rgba(255, 255, 255, 0.022);
       --bg-card-hover: rgba(255, 255, 255, 0.045);
-      --border: rgba(255, 255, 255, 0.06);
-      --border-hover: rgba(255, 255, 255, 0.13);
-      --text-primary: #f0f0f5;
-      --text-secondary: #8b8b9e;
-      --text-muted: #55556a;
-      --green: #10b981;
-      --green-bg: rgba(16, 185, 129, 0.1);
-      --green-border: rgba(16, 185, 129, 0.25);
-      --amber: #f59e0b;
-      --amber-bg: rgba(245, 158, 11, 0.1);
-      --amber-border: rgba(245, 158, 11, 0.25);
-      --gray: #6b7280;
-      --gray-bg: rgba(107, 114, 128, 0.1);
-      --gray-border: rgba(107, 114, 128, 0.25);
-      --blue: #3b82f6;
-      --purple: #8b5cf6;
+      --border: rgba(255, 255, 255, 0.05);
+      --border-hover: rgba(255, 255, 255, 0.12);
+      --text-primary: #f3f3f7;
+      --text-secondary: #8e8e9f;
+      --text-muted: #535368;
+      
       --radius-sm: 10px;
       --radius-md: 14px;
       --radius-lg: 20px;
       --radius-full: 100px;
+
+      /* Platform Colors */
+      --color-android: #10b981;
+      --color-android-bg: rgba(16, 185, 129, 0.08);
+      --color-android-border: rgba(16, 185, 129, 0.22);
+      
+      --color-web: #3b82f6;
+      --color-web-bg: rgba(59, 130, 246, 0.08);
+      --color-web-border: rgba(59, 130, 246, 0.22);
+
+      --color-desktop: #8b5cf6;
+      --color-desktop-bg: rgba(139, 92, 246, 0.08);
+      --color-desktop-border: rgba(139, 92, 246, 0.22);
+
+      --color-ios: #f43f5e;
+      --color-ios-bg: rgba(244, 63, 94, 0.08);
+      --color-ios-border: rgba(244, 63, 94, 0.22);
+
+      --color-amber: #f59e0b;
+      --color-amber-bg: rgba(245, 158, 11, 0.08);
+      --color-amber-border: rgba(245, 158, 11, 0.22);
+
+      --color-gray: #6b7280;
+      --color-gray-bg: rgba(107, 114, 128, 0.08);
+      --color-gray-border: rgba(107, 114, 128, 0.2);
     }
 
     *, *::before, *::after {
@@ -316,124 +394,223 @@ function getCSS() {
     .bg-orb {
       position: absolute;
       border-radius: 50%;
-      filter: blur(100px);
-      opacity: 0.4;
+      filter: blur(120px);
+      opacity: 0.35;
     }
     .bg-orb-1 {
-      width: 700px; height: 700px;
+      width: 750px; height: 750px;
       background: radial-gradient(circle, rgba(16,185,129,0.07), transparent 70%);
       top: -250px; left: -150px;
       animation: orbFloat1 25s ease-in-out infinite;
     }
     .bg-orb-2 {
-      width: 550px; height: 550px;
+      width: 600px; height: 600px;
       background: radial-gradient(circle, rgba(139,92,246,0.06), transparent 70%);
       bottom: -200px; right: -100px;
       animation: orbFloat2 30s ease-in-out infinite;
     }
     .bg-orb-3 {
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(59,130,246,0.04), transparent 70%);
-      top: 40%; left: 50%;
-      animation: orbFloat3 20s ease-in-out infinite;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(59,130,246,0.05), transparent 70%);
+      top: 35%; left: 45%;
+      animation: orbFloat3 22s ease-in-out infinite;
     }
 
     @keyframes orbFloat1 {
       0%, 100% { transform: translate(0, 0) scale(1); }
-      33% { transform: translate(40px, -30px) scale(1.05); }
-      66% { transform: translate(-20px, 25px) scale(0.97); }
+      33% { transform: translate(45px, -35px) scale(1.04); }
+      66% { transform: translate(-25px, 20px) scale(0.96); }
     }
     @keyframes orbFloat2 {
       0%, 100% { transform: translate(0, 0) scale(1); }
-      40% { transform: translate(-35px, -25px) scale(1.03); }
-      70% { transform: translate(25px, 15px) scale(0.96); }
+      40% { transform: translate(-40px, -20px) scale(1.03); }
+      70% { transform: translate(30px, 20px) scale(0.95); }
     }
     @keyframes orbFloat3 {
       0%, 100% { transform: translate(-50%, 0) scale(1); }
-      50% { transform: translate(-50%, -40px) scale(1.08); }
+      50% { transform: translate(-40%, -30px) scale(1.05); }
     }
 
     /* ── Container ── */
     .container {
-      max-width: 1120px;
+      max-width: 1140px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
     /* ── Header ── */
     .header {
-      text-align: center;
-      padding: 72px 0 48px;
+      padding: 64px 0 40px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(10,11,16,0.5) 0%, transparent 100%);
     }
+    
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    
+    @media (min-width: 860px) {
+      .profile-grid {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    .profile-left {
+      text-align: center;
+    }
+    
+    @media (min-width: 860px) {
+      .profile-left {
+        text-align: left;
+      }
+    }
+
     .dev-avatar {
-      width: 92px;
-      height: 92px;
+      width: 96px;
+      height: 96px;
       border-radius: 50%;
-      border: 3px solid rgba(139, 92, 246, 0.3);
-      margin: 0 auto 22px;
+      border: 3px solid rgba(139, 92, 246, 0.25);
+      margin: 0 auto 20px;
       display: block;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
     }
+    
+    @media (min-width: 860px) {
+      .dev-avatar {
+        margin: 0 0 20px 0;
+      }
+    }
+    
     .dev-avatar:hover {
-      border-color: rgba(139, 92, 246, 0.6);
+      border-color: rgba(139, 92, 246, 0.5);
       box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
       transform: scale(1.05);
     }
     .dev-name {
-      font-size: 2.6rem;
-      font-weight: 700;
+      font-size: 2.8rem;
+      font-weight: 800;
       letter-spacing: -0.025em;
       background: linear-gradient(135deg, #ffffff 0%, #c4b5fd 40%, #818cf8 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     .dev-subtitle {
       color: var(--text-secondary);
-      font-size: 1.05rem;
-      font-weight: 400;
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    /* ── Profile Badges ── */
+    .profile-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    @media (min-width: 860px) {
+      .profile-badges {
+        justify-content: flex-start;
+      }
+    }
+    .badge-img {
+      height: 28px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
     }
 
     /* ── Stats ── */
     .stats-row {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       justify-content: center;
-      margin-top: 36px;
       flex-wrap: wrap;
+    }
+    @media (min-width: 860px) {
+      .stats-row {
+        justify-content: flex-start;
+      }
     }
     .stat-box {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 18px 28px;
+      padding: 12px 20px;
       text-align: center;
-      min-width: 120px;
+      min-width: 100px;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
     .stat-box:hover {
       border-color: var(--border-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     }
     .stat-value {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 700;
       color: var(--text-primary);
     }
-    .stat-value.green { color: var(--green); }
-    .stat-value.amber { color: var(--amber); }
-    .stat-value.gray { color: var(--gray); }
+    .stat-value.android { color: var(--color-android); }
+    .stat-value.web { color: var(--color-web); }
+    .stat-value.desktop { color: var(--color-desktop); }
+    .stat-value.gray { color: var(--color-gray); }
     .stat-label {
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-top: 4px;
+      letter-spacing: 0.05em;
+      margin-top: 3px;
+    }
+
+    /* ── GitHub Widget Box ── */
+    .github-box {
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .github-box-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .github-box-title::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-android);
+      box-shadow: 0 0 10px var(--color-android);
+    }
+    
+    .github-graph-img {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+      transition: transform 0.3s ease;
+    }
+    .github-graph-img:hover {
+      transform: scale(1.01);
     }
 
     /* ── Filter ── */
@@ -441,17 +618,17 @@ function getCSS() {
       display: flex;
       gap: 8px;
       justify-content: center;
-      margin: 44px 0 32px;
+      margin: 40px 0 28px;
       flex-wrap: wrap;
     }
     .filter-btn {
-      padding: 8px 22px;
+      padding: 8px 20px;
       border-radius: var(--radius-full);
       border: 1px solid var(--border);
       background: transparent;
       color: var(--text-secondary);
       font-family: inherit;
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       font-weight: 500;
       cursor: pointer;
       transition: all 0.25s ease;
@@ -459,35 +636,40 @@ function getCSS() {
       user-select: none;
     }
     .filter-btn:hover {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.04);
       color: var(--text-primary);
       border-color: var(--border-hover);
     }
     .filter-btn.active {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.07);
       color: var(--text-primary);
-      border-color: rgba(255,255,255,0.2);
-      box-shadow: 0 0 12px rgba(255,255,255,0.03);
+      border-color: rgba(255,255,255,0.18);
+      box-shadow: 0 0 12px rgba(255,255,255,0.02);
     }
     .filter-count {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 20px;
-      height: 20px;
-      padding: 0 6px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.08);
-      font-size: 0.7rem;
+      min-width: 18px;
+      height: 18px;
+      padding: 0 5px;
+      border-radius: 9px;
+      background: rgba(255,255,255,0.07);
+      font-size: 0.68rem;
       margin-left: 6px;
+      color: var(--text-secondary);
+    }
+    .filter-btn.active .filter-count {
+      background: rgba(255,255,255,0.15);
+      color: var(--text-primary);
     }
 
     /* ── Grid ── */
     .app-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-      gap: 18px;
-      padding-bottom: 60px;
+      gap: 20px;
+      padding-bottom: 64px;
     }
 
     /* ── Card ── */
@@ -496,20 +678,22 @@ function getCSS() {
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 24px;
+      display: flex;
+      flex-direction: column;
       transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
       opacity: 0;
       transform: translateY(24px);
       animation: cardIn 0.5s ease forwards;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
     }
     .app-card:hover {
       background: var(--bg-card-hover);
       border-color: var(--border-hover);
       transform: translateY(-5px);
       box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.3),
-        0 0 0 1px rgba(255,255,255,0.05) inset;
+        0 20px 40px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255,255,255,0.04) inset;
     }
     .app-card.hidden {
       display: none;
@@ -527,37 +711,37 @@ function getCSS() {
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .app-icon {
-      width: 54px;
-      height: 54px;
+      width: 56px;
+      height: 56px;
       border-radius: var(--radius-sm);
       flex-shrink: 0;
       object-fit: cover;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
     .app-icon-letter {
-      width: 54px;
-      height: 54px;
+      width: 56px;
+      height: 56px;
       border-radius: var(--radius-sm);
       flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 700;
       color: #fff;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.25);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
     .card-title-area {
       min-width: 0;
       flex: 1;
     }
     .app-name {
-      font-size: 1rem;
-      font-weight: 600;
+      font-size: 1.05rem;
+      font-weight: 700;
       line-height: 1.35;
       color: var(--text-primary);
       display: -webkit-box;
@@ -573,57 +757,82 @@ function getCSS() {
       overflow: hidden;
       text-overflow: ellipsis;
       display: block;
-      margin-top: 2px;
+      margin-top: 3px;
     }
 
     /* ── Description ── */
     .app-desc {
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       color: var(--text-secondary);
-      line-height: 1.55;
-      margin-bottom: 14px;
+      line-height: 1.6;
+      margin-bottom: 16px;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      flex-grow: 1; /* Pushes the buttons to the bottom of the card */
     }
 
     /* ── Meta (badges) ── */
     .card-meta {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 14px;
+      gap: 6px;
+      margin-bottom: 16px;
       flex-wrap: wrap;
     }
-    .status-badge {
+    
+    .platform-badge, .status-badge {
       display: inline-flex;
       align-items: center;
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: var(--radius-full);
-      font-size: 0.73rem;
+      font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
+
+    .platform-android {
+      background: var(--color-android-bg);
+      color: var(--color-android);
+      border: 1px solid var(--color-android-border);
+    }
+    .platform-web {
+      background: var(--color-web-bg);
+      color: var(--color-web);
+      border: 1px solid var(--color-web-border);
+    }
+    .platform-desktop {
+      background: var(--color-desktop-bg);
+      color: var(--color-desktop);
+      border: 1px solid var(--color-desktop-border);
+    }
+    .platform-ios {
+      background: var(--color-ios-bg);
+      color: var(--color-ios);
+      border: 1px solid var(--color-ios-border);
+    }
+
     .status-production {
-      background: var(--green-bg);
-      color: var(--green);
-      border: 1px solid var(--green-border);
+      background: var(--color-android-bg);
+      color: var(--color-android);
+      border: 1px solid var(--color-android-border);
     }
     .status-testing {
-      background: var(--amber-bg);
-      color: var(--amber);
-      border: 1px solid var(--amber-border);
+      background: var(--color-amber-bg);
+      color: var(--color-amber);
+      border: 1px solid var(--color-amber-border);
     }
     .status-draft {
-      background: var(--gray-bg);
-      color: var(--gray);
-      border: 1px solid var(--gray-border);
+      background: var(--color-gray-bg);
+      color: var(--color-gray);
+      border: 1px solid var(--color-gray-border);
     }
+    
     .app-genre {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       color: var(--text-muted);
-      padding: 3px 10px;
+      padding: 2px 8px;
       border-radius: var(--radius-full);
       border: 1px solid var(--border);
     }
@@ -633,8 +842,8 @@ function getCSS() {
       display: flex;
       align-items: center;
       gap: 16px;
-      margin-bottom: 14px;
-      font-size: 0.82rem;
+      margin-bottom: 16px;
+      font-size: 0.8rem;
     }
     .stat-rating {
       display: flex;
@@ -644,11 +853,11 @@ function getCSS() {
     .stars {
       display: inline-flex;
       gap: 1px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
     }
-    .star-filled { color: #fbbf24; }
-    .star-half { color: #fbbf24; opacity: 0.5; }
-    .star-empty { color: rgba(255,255,255,0.12); }
+    .star-filled { color: #f59e0b; }
+    .star-half { color: #f59e0b; opacity: 0.5; }
+    .star-empty { color: rgba(255,255,255,0.08); }
     .rating-value {
       color: var(--text-secondary);
       font-weight: 600;
@@ -663,12 +872,12 @@ function getCSS() {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
-      background: rgba(59,130,246,0.1);
-      color: var(--blue);
-      font-size: 0.7rem;
+      background: rgba(16,185,129,0.1);
+      color: var(--color-android);
+      font-size: 0.65rem;
       font-weight: 700;
     }
 
@@ -676,45 +885,69 @@ function getCSS() {
     .app-actions {
       display: flex;
       gap: 8px;
-      margin-top: 6px;
+      margin-top: auto; /* Aligns all actions perfectly to bottom */
       flex-wrap: wrap;
     }
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 9px 18px;
+      padding: 9px 16px;
       border-radius: var(--radius-sm);
       font-family: inherit;
-      font-size: 0.8rem;
-      font-weight: 500;
+      font-size: 0.78rem;
+      font-weight: 600;
       text-decoration: none;
       transition: all 0.25s ease;
       cursor: pointer;
       border: none;
       white-space: nowrap;
+      flex: 1;
+      justify-content: center;
     }
     .btn-icon {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
     }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--green), #059669);
+    
+    .btn-android {
+      background: linear-gradient(135deg, var(--color-android), #059669);
       color: #fff;
     }
-    .btn-primary:hover {
-      filter: brightness(1.15);
+    .btn-android:hover {
+      filter: brightness(1.1);
       transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(16,185,129,0.3);
+      box-shadow: 0 6px 14px rgba(16,185,129,0.22);
     }
+    
+    .btn-web {
+      background: linear-gradient(135deg, var(--color-web), #2563eb);
+      color: #fff;
+    }
+    .btn-web:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(59,130,246,0.22);
+    }
+
+    .btn-desktop {
+      background: linear-gradient(135deg, var(--color-desktop), #7c3aed);
+      color: #fff;
+    }
+    .btn-desktop:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(139,92,246,0.22);
+    }
+
     .btn-secondary {
-      background: var(--amber-bg);
-      color: var(--amber);
-      border: 1px solid var(--amber-border);
+      background: var(--color-amber-bg);
+      color: var(--color-amber);
+      border: 1px solid var(--color-amber-border);
     }
     .btn-secondary:hover {
-      background: rgba(245,158,11,0.18);
+      background: rgba(245,158,11,0.16);
       transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(245,158,11,0.15);
+      box-shadow: 0 4px 12px rgba(245,158,11,0.12);
     }
     .btn-ghost {
       background: transparent;
@@ -722,15 +955,16 @@ function getCSS() {
       border: 1px solid var(--border);
     }
     .btn-ghost:hover {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.035);
       color: var(--text-primary);
       border-color: var(--border-hover);
     }
     .btn-disabled {
-      background: var(--gray-bg);
-      color: var(--gray);
+      background: var(--color-gray-bg);
+      color: var(--color-gray);
       cursor: default;
-      border: 1px solid var(--gray-border);
+      border: 1px solid var(--color-gray-border);
+      flex: 1;
     }
 
     /* ── No Results ── */
@@ -745,10 +979,11 @@ function getCSS() {
     /* ── Footer ── */
     .footer {
       text-align: center;
-      padding: 36px 0 52px;
+      padding: 40px 0 56px;
       color: var(--text-muted);
       font-size: 0.8rem;
       border-top: 1px solid var(--border);
+      background: linear-gradient(0deg, rgba(10,11,16,0.4) 0%, transparent 100%);
     }
     .footer a {
       color: var(--text-secondary);
@@ -775,22 +1010,22 @@ function getCSS() {
 
     /* ── Responsive ── */
     @media (max-width: 768px) {
-      .header { padding: 52px 0 36px; }
-      .dev-name { font-size: 2rem; }
-      .stats-row { gap: 10px; }
-      .stat-box { padding: 14px 20px; min-width: 100px; }
-      .stat-value { font-size: 1.5rem; }
-      .app-grid { grid-template-columns: 1fr; gap: 14px; }
-      .filter-bar { gap: 6px; }
-      .filter-btn { padding: 7px 16px; font-size: 0.8rem; }
+      .header { padding: 48px 0 32px; }
+      .dev-name { font-size: 2.2rem; }
+      .stats-row { gap: 8px; }
+      .stat-box { padding: 10px 16px; min-width: 85px; }
+      .stat-value { font-size: 1.4rem; }
+      .app-grid { grid-template-columns: 1fr; gap: 16px; }
+      .filter-bar { gap: 6px; margin: 32px 0 24px; }
+      .filter-btn { padding: 6px 16px; font-size: 0.8rem; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
-      .dev-avatar { width: 68px; height: 68px; }
-      .dev-name { font-size: 1.6rem; }
-      .stat-box { min-width: 85px; padding: 12px 16px; }
-      .stat-value { font-size: 1.3rem; }
-      .app-card { padding: 18px; }
+      .dev-avatar { width: 76px; height: 76px; }
+      .dev-name { font-size: 1.8rem; }
+      .stat-box { min-width: 75px; padding: 8px 12px; }
+      .stat-value { font-size: 1.2rem; }
+      .app-card { padding: 20px; }
     }
   `;
 }
@@ -812,14 +1047,14 @@ function getJS() {
           let visibleCount = 0;
 
           cards.forEach((card) => {
-            const match = filter === 'all' || card.dataset.status === filter;
+            const match = filter === 'all' || card.dataset.platform === filter;
             card.classList.toggle('hidden', !match);
             if (match) {
               visibleCount++;
               // Re-trigger animation
               card.style.animation = 'none';
               card.offsetHeight;
-              card.style.animationDelay = (visibleCount * 0.04) + 's';
+              card.style.animationDelay = (visibleCount * 0.03) + 's';
               card.style.animation = '';
             }
           });
@@ -835,13 +1070,16 @@ function getJS() {
 
 // ─── HTML Generator ──────────────────────────────────
 function generateHTML(config, scrapedData) {
-  const { developer, apps } = config;
+  const { developer, projects } = config;
+
+  // Filter out hidden projects early!
+  const visibleProjects = projects.filter(p => !p.hidden);
 
   const counts = {
-    total: apps.length,
-    production: apps.filter(a => a.status === 'production').length,
-    testing: apps.filter(a => a.status === 'closed_testing').length,
-    draft: apps.filter(a => a.status === 'draft').length,
+    total: visibleProjects.length,
+    android: visibleProjects.filter(p => p.platform === 'android' || !p.platform).length,
+    web: visibleProjects.filter(p => p.platform === 'web').length,
+    desktop: visibleProjects.filter(p => p.platform === 'desktop').length,
   };
 
   const now = new Date();
@@ -849,9 +1087,9 @@ function generateHTML(config, scrapedData) {
   const kst = new Date(now.getTime() + kstOffset);
   const timestamp = kst.toISOString().replace('T', ' ').substring(0, 16) + ' KST';
 
-  const cardsHTML = apps.map((app, i) => {
-    const scraped = scrapedData[app.package] || null;
-    return getCardHTML(app, scraped, i);
+  const cardsHTML = visibleProjects.map((project, i) => {
+    const scraped = scrapedData[project.package] || null;
+    return getCardHTML(project, scraped, i);
   }).join('\n');
 
   return `<!DOCTYPE html>
@@ -859,15 +1097,15 @@ function generateHTML(config, scrapedData) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${escapeHtml(developer.name)} — App Portfolio</title>
-  <meta name="description" content="${escapeHtml(developer.name)}의 Android 앱 포트폴리오. ${counts.total}개의 앱을 확인해보세요." />
+  <title>${escapeHtml(developer.name)} — Portfolio</title>
+  <meta name="description" content="${escapeHtml(developer.name)}의 개발 포트폴리오. ${counts.total}개의 프로젝트를 확인해보세요." />
   <meta name="author" content="${escapeHtml(developer.name)}" />
-  <meta property="og:title" content="${escapeHtml(developer.name)} — App Portfolio" />
-  <meta property="og:description" content="Android 앱 ${counts.total}개 | Production ${counts.production} | Testing ${counts.testing}" />
+  <meta property="og:title" content="${escapeHtml(developer.name)} — Portfolio" />
+  <meta property="og:description" content="Android ${counts.android}개 | Web ${counts.web}개 | Desktop ${counts.desktop}개" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>${getCSS()}</style>
 </head>
 <body>
@@ -879,34 +1117,59 @@ function generateHTML(config, scrapedData) {
 
   <header class="header">
     <div class="container">
-      <img
-        class="dev-avatar"
-        src="https://github.com/${developer.githubUsername}.png"
-        alt="${escapeHtml(developer.name)}"
-        width="92"
-        height="92"
-      />
-      <h1 class="dev-name">${escapeHtml(developer.name)}</h1>
-      <p class="dev-subtitle">${escapeHtml(developer.description || 'App Developer')}</p>
+      <div class="profile-grid">
+        <div class="profile-left">
+          <img
+            class="dev-avatar"
+            src="https://github.com/${developer.githubUsername}.png"
+            alt="${escapeHtml(developer.name)}"
+            width="96"
+            height="96"
+          />
+          <h1 class="dev-name">${escapeHtml(developer.name)}</h1>
+          <p class="dev-subtitle">${escapeHtml(developer.description || 'Developer')}</p>
+          
+          <div class="profile-badges">
+            <img class="badge-img" src="https://img.shields.io/badge/40대-아재개발자-FF6B35?style=for-the-badge" alt="40대 아재개발자" />
+            <img class="badge-img" src="https://img.shields.io/badge/두%20아들-육아중인%20아빠-4A90D9?style=for-the-badge" alt="두 아들 육아중인 아빠" />
+            <img class="badge-img" src="https://img.shields.io/badge/9to6-직장인-17A589?style=for-the-badge" alt="9to6 직장인" />
+            <img class="badge-img" src="https://img.shields.io/badge/개발자-바이브코더-8E44AD?style=for-the-badge" alt="개발자 바이브코더" />
+            <img class="badge-img" src="https://img.shields.io/badge/예수님을%20믿는-크리스챤-C0392B?style=for-the-badge" alt="크리스챤" />
+          </div>
 
-      <div class="stats-row">
-        <div class="stat-box">
-          <div class="stat-value">${counts.total}</div>
-          <div class="stat-label">Total Apps</div>
+          <div class="stats-row">
+            <div class="stat-box">
+              <div class="stat-value">${counts.total}</div>
+              <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value android">${counts.android}</div>
+              <div class="stat-label">Android</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value web">${counts.web}</div>
+              <div class="stat-label">Web</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value desktop">${counts.desktop}</div>
+              <div class="stat-label">Desktop</div>
+            </div>
+          </div>
         </div>
-        <div class="stat-box">
-          <div class="stat-value green">${counts.production}</div>
-          <div class="stat-label">Production</div>
+
+        <div class="profile-right">
+          <div class="github-box">
+            <div class="github-box-title">GitHub Activity Graph</div>
+            <a href="https://github.com/${developer.githubUsername}" target="_blank" rel="noopener">
+              <img
+                class="github-graph-img"
+                src="https://github-readme-activity-graph.vercel.app/graph?username=${developer.githubUsername}&theme=react-dark"
+                alt="GitHub Activity Graph"
+                loading="lazy"
+              />
+            </a>
+          </div>
         </div>
-        <div class="stat-box">
-          <div class="stat-value amber">${counts.testing}</div>
-          <div class="stat-label">Testing</div>
-        </div>
-        ${counts.draft > 0 ? `
-        <div class="stat-box">
-          <div class="stat-value gray">${counts.draft}</div>
-          <div class="stat-label">Draft</div>
-        </div>` : ''}
       </div>
     </div>
   </header>
@@ -914,25 +1177,25 @@ function generateHTML(config, scrapedData) {
   <main class="container">
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">All<span class="filter-count">${counts.total}</span></button>
-      <button class="filter-btn" data-filter="production">Production<span class="filter-count">${counts.production}</span></button>
-      <button class="filter-btn" data-filter="closed_testing">Testing<span class="filter-count">${counts.testing}</span></button>
-      ${counts.draft > 0 ? `<button class="filter-btn" data-filter="draft">Draft<span class="filter-count">${counts.draft}</span></button>` : ''}
+      <button class="filter-btn" data-filter="android">📱 Android<span class="filter-count">${counts.android}</span></button>
+      <button class="filter-btn" data-filter="web">🌐 Web<span class="filter-count">${counts.web}</span></button>
+      <button class="filter-btn" data-filter="desktop">💻 Desktop<span class="filter-count">${counts.desktop}</span></button>
     </div>
 
     <div class="app-grid" id="app-grid">
       ${cardsHTML}
     </div>
 
-    <div class="no-results">No apps found for this filter.</div>
+    <div class="no-results">No projects found for this filter.</div>
   </main>
 
   <footer class="footer">
     <div class="container">
       <p class="update-time">Last updated: ${timestamp}</p>
       <p class="links">
-        <a href="https://github.com/${developer.githubUsername}" target="_blank">GitHub</a>
+        <a href="https://github.com/${developer.githubUsername}" target="_blank">GitHub Profile</a>
         <span class="sep">·</span>
-        <a href="https://play.google.com/store/apps/dev?id=${developer.accountId}" target="_blank">Google Play</a>
+        <a href="https://play.google.com/store/apps/dev?id=${developer.accountId}" target="_blank">Google Play Dev</a>
         <span class="sep">·</span>
         <span>Powered by GitHub Actions</span>
       </p>
@@ -946,20 +1209,20 @@ function generateHTML(config, scrapedData) {
 
 // ─── Main ────────────────────────────────────────────
 async function main() {
-  console.log('📱 Building app portfolio...\n');
+  console.log('📱 Building expanded app portfolio...\n');
 
   const config = JSON.parse(fs.readFileSync(APPS_JSON, 'utf-8'));
   const cache = loadCache();
 
-  // 1. Scrape production apps (full data from Play Store)
-  const productionApps = config.apps.filter(a => a.status === 'production');
+  // 1. Scrape Android production apps (full data from Play Store)
+  const androidApps = config.projects.filter(p => (p.platform === 'android' || !p.platform) && !p.hidden);
+  const productionApps = androidApps.filter(a => a.status === 'production');
+  
   if (productionApps.length > 0) {
-    console.log(`🔍 Scraping ${productionApps.length} production app(s) from Play Store...`);
+    console.log(`🔍 Scraping ${productionApps.length} production Android app(s) from Play Store...`);
     for (const app of productionApps) {
-      // Try google-play-scraper first
       let data = await scrapeApp(app.package);
 
-      // Fallback: direct HTML parsing
       if (!data) {
         data = await scrapePlayStoreHTML(app.package);
       }
@@ -974,19 +1237,6 @@ async function main() {
     console.log('');
   }
 
-  // 2. For non-production apps, use iconUrl from config (no server-side scraping possible)
-  const nonProductionApps = config.apps.filter(a => a.status !== 'production');
-  const appsWithIcon = nonProductionApps.filter(a => a.iconUrl);
-  const appsWithoutIcon = nonProductionApps.filter(a => !a.iconUrl);
-  if (appsWithIcon.length > 0) {
-    console.log(`🖼️  ${appsWithIcon.length} non-production app(s) have custom iconUrl`);
-  }
-  if (appsWithoutIcon.length > 0) {
-    console.log(`🔤 ${appsWithoutIcon.length} non-production app(s) will use letter avatars`);
-    console.log('   (Add "iconUrl" to apps.json to set custom icons)');
-  }
-  if (nonProductionApps.length > 0) console.log('');
-
   saveCache(cache);
 
   // Generate HTML
@@ -994,10 +1244,9 @@ async function main() {
   const html = generateHTML(config, cache);
   fs.writeFileSync(OUTPUT_HTML, html, 'utf-8');
 
-  const iconCount = config.apps.filter(a => a.iconUrl).length + Object.values(cache).filter(c => c.icon).length;
+  const totalVisible = config.projects.filter(p => !p.hidden).length;
   console.log(`✅ Portfolio saved: ${OUTPUT_HTML}`);
-  console.log(`   Total apps: ${config.apps.length}`);
-  console.log(`   Icons: ${iconCount}/${config.apps.length}`);
+  console.log(`   Total visible projects: ${totalVisible}`);
 }
 
 main().catch(err => {
