@@ -24,7 +24,7 @@
       "name": "Lumina Daily - 오늘의 명언",
       "package": "com.jeiel85.luminadaily",
       "platform": "android",
-      "status": "closed_testing",
+      "status": "production",
       "iconUrl": "icons/com.jeiel85.luminadaily.png"
     },
     {

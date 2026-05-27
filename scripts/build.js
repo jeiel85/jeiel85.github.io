@@ -126,6 +126,55 @@ function saveCache(cache) {
   fs.writeFileSync(CACHE_JSON, JSON.stringify(cache, null, 2));
 }
 
+function downloadFile(url, outputPath, redirectCount = 0) {
+  if (redirectCount > 5) return Promise.reject(new Error('Too many redirects'));
+
+  return new Promise((resolve, reject) => {
+    https.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+      }
+    }, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        const redirectUrl = res.headers.location.startsWith('http')
+          ? res.headers.location
+          : new URL(res.headers.location, url).href;
+        res.resume();
+        return downloadFile(redirectUrl, outputPath, redirectCount + 1).then(resolve).catch(reject);
+      }
+
+      if (res.statusCode !== 200) {
+        res.resume();
+        return reject(new Error(`HTTP ${res.statusCode}`));
+      }
+
+      fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+      const file = fs.createWriteStream(outputPath);
+      res.pipe(file);
+      file.on('finish', () => file.close(resolve));
+      file.on('error', reject);
+    }).on('error', reject);
+  });
+}
+
+async function ensureLocalIcon(project, scraped) {
+  if (!project.iconUrl || !scraped || !scraped.icon) return;
+
+  const fullIconPath = path.join(ROOT, project.iconUrl);
+  if (fs.existsSync(fullIconPath)) return;
+
+  try {
+    const iconUrl = scraped.icon.includes('=')
+      ? scraped.icon.replace(/=[^=]*$/, '=w512-h512-rw')
+      : scraped.icon;
+    console.log(`  Downloading icon: ${project.package} -> ${path.relative(ROOT, fullIconPath)}`);
+    await downloadFile(iconUrl, fullIconPath);
+  } catch (err) {
+    console.warn(`  ⚠ Failed to download icon for ${project.package}: ${err.message}`);
+  }
+}
+
 // ─── Helpers ─────────────────────────────────────────
 function escapeHtml(str) {
   if (!str) return '';
@@ -1230,6 +1279,7 @@ async function main() {
 
       if (data) {
         cache[app.package] = { ...data, _lastScraped: new Date().toISOString() };
+        await ensureLocalIcon(app, data);
         console.log(`  ✓ ${app.name}`);
       } else {
         console.log(`  ✗ No data for ${app.name}`);
@@ -1242,7 +1292,7 @@ async function main() {
 
   // Generate HTML
   console.log('🎨 Generating HTML...');
-  const html = generateHTML(config, cache);
+  const html = generateHTML(config, cache).replace(/[ \t]+$/gm, '');
   fs.writeFileSync(OUTPUT_HTML, html, 'utf-8');
 
   const totalVisible = config.projects.filter(p => !p.hidden).length;

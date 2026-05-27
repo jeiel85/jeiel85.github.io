@@ -24,7 +24,7 @@
       --text-primary: #f3f3f7;
       --text-secondary: #8e8e9f;
       --text-muted: #535368;
-      
+
       --radius-sm: 10px;
       --radius-md: 14px;
       --radius-lg: 20px;
@@ -34,7 +34,7 @@
       --color-android: #10b981;
       --color-android-bg: rgba(16, 185, 129, 0.08);
       --color-android-border: rgba(16, 185, 129, 0.22);
-      
+
       --color-web: #3b82f6;
       --color-web-bg: rgba(59, 130, 246, 0.08);
       --color-web-border: rgba(59, 130, 246, 0.22);
@@ -138,14 +138,14 @@
       border-bottom: 1px solid var(--border);
       background: linear-gradient(180deg, rgba(10,11,16,0.5) 0%, transparent 100%);
     }
-    
+
     .profile-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 32px;
       align-items: center;
     }
-    
+
     @media (min-width: 860px) {
       .profile-grid {
         grid-template-columns: 1.2fr 1fr;
@@ -155,7 +155,7 @@
     .profile-left {
       text-align: center;
     }
-    
+
     @media (min-width: 860px) {
       .profile-left {
         text-align: left;
@@ -171,13 +171,13 @@
       display: block;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
+
     @media (min-width: 860px) {
       .dev-avatar {
         margin: 0 0 20px 0;
       }
     }
-    
+
     .dev-avatar:hover {
       border-color: rgba(139, 92, 246, 0.5);
       box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
@@ -277,7 +277,7 @@
       gap: 16px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
-    
+
     .github-box-title {
       font-size: 0.88rem;
       font-weight: 600;
@@ -286,7 +286,7 @@
       align-items: center;
       gap: 8px;
     }
-    
+
     .github-box-title::before {
       content: '';
       display: inline-block;
@@ -296,7 +296,7 @@
       background: var(--color-android);
       box-shadow: 0 0 10px var(--color-android);
     }
-    
+
     .github-graph-img {
       width: 100%;
       border-radius: var(--radius-sm);
@@ -475,7 +475,7 @@
       margin-bottom: 16px;
       flex-wrap: wrap;
     }
-    
+
     .platform-badge, .status-badge {
       display: inline-flex;
       align-items: center;
@@ -522,7 +522,7 @@
       color: var(--color-gray);
       border: 1px solid var(--color-gray-border);
     }
-    
+
     .app-genre {
       font-size: 0.7rem;
       color: var(--text-muted);
@@ -602,7 +602,7 @@
     .btn-icon {
       font-size: 0.65rem;
     }
-    
+
     .btn-android {
       background: linear-gradient(135deg, var(--color-android), #059669);
       color: #fff;
@@ -612,7 +612,7 @@
       transform: translateY(-1px);
       box-shadow: 0 6px 14px rgba(16,185,129,0.22);
     }
-    
+
     .btn-web {
       background: linear-gradient(135deg, var(--color-web), #2563eb);
       color: #fff;
@@ -743,7 +743,7 @@
           />
           <h1 class="dev-name">Sitdory</h1>
           <p class="dev-subtitle">Android, Web &amp; Desktop Developer</p>
-          
+
           <div class="profile-badges">
             <img class="badge-img" src="https://img.shields.io/badge/40대-아재개발자-FF6B35?style=for-the-badge" alt="40대 아재개발자" />
             <img class="badge-img" src="https://img.shields.io/badge/두%20아들-육아중인%20아빠-4A90D9?style=for-the-badge" alt="두 아들 육아중인 아빠" />
@@ -798,7 +798,7 @@
     </div>
 
     <div class="app-grid" id="app-grid">
-      
+
     <article class="app-card" data-platform="android" style="animation-delay: 0s">
       <div class="card-header">
         <img class="app-icon" src="icons/app.briodo.png" alt="BrioDo — Do it with brio." loading="lazy" />
@@ -811,10 +811,10 @@
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-production">Production</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/store/apps/details?id=app.briodo" target="_blank" rel="noopener" class="btn btn-android">
             <span class="btn-icon">▶</span> Play Store
@@ -830,14 +830,14 @@
           <span class="app-package" title="io.jeiel85.dockmode">io.jeiel85.dockmode</span>
         </div>
       </div>
-      
+
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-testing">Closed Testing</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/apps/testing/io.jeiel85.dockmode" target="_blank" rel="noopener" class="btn btn-secondary">
             🧪 Join Beta
@@ -856,20 +856,17 @@
           <span class="app-package" title="com.jeiel85.luminadaily">com.jeiel85.luminadaily</span>
         </div>
       </div>
-      
+      <p class="app-desc">매일 아침 AI가 생성한 오늘의 명언으로 하루를 시작하세요.</p>
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
-        <span class="status-badge status-testing">Closed Testing</span>
-        
+        <span class="status-badge status-production">Production</span>
+
       </div>
-      
-      
+
+
         <div class="app-actions">
-          <a href="https://play.google.com/apps/testing/com.jeiel85.luminadaily" target="_blank" rel="noopener" class="btn btn-secondary">
-            🧪 Join Beta
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.jeiel85.luminadaily" target="_blank" rel="noopener" class="btn btn-ghost">
-            ▶ Play Store
+          <a href="https://play.google.com/store/apps/details?id=com.jeiel85.luminadaily" target="_blank" rel="noopener" class="btn btn-android">
+            <span class="btn-icon">▶</span> Play Store
           </a>
         </div>
     </article>
@@ -882,14 +879,14 @@
           <span class="app-package" title="com.markleaf.notes">com.markleaf.notes</span>
         </div>
       </div>
-      
+
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-testing">Closed Testing</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/apps/testing/com.markleaf.notes" target="_blank" rel="noopener" class="btn btn-secondary">
             🧪 Join Beta
@@ -908,14 +905,14 @@
           <span class="app-package" title="com.jeiel85.nightseedbastion">com.jeiel85.nightseedbastion</span>
         </div>
       </div>
-      
+
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-testing">Closed Testing</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/apps/testing/com.jeiel85.nightseedbastion" target="_blank" rel="noopener" class="btn btn-secondary">
             🧪 Join Beta
@@ -934,14 +931,14 @@
           <span class="app-package" title="com.nightseed.survivor">com.nightseed.survivor</span>
         </div>
       </div>
-      
+
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-testing">Closed Testing</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/apps/testing/com.nightseed.survivor" target="_blank" rel="noopener" class="btn btn-secondary">
             🧪 Join Beta
@@ -960,14 +957,14 @@
           <span class="app-package" title="io.pulpit.ink">io.pulpit.ink</span>
         </div>
       </div>
-      
+
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-testing">Closed Testing</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/apps/testing/io.pulpit.ink" target="_blank" rel="noopener" class="btn btn-secondary">
             🧪 Join Beta
@@ -986,14 +983,14 @@
           <span class="app-package" title="com.veritasbible.app">com.veritasbible.app</span>
         </div>
       </div>
-      
+
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-testing">Closed Testing</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/apps/testing/com.veritasbible.app" target="_blank" rel="noopener" class="btn btn-secondary">
             🧪 Join Beta
@@ -1012,14 +1009,14 @@
           <span class="app-package" title="com.jeiel85.wildhavenidle">com.jeiel85.wildhavenidle</span>
         </div>
       </div>
-      
+
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-testing">Closed Testing</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/apps/testing/com.jeiel85.wildhavenidle" target="_blank" rel="noopener" class="btn btn-secondary">
             🧪 Join Beta
@@ -1038,14 +1035,14 @@
           <span class="app-package" title="com.jeiel.zephyr_sky">com.jeiel.zephyr_sky</span>
         </div>
       </div>
-      
+
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-testing">Closed Testing</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/apps/testing/com.jeiel.zephyr_sky" target="_blank" rel="noopener" class="btn btn-secondary">
             🧪 Join Beta
@@ -1064,14 +1061,14 @@
           <span class="app-package" title="com.bebecup.app">com.bebecup.app</span>
         </div>
       </div>
-      
+
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-testing">Closed Testing</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/apps/testing/com.bebecup.app" target="_blank" rel="noopener" class="btn btn-secondary">
             🧪 Join Beta
@@ -1090,14 +1087,14 @@
           <span class="app-package" title="com.markscene.app">com.markscene.app</span>
         </div>
       </div>
-      
+
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-testing">Closed Testing</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/apps/testing/com.markscene.app" target="_blank" rel="noopener" class="btn btn-secondary">
             🧪 Join Beta
@@ -1110,20 +1107,20 @@
 
     <article class="app-card" data-platform="android" style="animation-delay: 0.6000000000000001s">
       <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">별</div>
+        <img class="app-icon" src="icons/com.aistudio.starguide.qkvmsh.png" alt="별자리 탐험 — 실시간 AR 천체 관측" loading="lazy" />
         <div class="card-title-area">
           <h3 class="app-name" title="별자리 탐험 — 실시간 AR 천체 관측">별자리 탐험 — 실시간 AR 천체 관측</h3>
           <span class="app-package" title="com.aistudio.starguide.qkvmsh">com.aistudio.starguide.qkvmsh</span>
         </div>
       </div>
-      
+
       <div class="card-meta">
         <span class="platform-badge platform-android">📱 Android</span>
         <span class="status-badge status-testing">Closed Testing</span>
-        
+
       </div>
-      
-      
+
+
         <div class="app-actions">
           <a href="https://play.google.com/apps/testing/com.aistudio.starguide.qkvmsh" target="_blank" rel="noopener" class="btn btn-secondary">
             🧪 Join Beta
@@ -1146,16 +1143,16 @@
       <div class="card-meta">
         <span class="platform-badge platform-web">🌐 Web App</span>
         <span class="status-badge status-production">Production</span>
-        
+
       </div>
-      
-      
+
+
       <div class="app-actions">
-        
+
         <a href="https://score-fetcher.vercel.app" target="_blank" rel="noopener" class="btn btn-web">
           🌐 Launch Web App
         </a>
-        
+
         <a href="https://github.com/jeiel85/score-fetcher-web" target="_blank" rel="noopener" class="btn btn-ghost">
           💻 GitHub
         </a>
@@ -1174,16 +1171,16 @@
       <div class="card-meta">
         <span class="platform-badge platform-web">🌐 Web App</span>
         <span class="status-badge status-production">Production</span>
-        
+
       </div>
-      
-      
+
+
       <div class="app-actions">
-        
+
         <a href="https://jeiel85.github.io/scripture-flux-web/" target="_blank" rel="noopener" class="btn btn-web">
           🌐 Launch Web App
         </a>
-        
+
         <a href="https://github.com/jeiel85/scripture-flux-web" target="_blank" rel="noopener" class="btn btn-ghost">
           💻 GitHub
         </a>
@@ -1202,16 +1199,16 @@
       <div class="card-meta">
         <span class="platform-badge platform-web">🌐 Web App</span>
         <span class="status-badge status-production">Production</span>
-        
+
       </div>
-      
-      
+
+
       <div class="app-actions">
-        
+
         <a href="https://mongil-coupon.vercel.app" target="_blank" rel="noopener" class="btn btn-web">
           🌐 Launch Web App
         </a>
-        
+
         <a href="https://github.com/jeiel85/mongil-coupon-web" target="_blank" rel="noopener" class="btn btn-ghost">
           💻 GitHub
         </a>
@@ -1230,16 +1227,16 @@
       <div class="card-meta">
         <span class="platform-badge platform-web">🌐 Web App</span>
         <span class="status-badge status-production">Production</span>
-        
+
       </div>
-      
-      
+
+
       <div class="app-actions">
-        
+
         <a href="https://ruby-momentum.onrender.com" target="_blank" rel="noopener" class="btn btn-web">
           🌐 Launch Web App
         </a>
-        
+
         <a href="https://github.com/jeiel85/ruby-momentum-web" target="_blank" rel="noopener" class="btn btn-ghost">
           💻 GitHub
         </a>
@@ -1258,16 +1255,16 @@
       <div class="card-meta">
         <span class="platform-badge platform-desktop">💻 Desktop</span>
         <span class="status-badge status-production">Production</span>
-        
+
       </div>
-      
-      
+
+
       <div class="app-actions">
-        
+
         <a href="https://github.com/jeiel85/localpdf-studio-desktop" target="_blank" rel="noopener" class="btn btn-desktop">
           💾 Download / GitHub
         </a>
-        
+
       </div>
     </article>
 
@@ -1283,16 +1280,16 @@
       <div class="card-meta">
         <span class="platform-badge platform-desktop">💻 Desktop</span>
         <span class="status-badge status-production">Production</span>
-        
+
       </div>
-      
-      
+
+
       <div class="app-actions">
-        
+
         <a href="https://github.com/jeiel85/claude-usage-tray-windows" target="_blank" rel="noopener" class="btn btn-desktop">
           💾 Download / GitHub
         </a>
-        
+
       </div>
     </article>
 
@@ -1308,16 +1305,16 @@
       <div class="card-meta">
         <span class="platform-badge platform-desktop">💻 Desktop</span>
         <span class="status-badge status-production">Production</span>
-        
+
       </div>
-      
-      
+
+
       <div class="app-actions">
-        
+
         <a href="https://github.com/jeiel85/link-dock-windows" target="_blank" rel="noopener" class="btn btn-desktop">
           💾 Download / GitHub
         </a>
-        
+
       </div>
     </article>
 
@@ -1333,16 +1330,16 @@
       <div class="card-meta">
         <span class="platform-badge platform-desktop">💻 Desktop</span>
         <span class="status-badge status-production">Production</span>
-        
+
       </div>
-      
-      
+
+
       <div class="app-actions">
-        
+
         <a href="https://github.com/jeiel85/updio-windows" target="_blank" rel="noopener" class="btn btn-desktop">
           💾 Download / GitHub
         </a>
-        
+
       </div>
     </article>
 
@@ -1358,16 +1355,16 @@
       <div class="card-meta">
         <span class="platform-badge platform-desktop">💻 Desktop</span>
         <span class="status-badge status-production">Production</span>
-        
+
       </div>
-      
-      
+
+
       <div class="app-actions">
-        
+
         <a href="https://github.com/jeiel85/process-guardian-windows" target="_blank" rel="noopener" class="btn btn-desktop">
           💾 Download / GitHub
         </a>
-        
+
       </div>
     </article>
 
@@ -1383,16 +1380,16 @@
       <div class="card-meta">
         <span class="platform-badge platform-desktop">💻 Desktop</span>
         <span class="status-badge status-production">Production</span>
-        
+
       </div>
-      
-      
+
+
       <div class="app-actions">
-        
+
         <a href="https://github.com/jeiel85/cli-here-windows" target="_blank" rel="noopener" class="btn btn-desktop">
           💾 Download / GitHub
         </a>
-        
+
       </div>
     </article>
     </div>
@@ -1402,7 +1399,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="update-time">Last updated: 2026-05-27 10:40 KST</p>
+      <p class="update-time">Last updated: 2026-05-27 12:29 KST</p>
       <p class="links">
         <a href="https://github.com/jeiel85" target="_blank">GitHub Profile</a>
         <span class="sep">·</span>
