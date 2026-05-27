@@ -105,6 +105,13 @@
       "iconUrl": "icons/com.jeiel85.breathspace.png"
     },
     {
+      "name": "아워 글래스 — Flux Hourglass",
+      "package": "com.flux.hourglass",
+      "platform": "android",
+      "status": "draft",
+      "iconUrl": "icons/com.flux.hourglass.png"
+    },
+    {
       "name": "Score Fetcher — 찬양팀 콘티 & 악보 PWA",
       "platform": "web",
       "status": "production",
