@@ -91,6 +91,13 @@
       "iconUrl": "icons/com.markscene.app.png"
     },
     {
+      "name": "별자리 탐험 — 실시간 AR 천체 관측",
+      "package": "com.aistudio.starguide.qkvmsh",
+      "platform": "android",
+      "status": "closed_testing",
+      "iconUrl": "icons/com.aistudio.starguide.qkvmsh.png"
+    },
+    {
       "name": "Score Fetcher — 찬양팀 콘티 & 악보 PWA",
       "platform": "web",
       "status": "production",
