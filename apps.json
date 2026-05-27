@@ -56,7 +56,7 @@
       "iconUrl": "icons/io.pulpit.ink.png"
     },
     {
-      "name": "Veritas Bible — 오프라인 관주 성경",
+      "name": "Veritas Bible — 오프라인 한영 성경",
       "package": "com.veritasbible.app",
       "platform": "android",
       "status": "closed_testing",
@@ -71,10 +71,10 @@
     },
     {
       "name": "Zephyr Sky",
-      "package": "com.jeiel.zephyr_sky",
+      "package": "com.jeiel85.zephyr_sky",
       "platform": "android",
       "status": "closed_testing",
-      "iconUrl": "icons/com.jeiel.zephyr_sky.png"
+      "iconUrl": "icons/com.jeiel85.zephyr_sky.png"
     },
     {
       "name": "베베컵",
@@ -91,11 +91,18 @@
       "iconUrl": "icons/com.markscene.app.png"
     },
     {
-      "name": "별자리 탐험 — 실시간 AR 천체 관측",
-      "package": "com.aistudio.starguide.qkvmsh",
+      "name": "별자리 탐험: AR 별자리 가이드",
+      "package": "io.stargaze.explorer",
       "platform": "android",
       "status": "closed_testing",
-      "iconUrl": "icons/com.aistudio.starguide.qkvmsh.png"
+      "iconUrl": "icons/io.stargaze.explorer.png"
+    },
+    {
+      "name": "숨 쉴 틈 — Breath Space",
+      "package": "com.jeiel85.breathspace",
+      "platform": "android",
+      "status": "closed_testing",
+      "iconUrl": "icons/com.jeiel85.breathspace.png"
     },
     {
       "name": "Score Fetcher — 찬양팀 콘티 & 악보 PWA",
