@@ -71,10 +71,10 @@
     },
     {
       "name": "Zephyr Sky",
-      "package": "com.jeiel85.zephyr_sky",
+      "package": "com.jeiel.zephyr_sky",
       "platform": "android",
       "status": "closed_testing",
-      "iconUrl": "icons/com.jeiel85.zephyr_sky.png"
+      "iconUrl": "icons/com.jeiel.zephyr_sky.png"
     },
     {
       "name": "베베컵",
