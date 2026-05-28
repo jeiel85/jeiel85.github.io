@@ -8,6 +8,9 @@ on:
   push:
     paths:
       - 'apps.json'
+      - 'scripts/build.js'
+      - 'index.html'
+      - '.github/workflows/**'
 
 permissions:
   contents: write
