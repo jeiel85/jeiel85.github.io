@@ -392,6 +392,23 @@
     .app-card.hidden {
       display: none;
     }
+    .app-card.highlight-pulse {
+      animation: cardHighlightPulse 2s ease-in-out infinite alternate;
+      border-color: var(--color-android);
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.45);
+    }
+    @keyframes cardHighlightPulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+        border-color: rgba(16, 185, 129, 0.4);
+      }
+      100% {
+        transform: scale(1.02);
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.55);
+        border-color: rgba(16, 185, 129, 0.95);
+      }
+    }
 
     @keyframes cardIn {
       to {
@@ -847,7 +864,7 @@
 
     <div class="app-grid" id="app-grid">
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0s">
+    <article class="app-card" id="app.briodo" data-platform="android" style="animation-delay: 0s">
       <div class="card-header">
         <img class="app-icon" src="icons/app.briodo.png" alt="BrioDo — Do it with brio." loading="lazy" />
         <div class="card-title-area">
@@ -881,7 +898,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.05s">
+    <article class="app-card" id="io.jeiel85.dockmode" data-platform="android" style="animation-delay: 0.05s">
       <div class="card-header">
         <img class="app-icon" src="icons/io.jeiel85.dockmode.png" alt="DockMode - Standby Clock" loading="lazy" />
         <div class="card-title-area">
@@ -918,7 +935,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.1s">
+    <article class="app-card" id="com.jeiel85.luminadaily" data-platform="android" style="animation-delay: 0.1s">
       <div class="card-header">
         <img class="app-icon" src="icons/com.jeiel85.luminadaily.png" alt="Lumina Daily - 오늘의 명언" loading="lazy" />
         <div class="card-title-area">
@@ -952,7 +969,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.15000000000000002s">
+    <article class="app-card" id="com.markleaf.notes" data-platform="android" style="animation-delay: 0.15000000000000002s">
       <div class="card-header">
         <img class="app-icon" src="icons/com.markleaf.notes.png" alt="Markleaf" loading="lazy" />
         <div class="card-title-area">
@@ -989,7 +1006,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.2s">
+    <article class="app-card" id="com.jeiel85.nightseedbastion" data-platform="android" style="animation-delay: 0.2s">
       <div class="card-header">
         <img class="app-icon" src="icons/com.jeiel85.nightseedbastion.png" alt="Nightseed Bastion" loading="lazy" />
         <div class="card-title-area">
@@ -1026,7 +1043,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.25s">
+    <article class="app-card" id="com.nightseed.survivor" data-platform="android" style="animation-delay: 0.25s">
       <div class="card-header">
         <img class="app-icon" src="icons/com.nightseed.survivor.png" alt="Nightseed Survivor" loading="lazy" />
         <div class="card-title-area">
@@ -1063,7 +1080,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.30000000000000004s">
+    <article class="app-card" id="io.pulpit.ink" data-platform="android" style="animation-delay: 0.30000000000000004s">
       <div class="card-header">
         <img class="app-icon" src="icons/io.pulpit.ink.png" alt="Pulpit Ink — 설교 녹음·필기" loading="lazy" />
         <div class="card-title-area">
@@ -1100,7 +1117,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.35000000000000003s">
+    <article class="app-card" id="com.veritasbible.app" data-platform="android" style="animation-delay: 0.35000000000000003s">
       <div class="card-header">
         <img class="app-icon" src="icons/com.veritasbible.app.png" alt="Veritas Bible — 오프라인 한영 성경" loading="lazy" />
         <div class="card-title-area">
@@ -1137,7 +1154,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.4s">
+    <article class="app-card" id="com.jeiel85.wildhavenidle" data-platform="android" style="animation-delay: 0.4s">
       <div class="card-header">
         <img class="app-icon" src="icons/com.jeiel85.wildhavenidle.png" alt="Wild Haven Idle" loading="lazy" />
         <div class="card-title-area">
@@ -1174,7 +1191,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.45s">
+    <article class="app-card" id="com.jeiel.zephyr_sky" data-platform="android" style="animation-delay: 0.45s">
       <div class="card-header">
         <img class="app-icon" src="icons/com.jeiel.zephyr_sky.png" alt="Zephyr Sky" loading="lazy" />
         <div class="card-title-area">
@@ -1211,7 +1228,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.5s">
+    <article class="app-card" id="com.bebecup.app" data-platform="android" style="animation-delay: 0.5s">
       <div class="card-header">
         <img class="app-icon" src="icons/com.bebecup.app.png" alt="베베컵" loading="lazy" />
         <div class="card-title-area">
@@ -1248,7 +1265,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.55s">
+    <article class="app-card" id="com.markscene.app" data-platform="android" style="animation-delay: 0.55s">
       <div class="card-header">
         <img class="app-icon" src="icons/com.markscene.app.png" alt="MarkScene" loading="lazy" />
         <div class="card-title-area">
@@ -1285,7 +1302,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.6000000000000001s">
+    <article class="app-card" id="io.stargaze.explorer" data-platform="android" style="animation-delay: 0.6000000000000001s">
       <div class="card-header">
         <img class="app-icon" src="icons/io.stargaze.explorer.png" alt="별자리 탐험: AR 별자리 가이드" loading="lazy" />
         <div class="card-title-area">
@@ -1322,7 +1339,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.65s">
+    <article class="app-card" id="com.jeiel85.breathspace" data-platform="android" style="animation-delay: 0.65s">
       <div class="card-header">
         <img class="app-icon" src="icons/com.jeiel85.breathspace.png" alt="숨 쉴 틈 — Breath Space" loading="lazy" />
         <div class="card-title-area">
@@ -1359,7 +1376,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="android" style="animation-delay: 0.7000000000000001s">
+    <article class="app-card" id="com.flux.hourglass" data-platform="android" style="animation-delay: 0.7000000000000001s">
       <div class="card-header">
         <img class="app-icon" src="icons/com.flux.hourglass.png" alt="아워 글래스 — Flux Hourglass" loading="lazy" />
         <div class="card-title-area">
@@ -1396,7 +1413,7 @@
         </div>
     </article>
 
-    <article class="app-card" data-platform="web" style="animation-delay: 0.75s">
+    <article class="app-card" id="score-fetcher-pwa" data-platform="web" style="animation-delay: 0.75s">
       <div class="card-header">
         <img class="app-icon" src="icons/score-fetcher-web.png" alt="Score Fetcher — 찬양팀 콘티 &amp; 악보 PWA" loading="lazy" />
         <div class="card-title-area">
@@ -1414,7 +1431,7 @@
 
       <div class="app-actions">
 
-        <a href="https://score-fetcher.vercel.app" target="_blank" rel="noopener" class="btn btn-web">
+        <a href="https://jeiel85.github.io/score-fetcher-web/" target="_blank" rel="noopener" class="btn btn-web">
           🌐 Launch Web App
         </a>
 
@@ -1427,7 +1444,7 @@
             data-status="production"
             data-name="Score Fetcher — 찬양팀 콘티 &amp; 악보 PWA"
             data-package=""
-            data-url="https://score-fetcher.vercel.app"
+            data-url="https://jeiel85.github.io/score-fetcher-web/"
             data-desc="예배 콘티 작성, 악보 검색, 통합 PDF 악보집 생성, 실시간 공유와 푸시 알림을 제공하는 스마트 찬양팀용 Progressive Web App (PWA)."
             data-github="https://github.com/jeiel85/score-fetcher-web">
             📋 Copy Link
@@ -1435,7 +1452,7 @@
       </div>
     </article>
 
-    <article class="app-card" data-platform="web" style="animation-delay: 0.8s">
+    <article class="app-card" id="scriptureflux-" data-platform="web" style="animation-delay: 0.8s">
       <div class="card-header">
         <img class="app-icon" src="icons/scripture-flux-web.png" alt="ScriptureFlux — 성경 교차 참조 시각화 네트워크" loading="lazy" />
         <div class="card-title-area">
@@ -1474,7 +1491,7 @@
       </div>
     </article>
 
-    <article class="app-card" data-platform="web" style="animation-delay: 0.8500000000000001s">
+    <article class="app-card" id="mongil-coupon-" data-platform="web" style="animation-delay: 0.8500000000000001s">
       <div class="card-header">
         <img class="app-icon" src="icons/mongil-coupon-web.ico" alt="Mongil Coupon — 몬길 쿠폰 자동 등록기" loading="lazy" />
         <div class="card-title-area">
@@ -1492,7 +1509,7 @@
 
       <div class="app-actions">
 
-        <a href="https://mongil-coupon.vercel.app" target="_blank" rel="noopener" class="btn btn-web">
+        <a href="https://jeiel85.github.io/mongil-coupon-web/" target="_blank" rel="noopener" class="btn btn-web">
           🌐 Launch Web App
         </a>
 
@@ -1505,7 +1522,7 @@
             data-status="production"
             data-name="Mongil Coupon — 몬길 쿠폰 자동 등록기"
             data-package=""
-            data-url="https://mongil-coupon.vercel.app"
+            data-url="https://jeiel85.github.io/mongil-coupon-web/"
             data-desc="넷마블 &#039;몬스터길들이기&#039; 쿠폰들을 일괄적으로 수집하여 복잡한 과정 없이 한 번에 편리하게 자동 등록해 주는 웹 서비스."
             data-github="https://github.com/jeiel85/mongil-coupon-web">
             📋 Copy Link
@@ -1513,7 +1530,7 @@
       </div>
     </article>
 
-    <article class="app-card" data-platform="web" style="animation-delay: 0.9s">
+    <article class="app-card" id="ruby-momentum-" data-platform="web" style="animation-delay: 0.9s">
       <div class="card-header">
         <img class="app-icon" src="icons/ruby-momentum-web.png" alt="Ruby Momentum — 루비 온 레일즈 소셜 포스팅" loading="lazy" />
         <div class="card-title-area">
@@ -1552,7 +1569,7 @@
       </div>
     </article>
 
-    <article class="app-card" data-platform="desktop" style="animation-delay: 0.9500000000000001s">
+    <article class="app-card" id="localpdf-studio-pdf-" data-platform="desktop" style="animation-delay: 0.9500000000000001s">
       <div class="card-header">
         <img class="app-icon" src="icons/localpdf-studio-desktop.png" alt="LocalPDF Studio — 개인정보 안전 로컬 PDF 편집기" loading="lazy" />
         <div class="card-title-area">
@@ -1588,7 +1605,7 @@
       </div>
     </article>
 
-    <article class="app-card" data-platform="desktop" style="animation-delay: 1s">
+    <article class="app-card" id="claude-usage-tray-ai-" data-platform="desktop" style="animation-delay: 1s">
       <div class="card-header">
         <img class="app-icon" src="icons/claude-usage-tray-windows.ico" alt="Claude Usage Tray — AI 사용량 모니터링" loading="lazy" />
         <div class="card-title-area">
@@ -1624,7 +1641,7 @@
       </div>
     </article>
 
-    <article class="app-card" data-platform="desktop" style="animation-delay: 1.05s">
+    <article class="app-card" id="linkdock-" data-platform="desktop" style="animation-delay: 1.05s">
       <div class="card-header">
         <img class="app-icon" src="icons/link-dock-windows.png" alt="LinkDock — 데스크톱 분석형 영상 다운로더" loading="lazy" />
         <div class="card-title-area">
@@ -1660,7 +1677,7 @@
       </div>
     </article>
 
-    <article class="app-card" data-platform="desktop" style="animation-delay: 1.1s">
+    <article class="app-card" id="updio-ai-" data-platform="desktop" style="animation-delay: 1.1s">
       <div class="card-header">
         <img class="app-icon" src="icons/updio-windows.png" alt="UpdIO — AI 기반 비디오 업스케일러 &amp; 플레이어" loading="lazy" />
         <div class="card-title-area">
@@ -1696,7 +1713,7 @@
       </div>
     </article>
 
-    <article class="app-card" data-platform="desktop" style="animation-delay: 1.1500000000000001s">
+    <article class="app-card" id="process-guardian-" data-platform="desktop" style="animation-delay: 1.1500000000000001s">
       <div class="card-header">
         <img class="app-icon" src="icons/process-guardian-windows.png" alt="Process Guardian — 프로세스 실시간 종료 감시자" loading="lazy" />
         <div class="card-title-area">
@@ -1732,7 +1749,7 @@
       </div>
     </article>
 
-    <article class="app-card" data-platform="desktop" style="animation-delay: 1.2000000000000002s">
+    <article class="app-card" id="cli-here-ai-" data-platform="desktop" style="animation-delay: 1.2000000000000002s">
       <div class="card-header">
         <img class="app-icon" src="icons/cli-here-windows.png" alt="CLI Here — 탐색기 AI 코딩 에이전트 빠른 실행기" loading="lazy" />
         <div class="card-title-area">
@@ -1774,7 +1791,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="update-time">Last updated: 2026-05-28 16:54 KST</p>
+      <p class="update-time">Last updated: 2026-05-28 22:18 KST</p>
       <p class="links">
         <a href="https://github.com/jeiel85" target="_blank">GitHub Profile</a>
         <span class="sep">·</span>
@@ -1817,6 +1834,42 @@
           }
         });
       });
+
+      // ─── Hash Anchor & Highlight Handler ───
+      function handleHash() {
+        const hash = window.location.hash;
+        if (!hash) return;
+
+        const targetId = hash.substring(1);
+        const targetCard = document.getElementById(targetId);
+        if (!targetCard) return;
+
+        // If the platform is not 'all', ensure we switch the filter to the target card's platform so it becomes visible
+        const platform = targetCard.dataset.platform;
+        if (platform) {
+          const matchingBtn = Array.from(filterBtns).find(btn => btn.dataset.filter === platform || btn.dataset.filter === 'all');
+          const activeBtn = document.querySelector('.filter-btn.active');
+
+          if (activeBtn && activeBtn.dataset.filter !== 'all' && activeBtn.dataset.filter !== platform) {
+            const allBtn = Array.from(filterBtns).find(btn => btn.dataset.filter === 'all');
+            if (allBtn) allBtn.click();
+          }
+        }
+
+        // Scroll to card smoothly
+        setTimeout(() => {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+          // Add highlighting class/animation
+          targetCard.classList.add('highlight-pulse');
+          setTimeout(() => {
+            targetCard.classList.remove('highlight-pulse');
+          }, 4000);
+        }, 300);
+      }
+
+      window.addEventListener('hashchange', handleHash);
+      setTimeout(handleHash, 500);
 
       // ─── Toast Notification System ───
       function showToast(message) {
@@ -1870,20 +1923,16 @@
 아래 링크로 참여해 주신 후 댓글로 본인의 테스트 링크를 남겨주시면 저도 즉시 참여하겠습니다! (스크린샷 인증 환영합니다)
 
 ▶ 앱 이름: ${name}
-1. 구글 그룹스 가입: https://groups.google.com/g/sitdory-tester
-2. 테스터 등록 (옵트인): https://play.google.com/apps/testing/${pkg}
-3. 다운로드 링크: https://play.google.com/store/apps/details?id=${pkg}
+👉 테스트 참여 링크 (구글 그룹스 가입 & 테스터 등록): https://jeiel85.github.io/#${pkg}
 
 소중한 시간 내어 참여해 주셔서 진심으로 감사드립니다. 함께 완주해서 성공적으로 출시합시다!
 
 [en-US]
 Hello! I'm looking for mutual closed testing for my Android app.
-Please join my test using the links below, and leave your test links in the comments. I will test yours back immediately! (Screenshots are highly appreciated)
+Please join my test using the link below, and leave your test links in the comments. I will test yours back immediately! (Screenshots are highly appreciated)
 
 ▶ App Name: ${name}
-1. Join Google Group: https://groups.google.com/g/sitdory-tester
-2. Opt-in Web Link: https://play.google.com/apps/testing/${pkg}
-3. Play Store Link: https://play.google.com/store/apps/details?id=${pkg}
+👉 Test Join Link (Google Group & Opt-in): https://jeiel85.github.io/#${pkg}
 
 Thank you so much for your time and support. Let's launch successfully together!`;
             toastMsg = '비공개 테스트 모집 문구가 복사되었습니다! 📋✨';

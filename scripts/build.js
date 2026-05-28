@@ -420,8 +420,10 @@ function getCardHTML(project, scraped, index) {
       </div>`;
   }
 
+  const elementId = isAndroid ? project.package : (project.name ? project.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') : '');
+
   return `
-    <article class="app-card" data-platform="${project.platform || 'android'}" style="animation-delay: ${index * 0.05}s">
+    <article class="app-card" ${elementId ? `id="${elementId}"` : ''} data-platform="${project.platform || 'android'}" style="animation-delay: ${index * 0.05}s">
       <div class="card-header">
         ${iconHTML}
         <div class="card-title-area">
@@ -820,6 +822,23 @@ function getCSS() {
     }
     .app-card.hidden {
       display: none;
+    }
+    .app-card.highlight-pulse {
+      animation: cardHighlightPulse 2s ease-in-out infinite alternate;
+      border-color: var(--color-android);
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.45);
+    }
+    @keyframes cardHighlightPulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+        border-color: rgba(16, 185, 129, 0.4);
+      }
+      100% {
+        transform: scale(1.02);
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.55);
+        border-color: rgba(16, 185, 129, 0.95);
+      }
     }
 
     @keyframes cardIn {
@@ -1236,6 +1255,42 @@ function getJS() {
         });
       });
 
+      // ─── Hash Anchor & Highlight Handler ───
+      function handleHash() {
+        const hash = window.location.hash;
+        if (!hash) return;
+        
+        const targetId = hash.substring(1);
+        const targetCard = document.getElementById(targetId);
+        if (!targetCard) return;
+
+        // If the platform is not 'all', ensure we switch the filter to the target card's platform so it becomes visible
+        const platform = targetCard.dataset.platform;
+        if (platform) {
+          const matchingBtn = Array.from(filterBtns).find(btn => btn.dataset.filter === platform || btn.dataset.filter === 'all');
+          const activeBtn = document.querySelector('.filter-btn.active');
+          
+          if (activeBtn && activeBtn.dataset.filter !== 'all' && activeBtn.dataset.filter !== platform) {
+            const allBtn = Array.from(filterBtns).find(btn => btn.dataset.filter === 'all');
+            if (allBtn) allBtn.click();
+          }
+        }
+
+        // Scroll to card smoothly
+        setTimeout(() => {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+          // Add highlighting class/animation
+          targetCard.classList.add('highlight-pulse');
+          setTimeout(() => {
+            targetCard.classList.remove('highlight-pulse');
+          }, 4000);
+        }, 300);
+      }
+
+      window.addEventListener('hashchange', handleHash);
+      setTimeout(handleHash, 500);
+
       // ─── Toast Notification System ───
       function showToast(message) {
         let container = document.querySelector('.toast-container');
@@ -1288,20 +1343,16 @@ function getJS() {
 아래 링크로 참여해 주신 후 댓글로 본인의 테스트 링크를 남겨주시면 저도 즉시 참여하겠습니다! (스크린샷 인증 환영합니다)
 
 ▶ 앱 이름: \${name}
-1. 구글 그룹스 가입: https://groups.google.com/g/sitdory-tester
-2. 테스터 등록 (옵트인): https://play.google.com/apps/testing/\${pkg}
-3. 다운로드 링크: https://play.google.com/store/apps/details?id=\${pkg}
+👉 테스트 참여 링크 (구글 그룹스 가입 & 테스터 등록): https://jeiel85.github.io/#\${pkg}
 
 소중한 시간 내어 참여해 주셔서 진심으로 감사드립니다. 함께 완주해서 성공적으로 출시합시다!
 
 [en-US]
 Hello! I'm looking for mutual closed testing for my Android app. 
-Please join my test using the links below, and leave your test links in the comments. I will test yours back immediately! (Screenshots are highly appreciated)
+Please join my test using the link below, and leave your test links in the comments. I will test yours back immediately! (Screenshots are highly appreciated)
 
 ▶ App Name: \${name}
-1. Join Google Group: https://groups.google.com/g/sitdory-tester
-2. Opt-in Web Link: https://play.google.com/apps/testing/\${pkg}
-3. Play Store Link: https://play.google.com/store/apps/details?id=\${pkg}
+👉 Test Join Link (Google Group & Opt-in): https://jeiel85.github.io/#\${pkg}
 
 Thank you so much for your time and support. Let's launch successfully together!\`;
             toastMsg = '비공개 테스트 모집 문구가 복사되었습니다! 📋✨';

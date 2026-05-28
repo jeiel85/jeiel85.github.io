@@ -116,7 +116,7 @@
       "platform": "web",
       "status": "production",
       "description": "예배 콘티 작성, 악보 검색, 통합 PDF 악보집 생성, 실시간 공유와 푸시 알림을 제공하는 스마트 찬양팀용 Progressive Web App (PWA).",
-      "url": "https://score-fetcher.vercel.app",
+      "url": "https://jeiel85.github.io/score-fetcher-web/",
       "githubUrl": "https://github.com/jeiel85/score-fetcher-web",
       "iconUrl": "icons/score-fetcher-web.png"
     },
@@ -134,7 +134,7 @@
       "platform": "web",
       "status": "production",
       "description": "넷마블 '몬스터길들이기' 쿠폰들을 일괄적으로 수집하여 복잡한 과정 없이 한 번에 편리하게 자동 등록해 주는 웹 서비스.",
-      "url": "https://mongil-coupon.vercel.app",
+      "url": "https://jeiel85.github.io/mongil-coupon-web/",
       "githubUrl": "https://github.com/jeiel85/mongil-coupon-web",
       "iconUrl": "icons/mongil-coupon-web.ico"
     },
