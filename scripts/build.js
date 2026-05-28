@@ -24,6 +24,64 @@ const GRADIENTS = [
   'linear-gradient(135deg, #c471f5 0%, #fa71cd 100%)',
 ];
 
+// ─── Android Package Lockdown & Validation ───────────
+const LOCKED_ANDROID_PACKAGES = {
+  "app.briodo": "BrioDo — Do it with brio.",
+  "io.jeiel85.dockmode": "DockMode - Standby Clock",
+  "com.jeiel85.luminadaily": "Lumina Daily - 오늘의 명언",
+  "com.markleaf.notes": "Markleaf",
+  "com.jeiel85.nightseedbastion": "Nightseed Bastion",
+  "com.nightseed.survivor": "Nightseed Survivor",
+  "io.pulpit.ink": "Pulpit Ink — 설교 녹음·필기",
+  "com.veritasbible.app": "Veritas Bible — 오프라인 한영 성경",
+  "com.jeiel85.wildhavenidle": "Wild Haven Idle",
+  "com.jeiel.zephyr_sky": "Zephyr Sky",
+  "com.bebecup.app": "베베컵",
+  "com.markscene.app": "MarkScene",
+  "io.stargaze.explorer": "별자리 탐험: AR 별자리 가이드",
+  "com.jeiel85.breathspace": "숨 쉴 틈 — Breath Space",
+  "com.flux.hourglass": "아워 글래스 — Flux Hourglass"
+};
+
+function validateAndroidPackages(projects) {
+  console.log('🔒 Validating Android package names (Lockdown Active)...');
+  
+  // Check if any locked package has been modified or removed
+  for (const [pkg, name] of Object.entries(LOCKED_ANDROID_PACKAGES)) {
+    const matchingProj = projects.find(p => p.package === pkg);
+    if (!matchingProj) {
+      // Find if there's a project with the same name but different package
+      const sameNameProj = projects.find(p => p.name === name);
+      if (sameNameProj) {
+        throw new Error(`[Lockdown Violation] Package name for "${name}" has been modified from "${pkg}" to "${sameNameProj.package}"! Android package names are locked down.`);
+      } else {
+        throw new Error(`[Lockdown Violation] Locked Android project "${name}" (${pkg}) has been removed from apps.json!`);
+      }
+    }
+  }
+
+  // Validate format and opt-in links for all Android projects
+  for (const proj of projects) {
+    if (proj.platform === 'android' || !proj.platform) {
+      if (!proj.package) {
+        throw new Error(`[Validation Error] Android project "${proj.name}" is missing a "package" field.`);
+      }
+      
+      // Standard package name format check
+      const packageRegex = /^[a-z][a-z0-9_]*(\.[a-z0-9_]+)+[0-9a-z_]$/i;
+      if (!packageRegex.test(proj.package)) {
+        throw new Error(`[Validation Error] Android project "${proj.name}" has an invalid package name format: "${proj.package}".`);
+      }
+
+      // Opt-in link validation (if provided)
+      if (proj.optInUrl && !proj.optInUrl.includes(proj.package)) {
+        throw new Error(`[Validation Error] Android project "${proj.name}" has an optInUrl ("${proj.optInUrl}") that does not match its package name ("${proj.package}").`);
+      }
+    }
+  }
+  console.log('✅ Android package names validated successfully (No modifications detected).\n');
+}
+
 // ─── Scraping ────────────────────────────────────────
 async function scrapeApp(packageName) {
   try {
@@ -293,6 +351,18 @@ function getCardHTML(project, scraped, index) {
   }
 
   // 6. Action buttons
+  const copyBtnHTML = `
+          <button class="btn btn-ghost btn-copy-promo"
+            data-platform="${project.platform || 'android'}"
+            data-status="${project.status || ''}"
+            data-name="${escapeHtml(project.name)}"
+            data-package="${project.package || ''}"
+            data-url="${project.url || ''}"
+            data-desc="${escapeHtml(descriptionText)}"
+            data-github="${project.githubUrl || ''}">
+            ${project.status === 'closed_testing' ? '📋 Copy Promo' : '📋 Copy Link'}
+          </button>`;
+
   let buttonsHTML = '';
   if (isAndroid) {
     const playStoreUrl = `https://play.google.com/store/apps/details?id=${project.package}`;
@@ -303,6 +373,7 @@ function getCardHTML(project, scraped, index) {
           <a href="${playStoreUrl}" target="_blank" rel="noopener" class="btn btn-android">
             <span class="btn-icon">▶</span> Play Store
           </a>
+          ${copyBtnHTML}
         </div>`;
     } else if (project.status === 'closed_testing') {
       buttonsHTML = `
@@ -313,6 +384,7 @@ function getCardHTML(project, scraped, index) {
           <a href="${playStoreUrl}" target="_blank" rel="noopener" class="btn btn-ghost">
             ▶ Play Store
           </a>
+          ${copyBtnHTML}
         </div>`;
     } else {
       buttonsHTML = `
@@ -331,6 +403,7 @@ function getCardHTML(project, scraped, index) {
         <a href="${project.githubUrl}" target="_blank" rel="noopener" class="btn btn-ghost">
           💻 GitHub
         </a>` : ''}
+        ${copyBtnHTML}
       </div>`;
   } else if (isDesktop) {
     buttonsHTML = `
@@ -343,6 +416,7 @@ function getCardHTML(project, scraped, index) {
         <a href="${project.url}" target="_blank" rel="noopener" class="btn btn-ghost">
           📥 Direct Download
         </a>` : ''}
+        ${copyBtnHTML}
       </div>`;
   }
 
@@ -1057,6 +1131,54 @@ function getCSS() {
       opacity: 0.4;
     }
 
+    /* ── Toast Notification ── */
+    .toast-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      pointer-events: none;
+    }
+    
+    .toast {
+      background: rgba(10, 11, 16, 0.85);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: var(--text-primary);
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(139, 92, 246, 0.1);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transform: translateX(120%);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
+      opacity: 0;
+      pointer-events: auto;
+    }
+    
+    .toast.show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    .toast-icon {
+      font-size: 1.1rem;
+      color: var(--color-desktop);
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.8; }
+    }
+
     /* ── Responsive ── */
     @media (max-width: 768px) {
       .header { padding: 48px 0 32px; }
@@ -1112,6 +1234,118 @@ function getJS() {
             noResults.style.display = visibleCount === 0 ? 'block' : 'none';
           }
         });
+      });
+
+      // ─── Toast Notification System ───
+      function showToast(message) {
+        let container = document.querySelector('.toast-container');
+        if (!container) {
+          container = document.createElement('div');
+          container.className = 'toast-container';
+          document.body.appendChild(container);
+        }
+        
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerHTML = \`<span class="toast-icon">✨</span><span class="toast-message">\${message}</span>\`;
+        container.appendChild(toast);
+        
+        // Trigger reflow to start transition
+        toast.offsetHeight;
+        toast.classList.add('show');
+        
+        setTimeout(() => {
+          toast.classList.remove('show');
+          toast.addEventListener('transitionend', () => {
+            toast.remove();
+          });
+        }, 3000);
+      }
+
+      // ─── Share/Copy Action Handler ───
+      document.body.addEventListener('click', async (e) => {
+        const btn = e.target.closest('.btn-copy-promo');
+        if (!btn) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const platform = btn.dataset.platform;
+        const status = btn.dataset.status;
+        const name = btn.dataset.name;
+        const pkg = btn.dataset.package;
+        const url = btn.dataset.url;
+        const desc = btn.dataset.desc;
+        const github = btn.dataset.github;
+
+        let copyText = '';
+        let toastMsg = '';
+
+        if (platform === 'android') {
+          if (status === 'closed_testing') {
+            copyText = \`[ko-KR]
+안녕하세요! 비공개 테스트 교차 참여(품앗이) 요청드립니다. 
+아래 링크로 참여해 주신 후 댓글로 본인의 테스트 링크를 남겨주시면 저도 즉시 참여하겠습니다! (스크린샷 인증 환영합니다)
+
+▶ 앱 이름: \${name}
+1. 구글 그룹스 가입: https://groups.google.com/g/sitdory-tester
+2. 테스터 등록 (옵트인): https://play.google.com/apps/testing/\${pkg}
+3. 다운로드 링크: https://play.google.com/store/apps/details?id=\${pkg}
+
+소중한 시간 내어 참여해 주셔서 진심으로 감사드립니다. 함께 완주해서 성공적으로 출시합시다!
+
+[en-US]
+Hello! I'm looking for mutual closed testing for my Android app. 
+Please join my test using the links below, and leave your test links in the comments. I will test yours back immediately! (Screenshots are highly appreciated)
+
+▶ App Name: \${name}
+1. Join Google Group: https://groups.google.com/g/sitdory-tester
+2. Opt-in Web Link: https://play.google.com/apps/testing/\${pkg}
+3. Play Store Link: https://play.google.com/store/apps/details?id=\${pkg}
+
+Thank you so much for your time and support. Let's launch successfully together!\`;
+            toastMsg = '비공개 테스트 모집 문구가 복사되었습니다! 📋✨';
+          } else {
+            // Production app
+            copyText = \`\${name} - \${desc}
+지금 구글 플레이 스토어에서 다운로드 받으실 수 있습니다!
+👉 다운로드 링크: https://play.google.com/store/apps/details?id=\${pkg}\`;
+            toastMsg = '앱 다운로드 정보가 복사되었습니다! 📱✨';
+          }
+        } else if (platform === 'web') {
+          copyText = \`\${name} - \${desc}
+지금 웹에서 바로 사용해 보세요!
+👉 서비스 링크: \${url}\`;
+          toastMsg = '웹앱 공유 정보가 복사되었습니다! 🌐✨';
+        } else if (platform === 'desktop') {
+          const dlUrl = github || url;
+          copyText = \`\${name} - \${desc}
+상세 정보 및 다운로드는 아래 링크에서 확인하실 수 있습니다!
+👉 링크: \${dlUrl}\`;
+          toastMsg = '데스크톱 앱 공유 정보가 복사되었습니다! 💻✨';
+        }
+
+        try {
+          await navigator.clipboard.writeText(copyText);
+          showToast(toastMsg);
+        } catch (err) {
+          // Fallback method
+          const textarea = document.createElement('textarea');
+          textarea.value = copyText;
+          textarea.style.position = 'fixed';
+          textarea.style.top = '0';
+          textarea.style.left = '0';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.select();
+          try {
+            document.execCommand('copy');
+            showToast(toastMsg);
+          } catch (e2) {
+            showToast('복사에 실패했습니다. 직접 복사해 주세요.');
+          }
+          document.body.removeChild(textarea);
+        }
       });
     });
   `;
@@ -1262,6 +1496,10 @@ async function main() {
   console.log('📱 Building expanded app portfolio...\n');
 
   const config = JSON.parse(fs.readFileSync(APPS_JSON, 'utf-8'));
+  
+  // Validate and lock down Android package names
+  validateAndroidPackages(config.projects);
+
   const cache = loadCache();
 
   // 1. Scrape Android production apps (full data from Play Store)
