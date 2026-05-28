@@ -99,10 +99,10 @@
     },
     {
       "name": "숨 쉴 틈 — Breath Space",
-      "package": "com.jciel85.breathspace",
+      "package": "com.jeiel85.breathspace",
       "platform": "android",
       "status": "closed_testing",
-      "iconUrl": "icons/com.jciel85.breathspace.png"
+      "iconUrl": "icons/com.jeiel85.breathspace.png"
     },
     {
       "name": "아워 글래스 — Flux Hourglass",
