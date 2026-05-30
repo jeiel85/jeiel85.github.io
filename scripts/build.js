@@ -351,6 +351,10 @@ function getCardHTML(project, scraped, index) {
   }
 
   // 6. Action buttons
+  const groupUrl = project.groupUrl || 'https://groups.google.com/g/sitdory-tester';
+  const optInUrl = project.optInUrl || `https://play.google.com/apps/testing/${project.package}`;
+  const playStoreUrl = `https://play.google.com/store/apps/details?id=${project.package}`;
+
   const copyBtnHTML = `
           <button class="btn btn-ghost btn-copy-promo"
             data-platform="${project.platform || 'android'}"
@@ -359,7 +363,10 @@ function getCardHTML(project, scraped, index) {
             data-package="${project.package || ''}"
             data-url="${project.url || ''}"
             data-desc="${escapeHtml(descriptionText)}"
-            data-github="${project.githubUrl || ''}">
+            data-github="${project.githubUrl || ''}"
+            data-group-url="${groupUrl}"
+            data-optin-url="${optInUrl}"
+            data-playstore-url="${playStoreUrl}">
             ${project.status === 'closed_testing' ? '📋 Copy Promo' : '📋 Copy Link'}
           </button>`;
 
@@ -1332,6 +1339,9 @@ function getJS() {
         const url = btn.dataset.url;
         const desc = btn.dataset.desc;
         const github = btn.dataset.github;
+        const groupUrl = btn.dataset.groupUrl;
+        const optInUrl = btn.dataset.optinUrl;
+        const playStoreUrl = btn.dataset.playstoreUrl;
 
         let copyText = '';
         let toastMsg = '';
@@ -1343,36 +1353,38 @@ function getJS() {
 아래 링크로 참여해 주신 후 댓글로 본인의 테스트 링크를 남겨주시면 저도 즉시 참여하겠습니다! (스크린샷 인증 환영합니다)
 
 ▶ 앱 이름: \${name}
-👉 테스트 참여 링크 (구글 그룹스 가입 & 테스터 등록): https://jeiel85.github.io/#\${pkg}
+👉 구글 그룹스 가입: \${groupUrl}
+👉 테스터 참여 웹 링크 (옵트인): \${optInUrl}
+👉 구글 플레이스토어 앱 다운로드: \${playStoreUrl}
 
 소중한 시간 내어 참여해 주셔서 진심으로 감사드립니다. 함께 완주해서 성공적으로 출시합시다!
 
 [en-US]
 Hello! I'm looking for mutual closed testing for my Android app. 
-Please join my test using the link below, and leave your test links in the comments. I will test yours back immediately! (Screenshots are highly appreciated)
+Please join my test using the links below, and leave your test links in the comments. I will test yours back immediately! (Screenshots are highly appreciated)
 
 ▶ App Name: \${name}
-👉 Test Join Link (Google Group & Opt-in): https://jeiel85.github.io/#\${pkg}
+👉 Join Google Group: \${groupUrl}
+👉 Tester Join Link (Opt-in): \${optInUrl}
+👉 Play Store Download: \${playStoreUrl}
 
 Thank you so much for your time and support. Let's launch successfully together!\`;
             toastMsg = '비공개 테스트 모집 문구가 복사되었습니다! 📋✨';
           } else {
             // Production app
-            copyText = \`\${name} - \${desc}
-지금 구글 플레이 스토어에서 다운로드 받으실 수 있습니다!
-👉 다운로드 링크: https://play.google.com/store/apps/details?id=\${pkg}\`;
+            copyText = \`▶ 앱 이름: \${name}
+▶ 앱 설명: \${desc || 'Google Play 스토어에서 확인하실 수 있습니다.'}
+👉 다운로드 링크: \${playStoreUrl}\`;
             toastMsg = '앱 다운로드 정보가 복사되었습니다! 📱✨';
           }
         } else if (platform === 'web') {
-          copyText = \`\${name} - \${desc}
-지금 웹에서 바로 사용해 보세요!
-👉 서비스 링크: \${url}\`;
+          copyText = \`▶ 앱 이름: \${name}
+▶ 앱 설명: \${desc}\${url ? \`\\n👉 서비스 실제 링크: \${url}\` : ''}\${github ? \`\\n👉 다운로드/GitHub 링크: \${github}\` : ''}\`;
           toastMsg = '웹앱 공유 정보가 복사되었습니다! 🌐✨';
         } else if (platform === 'desktop') {
-          const dlUrl = github || url;
-          copyText = \`\${name} - \${desc}
-상세 정보 및 다운로드는 아래 링크에서 확인하실 수 있습니다!
-👉 링크: \${dlUrl}\`;
+          const dlUrl = url || (github ? \`\${github}/releases\` : '');
+          copyText = \`▶ 앱 이름: \${name}
+▶ 앱 설명: \${desc}\${github ? \`\\n👉 서비스 실제 링크: \${github}\` : ''}\${dlUrl ? \`\\n👉 다운로드 링크: \${dlUrl}\` : ''}\`;
           toastMsg = '데스크톱 앱 공유 정보가 복사되었습니다! 💻✨';
         }
 
