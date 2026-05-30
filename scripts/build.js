@@ -1348,19 +1348,7 @@ function getJS() {
 
         if (platform === 'android') {
           if (status === 'closed_testing') {
-            copyText = \`[ko-KR]
-안녕하세요! 비공개 테스트 교차 참여(품앗이) 요청드립니다. 
-아래 링크로 참여해 주신 후 댓글로 본인의 테스트 링크를 남겨주시면 저도 즉시 참여하겠습니다! (스크린샷 인증 환영합니다)
-
-▶ 앱 이름: \${name}
-👉 구글 그룹스 가입: \${groupUrl}
-👉 테스터 참여 웹 링크 (옵트인): \${optInUrl}
-👉 구글 플레이스토어 앱 다운로드: \${playStoreUrl}
-
-소중한 시간 내어 참여해 주셔서 진심으로 감사드립니다. 함께 완주해서 성공적으로 출시합시다!
-
-[en-US]
-Hello! I'm looking for mutual closed testing for my Android app. 
+            copyText = \`Hello! I'm looking for mutual closed testing for my Android app. 
 Please join my test using the links below, and leave your test links in the comments. I will test yours back immediately! (Screenshots are highly appreciated)
 
 ▶ App Name: \${name}
