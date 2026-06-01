@@ -112,6 +112,14 @@
       "iconUrl": "icons/com.flux.hourglass.png"
     },
     {
+      "name": "Retro Pixel Racer — 레트로 픽셀 레이서",
+      "package": "com.jeiel85.retropixelracer",
+      "platform": "android",
+      "status": "closed_testing",
+      "description": "80년대 고전 아케이드의 강렬한 레이싱 재미를 안드로이드 모바일 환경에서 현대적인 Jetpack Compose 기술로 우아하게 재해석한 2D 픽셀 아트 레이싱 게임입니다.",
+      "iconUrl": "icons/com.jeiel85.retropixelracer.png"
+    },
+    {
       "name": "Score Fetcher — 찬양팀 콘티 & 악보 PWA",
       "platform": "web",
       "status": "production",

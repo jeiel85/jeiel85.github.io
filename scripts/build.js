@@ -40,7 +40,8 @@ const LOCKED_ANDROID_PACKAGES = {
   "com.markscene.app": "MarkScene",
   "io.stargaze.explorer": "별자리 탐험: AR 별자리 가이드",
   "com.jeiel85.breathspace": "숨 쉴 틈 — Breath Space",
-  "com.flux.hourglass": "아워 글래스 — Flux Hourglass"
+  "com.flux.hourglass": "아워 글래스 — Flux Hourglass",
+  "com.jeiel85.retropixelracer": "Retro Pixel Racer — 레트로 픽셀 레이서"
 };
 
 function validateAndroidPackages(projects) {
