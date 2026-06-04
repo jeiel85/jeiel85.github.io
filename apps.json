@@ -31,7 +31,7 @@
       "name": "Markleaf",
       "package": "com.markleaf.notes",
       "platform": "android",
-      "status": "closed_testing",
+      "status": "production",
       "iconUrl": "icons/com.markleaf.notes.png"
     },
     {
