@@ -42,13 +42,15 @@ jobs:
 
       - name: Build portfolio
         working-directory: scripts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: npm run build
 
       - name: Commit updated files
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add index.html scripts/cache.json icons
+          git add apps.json index.html scripts/cache.json icons
           git diff --staged --quiet || git commit -m "chore: update portfolio data [skip ci]"
           git push
 

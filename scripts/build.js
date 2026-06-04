@@ -9,6 +9,18 @@ const APPS_JSON = path.join(ROOT, 'apps.json');
 const CACHE_JSON = path.join(__dirname, 'cache.json');
 const OUTPUT_HTML = path.join(ROOT, 'index.html');
 
+const GITHUB_EXCLUDED_REPOS = new Set([
+  'AGENTS.md',
+  'homebrew-tap',
+  'jeiel85',
+  'jeiel85.github.io',
+]);
+
+const GITHUB_EXCLUDED_SUFFIXES = [
+  '-android',
+  '-designguide',
+];
+
 // ─── Avatar Gradients (for apps without Play Store icons) ─
 const GRADIENTS = [
   'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -81,6 +93,147 @@ function validateAndroidPackages(projects) {
     }
   }
   console.log('✅ Android package names validated successfully (No modifications detected).\n');
+}
+
+// ─── GitHub Repository Sync ──────────────────────────
+function fetchJSON(url, redirectCount = 0) {
+  if (redirectCount > 5) return Promise.reject(new Error('Too many redirects'));
+
+  return new Promise((resolve, reject) => {
+    const headers = {
+      'User-Agent': 'sitdory-portfolio-builder',
+      'Accept': 'application/vnd.github+json',
+    };
+
+    const githubToken = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+    if (githubToken) {
+      headers.Authorization = `Bearer ${githubToken}`;
+    }
+
+    https.get(url, { headers }, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        const redirectUrl = res.headers.location.startsWith('http')
+          ? res.headers.location
+          : new URL(res.headers.location, url).href;
+        res.resume();
+        return fetchJSON(redirectUrl, redirectCount + 1).then(resolve).catch(reject);
+      }
+
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        if (res.statusCode < 200 || res.statusCode >= 300) {
+          return reject(new Error(`HTTP ${res.statusCode}: ${data.slice(0, 160)}`));
+        }
+
+        try {
+          resolve(JSON.parse(data));
+        } catch (err) {
+          reject(err);
+        }
+      });
+      res.on('error', reject);
+    }).on('error', reject);
+  });
+}
+
+async function fetchGitHubRepos(username) {
+  const repos = [];
+  for (let page = 1; page <= 10; page++) {
+    const url = `https://api.github.com/users/${username}/repos?type=owner&sort=pushed&direction=desc&per_page=100&page=${page}`;
+    const batch = await fetchJSON(url);
+    if (!Array.isArray(batch) || batch.length === 0) break;
+    repos.push(...batch);
+    if (batch.length < 100) break;
+  }
+  return repos;
+}
+
+function isPortfolioCandidate(repo) {
+  if (repo.private || repo.fork) return false;
+  if (GITHUB_EXCLUDED_REPOS.has(repo.name)) return false;
+  if (GITHUB_EXCLUDED_SUFFIXES.some(suffix => repo.name.endsWith(suffix))) return false;
+
+  const homepage = (repo.homepage || '').trim();
+  const topics = Array.isArray(repo.topics) ? repo.topics : [];
+
+  return Boolean(homepage)
+    || repo.name.endsWith('-web')
+    || repo.name.endsWith('-desktop')
+    || repo.name.endsWith('-windows')
+    || topics.includes('github-pages')
+    || topics.includes('pwa');
+}
+
+function inferPlatform(repo) {
+  if (repo.name.endsWith('-desktop') || repo.name.endsWith('-windows')) {
+    return 'desktop';
+  }
+  return 'web';
+}
+
+function repoDisplayName(repoName) {
+  return repoName
+    .split('-')
+    .filter(Boolean)
+    .map(part => {
+      const lower = part.toLowerCase();
+      if (lower === 'ai') return 'AI';
+      if (lower === 'cli') return 'CLI';
+      if (lower === 'pdf') return 'PDF';
+      if (lower === 'pwa') return 'PWA';
+      return lower.charAt(0).toUpperCase() + lower.slice(1);
+    })
+    .join(' ');
+}
+
+function normalizeHomepage(homepage) {
+  const value = (homepage || '').trim();
+  return value || undefined;
+}
+
+async function syncGitHubProjects(config) {
+  const username = config.developer.githubUsername;
+  if (!username) return;
+
+  try {
+    console.log(`🔎 Syncing public GitHub repositories for ${username}...`);
+    const repos = await fetchGitHubRepos(username);
+    const existingGitHubUrls = new Set(
+      config.projects
+        .map(project => project.githubUrl)
+        .filter(Boolean)
+        .map(url => url.replace(/\/+$/, '').toLowerCase())
+    );
+
+    const additions = repos
+      .filter(isPortfolioCandidate)
+      .filter(repo => !existingGitHubUrls.has(repo.html_url.toLowerCase()))
+      .map(repo => ({
+        name: repoDisplayName(repo.name),
+        platform: inferPlatform(repo),
+        status: 'production',
+        description: repo.description || `${repoDisplayName(repo.name)} project.`,
+        ...(normalizeHomepage(repo.homepage) ? { url: normalizeHomepage(repo.homepage) } : {}),
+        githubUrl: repo.html_url,
+        iconUrl: `icons/${repo.name}.png`,
+        source: 'github'
+      }));
+
+    if (additions.length === 0) {
+      console.log('  No new GitHub portfolio repositories found.\n');
+      return;
+    }
+
+    config.projects.push(...additions);
+    fs.writeFileSync(APPS_JSON, JSON.stringify(config, null, 2) + '\n', 'utf-8');
+
+    console.log(`  Added ${additions.length} GitHub project(s):`);
+    additions.forEach(project => console.log(`  + ${project.name} (${project.platform})`));
+    console.log('');
+  } catch (err) {
+    console.warn(`  ⚠ GitHub repository sync skipped: ${err.message}\n`);
+  }
 }
 
 // ─── Scraping ────────────────────────────────────────
@@ -1349,7 +1502,10 @@ function getJS() {
 
         if (platform === 'android') {
           if (status === 'closed_testing') {
-            copyText = \`Hello! I'm looking for mutual closed testing for my Android app. 
+            copyText = \`당신의 앱을 테스트했습니다.
+제 앱도 테스트 부탁드립니다.
+
+Hello! I'm looking for mutual closed testing for my Android app. 
 Please join my test using the links below, and leave your test links in the comments. I will test yours back immediately! (Screenshots are highly appreciated)
 
 ▶ App Name: \${name}
@@ -1548,6 +1704,8 @@ async function main() {
   console.log('📱 Building expanded app portfolio...\n');
 
   const config = JSON.parse(fs.readFileSync(APPS_JSON, 'utf-8'));
+
+  await syncGitHubProjects(config);
   
   // Validate and lock down Android package names
   validateAndroidPackages(config.projects);

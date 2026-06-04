@@ -202,6 +202,45 @@
       "description": "Windows 탐색기 우클릭 콘텍스트 메뉴에 바로가기를 추가하여, 현재 폴더 경로에서 클릭 한 번으로 Anthropic Claude Code나 개발용 AI CLI 에이전트를 터미널에 즉시 실행시켜 주는 쾌속 개발 생산성 유틸리티.",
       "githubUrl": "https://github.com/jeiel85/cli-here-windows",
       "iconUrl": "icons/cli-here-windows.png"
+    },
+    {
+      "name": "Minimal Zip Concept",
+      "platform": "web",
+      "status": "production",
+      "description": "Minimal Zip Concept (MZC) - Learning-oriented lossless compression engine in Rust featuring RLE, Dictionary, LZ77, BCJ, Delta, and Dynamic Huffman Coding with a real-time GUI plot dashboard.",
+      "url": "https://jeiel85.github.io/minimal-zip-concept/",
+      "githubUrl": "https://github.com/jeiel85/minimal-zip-concept",
+      "iconUrl": "icons/minimal-zip-concept.png",
+      "source": "github"
+    },
+    {
+      "name": "Kunsarang Baptist Church",
+      "platform": "web",
+      "status": "production",
+      "description": "큰사랑교회 박규종 목사 강단 설교 아카이브 ＆ React/Python 스마트 자동 동기화 배포 파이프라인",
+      "url": "https://jeiel85.github.io/kunsarang-baptist-church/",
+      "githubUrl": "https://github.com/jeiel85/kunsarang-baptist-church",
+      "iconUrl": "icons/kunsarang-baptist-church.png",
+      "source": "github"
+    },
+    {
+      "name": "Pulpit Ink Desktop",
+      "platform": "desktop",
+      "status": "production",
+      "description": "Local-first Windows desktop app for transcribing sermons, lectures, and meetings with faster-whisper.",
+      "url": "https://jeiel85.github.io/pulpit-ink-desktop/",
+      "githubUrl": "https://github.com/jeiel85/pulpit-ink-desktop",
+      "iconUrl": "icons/pulpit-ink-desktop.png",
+      "source": "github"
+    },
+    {
+      "name": "Push Server Client Windows",
+      "platform": "desktop",
+      "status": "production",
+      "description": "WebSocket 기반 실시간 푸시 알림 시스템 - 서버와 Windows Forms 클라이언트 샘플 프로젝트",
+      "githubUrl": "https://github.com/jeiel85/push-server-client-windows",
+      "iconUrl": "icons/push-server-client-windows.png",
+      "source": "github"
     }
   ]
 }
