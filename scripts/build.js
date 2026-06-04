@@ -288,14 +288,18 @@ function fetchPage(url, redirectCount = 0) {
   });
 }
 
-async function scrapePlayStoreHTML(packageName) {
+async function scrapePlayStoreHTML(packageName, options = {}) {
+  const { quiet = false } = options;
+
   try {
     const url = `https://play.google.com/store/apps/details?id=${packageName}&hl=ko&gl=kr`;
     console.log(`  Fallback HTML scraping: ${packageName}...`);
     const { status, html } = await fetchPage(url);
 
     if (status !== 200) {
-      console.warn(`  ⚠ Play Store returned ${status} for ${packageName}`);
+      if (!quiet) {
+        console.warn(`  ⚠ Play Store returned ${status} for ${packageName}`);
+      }
       return null;
     }
 
@@ -320,8 +324,46 @@ async function scrapePlayStoreHTML(packageName) {
     }
     return null;
   } catch (err) {
-    console.warn(`  ⚠ Fallback scraping failed for ${packageName}: ${err.message}`);
+    if (!quiet) {
+      console.warn(`  ⚠ Fallback scraping failed for ${packageName}: ${err.message}`);
+    }
     return null;
+  }
+}
+
+async function promotePublishedTestingApps(config, cache) {
+  const testingApps = config.projects.filter(project =>
+    (project.platform === 'android' || !project.platform)
+    && project.status === 'closed_testing'
+    && !project.hidden
+  );
+
+  if (testingApps.length === 0) return;
+
+  console.log(`🧭 Checking ${testingApps.length} closed testing Android app(s) for production launch...`);
+  const promoted = [];
+
+  for (const app of testingApps) {
+    const data = await scrapePlayStoreHTML(app.package, { quiet: true });
+    const hasPublicStorePage = data && (data.title || data.icon || data.summary);
+
+    if (!hasPublicStorePage) {
+      console.log(`  - ${app.name} remains closed testing`);
+      continue;
+    }
+
+    app.status = 'production';
+    cache[app.package] = { ...data, _lastScraped: new Date().toISOString() };
+    await ensureLocalIcon(app, data);
+    promoted.push(app.name);
+    console.log(`  ↑ ${app.name} promoted to production`);
+  }
+
+  if (promoted.length > 0) {
+    fs.writeFileSync(APPS_JSON, JSON.stringify(config, null, 2) + '\n', 'utf-8');
+    console.log(`  Updated apps.json for ${promoted.length} production app(s).\n`);
+  } else {
+    console.log('  No closed testing apps appear public yet.\n');
   }
 }
 
@@ -1712,8 +1754,10 @@ async function main() {
 
   const cache = loadCache();
 
-  // 1. Scrape Android production apps (full data from Play Store)
   const androidApps = config.projects.filter(p => (p.platform === 'android' || !p.platform) && !p.hidden);
+  await promotePublishedTestingApps(config, cache);
+
+  // 1. Scrape Android production apps (full data from Play Store)
   const productionApps = androidApps.filter(a => a.status === 'production');
   
   if (productionApps.length > 0) {
