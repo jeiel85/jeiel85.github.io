@@ -241,6 +241,16 @@
       "githubUrl": "https://github.com/jeiel85/push-server-client-windows",
       "iconUrl": "icons/push-server-client-windows.png",
       "source": "github"
+    },
+    {
+      "name": "Healing Fishing",
+      "platform": "web",
+      "status": "production",
+      "description": "바쁜 일상 속에서 잔잔한 물결(윤슬)을 바라보며 마음을 녹이는 2.5D 로우폴리 힐링 낚시 게임, 윤슬낚시 (Yoonseul Fishing)",
+      "url": "https://jeiel85.github.io/healing-fishing/",
+      "githubUrl": "https://github.com/jeiel85/healing-fishing",
+      "iconUrl": "icons/healing-fishing.png",
+      "source": "github"
     }
   ]
 }
