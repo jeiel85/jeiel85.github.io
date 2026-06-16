@@ -331,6 +331,46 @@
       "githubUrl": "https://github.com/jeiel85/daddy-mode-switch",
       "iconUrl": "icons/daddy-mode-switch.png",
       "source": "github"
+    },
+    {
+      "name": "Dualframe Recorder",
+      "platform": "web",
+      "status": "production",
+      "description": "한 번의 촬영으로 16:9 가로 버전과 9:16 세로 버전을 동시에 저장하는 독립적인 로컬 카메라 유틸리티 앱 ",
+      "url": "https://jeiel85.github.io/dualframe-recorder/",
+      "githubUrl": "https://github.com/jeiel85/dualframe-recorder",
+      "iconUrl": "icons/dualframe-recorder.png",
+      "source": "github"
+    },
+    {
+      "name": "Day Bits",
+      "platform": "web",
+      "status": "production",
+      "description": "1일 1클립 일상 브이로그 비디오 다이어리 앱 DayBits (Android app compiling daily video clips into a vlog)",
+      "url": "https://jeiel85.github.io/day-bits/",
+      "githubUrl": "https://github.com/jeiel85/day-bits",
+      "iconUrl": "icons/day-bits.png",
+      "source": "github"
+    },
+    {
+      "name": "Clear PDF Local",
+      "platform": "web",
+      "status": "production",
+      "description": "Fast, private, and lightweight offline PDF reader & document scanner. Built with Kotlin and Jetpack Compose.",
+      "url": "https://jeiel85.github.io/clear-pdf-local/",
+      "githubUrl": "https://github.com/jeiel85/clear-pdf-local",
+      "iconUrl": "icons/clear-pdf-local.png",
+      "source": "github"
+    },
+    {
+      "name": "Earth Live Wallpaper",
+      "platform": "web",
+      "status": "production",
+      "description": "Real-time 3D Earth live wallpaper for Windows 11. Location-aware sunlight visualization. Lively Wallpaper compatible.",
+      "url": "https://jeiel85.github.io/earth-live-wallpaper/",
+      "githubUrl": "https://github.com/jeiel85/earth-live-wallpaper",
+      "iconUrl": "icons/earth-live-wallpaper.png",
+      "source": "github"
     }
   ]
 }
