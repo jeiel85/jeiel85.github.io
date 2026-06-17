@@ -371,6 +371,26 @@
       "githubUrl": "https://github.com/jeiel85/earth-live-wallpaper",
       "iconUrl": "icons/earth-live-wallpaper.png",
       "source": "github"
+    },
+    {
+      "name": "Yoonseul Fishing Unity",
+      "platform": "web",
+      "status": "production",
+      "description": "윤슬낚시 Unity 6 / C# port (from Kotlin/Compose Android). Targets Android + Windows.",
+      "url": "https://jeiel85.github.io/yoonseul-fishing-unity/",
+      "githubUrl": "https://github.com/jeiel85/yoonseul-fishing-unity",
+      "iconUrl": "icons/yoonseul-fishing-unity.png",
+      "source": "github"
+    },
+    {
+      "name": "Quiet Orbit",
+      "platform": "web",
+      "status": "production",
+      "description": "Quiet Orbit — 작은 행성 위를 산책하며 빛나는 메시지 조각을 발견하는 조용한 3D 웹 경험 (Next.js + React Three Fiber)",
+      "url": "https://quiet-orbit.vercel.app",
+      "githubUrl": "https://github.com/jeiel85/quiet-orbit",
+      "iconUrl": "icons/quiet-orbit.png",
+      "source": "github"
     }
   ]
 }
