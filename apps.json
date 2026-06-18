@@ -434,6 +434,16 @@
       "githubUrl": "https://github.com/jeiel85/quiet-orbit",
       "iconUrl": "icons/quiet-orbit.png",
       "source": "github"
+    },
+    {
+      "name": "Building Qr",
+      "platform": "web",
+      "status": "production",
+      "description": "링크를 스캔 가능한 3D 빌딩숲 QR 아트로 만드는 생성기 · Turn any link into a scannable QR code that stands up as an isometric city skyline.",
+      "url": "https://jeiel85.github.io/building-qr/",
+      "githubUrl": "https://github.com/jeiel85/building-qr",
+      "iconUrl": "icons/building-qr.png",
+      "source": "github"
     }
   ]
 }
