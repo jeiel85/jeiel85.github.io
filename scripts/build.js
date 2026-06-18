@@ -1544,10 +1544,7 @@ function getJS() {
 
         if (platform === 'android') {
           if (status === 'closed_testing') {
-            copyText = \`당신의 앱을 테스트했습니다.
-제 앱도 테스트 부탁드립니다.
-
-Hello! I'm looking for mutual closed testing for my Android app. 
+            copyText = \`Hello! I have tested your app and I'm looking for mutual closed testing for my Android app as well.
 Please join my test using the links below, and leave your test links in the comments. I will test yours back immediately! (Screenshots are highly appreciated)
 
 ▶ App Name: \${name}

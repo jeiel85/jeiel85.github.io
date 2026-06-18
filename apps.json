@@ -105,6 +105,13 @@
       "iconUrl": "icons/com.jeiel85.breathspace.png"
     },
     {
+      "name": "아빠 용돈 — Daddy Pocket",
+      "package": "com.jeiel85.daddypocket",
+      "platform": "android",
+      "status": "closed_testing",
+      "iconUrl": "icons/com.jeiel85.daddypocket.png"
+    },
+    {
       "name": "아워 글래스 — Flux Hourglass",
       "package": "com.flux.hourglass",
       "platform": "android",
@@ -118,6 +125,42 @@
       "status": "closed_testing",
       "description": "80년대 고전 아케이드의 강렬한 레이싱 재미를 안드로이드 모바일 환경에서 현대적인 Jetpack Compose 기술로 우아하게 재해석한 2D 픽셀 아트 레이싱 게임입니다.",
       "iconUrl": "icons/com.jeiel85.retropixelracer.png"
+    },
+    {
+      "name": "DualFrame Recorder",
+      "package": "com.dualframe.recorder",
+      "platform": "android",
+      "status": "github_only",
+      "description": "한 번의 촬영으로 16:9 가로 버전과 9:16 세로 버전을 동시에 저장하는 독립적인 로컬 카메라 유틸리티 앱.",
+      "githubUrl": "https://github.com/jeiel85/dualframe-recorder",
+      "iconUrl": "icons/com.dualframe.recorder.png"
+    },
+    {
+      "name": "DayBits — 1일 1클립 비디오 다이어리",
+      "package": "com.jeiel85.daybits",
+      "platform": "android",
+      "status": "github_only",
+      "description": "매일 짧은 영상 클립을 기록하고, 자동으로 세로형 브이로그로 편집해주는 오프라인 퍼스트 영상 일기 앱.",
+      "githubUrl": "https://github.com/jeiel85/day-bits",
+      "iconUrl": "icons/com.jeiel85.daybits.png"
+    },
+    {
+      "name": "Forest Pet Garden — 포레스트 펫 가든",
+      "package": "com.jeiel85.forestpetgarden",
+      "platform": "android",
+      "status": "github_only",
+      "description": "🦊 평화로운 오프라인 펫 가든 시뮬레이션 — 펫을 입양하고 숲을 탐험하며 보물을 모으세요.",
+      "githubUrl": "https://github.com/jeiel85/forest-pet-garden-android",
+      "iconUrl": "icons/com.jeiel85.forestpetgarden.png"
+    },
+    {
+      "name": "가족 차량 관리 — Daddy Car Book",
+      "package": "com.jeiel85.daddycarbook",
+      "platform": "android",
+      "status": "github_only",
+      "description": "차 관리할 때 놓치지 않게 해주는 아빠용 차량 노트. 자동차 정비, 보험, 검사, 주유비, 세차 등 완벽 관리.",
+      "githubUrl": "https://github.com/jeiel85/daddy-car-book",
+      "iconUrl": "icons/com.jeiel85.daddycarbook.png"
     },
     {
       "name": "Score Fetcher — 찬양팀 콘티 & 악보 PWA",

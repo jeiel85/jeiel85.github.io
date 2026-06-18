@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sitdory — Portfolio</title>
-  <meta name="description" content="Sitdory의 개발 포트폴리오. 45개의 프로젝트를 확인해보세요." />
+  <meta name="description" content="Sitdory의 개발 포트폴리오. 30개의 프로젝트를 확인해보세요." />
   <meta name="author" content="Sitdory" />
   <meta property="og:title" content="Sitdory — Portfolio" />
-  <meta property="og:description" content="Android 16개 | Web 21개 | Desktop 8개" />
+  <meta property="og:description" content="Android 16개 | Web 6개 | Desktop 8개" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -539,6 +539,11 @@
       color: var(--color-gray);
       border: 1px solid var(--color-gray-border);
     }
+    .status-github {
+      background: rgba(88, 166, 255, 0.12);
+      color: #58a6ff;
+      border: 1px solid rgba(88, 166, 255, 0.3);
+    }
 
     .app-genre {
       font-size: 0.7rem;
@@ -819,7 +824,7 @@
 
           <div class="stats-row">
             <div class="stat-box">
-              <div class="stat-value">45</div>
+              <div class="stat-value">30</div>
               <div class="stat-label">Total</div>
             </div>
             <div class="stat-box">
@@ -827,7 +832,7 @@
               <div class="stat-label">Android</div>
             </div>
             <div class="stat-box">
-              <div class="stat-value web">21</div>
+              <div class="stat-value web">6</div>
               <div class="stat-label">Web</div>
             </div>
             <div class="stat-box">
@@ -856,9 +861,9 @@
 
   <main class="container">
     <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">All<span class="filter-count">45</span></button>
+      <button class="filter-btn active" data-filter="all">All<span class="filter-count">30</span></button>
       <button class="filter-btn" data-filter="android">📱 Android<span class="filter-count">16</span></button>
-      <button class="filter-btn" data-filter="web">🌐 Web<span class="filter-count">21</span></button>
+      <button class="filter-btn" data-filter="web">🌐 Web<span class="filter-count">6</span></button>
       <button class="filter-btn" data-filter="desktop">💻 Desktop<span class="filter-count">8</span></button>
     </div>
 
@@ -1495,6 +1500,158 @@
         </div>
     </article>
 
+    <article class="app-card" id="com.dualframe.recorder" data-platform="android" style="animation-delay: 0.8s">
+      <div class="card-header">
+        <img class="app-icon" src="icons/com.dualframe.recorder.png" alt="DualFrame Recorder" loading="lazy" />
+        <div class="card-title-area">
+          <h3 class="app-name" title="DualFrame Recorder">DualFrame Recorder</h3>
+          <span class="app-package" title="com.dualframe.recorder">com.dualframe.recorder</span>
+        </div>
+      </div>
+      <p class="app-desc">한 번의 촬영으로 16:9 가로 버전과 9:16 세로 버전을 동시에 저장하는 독립적인 로컬 카메라 유틸리티 앱.</p>
+      <div class="card-meta">
+        <span class="platform-badge platform-android">📱 Android</span>
+        <span class="status-badge status-github">GitHub Only</span>
+      </div>
+
+        <div class="app-actions">
+          <a href="https://github.com/jeiel85/dualframe-recorder/releases/latest" target="_blank" rel="noopener" class="btn btn-secondary">
+            ⬇️ APK 다운로드
+          </a>
+          <a href="https://github.com/jeiel85/dualframe-recorder" target="_blank" rel="noopener" class="btn btn-ghost">
+            💻 GitHub
+          </a>
+
+          <button class="btn btn-ghost btn-copy-promo"
+            data-platform="android"
+            data-status="github_only"
+            data-name="DualFrame Recorder"
+            data-package="com.dualframe.recorder"
+            data-url=""
+            data-desc="한 번의 촬영으로 16:9 가로 버전과 9:16 세로 버전을 동시에 저장하는 독립적인 로컬 카메라 유틸리티 앱."
+            data-github="https://github.com/jeiel85/dualframe-recorder"
+            data-group-url=""
+            data-optin-url=""
+            data-playstore-url="https://github.com/jeiel85/dualframe-recorder/releases/latest">
+            📋 Copy Link
+          </button>
+        </div>
+    </article>
+
+    <article class="app-card" id="com.jeiel85.daybits" data-platform="android" style="animation-delay: 0.85s">
+      <div class="card-header">
+        <img class="app-icon" src="icons/com.jeiel85.daybits.png" alt="DayBits — 1일 1클립 비디오 다이어리" loading="lazy" />
+        <div class="card-title-area">
+          <h3 class="app-name" title="DayBits — 1일 1클립 비디오 다이어리">DayBits — 1일 1클립 비디오 다이어리</h3>
+          <span class="app-package" title="com.jeiel85.daybits">com.jeiel85.daybits</span>
+        </div>
+      </div>
+      <p class="app-desc">매일 짧은 영상 클립을 기록하고, 자동으로 세로형 브이로그로 편집해주는 오프라인 퍼스트 영상 일기 앱.</p>
+      <div class="card-meta">
+        <span class="platform-badge platform-android">📱 Android</span>
+        <span class="status-badge status-github">GitHub Only</span>
+      </div>
+
+        <div class="app-actions">
+          <a href="https://github.com/jeiel85/day-bits/releases/latest" target="_blank" rel="noopener" class="btn btn-secondary">
+            ⬇️ APK 다운로드
+          </a>
+          <a href="https://github.com/jeiel85/day-bits" target="_blank" rel="noopener" class="btn btn-ghost">
+            💻 GitHub
+          </a>
+
+          <button class="btn btn-ghost btn-copy-promo"
+            data-platform="android"
+            data-status="github_only"
+            data-name="DayBits — 1일 1클립 비디오 다이어리"
+            data-package="com.jeiel85.daybits"
+            data-url=""
+            data-desc="매일 짧은 영상 클립을 기록하고, 자동으로 세로형 브이로그로 편집해주는 오프라인 퍼스트 영상 일기 앱."
+            data-github="https://github.com/jeiel85/day-bits"
+            data-group-url=""
+            data-optin-url=""
+            data-playstore-url="https://github.com/jeiel85/day-bits/releases/latest">
+            📋 Copy Link
+          </button>
+        </div>
+    </article>
+
+    <article class="app-card" id="com.jeiel85.forestpetgarden" data-platform="android" style="animation-delay: 0.9s">
+      <div class="card-header">
+        <img class="app-icon" src="icons/com.jeiel85.forestpetgarden.png" alt="Forest Pet Garden — 포레스트 펫 가든" loading="lazy" />
+        <div class="card-title-area">
+          <h3 class="app-name" title="Forest Pet Garden — 포레스트 펫 가든">Forest Pet Garden — 포레스트 펫 가든</h3>
+          <span class="app-package" title="com.jeiel85.forestpetgarden">com.jeiel85.forestpetgarden</span>
+        </div>
+      </div>
+      <p class="app-desc">🦊 평화로운 오프라인 펫 가든 시뮬레이션 — 펫을 입양하고 숲을 탐험하며 보물을 모으세요.</p>
+      <div class="card-meta">
+        <span class="platform-badge platform-android">📱 Android</span>
+        <span class="status-badge status-github">GitHub Only</span>
+      </div>
+
+        <div class="app-actions">
+          <a href="https://github.com/jeiel85/forest-pet-garden-android/releases/latest" target="_blank" rel="noopener" class="btn btn-secondary">
+            ⬇️ APK 다운로드
+          </a>
+          <a href="https://github.com/jeiel85/forest-pet-garden-android" target="_blank" rel="noopener" class="btn btn-ghost">
+            💻 GitHub
+          </a>
+
+          <button class="btn btn-ghost btn-copy-promo"
+            data-platform="android"
+            data-status="github_only"
+            data-name="Forest Pet Garden — 포레스트 펫 가든"
+            data-package="com.jeiel85.forestpetgarden"
+            data-url=""
+            data-desc="🦊 평화로운 오프라인 펫 가든 시뮬레이션 — 펫을 입양하고 숲을 탐험하며 보물을 모으세요."
+            data-github="https://github.com/jeiel85/forest-pet-garden-android"
+            data-group-url=""
+            data-optin-url=""
+            data-playstore-url="https://github.com/jeiel85/forest-pet-garden-android/releases/latest">
+            📋 Copy Link
+          </button>
+        </div>
+    </article>
+
+    <article class="app-card" id="com.jeiel85.daddycarbook" data-platform="android" style="animation-delay: 0.95s">
+      <div class="card-header">
+        <img class="app-icon" src="icons/com.jeiel85.daddycarbook.png" alt="가족 차량 관리 — Daddy Car Book" loading="lazy" />
+        <div class="card-title-area">
+          <h3 class="app-name" title="가족 차량 관리 — Daddy Car Book">가족 차량 관리 — Daddy Car Book</h3>
+          <span class="app-package" title="com.jeiel85.daddycarbook">com.jeiel85.daddycarbook</span>
+        </div>
+      </div>
+      <p class="app-desc">차 관리할 때 놓치지 않게 해주는 아빠용 차량 노트. 자동차 정비, 보험, 검사, 주유비, 세차 등 완벽 관리.</p>
+      <div class="card-meta">
+        <span class="platform-badge platform-android">📱 Android</span>
+        <span class="status-badge status-github">GitHub Only</span>
+      </div>
+
+        <div class="app-actions">
+          <a href="https://github.com/jeiel85/daddy-car-book/releases/latest" target="_blank" rel="noopener" class="btn btn-secondary">
+            ⬇️ APK 다운로드
+          </a>
+          <a href="https://github.com/jeiel85/daddy-car-book" target="_blank" rel="noopener" class="btn btn-ghost">
+            💻 GitHub
+          </a>
+
+          <button class="btn btn-ghost btn-copy-promo"
+            data-platform="android"
+            data-status="github_only"
+            data-name="가족 차량 관리 — Daddy Car Book"
+            data-package="com.jeiel85.daddycarbook"
+            data-url=""
+            data-desc="차 관리할 때 놓치지 않게 해주는 아빠용 차량 노트. 자동차 정비, 보험, 검사, 주유비, 세차 등 완벽 관리."
+            data-github="https://github.com/jeiel85/daddy-car-book"
+            data-group-url=""
+            data-optin-url=""
+            data-playstore-url="https://github.com/jeiel85/daddy-car-book/releases/latest">
+            📋 Copy Link
+          </button>
+        </div>
+    </article>
+
     <article class="app-card" id="score-fetcher-pwa" data-platform="web" style="animation-delay: 0.8s">
       <div class="card-header">
         <img class="app-icon" src="icons/score-fetcher-web.png" alt="Score Fetcher — 찬양팀 콘티 &amp; 악보 PWA" loading="lazy" />
@@ -1899,7 +2056,7 @@
 
     <article class="app-card" id="minimal-zip-concept" data-platform="web" style="animation-delay: 1.3s">
       <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%)">M</div>
+        <img class="app-icon" src="icons/minimal-zip-concept.png" alt="Minimal Zip Concept" loading="lazy" />
         <div class="card-title-area">
           <h3 class="app-name" title="Minimal Zip Concept">Minimal Zip Concept</h3>
           <span class="app-package" title="jeiel85/minimal-zip-concept">jeiel85/minimal-zip-concept</span>
@@ -1941,7 +2098,7 @@
 
     <article class="app-card" id="kunsarang-baptist-church" data-platform="web" style="animation-delay: 1.35s">
       <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)">K</div>
+        <img class="app-icon" src="icons/kunsarang-baptist-church.png" alt="Kunsarang Baptist Church" loading="lazy" />
         <div class="card-title-area">
           <h3 class="app-name" title="Kunsarang Baptist Church">Kunsarang Baptist Church</h3>
           <span class="app-package" title="jeiel85/kunsarang-baptist-church">jeiel85/kunsarang-baptist-church</span>
@@ -1983,7 +2140,7 @@
 
     <article class="app-card" id="pulpit-ink-desktop" data-platform="desktop" style="animation-delay: 1.4000000000000001s">
       <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)">P</div>
+        <img class="app-icon" src="icons/pulpit-ink-desktop.png" alt="Pulpit Ink Desktop" loading="lazy" />
         <div class="card-title-area">
           <h3 class="app-name" title="Pulpit Ink Desktop">Pulpit Ink Desktop</h3>
           <span class="app-package" title="jeiel85/pulpit-ink-desktop">jeiel85/pulpit-ink-desktop</span>
@@ -2025,7 +2182,7 @@
 
     <article class="app-card" id="push-server-client-windows" data-platform="desktop" style="animation-delay: 1.4500000000000002s">
       <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)">P</div>
+        <img class="app-icon" src="icons/push-server-client-windows.png" alt="Push Server Client Windows" loading="lazy" />
         <div class="card-title-area">
           <h3 class="app-name" title="Push Server Client Windows">Push Server Client Windows</h3>
           <span class="app-package" title="jeiel85/push-server-client-windows">jeiel85/push-server-client-windows</span>
@@ -2061,636 +2218,6 @@
           </button>
       </div>
     </article>
-
-    <article class="app-card" id="healing-fishing" data-platform="web" style="animation-delay: 1.5s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)">H</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Healing Fishing">Healing Fishing</h3>
-          <span class="app-package" title="jeiel85/healing-fishing">jeiel85/healing-fishing</span>
-        </div>
-      </div>
-      <p class="app-desc">바쁜 일상 속에서 잔잔한 물결(윤슬)을 바라보며 마음을 녹이는 2.5D 로우폴리 힐링 낚시 게임, 윤슬낚시 (Yoonseul Fishing)</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/healing-fishing/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/healing-fishing" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Healing Fishing"
-            data-package=""
-            data-url="https://jeiel85.github.io/healing-fishing/"
-            data-desc="바쁜 일상 속에서 잔잔한 물결(윤슬)을 바라보며 마음을 녹이는 2.5D 로우폴리 힐링 낚시 게임, 윤슬낚시 (Yoonseul Fishing)"
-            data-github="https://github.com/jeiel85/healing-fishing"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="yoonseul-fishing" data-platform="web" style="animation-delay: 1.55s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #13547a 0%, #80d0c7 100%)">Y</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Yoonseul Fishing">Yoonseul Fishing</h3>
-          <span class="app-package" title="jeiel85/yoonseul-fishing">jeiel85/yoonseul-fishing</span>
-        </div>
-      </div>
-      <p class="app-desc">바쁜 일상 속에서 잔잔한 물결(윤슬)을 바라보며 마음을 녹이는 2.5D 로우폴리 힐링 낚시 게임, 윤슬낚시 (Yoonseul Fishing)</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/yoonseul-fishing/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/yoonseul-fishing" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Yoonseul Fishing"
-            data-package=""
-            data-url="https://jeiel85.github.io/yoonseul-fishing/"
-            data-desc="바쁜 일상 속에서 잔잔한 물결(윤슬)을 바라보며 마음을 녹이는 2.5D 로우폴리 힐링 낚시 게임, 윤슬낚시 (Yoonseul Fishing)"
-            data-github="https://github.com/jeiel85/yoonseul-fishing"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="daddy-car-book" data-platform="web" style="animation-delay: 1.6s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #c471f5 0%, #fa71cd 100%)">D</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Daddy Car Book">Daddy Car Book</h3>
-          <span class="app-package" title="jeiel85/daddy-car-book">jeiel85/daddy-car-book</span>
-        </div>
-      </div>
-      <p class="app-desc">4050 아빠들을 위한 쉽고 직관적인 차량 주유비 및 정비 내역 관리 가계부 앱 (Android · Kotlin · Jetpack Compose · Room · Local-First)</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/daddy-car-book/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/daddy-car-book" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Daddy Car Book"
-            data-package=""
-            data-url="https://jeiel85.github.io/daddy-car-book/"
-            data-desc="4050 아빠들을 위한 쉽고 직관적인 차량 주유비 및 정비 내역 관리 가계부 앱 (Android · Kotlin · Jetpack Compose · Room · Local-First)"
-            data-github="https://github.com/jeiel85/daddy-car-book"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="daddy-weekend" data-platform="web" style="animation-delay: 1.6500000000000001s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">D</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Daddy Weekend">Daddy Weekend</h3>
-          <span class="app-package" title="jeiel85/daddy-weekend">jeiel85/daddy-weekend</span>
-        </div>
-      </div>
-      <p class="app-desc">40~50대 아빠를 위한 현실적이고 부담 없는 주말 자녀 맞춤형 코스 추천 및 일정 저장 관리 앱 (Android · Local-First · Room · MVVM)</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/daddy-weekend/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/daddy-weekend" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Daddy Weekend"
-            data-package=""
-            data-url="https://jeiel85.github.io/daddy-weekend/"
-            data-desc="40~50대 아빠를 위한 현실적이고 부담 없는 주말 자녀 맞춤형 코스 추천 및 일정 저장 관리 앱 (Android · Local-First · Room · MVVM)"
-            data-github="https://github.com/jeiel85/daddy-weekend"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="daddy-easy-pocket-money" data-platform="web" style="animation-delay: 1.7000000000000002s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">D</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Daddy Easy Pocket Money">Daddy Easy Pocket Money</h3>
-          <span class="app-package" title="jeiel85/daddy-easy-pocket-money">jeiel85/daddy-easy-pocket-money</span>
-        </div>
-      </div>
-      <p class="app-desc">4050 아빠들을 위한 쉽고 간편한 복잡하지 않은 용돈 및 카드 지출 정리 및 가계부 앱 (Android MVVM Room Local-First)</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/daddy-easy-pocket-money/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/daddy-easy-pocket-money" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Daddy Easy Pocket Money"
-            data-package=""
-            data-url="https://jeiel85.github.io/daddy-easy-pocket-money/"
-            data-desc="4050 아빠들을 위한 쉽고 간편한 복잡하지 않은 용돈 및 카드 지출 정리 및 가계부 앱 (Android MVVM Room Local-First)"
-            data-github="https://github.com/jeiel85/daddy-easy-pocket-money"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="daddy-log" data-platform="web" style="animation-delay: 1.75s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">D</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Daddy Log">Daddy Log</h3>
-          <span class="app-package" title="jeiel85/daddy-log">jeiel85/daddy-log</span>
-        </div>
-      </div>
-      <p class="app-desc">두피케어기록 · Daddy Log — 두피·모발 상태, 각도별 사진, 케어 루틴을 기기 안에 기록하고 변화를 비교하는 로컬 전용 Android 앱</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/daddy-log/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/daddy-log" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Daddy Log"
-            data-package=""
-            data-url="https://jeiel85.github.io/daddy-log/"
-            data-desc="두피케어기록 · Daddy Log — 두피·모발 상태, 각도별 사진, 케어 루틴을 기기 안에 기록하고 변화를 비교하는 로컬 전용 Android 앱"
-            data-github="https://github.com/jeiel85/daddy-log"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="daddy-gift-tracker" data-platform="web" style="animation-delay: 1.8s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)">D</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Daddy Gift Tracker">Daddy Gift Tracker</h3>
-          <span class="app-package" title="jeiel85/daddy-gift-tracker">jeiel85/daddy-gift-tracker</span>
-        </div>
-      </div>
-      <p class="app-desc">경조사 인맥 관리 — 경조사비·인맥·일정 알림·통계를 로컬에서 관리하는 Android 장부 앱 (Daddy Gift Tracker: a local-first Android ledger for Korean social-event gifts &amp; relationships)</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/daddy-gift-tracker/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/daddy-gift-tracker" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Daddy Gift Tracker"
-            data-package=""
-            data-url="https://jeiel85.github.io/daddy-gift-tracker/"
-            data-desc="경조사 인맥 관리 — 경조사비·인맥·일정 알림·통계를 로컬에서 관리하는 Android 장부 앱 (Daddy Gift Tracker: a local-first Android ledger for Korean social-event gifts &amp; relationships)"
-            data-github="https://github.com/jeiel85/daddy-gift-tracker"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="daddy-heart-journal" data-platform="web" style="animation-delay: 1.85s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%)">D</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Daddy Heart Journal">Daddy Heart Journal</h3>
-          <span class="app-package" title="jeiel85/daddy-heart-journal">jeiel85/daddy-heart-journal</span>
-        </div>
-      </div>
-      <p class="app-desc">글과 목소리로 가족에게 남기는 마음을 기기 안에 보관하는 아빠 전용 로컬 감성 일기장 (Android · Jetpack Compose)</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/daddy-heart-journal/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/daddy-heart-journal" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Daddy Heart Journal"
-            data-package=""
-            data-url="https://jeiel85.github.io/daddy-heart-journal/"
-            data-desc="글과 목소리로 가족에게 남기는 마음을 기기 안에 보관하는 아빠 전용 로컬 감성 일기장 (Android · Jetpack Compose)"
-            data-github="https://github.com/jeiel85/daddy-heart-journal"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="daddy-mode-switch" data-platform="web" style="animation-delay: 1.9000000000000001s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)">D</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Daddy Mode Switch">Daddy Mode Switch</h3>
-          <span class="app-package" title="jeiel85/daddy-mode-switch">jeiel85/daddy-mode-switch</span>
-        </div>
-      </div>
-      <p class="app-desc">퇴근길 3분, 따뜻한 아빠로 전환하는 안드로이드 앱 · A 3-minute commute ritual to switch into warm dad mode (Android · Jetpack Compose)</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/daddy-mode-switch/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/daddy-mode-switch" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Daddy Mode Switch"
-            data-package=""
-            data-url="https://jeiel85.github.io/daddy-mode-switch/"
-            data-desc="퇴근길 3분, 따뜻한 아빠로 전환하는 안드로이드 앱 · A 3-minute commute ritual to switch into warm dad mode (Android · Jetpack Compose)"
-            data-github="https://github.com/jeiel85/daddy-mode-switch"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="dualframe-recorder" data-platform="web" style="animation-delay: 1.9500000000000002s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)">D</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Dualframe Recorder">Dualframe Recorder</h3>
-          <span class="app-package" title="jeiel85/dualframe-recorder">jeiel85/dualframe-recorder</span>
-        </div>
-      </div>
-      <p class="app-desc">한 번의 촬영으로 16:9 가로 버전과 9:16 세로 버전을 동시에 저장하는 독립적인 로컬 카메라 유틸리티 앱 </p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/dualframe-recorder/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/dualframe-recorder" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Dualframe Recorder"
-            data-package=""
-            data-url="https://jeiel85.github.io/dualframe-recorder/"
-            data-desc="한 번의 촬영으로 16:9 가로 버전과 9:16 세로 버전을 동시에 저장하는 독립적인 로컬 카메라 유틸리티 앱 "
-            data-github="https://github.com/jeiel85/dualframe-recorder"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="day-bits" data-platform="web" style="animation-delay: 2s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)">D</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Day Bits">Day Bits</h3>
-          <span class="app-package" title="jeiel85/day-bits">jeiel85/day-bits</span>
-        </div>
-      </div>
-      <p class="app-desc">1일 1클립 일상 브이로그 비디오 다이어리 앱 DayBits (Android app compiling daily video clips into a vlog)</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/day-bits/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/day-bits" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Day Bits"
-            data-package=""
-            data-url="https://jeiel85.github.io/day-bits/"
-            data-desc="1일 1클립 일상 브이로그 비디오 다이어리 앱 DayBits (Android app compiling daily video clips into a vlog)"
-            data-github="https://github.com/jeiel85/day-bits"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="clear-pdf-local" data-platform="web" style="animation-delay: 2.0500000000000003s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)">C</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Clear PDF Local">Clear PDF Local</h3>
-          <span class="app-package" title="jeiel85/clear-pdf-local">jeiel85/clear-pdf-local</span>
-        </div>
-      </div>
-      <p class="app-desc">Fast, private, and lightweight offline PDF reader &amp; document scanner. Built with Kotlin and Jetpack Compose.</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/clear-pdf-local/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/clear-pdf-local" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Clear PDF Local"
-            data-package=""
-            data-url="https://jeiel85.github.io/clear-pdf-local/"
-            data-desc="Fast, private, and lightweight offline PDF reader &amp; document scanner. Built with Kotlin and Jetpack Compose."
-            data-github="https://github.com/jeiel85/clear-pdf-local"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="earth-live-wallpaper" data-platform="web" style="animation-delay: 2.1s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #13547a 0%, #80d0c7 100%)">E</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Earth Live Wallpaper">Earth Live Wallpaper</h3>
-          <span class="app-package" title="jeiel85/earth-live-wallpaper">jeiel85/earth-live-wallpaper</span>
-        </div>
-      </div>
-      <p class="app-desc">Real-time 3D Earth live wallpaper for Windows 11. Location-aware sunlight visualization. Lively Wallpaper compatible.</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/earth-live-wallpaper/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/earth-live-wallpaper" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Earth Live Wallpaper"
-            data-package=""
-            data-url="https://jeiel85.github.io/earth-live-wallpaper/"
-            data-desc="Real-time 3D Earth live wallpaper for Windows 11. Location-aware sunlight visualization. Lively Wallpaper compatible."
-            data-github="https://github.com/jeiel85/earth-live-wallpaper"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="yoonseul-fishing-unity" data-platform="web" style="animation-delay: 2.15s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #c471f5 0%, #fa71cd 100%)">Y</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Yoonseul Fishing Unity">Yoonseul Fishing Unity</h3>
-          <span class="app-package" title="jeiel85/yoonseul-fishing-unity">jeiel85/yoonseul-fishing-unity</span>
-        </div>
-      </div>
-      <p class="app-desc">윤슬낚시 Unity 6 / C# port (from Kotlin/Compose Android). Targets Android + Windows.</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://jeiel85.github.io/yoonseul-fishing-unity/" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/yoonseul-fishing-unity" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Yoonseul Fishing Unity"
-            data-package=""
-            data-url="https://jeiel85.github.io/yoonseul-fishing-unity/"
-            data-desc="윤슬낚시 Unity 6 / C# port (from Kotlin/Compose Android). Targets Android + Windows."
-            data-github="https://github.com/jeiel85/yoonseul-fishing-unity"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
-
-    <article class="app-card" id="quiet-orbit" data-platform="web" style="animation-delay: 2.2s">
-      <div class="card-header">
-        <div class="app-icon-letter" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">Q</div>
-        <div class="card-title-area">
-          <h3 class="app-name" title="Quiet Orbit">Quiet Orbit</h3>
-          <span class="app-package" title="jeiel85/quiet-orbit">jeiel85/quiet-orbit</span>
-        </div>
-      </div>
-      <p class="app-desc">Quiet Orbit — 작은 행성 위를 산책하며 빛나는 메시지 조각을 발견하는 조용한 3D 웹 경험 (Next.js + React Three Fiber)</p>
-      <div class="card-meta">
-        <span class="platform-badge platform-web">🌐 Web App</span>
-        <span class="status-badge status-production">Production</span>
-
-      </div>
-
-
-      <div class="app-actions">
-
-        <a href="https://quiet-orbit.vercel.app" target="_blank" rel="noopener" class="btn btn-web">
-          🌐 Launch Web App
-        </a>
-
-        <a href="https://github.com/jeiel85/quiet-orbit" target="_blank" rel="noopener" class="btn btn-ghost">
-          💻 GitHub
-        </a>
-
-          <button class="btn btn-ghost btn-copy-promo"
-            data-platform="web"
-            data-status="production"
-            data-name="Quiet Orbit"
-            data-package=""
-            data-url="https://quiet-orbit.vercel.app"
-            data-desc="Quiet Orbit — 작은 행성 위를 산책하며 빛나는 메시지 조각을 발견하는 조용한 3D 웹 경험 (Next.js + React Three Fiber)"
-            data-github="https://github.com/jeiel85/quiet-orbit"
-            data-group-url="https://groups.google.com/g/sitdory-tester"
-            data-optin-url="https://play.google.com/apps/testing/undefined"
-            data-playstore-url="https://play.google.com/store/apps/details?id=undefined">
-            📋 Copy Link
-          </button>
-      </div>
-    </article>
     </div>
 
     <div class="no-results">No projects found for this filter.</div>
@@ -2698,7 +2225,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="update-time">Last updated: 2026-06-18 07:44 KST</p>
+      <p class="update-time">Last updated: 2026-06-05 10:25 KST</p>
       <p class="links">
         <a href="https://github.com/jeiel85" target="_blank">GitHub Profile</a>
         <span class="sep">·</span>
@@ -2828,10 +2355,7 @@
 
         if (platform === 'android') {
           if (status === 'closed_testing') {
-            copyText = `당신의 앱을 테스트했습니다.
-제 앱도 테스트 부탁드립니다.
-
-Hello! I'm looking for mutual closed testing for my Android app.
+            copyText = `Hello! I have tested your app and I'm looking for mutual closed testing for my Android app as well.
 Please join my test using the links below, and leave your test links in the comments. I will test yours back immediately! (Screenshots are highly appreciated)
 
 ▶ App Name: ${name}
@@ -2841,11 +2365,12 @@ Please join my test using the links below, and leave your test links in the comm
 
 Thank you so much for your time and support. Let's launch successfully together!`;
             toastMsg = '비공개 테스트 모집 문구가 복사되었습니다! 📋✨';
+          } else if (status === 'github_only') {
+            copyText = `▶ 앱 이름: ${name}\n▶ 앱 설명: ${desc}\n👉 GitHub APK 다운로드: ${playStoreUrl}\n👉 GitHub 레포지토리: ${github}`;
+            toastMsg = 'GitHub APK 링크가 복사되었습니다! 📦✨';
           } else {
             // Production app
-            copyText = `▶ 앱 이름: ${name}
-▶ 앱 설명: ${desc || 'Google Play 스토어에서 확인하실 수 있습니다.'}
-👉 다운로드 링크: ${playStoreUrl}`;
+            copyText = `▶ 앱 이름: ${name}\n▶ 앱 설명: ${desc || 'Google Play 스토어에서 확인하실 수 있습니다.'}\n👉 다운로드 링크: ${playStoreUrl}`;
             toastMsg = '앱 다운로드 정보가 복사되었습니다! 📱✨';
           }
         } else if (platform === 'web') {
