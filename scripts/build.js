@@ -447,6 +447,7 @@ function getStatusLabel(status) {
     case 'draft': return 'Draft';
     case 'development': return 'In Dev';
     case 'active': return 'Active';
+    case 'github_only': return 'GitHub Only';
     default: return status;
   }
 }
@@ -460,6 +461,7 @@ function getStatusClass(status) {
     case 'development':
       return 'status-testing';
     case 'draft':
+    case 'github_only':
       return 'status-draft';
     default:
       return '';
@@ -588,6 +590,19 @@ function getCardHTML(project, scraped, index) {
             ▶ Play Store
           </a>
           ${copyBtnHTML}
+        </div>`;
+    } else if (project.status === 'github_only') {
+      const releasesUrl = project.githubUrl ? `${project.githubUrl}/releases` : '';
+      buttonsHTML = `
+        <div class="app-actions">
+          ${releasesUrl ? `
+          <a href="${releasesUrl}" target="_blank" rel="noopener" class="btn btn-secondary">
+            📦 GitHub Releases
+          </a>` : ''}
+          ${project.githubUrl ? `
+          <a href="${project.githubUrl}" target="_blank" rel="noopener" class="btn btn-ghost">
+            💻 GitHub
+          </a>` : ''}
         </div>`;
     } else {
       buttonsHTML = `
@@ -851,6 +866,42 @@ function getCSS() {
       height: 28px;
       border-radius: 4px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    /* ── Social Links ── */
+    .social-links {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    @media (min-width: 860px) {
+      .social-links {
+        justify-content: flex-start;
+      }
+    }
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .social-link:hover {
+      border-color: var(--border-hover);
+      color: var(--text-primary);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     /* ── Stats ── */
@@ -1685,6 +1736,15 @@ function generateHTML(config, scrapedData) {
               <div class="stat-value desktop">${counts.desktop}</div>
               <div class="stat-label">Desktop</div>
             </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/${developer.githubUsername}?tab=repositories" target="_blank" rel="noopener" class="social-link">
+              💻 GitHub Repos
+            </a>
+            <a href="https://play.google.com/store/apps/dev?id=${developer.accountId}" target="_blank" rel="noopener" class="social-link">
+              ▶ Google Play
+            </a>
           </div>
         </div>
 
