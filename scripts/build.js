@@ -52,8 +52,21 @@ const LOCKED_ANDROID_PACKAGES = {
   "com.markscene.app": "MarkScene",
   "io.stargaze.explorer": "별자리 탐험: AR 별자리 가이드",
   "com.jeiel85.breathspace": "숨 쉴 틈 — Breath Space",
+  "com.jeiel85.daddypocket": "아빠 용돈 — Daddy Pocket",
   "com.flux.hourglass": "아워 글래스 — Flux Hourglass",
-  "com.jeiel85.retropixelracer": "Retro Pixel Racer — 레트로 픽셀 레이서"
+  "com.jeiel85.retropixelracer": "Retro Pixel Racer — 레트로 픽셀 레이서",
+  "com.dualframe.recorder": "DualFrame Recorder",
+  "com.jeiel85.daybits": "DayBits — 1일 1클립 비디오 다이어리",
+  "com.jeiel85.forestpetgarden": "Forest Pet Garden — 포레스트 펫 가든",
+  "com.jeiel85.daddycarbook": "가족 차량 관리 — Daddy Car Book",
+  "com.jeiel85.clearpdflocal": "ClearPDF Local — 로컬 PDF 리더",
+  "com.jeiel85.daddyweekend": "Daddy Weekend — 아빠 주말 코스",
+  "com.jeiel.daddylog": "Daddy Log — 두피케어기록",
+  "com.jeiel.daddygifttracker": "Daddy Gift Tracker — 경조사 장부",
+  "com.jeiel.daddyheartjournal": "Daddy Heart Journal — 마음 일기장",
+  "com.jeiel85.daddymode": "Daddy Mode Switch — 아빠 모드 전환",
+  "com.jeiel85.healingfishing": "Yoonseul Fishing — 윤슬낚시",
+  "com.jeiel.contextactionassistant": "Context Action Assistant"
 };
 
 function validateAndroidPackages(projects) {
@@ -149,10 +162,24 @@ async function fetchGitHubRepos(username) {
   return repos;
 }
 
+function isAndroidRepository(repo) {
+  const repoName = (repo.name || '').toLowerCase();
+  const description = (repo.description || '').toLowerCase();
+  const topics = Array.isArray(repo.topics)
+    ? repo.topics.map(topic => topic.toLowerCase())
+    : [];
+
+  return repoName.endsWith('-android')
+    || topics.some(topic => topic === 'android' || topic === 'android-app' || topic === 'android-game')
+    || description.includes('android')
+    || description.includes('안드로이드');
+}
+
 function isPortfolioCandidate(repo) {
   if (repo.private || repo.fork) return false;
   if (GITHUB_EXCLUDED_REPOS.has(repo.name)) return false;
   if (GITHUB_EXCLUDED_SUFFIXES.some(suffix => repo.name.endsWith(suffix))) return false;
+  if (isAndroidRepository(repo)) return false;
 
   const homepage = (repo.homepage || '').trim();
   const topics = Array.isArray(repo.topics) ? repo.topics : [];
@@ -595,6 +622,10 @@ function getCardHTML(project, scraped, index) {
       const releasesUrl = project.githubUrl ? `${project.githubUrl}/releases` : '';
       buttonsHTML = `
         <div class="app-actions">
+          ${project.url ? `
+          <a href="${project.url}" target="_blank" rel="noopener" class="btn btn-web">
+            🌐 Project Page
+          </a>` : ''}
           ${releasesUrl ? `
           <a href="${releasesUrl}" target="_blank" rel="noopener" class="btn btn-secondary">
             📦 GitHub Releases

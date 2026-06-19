@@ -109,6 +109,9 @@
       "package": "com.jeiel85.daddypocket",
       "platform": "android",
       "status": "closed_testing",
+      "description": "4050 아빠들을 위한 쉽고 간편한 용돈 및 카드 지출 정리 가계부 앱.",
+      "url": "https://jeiel85.github.io/daddy-easy-pocket-money/",
+      "githubUrl": "https://github.com/jeiel85/daddy-easy-pocket-money",
       "iconUrl": "icons/com.jeiel85.daddypocket.png"
     },
     {
@@ -132,6 +135,7 @@
       "platform": "android",
       "status": "github_only",
       "description": "한 번의 촬영으로 16:9 가로 버전과 9:16 세로 버전을 동시에 저장하는 독립적인 로컬 카메라 유틸리티 앱.",
+      "url": "https://jeiel85.github.io/dualframe-recorder/",
       "githubUrl": "https://github.com/jeiel85/dualframe-recorder",
       "iconUrl": "icons/com.dualframe.recorder.png"
     },
@@ -141,6 +145,7 @@
       "platform": "android",
       "status": "github_only",
       "description": "매일 짧은 영상 클립을 기록하고, 자동으로 세로형 브이로그로 편집해주는 오프라인 퍼스트 영상 일기 앱.",
+      "url": "https://jeiel85.github.io/day-bits/",
       "githubUrl": "https://github.com/jeiel85/day-bits",
       "iconUrl": "icons/com.jeiel85.daybits.png"
     },
@@ -150,6 +155,7 @@
       "platform": "android",
       "status": "github_only",
       "description": "🦊 평화로운 오프라인 펫 가든 시뮬레이션 — 펫을 입양하고 숲을 탐험하며 보물을 모으세요.",
+      "url": "https://jeiel85.github.io/forest-pet-garden-android/",
       "githubUrl": "https://github.com/jeiel85/forest-pet-garden-android",
       "iconUrl": "icons/com.jeiel85.forestpetgarden.png"
     },
@@ -159,8 +165,88 @@
       "platform": "android",
       "status": "github_only",
       "description": "차 관리할 때 놓치지 않게 해주는 아빠용 차량 노트. 자동차 정비, 보험, 검사, 주유비, 세차 등 완벽 관리.",
+      "url": "https://jeiel85.github.io/daddy-car-book/",
       "githubUrl": "https://github.com/jeiel85/daddy-car-book",
       "iconUrl": "icons/com.jeiel85.daddycarbook.png"
+    },
+    {
+      "name": "ClearPDF Local — 로컬 PDF 리더",
+      "package": "com.jeiel85.clearpdflocal",
+      "platform": "android",
+      "status": "github_only",
+      "description": "광고나 클라우드 업로드 없이 기기 안에서 PDF 읽기, 스캔, 병합, 분할을 처리하는 로컬 우선 Android PDF 유틸리티.",
+      "url": "https://jeiel85.github.io/clear-pdf-local/",
+      "githubUrl": "https://github.com/jeiel85/clear-pdf-local",
+      "iconUrl": "icons/com.jeiel85.clearpdflocal.png"
+    },
+    {
+      "name": "Daddy Weekend — 아빠 주말 코스",
+      "package": "com.jeiel85.daddyweekend",
+      "platform": "android",
+      "status": "github_only",
+      "description": "40~50대 아빠가 부담 없이 주말 가족 코스를 정리하고 저장할 수 있는 로컬 우선 일정 앱.",
+      "url": "https://jeiel85.github.io/daddy-weekend/",
+      "githubUrl": "https://github.com/jeiel85/daddy-weekend",
+      "iconUrl": "icons/com.jeiel85.daddyweekend.png"
+    },
+    {
+      "name": "Daddy Log — 두피케어기록",
+      "package": "com.jeiel.daddylog",
+      "platform": "android",
+      "status": "github_only",
+      "description": "두피와 모발 상태, 각도별 사진, 케어 루틴을 기기 안에 기록하고 변화를 비교하는 로컬 전용 Android 앱.",
+      "url": "https://jeiel85.github.io/daddy-log/",
+      "githubUrl": "https://github.com/jeiel85/daddy-log",
+      "iconUrl": "icons/com.jeiel.daddylog.png"
+    },
+    {
+      "name": "Daddy Gift Tracker — 경조사 장부",
+      "package": "com.jeiel.daddygifttracker",
+      "platform": "android",
+      "status": "github_only",
+      "description": "경조사비, 인맥, 일정 알림, 통계를 로컬에서 관리하는 한국형 경조사 장부 앱.",
+      "url": "https://jeiel85.github.io/daddy-gift-tracker/",
+      "githubUrl": "https://github.com/jeiel85/daddy-gift-tracker",
+      "iconUrl": "icons/com.jeiel.daddygifttracker.png"
+    },
+    {
+      "name": "Daddy Heart Journal — 마음 일기장",
+      "package": "com.jeiel.daddyheartjournal",
+      "platform": "android",
+      "status": "github_only",
+      "description": "글과 목소리로 가족에게 남기는 마음을 기기 안에 보관하는 아빠 전용 로컬 감성 일기장.",
+      "url": "https://jeiel85.github.io/daddy-heart-journal/",
+      "githubUrl": "https://github.com/jeiel85/daddy-heart-journal",
+      "iconUrl": "icons/com.jeiel.daddyheartjournal.png"
+    },
+    {
+      "name": "Daddy Mode Switch — 아빠 모드 전환",
+      "package": "com.jeiel85.daddymode",
+      "platform": "android",
+      "status": "github_only",
+      "description": "퇴근길 3분 동안 일 모드에서 따뜻한 아빠 모드로 전환하도록 돕는 로컬 우선 마음 루틴 앱.",
+      "url": "https://jeiel85.github.io/daddy-mode-switch/",
+      "githubUrl": "https://github.com/jeiel85/daddy-mode-switch",
+      "iconUrl": "icons/com.jeiel85.daddymode.png"
+    },
+    {
+      "name": "Yoonseul Fishing — 윤슬낚시",
+      "package": "com.jeiel85.healingfishing",
+      "platform": "android",
+      "status": "github_only",
+      "description": "잔잔한 물결을 바라보며 마음을 녹이는 2.5D 로우폴리 힐링 낚시 게임.",
+      "url": "https://jeiel85.github.io/yoonseul-fishing/",
+      "githubUrl": "https://github.com/jeiel85/yoonseul-fishing",
+      "iconUrl": "icons/com.jeiel85.healingfishing.png"
+    },
+    {
+      "name": "Context Action Assistant",
+      "package": "com.jeiel.contextactionassistant",
+      "platform": "android",
+      "status": "github_only",
+      "description": "스크린샷과 수동 캡처 화면을 AI가 분석해 일정, 코드, 메모, 영수증 같은 실행 가능한 결과로 바꾸는 Android 오버레이 앱.",
+      "githubUrl": "https://github.com/jeiel85/context-action-assistant-android",
+      "iconUrl": "icons/com.jeiel.contextactionassistant.png"
     },
     {
       "name": "Score Fetcher — 찬양팀 콘티 & 악보 PWA",
@@ -286,123 +372,13 @@
       "source": "github"
     },
     {
-      "name": "Healing Fishing",
+      "name": "Mournlight Covenant",
       "platform": "web",
       "status": "production",
-      "description": "바쁜 일상 속에서 잔잔한 물결(윤슬)을 바라보며 마음을 녹이는 2.5D 로우폴리 힐링 낚시 게임, 윤슬낚시 (Yoonseul Fishing)",
-      "url": "https://jeiel85.github.io/healing-fishing/",
-      "githubUrl": "https://github.com/jeiel85/healing-fishing",
-      "iconUrl": "icons/healing-fishing.png",
-      "source": "github"
-    },
-    {
-      "name": "Yoonseul Fishing",
-      "platform": "web",
-      "status": "production",
-      "description": "바쁜 일상 속에서 잔잔한 물결(윤슬)을 바라보며 마음을 녹이는 2.5D 로우폴리 힐링 낚시 게임, 윤슬낚시 (Yoonseul Fishing)",
-      "url": "https://jeiel85.github.io/yoonseul-fishing/",
-      "githubUrl": "https://github.com/jeiel85/yoonseul-fishing",
-      "iconUrl": "icons/yoonseul-fishing.png",
-      "source": "github"
-    },
-    {
-      "name": "Daddy Car Book",
-      "platform": "web",
-      "status": "production",
-      "description": "4050 아빠들을 위한 쉽고 직관적인 차량 주유비 및 정비 내역 관리 가계부 앱 (Android · Kotlin · Jetpack Compose · Room · Local-First)",
-      "url": "https://jeiel85.github.io/daddy-car-book/",
-      "githubUrl": "https://github.com/jeiel85/daddy-car-book",
-      "iconUrl": "icons/daddy-car-book.png",
-      "source": "github"
-    },
-    {
-      "name": "Daddy Weekend",
-      "platform": "web",
-      "status": "production",
-      "description": "40~50대 아빠를 위한 현실적이고 부담 없는 주말 자녀 맞춤형 코스 추천 및 일정 저장 관리 앱 (Android · Local-First · Room · MVVM)",
-      "url": "https://jeiel85.github.io/daddy-weekend/",
-      "githubUrl": "https://github.com/jeiel85/daddy-weekend",
-      "iconUrl": "icons/daddy-weekend.png",
-      "source": "github"
-    },
-    {
-      "name": "Daddy Easy Pocket Money",
-      "platform": "web",
-      "status": "production",
-      "description": "4050 아빠들을 위한 쉽고 간편한 복잡하지 않은 용돈 및 카드 지출 정리 및 가계부 앱 (Android MVVM Room Local-First)",
-      "url": "https://jeiel85.github.io/daddy-easy-pocket-money/",
-      "githubUrl": "https://github.com/jeiel85/daddy-easy-pocket-money",
-      "iconUrl": "icons/daddy-easy-pocket-money.png",
-      "source": "github"
-    },
-    {
-      "name": "Daddy Log",
-      "platform": "web",
-      "status": "production",
-      "description": "두피케어기록 · Daddy Log — 두피·모발 상태, 각도별 사진, 케어 루틴을 기기 안에 기록하고 변화를 비교하는 로컬 전용 Android 앱",
-      "url": "https://jeiel85.github.io/daddy-log/",
-      "githubUrl": "https://github.com/jeiel85/daddy-log",
-      "iconUrl": "icons/daddy-log.png",
-      "source": "github"
-    },
-    {
-      "name": "Daddy Gift Tracker",
-      "platform": "web",
-      "status": "production",
-      "description": "경조사 인맥 관리 — 경조사비·인맥·일정 알림·통계를 로컬에서 관리하는 Android 장부 앱 (Daddy Gift Tracker: a local-first Android ledger for Korean social-event gifts & relationships)",
-      "url": "https://jeiel85.github.io/daddy-gift-tracker/",
-      "githubUrl": "https://github.com/jeiel85/daddy-gift-tracker",
-      "iconUrl": "icons/daddy-gift-tracker.png",
-      "source": "github"
-    },
-    {
-      "name": "Daddy Heart Journal",
-      "platform": "web",
-      "status": "production",
-      "description": "글과 목소리로 가족에게 남기는 마음을 기기 안에 보관하는 아빠 전용 로컬 감성 일기장 (Android · Jetpack Compose)",
-      "url": "https://jeiel85.github.io/daddy-heart-journal/",
-      "githubUrl": "https://github.com/jeiel85/daddy-heart-journal",
-      "iconUrl": "icons/daddy-heart-journal.png",
-      "source": "github"
-    },
-    {
-      "name": "Daddy Mode Switch",
-      "platform": "web",
-      "status": "production",
-      "description": "퇴근길 3분, 따뜻한 아빠로 전환하는 안드로이드 앱 · A 3-minute commute ritual to switch into warm dad mode (Android · Jetpack Compose)",
-      "url": "https://jeiel85.github.io/daddy-mode-switch/",
-      "githubUrl": "https://github.com/jeiel85/daddy-mode-switch",
-      "iconUrl": "icons/daddy-mode-switch.png",
-      "source": "github"
-    },
-    {
-      "name": "Dualframe Recorder",
-      "platform": "web",
-      "status": "production",
-      "description": "한 번의 촬영으로 16:9 가로 버전과 9:16 세로 버전을 동시에 저장하는 독립적인 로컬 카메라 유틸리티 앱 ",
-      "url": "https://jeiel85.github.io/dualframe-recorder/",
-      "githubUrl": "https://github.com/jeiel85/dualframe-recorder",
-      "iconUrl": "icons/dualframe-recorder.png",
-      "source": "github"
-    },
-    {
-      "name": "Day Bits",
-      "platform": "web",
-      "status": "production",
-      "description": "1일 1클립 일상 브이로그 비디오 다이어리 앱 DayBits (Android app compiling daily video clips into a vlog)",
-      "url": "https://jeiel85.github.io/day-bits/",
-      "githubUrl": "https://github.com/jeiel85/day-bits",
-      "iconUrl": "icons/day-bits.png",
-      "source": "github"
-    },
-    {
-      "name": "Clear PDF Local",
-      "platform": "web",
-      "status": "production",
-      "description": "Fast, private, and lightweight offline PDF reader & document scanner. Built with Kotlin and Jetpack Compose.",
-      "url": "https://jeiel85.github.io/clear-pdf-local/",
-      "githubUrl": "https://github.com/jeiel85/clear-pdf-local",
-      "iconUrl": "icons/clear-pdf-local.png",
+      "description": "죽은 왕국의 기억이 다음 밤을 바꾸는 모바일 우선 2D 액션 로그라이트 게임 기획/프로토타입.",
+      "url": "https://jeiel85.github.io/mournlight-covenant-android/",
+      "githubUrl": "https://github.com/jeiel85/mournlight-covenant-android",
+      "iconUrl": "icons/mournlight-covenant-android.png",
       "source": "github"
     },
     {

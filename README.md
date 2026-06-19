@@ -14,7 +14,7 @@ Sitdory(jeiel85)의 개발 프로젝트들을 한눈에 확인하고 관리할 �
 
 1. **GitHub 공개 레포 자동 동기화**
    - 빌드 시 GitHub API로 공개/비포크 레포를 확인하고, 포트폴리오 후보에 해당하는 새 웹/데스크톱 프로젝트를 `apps.json`에 자동 병합합니다.
-   - `-android` 레포는 패키지명과 Play Store 상태가 필요하므로 자동 중복 등록하지 않고, 기존 Android 앱 목록은 수동으로 정확히 관리합니다.
+   - Android 성격의 레포는 패키지명과 Play Store 상태가 필요하므로 자동으로 Web App 카드로 중복 등록하지 않고, Android 앱 목록에서 수동으로 정확히 관리합니다.
 
 2. **Google Play Store 실시간 스크래핑 (`google-play-scraper` 활용)**
    - `apps.json`에 정의된 Android 앱 패키지명을 기반으로 구글 플레이 스토어에서 실시간 데이터를 자동으로 가져옵니다.
@@ -133,6 +133,21 @@ node build.js
   "platform": "android",
   "status": "closed_testing",
   "iconUrl": "icons/com.example.testapp.png"
+}
+```
+
+#### 📦 Android GitHub-only 앱
+아직 Play Store 공개/테스트 링크보다 GitHub 배포 페이지가 우선인 앱은 `status`를 `github_only`로 선언하고 `githubUrl`과 필요 시 `url`을 함께 적습니다.
+```json
+{
+  "name": "앱 이름",
+  "package": "com.example.githubapp",
+  "platform": "android",
+  "status": "github_only",
+  "description": "GitHub에서 배포 중인 Android 앱 설명.",
+  "url": "https://jeiel85.github.io/example-app/",
+  "githubUrl": "https://github.com/jeiel85/example-app",
+  "iconUrl": "icons/com.example.githubapp.png"
 }
 ```
 
