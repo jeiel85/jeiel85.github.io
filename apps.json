@@ -420,6 +420,16 @@
       "githubUrl": "https://github.com/jeiel85/building-qr",
       "iconUrl": "icons/building-qr.png",
       "source": "github"
+    },
+    {
+      "name": "Boardlink Web",
+      "platform": "web",
+      "status": "production",
+      "description": "Free, accountless, browser-first PWA for real-time multiplayer board & casual games. Open a link and play instantly — server-authoritative rooms on Cloudflare Workers + Durable Objects.",
+      "url": "https://jeiel85.github.io/boardlink-web/",
+      "githubUrl": "https://github.com/jeiel85/boardlink-web",
+      "iconUrl": "icons/boardlink-web.png",
+      "source": "github"
     }
   ]
 }
