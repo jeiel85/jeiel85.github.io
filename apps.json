@@ -439,6 +439,26 @@
       "githubUrl": "https://github.com/jeiel85/boardlink-web",
       "iconUrl": "icons/boardlink-web.png",
       "source": "github"
+    },
+    {
+      "name": "Lumen Bloom",
+      "platform": "web",
+      "status": "production",
+      "description": "Infinite-growth ambient arcade game — evolve from light dust to a Cosmic Web. Vanilla TypeScript, Vite, Web Audio API, PWA.",
+      "url": "https://jeiel85.github.io/lumen-bloom/",
+      "githubUrl": "https://github.com/jeiel85/lumen-bloom",
+      "iconUrl": "icons/lumen-bloom.png",
+      "source": "github"
+    },
+    {
+      "name": "Ephemeral File Share",
+      "platform": "web",
+      "status": "production",
+      "description": "Privacy-first ephemeral file sharing with browser-side AES-256-GCM encryption, passkey auth, and auto-deletion within 24h.",
+      "url": "https://jeiel85.github.io/ephemeral-file-share/",
+      "githubUrl": "https://github.com/jeiel85/ephemeral-file-share",
+      "iconUrl": "icons/ephemeral-file-share.png",
+      "source": "github"
     }
   ]
 }
