@@ -3,7 +3,8 @@
     "name": "Sitdory",
     "accountId": "6375329746023339599",
     "githubUsername": "jeiel85",
-    "description": "Android, Web & Desktop Developer"
+    "description": "Android, Web & Desktop Developer",
+    "tagline": "낮에는 9 to 6 직장인이자 두 아들의 아빠, 밤에는 바이브코딩으로 아이디어를 끝까지 만들어 배포하는 개발자입니다."
   },
   "projects": [
     {
@@ -32,6 +33,7 @@
       "package": "com.markleaf.notes",
       "platform": "android",
       "status": "production",
+      "featured": true,
       "iconUrl": "icons/com.markleaf.notes.png"
     },
     {
@@ -252,6 +254,7 @@
       "name": "Score Fetcher — 찬양팀 콘티 & 악보 PWA",
       "platform": "web",
       "status": "production",
+      "showcase": true,
       "description": "예배 콘티 작성, 악보 검색, 통합 PDF 악보집 생성, 실시간 공유와 푸시 알림을 제공하는 스마트 찬양팀용 Progressive Web App (PWA).",
       "url": "https://jeiel85.github.io/score-fetcher-web/",
       "githubUrl": "https://github.com/jeiel85/score-fetcher-web",
@@ -261,6 +264,7 @@
       "name": "ScriptureFlux — 성경 교차 참조 시각화 네트워크",
       "platform": "web",
       "status": "production",
+      "featured": true,
       "description": "성경 66권 전체의 긴밀한 상호 연관성(34만 개 이상의 교차 참조)을 HTML5 Canvas 2D 기반의 수려한 무지개 곡선 네트워크로 시각화해 주는 모던 인터랙티브 웹앱 (SPA).",
       "url": "https://jeiel85.github.io/scripture-flux-web/",
       "githubUrl": "https://github.com/jeiel85/scripture-flux-web",
@@ -270,6 +274,7 @@
       "name": "Mongil Coupon — 몬길 쿠폰 자동 등록기",
       "platform": "web",
       "status": "production",
+      "showcase": true,
       "description": "넷마블 '몬스터길들이기' 쿠폰들을 일괄적으로 수집하여 복잡한 과정 없이 한 번에 편리하게 자동 등록해 주는 웹 서비스.",
       "url": "https://jeiel85.github.io/mongil-coupon-web/",
       "githubUrl": "https://github.com/jeiel85/mongil-coupon-web",
@@ -336,6 +341,7 @@
       "name": "Minimal Zip Concept",
       "platform": "web",
       "status": "production",
+      "showcase": true,
       "description": "Minimal Zip Concept (MZC) - Learning-oriented lossless compression engine in Rust featuring RLE, Dictionary, LZ77, BCJ, Delta, and Dynamic Huffman Coding with a real-time GUI plot dashboard.",
       "url": "https://jeiel85.github.io/minimal-zip-concept/",
       "githubUrl": "https://github.com/jeiel85/minimal-zip-concept",
@@ -385,6 +391,7 @@
       "name": "Earth Live Wallpaper",
       "platform": "web",
       "status": "production",
+      "showcase": true,
       "description": "Real-time 3D Earth live wallpaper for Windows 11. Location-aware sunlight visualization. Lively Wallpaper compatible.",
       "url": "https://jeiel85.github.io/earth-live-wallpaper/",
       "githubUrl": "https://github.com/jeiel85/earth-live-wallpaper",
@@ -405,6 +412,7 @@
       "name": "Quiet Orbit",
       "platform": "web",
       "status": "production",
+      "showcase": true,
       "description": "Quiet Orbit — 작은 행성 위를 산책하며 빛나는 메시지 조각을 발견하는 조용한 3D 웹 경험 (Next.js + React Three Fiber)",
       "url": "https://quiet-orbit.vercel.app",
       "githubUrl": "https://github.com/jeiel85/quiet-orbit",
@@ -415,6 +423,7 @@
       "name": "Building Qr",
       "platform": "web",
       "status": "production",
+      "showcase": true,
       "description": "링크를 스캔 가능한 3D 빌딩숲 QR 아트로 만드는 생성기 · Turn any link into a scannable QR code that stands up as an isometric city skyline.",
       "url": "https://jeiel85.github.io/building-qr/",
       "githubUrl": "https://github.com/jeiel85/building-qr",
