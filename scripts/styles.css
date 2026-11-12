@@ -61,7 +61,7 @@ button, input, select { font: inherit; color: inherit; }
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 16px; }
 .nav-brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; letter-spacing: -0.01em; }
-.nav-brand i { width: 10px; height: 12px; background: var(--lamp); border-radius: 1px; box-shadow: 0 0 10px rgba(255, 194, 75, 0.7); }
+.nav-brand img { width: 24px; height: 24px; border-radius: 6px; }
 .nav-links { display: flex; gap: 22px; align-items: center; font-size: 0.9rem; }
 .nav-links a { text-decoration: none; color: var(--fog); transition: color 0.2s; }
 .nav-links a:hover { color: var(--moon); }

@@ -1,6 +1,6 @@
-# Sitdory — 퇴근 후에 켜지는 창문들
+# EL Studio — 퇴근 후에 켜지는 창문들
 
-Sitdory(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다.
+EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다.
 
 - **사이트:** https://jeiel85.github.io
 - **Google Play 개발자 페이지:** https://play.google.com/store/apps/dev?id=6375329746023339599
@@ -62,7 +62,7 @@ GitHub의 공개 레포는 `apps.json`에 없어도 전체 프로젝트 목록�
 ```json
 {
   "developer": {
-    "name": "Sitdory",
+    "name": "EL Studio",
     "accountId": "6375329746023339599",
     "githubUsername": "jeiel85",
     "description": "Android, Web & Desktop Developer",
@@ -95,6 +95,17 @@ GitHub의 공개 레포는 `apps.json`에 없어도 전체 프로젝트 목록�
 | `hiddenRepos` (최상위) | `apps.json`에 없는 공개 레포 중 목록에서 뺄 레포 이름 |
 
 Android 패키지명은 `build.js`의 `LOCKED_ANDROID_PACKAGES`로 잠겨 있어, 등록된 패키지를 바꾸거나 지우면 빌드가 실패합니다.
+
+## 브랜드 마크
+
+`brand/`에 EL Studio 마크가 있습니다. 7×5 창문 격자에서 불 켜진 창문이 "EL"을 이룹니다(히어로 스카이라인과 같은 모티프).
+
+| 파일 | 용도 |
+| --- | --- |
+| `brand/el-studio-mark.svg` | 원본. 파비콘(SVG)과 내비게이션 로고 |
+| `brand/el-studio-mark-512.png` | 공유 미리보기(`og:image`)와 일반 용도 |
+| `brand/el-studio-avatar-512.png` | GitHub 등 원형으로 잘리는 프로필 사진용(모서리 없는 정사각형, 여백 포함) |
+| `brand/apple-touch-icon.png`, `favicon.png` | 180px 홈 화면 아이콘, 64px PNG 파비콘 |
 
 ## 기술
 

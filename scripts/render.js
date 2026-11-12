@@ -454,17 +454,20 @@ function renderPage(model) {
   <meta property="og:description" content="${esc(description)}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://${esc(developer.githubUsername)}.github.io/" />
+  <meta property="og:image" content="https://${esc(developer.githubUsername)}.github.io/brand/el-studio-mark-512.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="icon" href="brand/el-studio-mark.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.png" type="image/png" sizes="64x64" />
+  <link rel="apple-touch-icon" href="brand/apple-touch-icon.png" />
   <style>${CSS}</style>
 </head>
 <body>
   <a class="skip" href="#projects">전체 프로젝트로 건너뛰기</a>
   <nav class="nav" aria-label="주요 메뉴">
     <div class="container nav-inner">
-      <a class="nav-brand" href="#top"><i aria-hidden="true"></i>${esc(developer.name)}</a>
+      <a class="nav-brand" href="#top"><img src="brand/el-studio-mark.svg" alt="" width="24" height="24" />${esc(developer.name)}</a>
       <div class="nav-links">
         <a href="#featured">대표작</a>
         <a href="#ops">운영</a>

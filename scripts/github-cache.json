@@ -1,6 +1,46 @@
 {
- "fetchedAt": "2026-11-12T07:42:45.615Z",
+ "fetchedAt": "2026-11-12T07:54:34.628Z",
  "repos": [
+  {
+   "name": "jeiel85.github.io",
+   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
+   "url": "https://github.com/jeiel85/jeiel85.github.io",
+   "homepage": "https://jeiel85.github.io/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-05-26T06:40:18Z",
+   "pushedAt": "2026-11-12T07:47:35Z",
+   "archived": false,
+   "sizeKb": 15261,
+   "license": null,
+   "primaryLanguage": "JavaScript",
+   "languages": [
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 48578
+    },
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 27417
+    }
+   ],
+   "topics": [
+    "android",
+    "closed-testing",
+    "github-actions",
+    "google-play",
+    "play-store",
+    "portfolio"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 98,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "Sitdory(jeiel85)의 개발 프로젝트들을 한눈에 확인하고 관리할 수 있는 현대적이고 아름다운 반응형 포트폴리오 웹사이트입니다."
+  },
   {
    "name": "tailscale-force-connect",
    "description": "Reconnect Tailscale on every Windows boot, even if you clicked Disconnect before shutting down. PowerShell + Task Scheduler, runs as SYSTEM before login.",
@@ -9,9 +49,9 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-11-11T06:09:06Z",
-   "pushedAt": "2026-11-12T07:35:19Z",
+   "pushedAt": "2026-11-12T07:46:55Z",
    "archived": false,
-   "sizeKb": 147,
+   "sizeKb": 315,
    "license": "MIT",
    "primaryLanguage": "PowerShell",
    "languages": [
@@ -36,13 +76,13 @@
     "vpn",
     "windows"
    ],
-   "releases": 4,
+   "releases": 5,
    "latestRelease": {
-    "tag": "v1.3.0",
-    "date": "2026-11-12T07:05:16Z",
-    "url": "https://github.com/jeiel85/tailscale-force-connect/releases/tag/v1.3.0"
+    "tag": "v1.4.0",
+    "date": "2026-11-12T07:48:21Z",
+    "url": "https://github.com/jeiel85/tailscale-force-connect/releases/tag/v1.4.0"
    },
-   "commits": 7,
+   "commits": 8,
    "workflows": 0,
    "images": [],
    "excerpt": "Windows PC에서 재부팅할 때마다 Tailscale을 연결 상태로 되돌립니다. 직접 끊을 수도 있지만, 끊은 상태는 1시간(바꿀 수 있음)까지만 유지되고 그 뒤에는 자동으로 다시 연결됩니다."
@@ -7743,46 +7783,6 @@
    "excerpt": "meshsim은 재난 상황의 store-carry-forward 라우팅을 연구하기 위한 Elixir/OTP 기반 DTN 시뮬레이터입니다. 동일한 시나리오와 시드에서 Direct, Binary Spray-and-Wait, Epidemic을 비교하고 전달률, 지연, 전송량과 토큰 보존 불변식을 추적합니다."
   },
   {
-   "name": "jeiel85.github.io",
-   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
-   "url": "https://github.com/jeiel85/jeiel85.github.io",
-   "homepage": "https://jeiel85.github.io/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-06-26T22:11:39Z",
-   "archived": false,
-   "sizeKb": 15261,
-   "license": null,
-   "primaryLanguage": "JavaScript",
-   "languages": [
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 48578
-    },
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 27417
-    }
-   ],
-   "topics": [
-    "android",
-    "closed-testing",
-    "github-actions",
-    "google-play",
-    "play-store",
-    "portfolio"
-   ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 98,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "Sitdory(jeiel85)의 개발 프로젝트들을 한눈에 확인하고 관리할 수 있는 현대적이고 아름다운 반응형 포트폴리오 웹사이트입니다."
-  },
-  {
    "name": "nimdrop",
    "description": "같은 LAN 안에서 QR/URL로 대용량 파일을 안전하게 주고받는 임시 로컬 전송 도구 (Nim 2.2.10)",
    "url": "https://github.com/jeiel85/nimdrop",
@@ -9712,7 +9712,7 @@
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
   "followers": 23,
-  "total": 11696,
+  "total": 11699,
   "days": [
    {
     "date": "2025-11-09",
@@ -11188,7 +11188,7 @@
    },
    {
     "date": "2026-11-12",
-    "count": 52
+    "count": 55
    }
   ]
  }
