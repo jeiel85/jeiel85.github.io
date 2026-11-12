@@ -1,6 +1,6 @@
 {
   "developer": {
-    "name": "Sitdory",
+    "name": "EL Studio",
     "accountId": "6375329746023339599",
     "githubUsername": "jeiel85",
     "description": "Android, Web & Desktop Developer",
@@ -12,13 +12,16 @@
       "package": "app.briodo",
       "platform": "android",
       "status": "production",
-      "iconUrl": "icons/app.briodo.png"
+      "githubUrl": "https://github.com/jeiel85/briodo-android",
+      "iconUrl": "icons/app.briodo.png",
+      "featured": true
     },
     {
       "name": "DockMode - Standby Clock",
       "package": "io.jeiel85.dockmode",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/dockmode-android",
       "iconUrl": "icons/io.jeiel85.dockmode.png"
     },
     {
@@ -26,6 +29,7 @@
       "package": "com.jeiel85.luminadaily",
       "platform": "android",
       "status": "production",
+      "githubUrl": "https://github.com/jeiel85/lumina-daily-android",
       "iconUrl": "icons/com.jeiel85.luminadaily.png"
     },
     {
@@ -33,6 +37,7 @@
       "package": "com.markleaf.notes",
       "platform": "android",
       "status": "production",
+      "githubUrl": "https://github.com/jeiel85/markleaf-android",
       "featured": true,
       "iconUrl": "icons/com.markleaf.notes.png"
     },
@@ -41,6 +46,7 @@
       "package": "com.jeiel85.nightseedbastion",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/nightseed-bastion-android",
       "iconUrl": "icons/com.jeiel85.nightseedbastion.png"
     },
     {
@@ -48,6 +54,7 @@
       "package": "com.nightseed.survivor",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/nightseed-survivor-android",
       "iconUrl": "icons/com.nightseed.survivor.png"
     },
     {
@@ -55,6 +62,7 @@
       "package": "io.pulpit.ink",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/pulpit-ink-android",
       "iconUrl": "icons/io.pulpit.ink.png"
     },
     {
@@ -62,6 +70,7 @@
       "package": "com.veritasbible.app",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/veritas-bible-android",
       "iconUrl": "icons/com.veritasbible.app.png"
     },
     {
@@ -69,6 +78,7 @@
       "package": "com.jeiel85.wildhavenidle",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/wild-haven-idle-android",
       "iconUrl": "icons/com.jeiel85.wildhavenidle.png"
     },
     {
@@ -76,6 +86,7 @@
       "package": "com.jeiel.zephyr_sky",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/zephyr-sky-android",
       "iconUrl": "icons/com.jeiel.zephyr_sky.png"
     },
     {
@@ -83,6 +94,7 @@
       "package": "com.bebecup.app",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/bebecup-android",
       "iconUrl": "icons/com.bebecup.app.png"
     },
     {
@@ -90,6 +102,7 @@
       "package": "com.markscene.app",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/markscene-android",
       "iconUrl": "icons/com.markscene.app.png"
     },
     {
@@ -97,6 +110,7 @@
       "package": "io.stargaze.explorer",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/stargaze-explorer-android",
       "iconUrl": "icons/io.stargaze.explorer.png"
     },
     {
@@ -104,6 +118,7 @@
       "package": "com.jeiel85.breathspace",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/breath-space-android",
       "iconUrl": "icons/com.jeiel85.breathspace.png"
     },
     {
@@ -121,6 +136,7 @@
       "package": "com.flux.hourglass",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/flux-hourglass-android",
       "iconUrl": "icons/com.flux.hourglass.png"
     },
     {
@@ -128,6 +144,7 @@
       "package": "com.jeiel85.retropixelracer",
       "platform": "android",
       "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/retro-pixel-racer-android",
       "description": "80년대 고전 아케이드의 강렬한 레이싱 재미를 안드로이드 모바일 환경에서 현대적인 Jetpack Compose 기술로 우아하게 재해석한 2D 픽셀 아트 레이싱 게임입니다.",
       "iconUrl": "icons/com.jeiel85.retropixelracer.png"
     },
@@ -303,7 +320,8 @@
       "status": "production",
       "description": "Windows 작업 표시줄 트레이에서 Claude Code, Gemini CLI, OpenCode 등 다양한 AI 에이전트 도구들의 실시간 크레딧 사용량과 알림을 백그라운드에서 편리하게 감시하고 모니터링해 주는 WPF 유틸리티 앱.",
       "githubUrl": "https://github.com/jeiel85/claude-usage-tray-windows",
-      "iconUrl": "icons/claude-usage-tray-windows.ico"
+      "iconUrl": "icons/claude-usage-tray-windows.ico",
+      "featured": true
     },
     {
       "name": "LinkDock — 데스크톱 분석형 영상 다운로더",

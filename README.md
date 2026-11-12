@@ -1,174 +1,116 @@
-# 📱 Sitdory Developer Portfolio
+# EL Studio — 퇴근 후에 켜지는 창문들
 
-Sitdory(jeiel85)의 개발 프로젝트들을 한눈에 확인하고 관리할 수 있는 현대적이고 아름다운 반응형 포트폴리오 웹사이트입니다.
+EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다.
 
-이 프로젝트는 정적 HTML 파일(`index.html`)을 수동으로 유지보수하는 대신, **앱 데이터 자동 수집 스크립트**와 **GitHub Actions 워크플로우**를 활용하여 데이터와 디자인을 완벽히 분리하고 상시 최신 상태로 자동 갱신되도록 구축되었습니다.
+- **사이트:** https://jeiel85.github.io
+- **Google Play 개발자 페이지:** https://play.google.com/store/apps/dev?id=6375329746023339599
 
-## 🔗 웹사이트 주소
-- **포트폴리오:** [https://jeiel85.github.io](https://jeiel85.github.io)
-- **Google Play 개발자 페이지:** [https://play.google.com/store/apps/dev?id=6375329746023339599](https://play.google.com/store/apps/dev?id=6375329746023339599)
+## 페이지 구성
 
----
+| 영역 | 보여 주는 것 | 데이터 출처 |
+| --- | --- | --- |
+| 히어로 스카이라인 | 지난 1년 기여 기록. 창문 하나가 하루, 건물 하나가 한 달이고 건물 높이는 그 달의 기여량 | GitHub 기여 캘린더 |
+| 대표작 | `featured: true` 프로젝트의 스크린샷, 설치 수, ★, 커밋, 릴리스, 언어 구성 | GitHub + Google Play |
+| 운영 | 배포 채널별 개수(Play 출시/비공개 테스트, Releases, 웹, CI), 월별 새 레포, 최근 활동 | GitHub + `apps.json` |
+| 기술 | 언어별 코드 비중(바이트), 레포 토픽. 누르면 아래 목록이 그 기술로 필터링됨 | GitHub |
+| 전체 프로젝트 | 공개 레포 전체 + `apps.json` 큐레이션. 검색·분류·채널·정렬, 카드를 누르면 상세(README 스크린샷 갤러리, 지표, 링크) | 전부 |
 
-## ✨ 핵심 기능
+상세 창은 `#project/<레포이름>` 주소로 바로 열 수 있습니다(예: `https://jeiel85.github.io/#project/markleaf-android`).
 
-1. **GitHub 공개 레포 자동 동기화**
-   - 빌드 시 GitHub API로 공개/비포크 레포를 확인하고, 포트폴리오 후보에 해당하는 새 웹/데스크톱 프로젝트를 `apps.json`에 자동 병합합니다.
-   - Android 성격의 레포는 패키지명과 Play Store 상태가 필요하므로 자동으로 Web App 카드로 중복 등록하지 않고, Android 앱 목록에서 수동으로 정확히 관리합니다.
-
-2. **Google Play Store 실시간 스크래핑 (`google-play-scraper` 활용)**
-   - `apps.json`에 정의된 Android 앱 패키지명을 기반으로 구글 플레이 스토어에서 실시간 데이터를 자동으로 가져옵니다.
-   - 앱 타이틀, 상세 설명, 다운로드 수, 별점(레이팅), 앱 아이콘 이미지 등을 자동으로 연동하여 렌더링합니다.
-
-3. **프리미엄 & 반응형 UI 디자인 (Vanilla CSS & JS)**
-   - 미려하고 매끄러운 다크 모드 테마와 글래스모피즘(Glassmorphism) 효과를 적용했습니다.
-   - 배경에 부드럽게 유영하며 움직이는 애니메이션 오브(Background Glow Orbs)를 구현하여 시각적 몰입감을 줍니다.
-   - 모바일, 태블릿, 데스크톱 등 어떠한 화면 크기에서도 최적의 레이아웃을 제공하는 완전 반응형 그리드를 채택했습니다.
-   - 카테고리별(전체, Android, Web, Desktop) 클릭 시 부드러운 애니메이션과 함께 즉각 필터링되는 인터랙티브 기능을 탑재했습니다.
-
-4. **GitHub Actions를 통한 100% 완전 자동화 배포**
-   - 매일 한국 시간 기준 오전 6시(UTC 21:00)에 스케줄링된 크론탭 작업이 스크래퍼를 구동합니다.
-   - 또는 프로젝트 구성 정보(`apps.json`)가 담긴 파일이 수정되어 `push`될 때 자동으로 빌드 파이프라인이 실행됩니다.
-   - 빌드가 완료되면 최신 스토어 통계 및 데이터가 포함된 `index.html`이 자동 갱신 및 커밋되고, **GitHub Pages**를 통해 클라이언트에 즉시 무중단 배포됩니다.
-
----
-
-## 📂 프로젝트 구조
+## 데이터 파이프라인
 
 ```text
-├── .github/
-│   └── workflows/
-│       └── update-portfolio.yml   # 매일 오전 6시 자동 빌드 및 GitHub Pages 배포 워크플로우
-├── icons/                         # 웹/데스크톱 앱 아이콘 및 저장된 스토어 아이콘 폴더
-├── scripts/
-│   ├── build.js                   # apps.json 및 스토어 크롤링 데이터를 조합해 index.html을 빌드하는 핵심 스크립트
-│   ├── cache.json                 # 플레이 스토어에서 긁어온 데이터 캐시 파일 (API 호출 최소화)
-│   ├── package.json               # 빌드 디펜던시 (google-play-scraper 등)
-│   └── package-lock.json
-├── apps.json                      # 포트폴리오의 모든 데이터를 정의하는 단일 설정 소스 파일
-├── index.html                     # build.js를 통해 갱신 및 자동 생성되는 빌드 결과물 (정적 페이지)
-└── README.md                      # 본 설명 파일
+apps.json ──────────────┐
+GitHub GraphQL ─────────┼─▶ scripts/build.js ─▶ index.html (정적 페이지 한 장)
+Google Play 스토어 페이지 ┘        │
+                                   ├─ scripts/github-cache.json  (GitHub 스냅샷)
+                                   └─ scripts/cache.json         (Play 스토어 데이터)
 ```
 
----
+- **GitHub (`scripts/github.js`)**: GraphQL 한 번의 페이지네이션으로 공개·비포크 레포 전체의 언어, 토픽, ★, 커밋 수, 릴리스, `.github/workflows` 개수, README 이미지(배지·로고·SVG 제외)와 첫 문단을 가져오고, 기여 캘린더를 따로 가져옵니다. **토큰이 필요합니다**(`GITHUB_TOKEN` 또는 `GH_TOKEN`).
+- **Google Play**: 출시된 앱은 스토어 페이지에서 아이콘·요약·스크린샷·다운로드 수를 읽습니다. 비공개 테스트 앱은 스토어에 공개 페이지가 생기면 자동으로 `production`으로 승격됩니다.
+- **실패 처리**: GitHub 또는 Play 호출이 실패하면 경고를 남기고 직전 캐시로 빌드합니다. 캐시도 없으면 해당 섹션만 빠집니다.
+- **비공개 레포**: `apps.json`의 `githubUrl`이 공개 레포가 아니면 GitHub 버튼을 숨기고 빌드 로그에 경고를 남깁니다.
 
-## 🛠️ 로컬 개발 및 빌드 방법
+## 자동 배포
 
-로컬 환경에서 직접 수동으로 빌드하거나 테스트를 원할 경우 아래 단계를 따릅니다.
+`.github/workflows/update-portfolio.yml`이 매일 오전 6시(KST)와 `apps.json`·`scripts/**` 변경 시 빌드하고, 갱신된 `index.html`과 캐시를 커밋한 뒤 GitHub Pages로 배포합니다.
 
-### 1. 요구사항
-- [Node.js](https://nodejs.org/) (v20 이상 권장)
+## 로컬 빌드
 
-### 2. 패키지 설치
-`scripts` 디렉토리로 이동하여 필요한 의존성 라이브러리를 설치합니다.
+Node.js 20 이상이 필요합니다.
+
 ```bash
 cd scripts
 npm install
+GITHUB_TOKEN=$(gh auth token) node build.js
 ```
 
-### 3. 빌드 실행
-빌드 스크립트를 직접 노드로 실행하여 `index.html`을 빌드 및 갱신합니다.
-```bash
-node build.js
-```
-*스크립트가 정상 종료되면 루트 폴더의 `index.html`과 `scripts/cache.json`, 그리고 `icons/` 내부의 앱 아이콘 파일들이 자동으로 갱신됩니다.*
+토큰 없이 실행하면 `github-cache.json`의 마지막 스냅샷으로 빌드합니다. 결과물은 루트의 `index.html`이며, 아무 정적 서버로 열면 됩니다(`python -m http.server`).
 
----
+| 파일 | 역할 |
+| --- | --- |
+| `scripts/build.js` | 검증 → GitHub·Play 수집 → 모델 조립 → 렌더 |
+| `scripts/github.js` | GitHub GraphQL 수집, README 이미지·발췌 추출, 캐시 |
+| `scripts/render.js` | 정적 HTML 렌더(스카이라인 SVG 포함) |
+| `scripts/styles.css`, `scripts/client.js` | 빌드 시 `index.html`에 인라인되는 스타일·스크립트(탐색기, 상세 창, 툴팁) |
 
-## 📝 포트폴리오 관리 가이드 (프로젝트 추가/수정)
+## `apps.json` 관리
 
-포트폴리오의 모든 데이터(개발자 정보 및 프로젝트 목록)는 루트 디렉토리의 **`apps.json`** 파일 하나로 관리됩니다. 이 파일을 직접 수정할 수도 있고, 빌드 스크립트가 GitHub 공개 레포 중 새 웹/데스크톱 후보를 자동으로 추가할 수도 있습니다. GitHub Actions는 갱신된 `apps.json`, `index.html`, 캐시와 아이콘을 커밋한 뒤 배포합니다.
-
-### `apps.json` 구조 예시
+GitHub의 공개 레포는 `apps.json`에 없어도 전체 프로젝트 목록에 자동으로 나옵니다. `apps.json`은 **큐레이션**용입니다. 여기에 있는 프로젝트는 아이콘, 플랫폼, 배포 상태, 추천 순위를 직접 지정합니다.
 
 ```json
 {
   "developer": {
-    "name": "Sitdory",
+    "name": "EL Studio",
     "accountId": "6375329746023339599",
     "githubUsername": "jeiel85",
-    "description": "Android, Web & Desktop Developer"
+    "description": "Android, Web & Desktop Developer",
+    "tagline": "낮에는 9 to 6 직장인이자 두 아들의 아빠, 밤에는 ..."
   },
+  "hiddenRepos": ["숨기고-싶은-레포"],
   "projects": [
     {
-      "name": "BrioDo — Do it with brio.",
-      "package": "app.briodo",
+      "name": "Markleaf",
+      "package": "com.markleaf.notes",
       "platform": "android",
       "status": "production",
-      "iconUrl": "icons/app.briodo.png"
-    },
-    {
-      "name": "Score Fetcher — 찬양팀 콘티 & 악보 PWA",
-      "platform": "web",
-      "status": "production",
-      "description": "예배 콘티 작성, 악보 검색, 통합 PDF 악보집 생성, 실시간 공유와 푸시 알림을 제공하는 스마트 찬양팀용 Progressive Web App (PWA).",
-      "url": "https://score-fetcher.vercel.app",
-      "githubUrl": "https://github.com/jeiel85/score-fetcher-web",
-      "iconUrl": "icons/score-fetcher-web.png"
+      "featured": true,
+      "githubUrl": "https://github.com/jeiel85/markleaf-android",
+      "iconUrl": "icons/com.markleaf.notes.png"
     }
   ]
 }
 ```
 
-### 💡 프로젝트 유형별 추가 가이드
+| 필드 | 설명 |
+| --- | --- |
+| `platform` | `android` · `web` · `desktop` |
+| `status` | Android: `production`(Play 출시) · `closed_testing`(비공개 테스트) · `github_only`. 그 외: `production` |
+| `githubUrl` | 연결할 레포. 공개 레포면 커밋·릴리스·스크린샷·언어가 자동으로 붙습니다 |
+| `url` | 라이브 데모·소개 페이지. 없으면 레포의 homepage를 씁니다 |
+| `featured` | 대표작 섹션에 크게 노출 |
+| `description` | 직접 쓴 한 줄 설명. 없으면 Play 요약 → 레포 설명 순으로 씁니다 |
+| `hidden` | 목록에서 숨김 |
+| `hiddenRepos` (최상위) | `apps.json`에 없는 공개 레포 중 목록에서 뺄 레포 이름 |
 
-#### 📱 Android 출시 앱 (Production)
-구글 플레이 스토어에 라이브 상태인 앱의 경우, `package` 필드에 정확한 패키지명을 적어주면 빌드 시 자동으로 설명, 아이콘, 다운로드 수, 평점을 스토어로부터 긁어옵니다.
-```json
-{
-  "name": "앱 이름",
-  "package": "com.example.myapp",
-  "platform": "android",
-  "status": "production",
-  "iconUrl": "icons/com.example.myapp.png"
-}
-```
+Android 패키지명은 `build.js`의 `LOCKED_ANDROID_PACKAGES`로 잠겨 있어, 등록된 패키지를 바꾸거나 지우면 빌드가 실패합니다.
 
-#### 🧪 Android 비공개 테스트 앱 (Closed Testing)
-비공개 테스트 중인 앱의 경우 `status`를 `closed_testing`으로 선언하면 테스터 전용 가입 링크(Join Beta)와 플레이 스토어 이동 버튼이 세련된 오렌지색 배지와 함께 제공됩니다.
-```json
-{
-  "name": "테스트 앱 이름",
-  "package": "com.example.testapp",
-  "platform": "android",
-  "status": "closed_testing",
-  "iconUrl": "icons/com.example.testapp.png"
-}
-```
+## 브랜드 마크
 
-#### 📦 Android GitHub-only 앱
-아직 Play Store 공개/테스트 링크보다 GitHub 배포 페이지가 우선인 앱은 `status`를 `github_only`로 선언하고 `githubUrl`과 필요 시 `url`을 함께 적습니다.
-```json
-{
-  "name": "앱 이름",
-  "package": "com.example.githubapp",
-  "platform": "android",
-  "status": "github_only",
-  "description": "GitHub에서 배포 중인 Android 앱 설명.",
-  "url": "https://jeiel85.github.io/example-app/",
-  "githubUrl": "https://github.com/jeiel85/example-app",
-  "iconUrl": "icons/com.example.githubapp.png"
-}
-```
+`brand/`에 EL Studio 마크가 있습니다. 7×5 창문 격자에서 불 켜진 창문이 "EL"을 이룹니다(히어로 스카이라인과 같은 모티프).
 
-#### 🌐 Web 및 💻 Desktop 프로젝트
-웹/데스크톱 앱은 스토어 스크래핑을 탈 수 없으므로 `description`, `url`(또는 다운로드 링크), `githubUrl` 등을 직접 정적으로 적어줍니다.
-```json
-{
-  "name": "LocalPDF Studio",
-  "platform": "desktop",
-  "status": "production",
-  "description": "Tauri + Rust 기반의 현대적인 로컬 PDF 편집 및 변환 프로그램.",
-  "githubUrl": "https://github.com/jeiel85/localpdf-studio-desktop",
-  "iconUrl": "icons/localpdf-studio-desktop.png"
-}
-```
+| 파일 | 용도 |
+| --- | --- |
+| `brand/el-studio-mark.svg` | 원본. 파비콘(SVG)과 내비게이션 로고 |
+| `brand/el-studio-mark-512.png` | 공유 미리보기(`og:image`)와 일반 용도 |
+| `brand/el-studio-avatar-512.png` | GitHub 등 원형으로 잘리는 프로필 사진용(모서리 없는 정사각형, 여백 포함) |
+| `brand/apple-touch-icon.png`, `favicon.png` | 180px 홈 화면 아이콘, 64px PNG 파비콘 |
+| `brand/el-studio-play-header.png` | Google Play 개발자 페이지 헤더(4096×2304, 투명 없음). 2026-11 기준 기여 기록 스카이라인 |
 
----
+## 기술
 
-## 🎨 기술 스택 및 디자인 요소
-- **Frontend Core:** HTML5, CSS3 (Custom Variables, Flexbox, CSS Grid), Vanilla Javascript (ES6+)
-- **Build & Automation:** Node.js, `google-play-scraper`
-- **CI/CD Pipeline:** GitHub Actions & GitHub Pages
-- **Typography:** Google Fonts (Inter)
-- **Visual Badges:** Shields.io
+- 정적 HTML 한 장(프레임워크 없음), 바닐라 JS
+- 폰트: Hahmlet(제목), IBM Plex Sans KR(본문), IBM Plex Mono(숫자)
+- Node.js 빌드 스크립트, GitHub GraphQL API, `google-play-scraper` + 스토어 HTML 폴백
+- GitHub Actions + GitHub Pages
