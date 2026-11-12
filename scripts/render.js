@@ -173,13 +173,15 @@ function renderFeaturedMedia(p) {
     return `<div class="feature-media feature-media--empty">${p.icon ? `<img class="feature-icon-lg" src="${esc(p.icon)}" alt="" loading="lazy" />` : ''}</div>`;
   }
   const portrait = p.images.filter(i => i.portrait);
-  if (portrait.length >= 2) {
+  const imgs = p.images.filter(i => !i.portrait);
+  // Store screenshots render as a phone strip; a single one is used only when
+  // there is no landscape image to put on the stage.
+  if (portrait.length >= 2 || (portrait.length && !imgs.length)) {
     return `
         <div class="feature-media feature-media--phones">
           <div class="phones">${portrait.slice(0, 6).map(img => `<img src="${esc(img.url)}" alt="${esc(img.alt)}" loading="lazy" />`).join('')}</div>
         </div>`;
   }
-  const imgs = p.images.filter(i => !i.portrait);
   const thumbs = imgs.length > 1
     ? `<div class="feature-thumbs">${imgs.slice(0, 6).map((img, i) => `<button type="button" class="thumb${i === 0 ? ' is-active' : ''}" data-src="${esc(img.url)}" data-alt="${esc(img.alt)}" aria-label="${i + 1}번째 이미지 보기"><img src="${esc(img.url)}" alt="" loading="lazy" /></button>`).join('')}</div>`
     : '';

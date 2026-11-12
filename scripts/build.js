@@ -443,7 +443,9 @@ function buildModel(config, playCache, snapshot) {
   const { developer } = config;
   const repos = snapshot && Array.isArray(snapshot.repos) ? snapshot.repos : [];
   const repoByName = new Map(repos.map(r => [r.name.toLowerCase(), r]));
-  const hiddenRepos = new Set([...EXPLORER_EXCLUDED_REPOS, ...(config.hiddenRepos || [])].map(n => n.toLowerCase()));
+  // A curated project marked hidden must also keep its repository out of discovery.
+  const hiddenProjectRepos = config.projects.filter(p => p.hidden).map(p => repoNameFromUrl(p.githubUrl)).filter(Boolean);
+  const hiddenRepos = new Set([...EXPLORER_EXCLUDED_REPOS, ...(config.hiddenRepos || []), ...hiddenProjectRepos].map(n => n.toLowerCase()));
 
   const projects = [];
   const usedRepos = new Set();
