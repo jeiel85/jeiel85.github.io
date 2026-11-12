@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-12T07:57:26.153Z",
+ "fetchedAt": "2026-11-12T08:25:20.385Z",
  "repos": [
   {
    "name": "jeiel85.github.io",
@@ -9,7 +9,7 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-12T07:55:41Z",
+   "pushedAt": "2026-11-12T08:25:01Z",
    "archived": false,
    "sizeKb": 15261,
    "license": null,
@@ -36,10 +36,10 @@
    ],
    "releases": 0,
    "latestRelease": null,
-   "commits": 98,
+   "commits": 99,
    "workflows": 1,
    "images": [],
-   "excerpt": "Sitdory(jeiel85)의 개발 프로젝트들을 한눈에 확인하고 관리할 수 있는 현대적이고 아름다운 반응형 포트폴리오 웹사이트입니다."
+   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
   },
   {
    "name": "tailscale-force-connect",
@@ -58,7 +58,17 @@
     {
      "name": "PowerShell",
      "color": "#012456",
-     "bytes": 26804
+     "bytes": 39929
+    },
+    {
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 30026
+    },
+    {
+     "name": "Slint",
+     "color": "#2379F4",
+     "bytes": 23521
     },
     {
      "name": "Batchfile",
@@ -97,7 +107,7 @@
    "createdAt": "2026-04-29T00:51:29Z",
    "pushedAt": "2026-11-12T07:34:47Z",
    "archived": false,
-   "sizeKb": 110518,
+   "sizeKb": 111197,
    "license": "Apache-2.0",
    "primaryLanguage": "Kotlin",
    "languages": [
@@ -138,11 +148,11 @@
     "room",
     "sqlite"
    ],
-   "releases": 158,
+   "releases": 159,
    "latestRelease": {
-    "tag": "v2.72.0",
-    "date": "2026-11-04T15:30:43Z",
-    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.72.0"
+    "tag": "v2.73.0",
+    "date": "2026-11-12T07:59:50Z",
+    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.73.0"
    },
    "commits": 1143,
    "workflows": 5,
@@ -6098,7 +6108,7 @@
     "typescript",
     "windows"
    ],
-   "releases": 17,
+   "releases": 7,
    "latestRelease": {
     "tag": "v0.18.0",
     "date": "2026-05-22T02:03:37Z",
@@ -6754,7 +6764,7 @@
     "visualizer",
     "wasm"
    ],
-   "releases": 8,
+   "releases": 1,
    "latestRelease": {
     "tag": "v0.12.1",
     "date": "2026-06-09T02:46:08Z",
@@ -9712,7 +9722,7 @@
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
   "followers": 23,
-  "total": 11699,
+  "total": 11702,
   "days": [
    {
     "date": "2025-11-09",
@@ -10932,11 +10942,11 @@
    },
    {
     "date": "2026-09-09",
-    "count": 26
+    "count": 28
    },
    {
     "date": "2026-09-10",
-    "count": 71
+    "count": 69
    },
    {
     "date": "2026-09-11",
@@ -10968,11 +10978,11 @@
    },
    {
     "date": "2026-09-18",
-    "count": 123
+    "count": 124
    },
    {
     "date": "2026-09-19",
-    "count": 54
+    "count": 53
    },
    {
     "date": "2026-09-20",
@@ -10996,11 +11006,11 @@
    },
    {
     "date": "2026-09-25",
-    "count": 22
+    "count": 24
    },
    {
     "date": "2026-09-26",
-    "count": 253
+    "count": 251
    },
    {
     "date": "2026-09-27",
@@ -11024,11 +11034,11 @@
    },
    {
     "date": "2026-10-02",
-    "count": 15
+    "count": 16
    },
    {
     "date": "2026-10-03",
-    "count": 20
+    "count": 19
    },
    {
     "date": "2026-10-04",
@@ -11036,7 +11046,7 @@
    },
    {
     "date": "2026-10-05",
-    "count": 76
+    "count": 77
    },
    {
     "date": "2026-10-06",
@@ -11044,7 +11054,7 @@
    },
    {
     "date": "2026-10-07",
-    "count": 189
+    "count": 188
    },
    {
     "date": "2026-10-08",
@@ -11152,15 +11162,15 @@
    },
    {
     "date": "2026-11-03",
-    "count": 129
+    "count": 131
    },
    {
     "date": "2026-11-04",
-    "count": 85
+    "count": 84
    },
    {
     "date": "2026-11-05",
-    "count": 34
+    "count": 33
    },
    {
     "date": "2026-11-06",
@@ -11172,15 +11182,15 @@
    },
    {
     "date": "2026-11-08",
-    "count": 66
+    "count": 67
    },
    {
     "date": "2026-11-09",
-    "count": 75
+    "count": 77
    },
    {
     "date": "2026-11-10",
-    "count": 61
+    "count": 58
    },
    {
     "date": "2026-11-11",
@@ -11188,7 +11198,7 @@
    },
    {
     "date": "2026-11-12",
-    "count": 55
+    "count": 58
    }
   ]
  }
