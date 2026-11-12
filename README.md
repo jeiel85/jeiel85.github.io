@@ -106,6 +106,7 @@ Android 패키지명은 `build.js`의 `LOCKED_ANDROID_PACKAGES`로 잠겨 있어
 | `brand/el-studio-mark-512.png` | 공유 미리보기(`og:image`)와 일반 용도 |
 | `brand/el-studio-avatar-512.png` | GitHub 등 원형으로 잘리는 프로필 사진용(모서리 없는 정사각형, 여백 포함) |
 | `brand/apple-touch-icon.png`, `favicon.png` | 180px 홈 화면 아이콘, 64px PNG 파비콘 |
+| `brand/el-studio-play-header.png` | Google Play 개발자 페이지 헤더(4096×2304, 투명 없음). 2026-11 기준 기여 기록 스카이라인 |
 
 ## 기술
 
