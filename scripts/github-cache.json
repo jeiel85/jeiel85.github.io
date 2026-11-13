@@ -1,45 +1,216 @@
 {
- "fetchedAt": "2026-11-12T08:25:20.385Z",
+ "fetchedAt": "2026-11-13T01:35:48.518Z",
  "repos": [
   {
-   "name": "jeiel85.github.io",
-   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
-   "url": "https://github.com/jeiel85/jeiel85.github.io",
-   "homepage": "https://jeiel85.github.io/",
+   "name": "Madang",
+   "description": "Living Windows wallpaper that reshapes the scenery around your desktop icons. Independent fork of Deskland Preview (GPL-3.0).",
+   "url": "https://github.com/jeiel85/Madang",
+   "homepage": "",
    "stars": 0,
    "forks": 0,
-   "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-12T08:25:01Z",
+   "createdAt": "2026-11-13T00:04:12Z",
+   "pushedAt": "2026-11-13T01:31:21Z",
    "archived": false,
-   "sizeKb": 15261,
-   "license": null,
-   "primaryLanguage": "JavaScript",
+   "sizeKb": 13620,
+   "license": "GPL-3.0",
+   "primaryLanguage": "HTML",
    "languages": [
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 223854
+    },
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 85125
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 12461
+    },
+    {
+     "name": "NSIS",
+     "color": null,
+     "bytes": 7210
+    },
     {
      "name": "JavaScript",
      "color": "#f1e05a",
-     "bytes": 48578
+     "bytes": 1117
+    }
+   ],
+   "topics": [],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 16,
+   "workflows": 0,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/Madang/main/docs/images/starry.webp",
+     "alt": "별자리"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/Madang/main/docs/images/snow.webp",
+     "alt": "첫눈"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/Madang/main/docs/images/meadow.webp",
+     "alt": "초원"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/Madang/main/docs/images/beach.webp",
+     "alt": "해변"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/Madang/main/prototype/thumbs/starry.webp",
+     "alt": "별자리 테마"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/Madang/main/prototype/thumbs/snow.webp",
+     "alt": "첫눈 테마"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/Madang/main/prototype/thumbs/beach.webp",
+     "alt": "해변 테마"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/Madang/main/prototype/thumbs/meadow.webp",
+     "alt": "초원 테마"
+    }
+   ],
+   "excerpt": "바탕화면 아이콘이 풍경의 일부가 되는 Windows 라이브 배경화면."
+  },
+  {
+   "name": "badasugi",
+   "description": "🎙️ 말하는 사람을 구분해 실시간으로 받아 적는 가볍고 빠른 Windows 회의 전사 앱 · Rust + Tauri · whisper.cpp 로컬 AI / Groq·OpenAI API · 화자 분리 · AI 회의록 요약",
+   "url": "https://github.com/jeiel85/badasugi",
+   "homepage": "https://jeiel85.github.io/badasugi/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-12T09:49:33Z",
+   "pushedAt": "2026-11-13T01:06:21Z",
+   "archived": false,
+   "sizeKb": 4400,
+   "license": "MIT",
+   "primaryLanguage": "Rust",
+   "languages": [
+    {
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 256470
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 67619
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 28072
     },
     {
      "name": "HTML",
      "color": "#e34c26",
-     "bytes": 27417
+     "bytes": 23465
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 4183
     }
    ],
    "topics": [
-    "android",
-    "closed-testing",
-    "github-actions",
-    "google-play",
-    "play-store",
-    "portfolio"
+    "dictation",
+    "korean",
+    "meeting-notes",
+    "onnx",
+    "rust",
+    "silero-vad",
+    "speaker-diarization",
+    "speech-to-text",
+    "stt",
+    "tauri",
+    "transcription",
+    "tray-app",
+    "whisper",
+    "whisper-cpp",
+    "windows"
    ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 99,
+   "releases": 5,
+   "latestRelease": {
+    "tag": "v0.2.3",
+    "date": "2026-11-13T01:06:21Z",
+    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.2.3"
+   },
+   "commits": 5,
+   "workflows": 0,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-dark.png",
+     "alt": "받아쓰기 화면 (어두운 테마)"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-light.png",
+     "alt": "받아쓰기 화면 (밝은 테마)"
+    }
+   ],
+   "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
+  },
+  {
+   "name": "homebase",
+   "description": "Personal Windows PC monitoring bot for Telegram. Monitor system status, receive alerts, and forward notifications via Telegram. Built with .NET.",
+   "url": "https://github.com/jeiel85/homebase",
+   "homepage": "https://jeiel85.github.io/homebase/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-07-07T05:48:11Z",
+   "pushedAt": "2026-11-13T00:53:27Z",
+   "archived": false,
+   "sizeKb": 617,
+   "license": "MIT",
+   "primaryLanguage": "C#",
+   "languages": [
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 472094
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 41376
+    },
+    {
+     "name": "Inno Setup",
+     "color": "#264b99",
+     "bytes": 3967
+    }
+   ],
+   "topics": [
+    "bot",
+    "csharp",
+    "dotnet",
+    "monitoring",
+    "pc-monitoring",
+    "sqlite",
+    "telegram",
+    "windows",
+    "windows-service",
+    "wpf"
+   ],
+   "releases": 29,
+   "latestRelease": {
+    "tag": "v0.13.2",
+    "date": "2026-11-13T00:56:09Z",
+    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.13.2"
+   },
+   "commits": 58,
    "workflows": 1,
    "images": [],
-   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
+   "excerpt": "외부 포트를 열지 않고, outbound HTTPS만으로 동작합니다."
   },
   {
    "name": "tailscale-force-connect",
@@ -49,26 +220,26 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-11-11T06:09:06Z",
-   "pushedAt": "2026-11-12T07:46:55Z",
+   "pushedAt": "2026-11-12T23:41:05Z",
    "archived": false,
-   "sizeKb": 315,
+   "sizeKb": 375,
    "license": "MIT",
    "primaryLanguage": "PowerShell",
    "languages": [
     {
      "name": "PowerShell",
      "color": "#012456",
-     "bytes": 39929
+     "bytes": 46945
     },
     {
      "name": "Rust",
      "color": "#dea584",
-     "bytes": 30026
+     "bytes": 38216
     },
     {
      "name": "Slint",
      "color": "#2379F4",
-     "bytes": 23521
+     "bytes": 23632
     },
     {
      "name": "Batchfile",
@@ -86,13 +257,13 @@
     "vpn",
     "windows"
    ],
-   "releases": 5,
+   "releases": 6,
    "latestRelease": {
-    "tag": "v1.4.0",
-    "date": "2026-11-12T07:48:21Z",
-    "url": "https://github.com/jeiel85/tailscale-force-connect/releases/tag/v1.4.0"
+    "tag": "v1.5.0",
+    "date": "2026-11-12T23:42:32Z",
+    "url": "https://github.com/jeiel85/tailscale-force-connect/releases/tag/v1.5.0"
    },
-   "commits": 8,
+   "commits": 9,
    "workflows": 0,
    "images": [],
    "excerpt": "Windows PC에서 재부팅할 때마다 Tailscale을 연결 상태로 되돌립니다. 직접 끊을 수도 있지만, 끊은 상태는 1시간(바꿀 수 있음)까지만 유지되고 그 뒤에는 자동으로 다시 연결됩니다."
@@ -102,19 +273,19 @@
    "description": "A lightweight, local-first Markdown note app for Android.",
    "url": "https://github.com/jeiel85/markleaf-android",
    "homepage": "https://jeiel85.github.io/markleaf-android/",
-   "stars": 143,
+   "stars": 145,
    "forks": 16,
    "createdAt": "2026-04-29T00:51:29Z",
-   "pushedAt": "2026-11-12T07:34:47Z",
+   "pushedAt": "2026-11-12T22:46:31Z",
    "archived": false,
-   "sizeKb": 111197,
+   "sizeKb": 111461,
    "license": "Apache-2.0",
    "primaryLanguage": "Kotlin",
    "languages": [
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 2666807
+     "bytes": 2672415
     },
     {
      "name": "PowerShell",
@@ -154,7 +325,7 @@
     "date": "2026-11-12T07:59:50Z",
     "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.73.0"
    },
-   "commits": 1143,
+   "commits": 1147,
    "workflows": 5,
    "images": [
     {
@@ -167,6 +338,51 @@
     }
    ],
    "excerpt": "A local-first, minimal Markdown note app for Android"
+  },
+  {
+   "name": "jeiel85.github.io",
+   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
+   "url": "https://github.com/jeiel85/jeiel85.github.io",
+   "homepage": "https://jeiel85.github.io/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-05-26T06:40:18Z",
+   "pushedAt": "2026-11-12T08:26:02Z",
+   "archived": false,
+   "sizeKb": 16177,
+   "license": null,
+   "primaryLanguage": "HTML",
+   "languages": [
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 392657
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 83349
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 23383
+    }
+   ],
+   "topics": [
+    "android",
+    "closed-testing",
+    "github-actions",
+    "google-play",
+    "play-store",
+    "portfolio"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 100,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
   },
   {
    "name": "snow-window",
@@ -7399,59 +7615,6 @@
    "excerpt": "🌊 프로젝트 소개 페이지 — 게임 소개·스크린샷·개발 현황."
   },
   {
-   "name": "homebase",
-   "description": "Personal Windows PC monitoring bot for Telegram. Monitor system status, receive alerts, and forward notifications via Telegram. Built with .NET.",
-   "url": "https://github.com/jeiel85/homebase",
-   "homepage": "https://jeiel85.github.io/homebase/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-07-07T05:48:11Z",
-   "pushedAt": "2026-07-15T08:27:18Z",
-   "archived": false,
-   "sizeKb": 617,
-   "license": "MIT",
-   "primaryLanguage": "C#",
-   "languages": [
-    {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 472094
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 41376
-    },
-    {
-     "name": "Inno Setup",
-     "color": "#264b99",
-     "bytes": 3967
-    }
-   ],
-   "topics": [
-    "bot",
-    "csharp",
-    "dotnet",
-    "monitoring",
-    "pc-monitoring",
-    "sqlite",
-    "telegram",
-    "windows",
-    "windows-service",
-    "wpf"
-   ],
-   "releases": 28,
-   "latestRelease": {
-    "tag": "v0.13.1",
-    "date": "2026-07-15T08:21:01Z",
-    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.13.1"
-   },
-   "commits": 57,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "외부 포트를 열지 않고, outbound HTTPS만으로 동작합니다."
-  },
-  {
    "name": "budsmonitor-windows",
    "description": "BudsMonitor for Windows: local-only Bluetooth earbuds battery and status monitor.",
    "url": "https://github.com/jeiel85/budsmonitor-windows",
@@ -9722,7 +9885,7 @@
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
   "followers": 23,
-  "total": 11702,
+  "total": 11721,
   "days": [
    {
     "date": "2025-11-09",
@@ -10962,15 +11125,15 @@
    },
    {
     "date": "2026-09-14",
-    "count": 72
+    "count": 71
    },
    {
     "date": "2026-09-15",
-    "count": 70
+    "count": 68
    },
    {
     "date": "2026-09-16",
-    "count": 64
+    "count": 62
    },
    {
     "date": "2026-09-17",
@@ -11198,7 +11361,11 @@
    },
    {
     "date": "2026-11-12",
-    "count": 58
+    "count": 66
+   },
+   {
+    "date": "2026-11-13",
+    "count": 16
    }
   ]
  }
