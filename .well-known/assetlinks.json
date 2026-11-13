@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.jeiel85.homebase",
+      "sha256_cert_fingerprints": [
+        "4D:9C:BD:4D:68:CD:2E:E7:92:FD:1F:50:6C:BF:AE:9C:23:13:18:6B:66:8A:5C:A3:4D:90:20:F5:D2:3E:F8:65"
+      ]
+    }
+  }
+]
