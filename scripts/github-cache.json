@@ -1,6 +1,147 @@
 {
- "fetchedAt": "2026-11-16T00:57:47.046Z",
+ "fetchedAt": "2026-11-17T03:19:54.521Z",
  "repos": [
+  {
+   "name": "homebase",
+   "description": "Watch your Windows PCs live from an Android app — open windows, per-app CPU/RAM, end-to-end encrypted push alerts, notifications shared between your PCs and phones. No open ports. Built with .NET and Kotlin.",
+   "url": "https://github.com/jeiel85/homebase",
+   "homepage": "https://jeiel85.github.io/homebase/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-07-07T05:48:11Z",
+   "pushedAt": "2026-11-17T01:08:21Z",
+   "archived": false,
+   "sizeKb": 1749,
+   "license": "MIT",
+   "primaryLanguage": "C#",
+   "languages": [
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 1600952
+    },
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 621969
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 43198
+    },
+    {
+     "name": "Inno Setup",
+     "color": "#264b99",
+     "bytes": 3967
+    }
+   ],
+   "topics": [
+    "bot",
+    "csharp",
+    "dotnet",
+    "monitoring",
+    "pc-monitoring",
+    "sqlite",
+    "telegram",
+    "windows",
+    "windows-service",
+    "wpf",
+    "android",
+    "jetpack-compose",
+    "kotlin",
+    "push-notifications",
+    "tailscale",
+    "unifiedpush"
+   ],
+   "releases": 57,
+   "latestRelease": {
+    "tag": "v0.38.1",
+    "date": "2026-11-17T01:16:11Z",
+    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.38.1"
+   },
+   "commits": 97,
+   "workflows": 4,
+   "images": [],
+   "excerpt": "PC·휴대폰끼리 서로의 상태를 보고 알림을 주고받습니다. Telegram 봇은 전환 기간의 대체 채널입니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale 망·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시·Telegram은 outbound HTTPS입니다."
+  },
+  {
+   "name": "badasugi",
+   "description": "🎙️ 말하는 사람을 구분해 실시간으로 받아 적는 가볍고 빠른 Windows 회의 전사 앱 · Rust + Tauri · whisper.cpp 로컬 AI / Groq·OpenAI API · 화자 분리 · AI 회의록 요약",
+   "url": "https://github.com/jeiel85/badasugi",
+   "homepage": "https://jeiel85.github.io/badasugi/",
+   "stars": 1,
+   "forks": 0,
+   "createdAt": "2026-11-12T09:49:33Z",
+   "pushedAt": "2026-11-17T00:08:02Z",
+   "archived": false,
+   "sizeKb": 6582,
+   "license": "MIT",
+   "primaryLanguage": "Rust",
+   "languages": [
+    {
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 607260
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 150164
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 56400
+    },
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 36959
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 8620
+    }
+   ],
+   "topics": [
+    "dictation",
+    "korean",
+    "meeting-notes",
+    "onnx",
+    "rust",
+    "silero-vad",
+    "speaker-diarization",
+    "speech-to-text",
+    "stt",
+    "tauri",
+    "transcription",
+    "tray-app",
+    "whisper",
+    "whisper-cpp",
+    "windows"
+   ],
+   "releases": 26,
+   "latestRelease": {
+    "tag": "v0.4.10",
+    "date": "2026-11-17T00:08:02Z",
+    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.10"
+   },
+   "commits": 34,
+   "workflows": 0,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-dark.png",
+     "alt": "받아쓰기 화면 (어두운 테마)"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-light.png",
+     "alt": "받아쓰기 화면 (밝은 테마)"
+    }
+   ],
+   "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
+  },
   {
    "name": "find-my-wife-phone",
    "description": "포너디 — “폰 어디?” 소파 밑 폰도 버튼 한 번에. 무음·방해 금지여도 울리고, 찾으면 원래대로. 받는 사람이 거절할 수 있는 가족용 Android 앱 (E2E 암호화, Cloudflare Worker + FCM)",
@@ -9,16 +150,16 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-11-15T06:18:39Z",
-   "pushedAt": "2026-11-16T00:33:14Z",
+   "pushedAt": "2026-11-16T15:12:24Z",
    "archived": false,
-   "sizeKb": 2059,
+   "sizeKb": 2126,
    "license": "MIT",
    "primaryLanguage": "Kotlin",
    "languages": [
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 268748
+     "bytes": 280183
     },
     {
      "name": "JavaScript",
@@ -26,14 +167,14 @@
      "bytes": 24749
     },
     {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 6300
+    },
+    {
      "name": "Python",
      "color": "#3572A5",
      "bytes": 6292
-    },
-    {
-     "name": "Shell",
-     "color": "#89e051",
-     "bytes": 5260
     }
    ],
    "topics": [
@@ -50,13 +191,13 @@
     "privacy",
     "qr-code"
    ],
-   "releases": 4,
+   "releases": 6,
    "latestRelease": {
-    "tag": "v0.3.0",
-    "date": "2026-11-15T13:09:08Z",
-    "url": "https://github.com/jeiel85/find-my-wife-phone/releases/tag/v0.3.0"
+    "tag": "v0.3.2",
+    "date": "2026-11-16T15:12:24Z",
+    "url": "https://github.com/jeiel85/find-my-wife-phone/releases/tag/v0.3.2"
    },
-   "commits": 17,
+   "commits": 25,
    "workflows": 0,
    "images": [
     {
@@ -91,217 +232,79 @@
    "excerpt": "“폰 어디?” — 소파 밑에 있어도, 버튼 한 번이면 울려요. 무음·방해 금지여도 크게 울리고, 찾으면 소리 설정이 원래대로 돌아가는 가족용 Android 앱."
   },
   {
-   "name": "homebase",
-   "description": "Personal Windows PC monitoring bot for Telegram. Monitor system status, receive alerts, and forward notifications via Telegram. Built with .NET.",
-   "url": "https://github.com/jeiel85/homebase",
-   "homepage": "https://jeiel85.github.io/homebase/",
+   "name": "tailscale-force-connect",
+   "description": "Reconnect Tailscale on every Windows boot, even if you clicked Disconnect before shutting down. PowerShell + Task Scheduler, runs as SYSTEM before login.",
+   "url": "https://github.com/jeiel85/tailscale-force-connect",
+   "homepage": "https://jeiel85.github.io/tailscale-force-connect/",
    "stars": 0,
    "forks": 0,
-   "createdAt": "2026-07-07T05:48:11Z",
-   "pushedAt": "2026-11-16T00:31:25Z",
+   "createdAt": "2026-11-11T06:09:06Z",
+   "pushedAt": "2026-11-16T14:56:26Z",
    "archived": false,
-   "sizeKb": 1265,
+   "sizeKb": 564,
    "license": "MIT",
-   "primaryLanguage": "C#",
+   "primaryLanguage": "PowerShell",
    "languages": [
-    {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 1075928
-    },
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 391670
-    },
     {
      "name": "PowerShell",
      "color": "#012456",
-     "bytes": 41660
+     "bytes": 104009
     },
-    {
-     "name": "Inno Setup",
-     "color": "#264b99",
-     "bytes": 3967
-    }
-   ],
-   "topics": [
-    "bot",
-    "csharp",
-    "dotnet",
-    "monitoring",
-    "pc-monitoring",
-    "sqlite",
-    "telegram",
-    "windows",
-    "windows-service",
-    "wpf"
-   ],
-   "releases": 44,
-   "latestRelease": {
-    "tag": "v0.26.0",
-    "date": "2026-11-15T11:21:40Z",
-    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.26.0"
-   },
-   "commits": 83,
-   "workflows": 2,
-   "images": [],
-   "excerpt": "인터넷에 포트를 열지 않습니다. Telegram은 outbound HTTPS, 휴대폰 앱은 같은 LAN(TLS)·Tailscale 망·Cloudflare Tunnel(outbound) 중 되는 경로로 연결합니다."
-  },
-  {
-   "name": "badasugi",
-   "description": "🎙️ 말하는 사람을 구분해 실시간으로 받아 적는 가볍고 빠른 Windows 회의 전사 앱 · Rust + Tauri · whisper.cpp 로컬 AI / Groq·OpenAI API · 화자 분리 · AI 회의록 요약",
-   "url": "https://github.com/jeiel85/badasugi",
-   "homepage": "https://jeiel85.github.io/badasugi/",
-   "stars": 1,
-   "forks": 0,
-   "createdAt": "2026-11-12T09:49:33Z",
-   "pushedAt": "2026-11-16T00:30:51Z",
-   "archived": false,
-   "sizeKb": 5348,
-   "license": "MIT",
-   "primaryLanguage": "Rust",
-   "languages": [
     {
      "name": "Rust",
      "color": "#dea584",
-     "bytes": 462115
+     "bytes": 68932
     },
     {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 89639
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 32740
-    },
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 26109
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 8620
-    }
-   ],
-   "topics": [
-    "dictation",
-    "korean",
-    "meeting-notes",
-    "onnx",
-    "rust",
-    "silero-vad",
-    "speaker-diarization",
-    "speech-to-text",
-    "stt",
-    "tauri",
-    "transcription",
-    "tray-app",
-    "whisper",
-    "whisper-cpp",
-    "windows"
-   ],
-   "releases": 16,
-   "latestRelease": {
-    "tag": "v0.4.0",
-    "date": "2026-11-15T14:52:21Z",
-    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.0"
-   },
-   "commits": 22,
-   "workflows": 0,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-dark.png",
-     "alt": "받아쓰기 화면 (어두운 테마)"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-light.png",
-     "alt": "받아쓰기 화면 (밝은 테마)"
-    }
-   ],
-   "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
-  },
-  {
-   "name": "claude-usage-tray-windows",
-   "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
-   "url": "https://github.com/jeiel85/claude-usage-tray-windows",
-   "homepage": "https://jeiel85.github.io/claude-usage-tray-windows/",
-   "stars": 2,
-   "forks": 0,
-   "createdAt": "2026-03-27T03:55:01Z",
-   "pushedAt": "2026-11-16T00:12:08Z",
-   "archived": false,
-   "sizeKb": 3703,
-   "license": null,
-   "primaryLanguage": "C#",
-   "languages": [
-    {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 1740035
-    },
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 293498
+     "name": "Slint",
+     "color": "#2379F4",
+     "bytes": 38283
     },
     {
      "name": "Batchfile",
      "color": "#C1F12E",
-     "bytes": 4101
+     "bytes": 440
     }
    ],
    "topics": [
-    "claude-ai",
-    "codex",
-    "dotnet",
-    "gemini-cli",
-    "github-pages",
-    "ntfy",
-    "opencode",
-    "system-tray",
-    "usage-monitor",
-    "windows",
-    "wpf"
+    "autostart",
+    "homelab",
+    "powershell",
+    "remote-access",
+    "tailscale",
+    "task-scheduler",
+    "vpn",
+    "windows"
    ],
-   "releases": 242,
+   "releases": 9,
    "latestRelease": {
-    "tag": "v1.61.0",
-    "date": "2026-11-16T00:20:18Z",
-    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.61.0"
+    "tag": "v1.8.0",
+    "date": "2026-11-16T15:03:13Z",
+    "url": "https://github.com/jeiel85/tailscale-force-connect/releases/tag/v1.8.0"
    },
-   "commits": 538,
-   "workflows": 2,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/claude-usage-tray-windows/master/docs/screenshot.png",
-     "alt": "Claude Usage Tray 스크린샷"
-    }
-   ],
-   "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
+   "commits": 12,
+   "workflows": 0,
+   "images": [],
+   "excerpt": "Windows PC에서 재부팅할 때마다 Tailscale을 연결 상태로 되돌립니다. 직접 끊을 수도 있지만, 끊은 상태는 1시간(바꿀 수 있음)까지만 유지되고 그 뒤에는 자동으로 다시 연결됩니다."
   },
   {
    "name": "markleaf-android",
    "description": "A lightweight, local-first Markdown note app for Android.",
    "url": "https://github.com/jeiel85/markleaf-android",
    "homepage": "https://jeiel85.github.io/markleaf-android/",
-   "stars": 151,
+   "stars": 153,
    "forks": 16,
    "createdAt": "2026-04-29T00:51:29Z",
-   "pushedAt": "2026-11-16T00:04:08Z",
+   "pushedAt": "2026-11-16T13:56:54Z",
    "archived": false,
-   "sizeKb": 112671,
+   "sizeKb": 113288,
    "license": "Apache-2.0",
    "primaryLanguage": "Kotlin",
    "languages": [
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 2699844
+     "bytes": 2723950
     },
     {
      "name": "PowerShell",
@@ -341,7 +344,7 @@
     "date": "2026-11-12T07:59:50Z",
     "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.73.0"
    },
-   "commits": 1158,
+   "commits": 1162,
    "workflows": 5,
    "images": [
     {
@@ -356,6 +359,65 @@
    "excerpt": "A local-first, minimal Markdown note app for Android"
   },
   {
+   "name": "claude-usage-tray-windows",
+   "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
+   "url": "https://github.com/jeiel85/claude-usage-tray-windows",
+   "homepage": "https://jeiel85.github.io/claude-usage-tray-windows/",
+   "stars": 2,
+   "forks": 0,
+   "createdAt": "2026-03-27T03:55:01Z",
+   "pushedAt": "2026-11-16T07:27:12Z",
+   "archived": false,
+   "sizeKb": 3350,
+   "license": null,
+   "primaryLanguage": "C#",
+   "languages": [
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 1770478
+    },
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 320773
+    },
+    {
+     "name": "Batchfile",
+     "color": "#C1F12E",
+     "bytes": 4101
+    }
+   ],
+   "topics": [
+    "claude-ai",
+    "codex",
+    "dotnet",
+    "gemini-cli",
+    "github-pages",
+    "ntfy",
+    "opencode",
+    "system-tray",
+    "usage-monitor",
+    "windows",
+    "wpf"
+   ],
+   "releases": 248,
+   "latestRelease": {
+    "tag": "v1.65.0",
+    "date": "2026-11-16T07:30:50Z",
+    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.65.0"
+   },
+   "commits": 556,
+   "workflows": 2,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/claude-usage-tray-windows/master/docs/screenshot.png",
+     "alt": "Claude Usage Tray 스크린샷"
+    }
+   ],
+   "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
+  },
+  {
    "name": "jeiel85",
    "description": "프로필 꾸미기",
    "url": "https://github.com/jeiel85/jeiel85",
@@ -363,7 +425,7 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-04-28T08:26:05Z",
-   "pushedAt": "2026-11-15T02:42:51Z",
+   "pushedAt": "2026-11-16T02:46:32Z",
    "archived": false,
    "sizeKb": 50,
    "license": null,
@@ -378,6 +440,180 @@
    "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
   },
   {
+   "name": "celestial-blades",
+   "description": "천명비행록 : Celestial Blades - oriental fantasy horizontal bullet-hell shooter. Phaser 3 + TypeScript + Vite, all graphics/sound procedurally generated, runs in the browser.",
+   "url": "https://github.com/jeiel85/celestial-blades",
+   "homepage": "https://jeiel85.github.io/celestial-blades/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-09-08T07:19:57Z",
+   "pushedAt": "2026-11-16T02:46:13Z",
+   "archived": false,
+   "sizeKb": 21459,
+   "license": "MIT",
+   "primaryLanguage": "TypeScript",
+   "languages": [
+    {
+     "name": "TypeScript",
+     "color": "#3178c6",
+     "bytes": 507252
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 17521
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 12388
+    },
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 5370
+    },
+    {
+     "name": "PLpgSQL",
+     "color": "#336790",
+     "bytes": 2319
+    }
+   ],
+   "topics": [
+    "arcade",
+    "bullet-hell",
+    "game",
+    "indie-game",
+    "phaser",
+    "phaser3",
+    "shmup",
+    "shoot-em-up",
+    "typescript",
+    "vite",
+    "webgame"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 26,
+   "workflows": 2,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/backgrounds/title_bg.jpg",
+     "alt": "천명비행록 키 아트 — 다섯 천명사와 균열 속 무명천"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/sprites/portrait_yun.png",
+     "alt": "윤"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/sprites/portrait_ryeohwa.png",
+     "alt": "려화"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/sprites/portrait_mooyoung.png",
+     "alt": "무영"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/sprites/portrait_soyul.png",
+     "alt": "소율"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/sprites/portrait_haerang.png",
+     "alt": "해랑"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/backgrounds/bg_valley.jpg",
+     "alt": "청운계곡"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/backgrounds/bg_city.jpg",
+     "alt": "붉은 기계도시"
+    }
+   ],
+   "excerpt": "동양 판타지 횡스크롤 탄막 슈팅 — 하늘의 균열을 봉인하라"
+  },
+  {
+   "name": "cheatsheet-win",
+   "description": "⌨️ Fn 키, 이제 외우지 마세요 — Hold Left Ctrl to see your laptop's Fn-key functions. 130 ASUS & Lenovo profiles from official manuals; detects your model, never guesses. Tiny native Rust tray app, auto-updates.",
+   "url": "https://github.com/jeiel85/cheatsheet-win",
+   "homepage": "https://jeiel85.github.io/cheatsheet-win/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-13T01:55:09Z",
+   "pushedAt": "2026-11-16T01:13:33Z",
+   "archived": false,
+   "sizeKb": 2151,
+   "license": "MIT",
+   "primaryLanguage": "Rust",
+   "languages": [
+    {
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 245769
+    },
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 25488
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 7200
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 3771
+    }
+   ],
+   "topics": [
+    "asus",
+    "cheatsheet",
+    "expertbook",
+    "fn-key",
+    "hotkeys",
+    "ideapad",
+    "keyboard-shortcuts",
+    "laptop",
+    "legion",
+    "lenovo",
+    "overlay",
+    "rust",
+    "system-tray",
+    "thinkbook",
+    "thinkpad",
+    "vivobook",
+    "win32",
+    "windows",
+    "windows-11",
+    "zenbook"
+   ],
+   "releases": 9,
+   "latestRelease": {
+    "tag": "v0.1.8",
+    "date": "2026-11-16T01:13:38Z",
+    "url": "https://github.com/jeiel85/cheatsheet-win/releases/tag/v0.1.8"
+   },
+   "commits": 10,
+   "workflows": 2,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/cheatsheet-win/main/docs/assets/overlay-ko.png",
+     "alt": "왼쪽 Ctrl을 길게 눌렀을 때 뜨는 Fn 키 안내 화면"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/cheatsheet-win/main/docs/assets/screens/settings-device-dark.png",
+     "alt": "설정 — 기기 (다크)"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/cheatsheet-win/main/docs/assets/screens/settings-trigger-light.png",
+     "alt": "설정 — 누르기·표시 (라이트)"
+    }
+   ],
+   "excerpt": "노트북 Fn 키, 이제 외우지 마세요. 왼쪽 Ctrl을 길게 누르면 내 노트북 모델의 Fn 키 기능이 화면에 떠요. 손을 떼면 사라져요."
+  },
+  {
    "name": "jeiel85.github.io",
    "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
    "url": "https://github.com/jeiel85/jeiel85.github.io",
@@ -385,16 +621,16 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-15T00:35:18Z",
+   "pushedAt": "2026-11-16T00:58:17Z",
    "archived": false,
-   "sizeKb": 16637,
+   "sizeKb": 15599,
    "license": null,
    "primaryLanguage": "HTML",
    "languages": [
     {
      "name": "HTML",
      "color": "#e34c26",
-     "bytes": 398361
+     "bytes": 401031
     },
     {
      "name": "JavaScript",
@@ -417,7 +653,7 @@
    ],
    "releases": 0,
    "latestRelease": null,
-   "commits": 105,
+   "commits": 108,
    "workflows": 1,
    "images": [],
    "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
@@ -497,87 +733,6 @@
    "workflows": 3,
    "images": [],
    "excerpt": "삼국지 영걸전(1995)을 현대 시스템에서 원작대로 돌리는 오픈소스 엔진 An open-source engine that runs your copy of the classic Three Kingdoms tactics RPG \"Sangokushi Eiketsuden\" on modern systems"
-  },
-  {
-   "name": "cheatsheet-win",
-   "description": "⌨️ Fn 키, 이제 외우지 마세요 — Hold Left Ctrl to see your laptop's Fn-key functions. 130 ASUS & Lenovo profiles from official manuals; detects your model, never guesses. Tiny native Rust tray app, auto-updates.",
-   "url": "https://github.com/jeiel85/cheatsheet-win",
-   "homepage": "https://jeiel85.github.io/cheatsheet-win/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-11-13T01:55:09Z",
-   "pushedAt": "2026-11-13T08:05:03Z",
-   "archived": false,
-   "sizeKb": 2074,
-   "license": "MIT",
-   "primaryLanguage": "Rust",
-   "languages": [
-    {
-     "name": "Rust",
-     "color": "#dea584",
-     "bytes": 226846
-    },
-    {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 25488
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 7200
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 3771
-    }
-   ],
-   "topics": [
-    "asus",
-    "cheatsheet",
-    "expertbook",
-    "fn-key",
-    "hotkeys",
-    "ideapad",
-    "keyboard-shortcuts",
-    "laptop",
-    "legion",
-    "lenovo",
-    "overlay",
-    "rust",
-    "system-tray",
-    "thinkbook",
-    "thinkpad",
-    "vivobook",
-    "win32",
-    "windows",
-    "windows-11",
-    "zenbook"
-   ],
-   "releases": 7,
-   "latestRelease": {
-    "tag": "v0.1.6",
-    "date": "2026-11-13T08:05:08Z",
-    "url": "https://github.com/jeiel85/cheatsheet-win/releases/tag/v0.1.6"
-   },
-   "commits": 8,
-   "workflows": 2,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/cheatsheet-win/main/docs/assets/overlay-ko.png",
-     "alt": "왼쪽 Ctrl을 길게 눌렀을 때 뜨는 Fn 키 안내 화면"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/cheatsheet-win/main/docs/assets/screens/settings-device-dark.png",
-     "alt": "설정 — 기기 (다크)"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/cheatsheet-win/main/docs/assets/screens/settings-trigger-light.png",
-     "alt": "설정 — 누르기·표시 (라이트)"
-    }
-   ],
-   "excerpt": "노트북 Fn 키, 이제 외우지 마세요. 왼쪽 Ctrl을 길게 누르면 내 노트북 모델의 Fn 키 기능이 화면에 떠요. 손을 떼면 사라져요."
   },
   {
    "name": "Madang",
@@ -663,62 +818,6 @@
     }
    ],
    "excerpt": "바탕화면 아이콘이 풍경의 일부가 되는 Windows 라이브 배경화면."
-  },
-  {
-   "name": "tailscale-force-connect",
-   "description": "Reconnect Tailscale on every Windows boot, even if you clicked Disconnect before shutting down. PowerShell + Task Scheduler, runs as SYSTEM before login.",
-   "url": "https://github.com/jeiel85/tailscale-force-connect",
-   "homepage": "https://jeiel85.github.io/tailscale-force-connect/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-11-11T06:09:06Z",
-   "pushedAt": "2026-11-12T23:41:05Z",
-   "archived": false,
-   "sizeKb": 375,
-   "license": "MIT",
-   "primaryLanguage": "PowerShell",
-   "languages": [
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 46945
-    },
-    {
-     "name": "Rust",
-     "color": "#dea584",
-     "bytes": 38216
-    },
-    {
-     "name": "Slint",
-     "color": "#2379F4",
-     "bytes": 23632
-    },
-    {
-     "name": "Batchfile",
-     "color": "#C1F12E",
-     "bytes": 440
-    }
-   ],
-   "topics": [
-    "autostart",
-    "homelab",
-    "powershell",
-    "remote-access",
-    "tailscale",
-    "task-scheduler",
-    "vpn",
-    "windows"
-   ],
-   "releases": 6,
-   "latestRelease": {
-    "tag": "v1.5.0",
-    "date": "2026-11-12T23:42:32Z",
-    "url": "https://github.com/jeiel85/tailscale-force-connect/releases/tag/v1.5.0"
-   },
-   "commits": 9,
-   "workflows": 0,
-   "images": [],
-   "excerpt": "Windows PC에서 재부팅할 때마다 Tailscale을 연결 상태로 되돌립니다. 직접 끊을 수도 있지만, 끊은 상태는 1시간(바꿀 수 있음)까지만 유지되고 그 뒤에는 자동으로 다시 연결됩니다."
   },
   {
    "name": "snow-window",
@@ -2174,99 +2273,6 @@
     }
    ],
    "excerpt": "『신세기 GPX 사이버 포뮬러』의 슈퍼 아스라다 01을 브라우저에서 돌려 보는 팬메이드 3D 뷰어입니다. 파츠를 누르면 설명이 나오고, 캐노피·엔진 커버·에어 브레이크·부스트·주행 모드를 직접 조작할 수 있습니다."
-  },
-  {
-   "name": "celestial-blades",
-   "description": "천명비행록 : Celestial Blades - oriental fantasy horizontal bullet-hell shooter. Phaser 3 + TypeScript + Vite, all graphics/sound procedurally generated, runs in the browser.",
-   "url": "https://github.com/jeiel85/celestial-blades",
-   "homepage": "https://jeiel85.github.io/celestial-blades/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-09-08T07:19:57Z",
-   "pushedAt": "2026-11-04T04:49:09Z",
-   "archived": false,
-   "sizeKb": 22099,
-   "license": "MIT",
-   "primaryLanguage": "TypeScript",
-   "languages": [
-    {
-     "name": "TypeScript",
-     "color": "#3178c6",
-     "bytes": 455325
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 17521
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 8219
-    },
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 5370
-    },
-    {
-     "name": "PLpgSQL",
-     "color": "#336790",
-     "bytes": 2319
-    }
-   ],
-   "topics": [
-    "arcade",
-    "bullet-hell",
-    "game",
-    "indie-game",
-    "phaser",
-    "phaser3",
-    "shmup",
-    "shoot-em-up",
-    "typescript",
-    "vite",
-    "webgame"
-   ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 23,
-   "workflows": 2,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/backgrounds/title_bg.jpg",
-     "alt": "천명비행록 키 아트 — 다섯 천명사와 균열 속 무명천"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/sprites/portrait_yun.png",
-     "alt": "윤"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/sprites/portrait_ryeohwa.png",
-     "alt": "려화"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/sprites/portrait_mooyoung.png",
-     "alt": "무영"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/sprites/portrait_soyul.png",
-     "alt": "소율"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/sprites/portrait_haerang.png",
-     "alt": "해랑"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/backgrounds/bg_valley.jpg",
-     "alt": "청운계곡"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/celestial-blades/main/src/assets/backgrounds/bg_city.jpg",
-     "alt": "붉은 기계도시"
-    }
-   ],
-   "excerpt": "동양 판타지 횡스크롤 탄막 슈팅 — 하늘의 균열을 봉인하라"
   },
   {
    "name": "kakao-ad-hider",
@@ -10069,7 +10075,7 @@
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
   "followers": 24,
-  "total": 11984,
+  "total": 12116,
   "days": [
    {
     "date": "2025-11-16",
@@ -11533,7 +11539,11 @@
    },
    {
     "date": "2026-11-16",
-    "count": 25
+    "count": 129
+   },
+   {
+    "date": "2026-11-17",
+    "count": 28
    }
   ]
  }
