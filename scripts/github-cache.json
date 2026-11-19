@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-18T02:41:33.162Z",
+ "fetchedAt": "2026-11-19T02:09:53.662Z",
  "repos": [
   {
    "name": "homebase",
@@ -9,26 +9,26 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-07-07T05:48:11Z",
-   "pushedAt": "2026-11-17T23:07:09Z",
+   "pushedAt": "2026-11-19T02:09:50Z",
    "archived": false,
-   "sizeKb": 2173,
+   "sizeKb": 3154,
    "license": "MIT",
    "primaryLanguage": "C#",
    "languages": [
     {
      "name": "C#",
      "color": "#7355dd",
-     "bytes": 1624544
+     "bytes": 1700689
     },
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 641104
+     "bytes": 695733
     },
     {
      "name": "PowerShell",
      "color": "#012456",
-     "bytes": 44543
+     "bytes": 50162
     },
     {
      "name": "Inno Setup",
@@ -54,35 +54,191 @@
     "tailscale",
     "unifiedpush"
    ],
-   "releases": 60,
+   "releases": 69,
    "latestRelease": {
-    "tag": "v0.40.0",
-    "date": "2026-11-17T08:02:48Z",
-    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.40.0"
+    "tag": "v0.45.0",
+    "date": "2026-11-19T01:58:34Z",
+    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.45.0"
    },
-   "commits": 100,
+   "commits": 115,
    "workflows": 4,
    "images": [],
-   "excerpt": "PC·휴대폰끼리 서로의 상태를 보고 알림을 주고받습니다. Telegram 봇은 전환 기간의 대체 채널입니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale 망·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시·Telegram은 outbound HTTPS입니다."
+   "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
+  },
+  {
+   "name": "doran",
+   "description": "도란 — 가족 공동 가계부. 카드·은행 알림이 오면 바로 장부에, 배우자 폰에는 \"남편이 현대카드로 12,300원 썼어요\" 알림. 부모님 카드 알림도 사람별로 합산, 달력·통계·자산·예산. Android, 종단 암호화(Cloudflare Worker + FCM)",
+   "url": "https://github.com/jeiel85/doran",
+   "homepage": "https://jeiel85.github.io/doran/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-17T11:37:58Z",
+   "pushedAt": "2026-11-19T02:09:00Z",
+   "archived": false,
+   "sizeKb": 16323,
+   "license": null,
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 562378
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 65624
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 11028
+    },
+    {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 10799
+    }
+   ],
+   "topics": [
+    "android",
+    "budget",
+    "cloudflare-workers",
+    "family",
+    "jetpack-compose",
+    "kotlin",
+    "cloudflare-d1",
+    "end-to-end-encryption",
+    "expense-tracker",
+    "family-sharing",
+    "firebase-cloud-messaging",
+    "household-budget",
+    "korean",
+    "notification-listener",
+    "personal-finance",
+    "privacy",
+    "qr-code",
+    "self-update",
+    "sms-parser"
+   ],
+   "releases": 5,
+   "latestRelease": {
+    "tag": "v0.1.4",
+    "date": "2026-11-18T10:04:04Z",
+    "url": "https://github.com/jeiel85/doran/releases/tag/v0.1.4"
+   },
+   "commits": 32,
+   "workflows": 0,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/home.webp",
+     "alt": "홈"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/calendar.webp",
+     "alt": "달력"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/stats.webp",
+     "alt": "통계"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/assets.webp",
+     "alt": "자산"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/entry.webp",
+     "alt": "입력"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/onboarding.webp",
+     "alt": "시작"
+    }
+   ],
+   "excerpt": "카드 알림이 오면 바로 장부에, 가족 모두의 폰에 도란도란. 부부가 같은 장부를 실시간으로 쓰고, 부모님 카드 알림도 사람별로 받아 합계에 더하는 가족용 Android 가계부."
+  },
+  {
+   "name": "claude-usage-tray-windows",
+   "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
+   "url": "https://github.com/jeiel85/claude-usage-tray-windows",
+   "homepage": "https://jeiel85.github.io/claude-usage-tray-windows/",
+   "stars": 2,
+   "forks": 0,
+   "createdAt": "2026-03-27T03:55:01Z",
+   "pushedAt": "2026-11-19T02:07:32Z",
+   "archived": false,
+   "sizeKb": 5905,
+   "license": "MIT",
+   "primaryLanguage": "C#",
+   "languages": [
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 1814476
+    },
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 383114
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 7079
+    },
+    {
+     "name": "Batchfile",
+     "color": "#C1F12E",
+     "bytes": 4101
+    }
+   ],
+   "topics": [
+    "claude-ai",
+    "codex",
+    "dotnet",
+    "gemini-cli",
+    "github-pages",
+    "ntfy",
+    "opencode",
+    "system-tray",
+    "usage-monitor",
+    "windows",
+    "wpf"
+   ],
+   "releases": 259,
+   "latestRelease": {
+    "tag": "v1.68.2",
+    "date": "2026-11-19T01:57:30Z",
+    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.68.2"
+   },
+   "commits": 597,
+   "workflows": 2,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/claude-usage-tray-windows/master/docs/screenshot.png",
+     "alt": "Claude Usage Tray 스크린샷"
+    }
+   ],
+   "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
   },
   {
    "name": "markleaf-android",
    "description": "A lightweight, local-first Markdown note app for Android.",
    "url": "https://github.com/jeiel85/markleaf-android",
    "homepage": "https://jeiel85.github.io/markleaf-android/",
-   "stars": 153,
+   "stars": 154,
    "forks": 16,
    "createdAt": "2026-04-29T00:51:29Z",
-   "pushedAt": "2026-11-17T15:09:29Z",
+   "pushedAt": "2026-11-18T23:57:45Z",
    "archived": false,
-   "sizeKb": 113740,
+   "sizeKb": 114466,
    "license": "Apache-2.0",
    "primaryLanguage": "Kotlin",
    "languages": [
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 2723950
+     "bytes": 2776814
     },
     {
      "name": "PowerShell",
@@ -116,13 +272,13 @@
     "room",
     "sqlite"
    ],
-   "releases": 159,
+   "releases": 160,
    "latestRelease": {
-    "tag": "v2.73.0",
-    "date": "2026-11-12T07:59:50Z",
-    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.73.0"
+    "tag": "v2.74.0",
+    "date": "2026-11-19T00:39:44Z",
+    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.74.0"
    },
-   "commits": 1162,
+   "commits": 1168,
    "workflows": 5,
    "images": [
     {
@@ -137,244 +293,60 @@
    "excerpt": "A local-first, minimal Markdown note app for Android"
   },
   {
-   "name": "claude-usage-tray-windows",
-   "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
-   "url": "https://github.com/jeiel85/claude-usage-tray-windows",
-   "homepage": "https://jeiel85.github.io/claude-usage-tray-windows/",
-   "stars": 2,
+   "name": "tailscale-force-connect",
+   "description": "Reconnect Tailscale on every Windows boot, even if you clicked Disconnect before shutting down. PowerShell + Task Scheduler, runs as SYSTEM before login.",
+   "url": "https://github.com/jeiel85/tailscale-force-connect",
+   "homepage": "https://jeiel85.github.io/tailscale-force-connect/",
+   "stars": 0,
    "forks": 0,
-   "createdAt": "2026-03-27T03:55:01Z",
-   "pushedAt": "2026-11-17T14:41:04Z",
+   "createdAt": "2026-11-11T06:09:06Z",
+   "pushedAt": "2026-11-18T23:49:32Z",
    "archived": false,
-   "sizeKb": 3765,
-   "license": null,
-   "primaryLanguage": "C#",
+   "sizeKb": 1018,
+   "license": "MIT",
+   "primaryLanguage": "Rust",
    "languages": [
     {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 1781579
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 116892
     },
     {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 320773
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 106135
+    },
+    {
+     "name": "Slint",
+     "color": "#2379F4",
+     "bytes": 44398
     },
     {
      "name": "Batchfile",
      "color": "#C1F12E",
-     "bytes": 4101
+     "bytes": 440
     }
    ],
    "topics": [
-    "claude-ai",
-    "codex",
-    "dotnet",
-    "gemini-cli",
-    "github-pages",
-    "ntfy",
-    "opencode",
-    "system-tray",
-    "usage-monitor",
-    "windows",
-    "wpf"
+    "autostart",
+    "homelab",
+    "powershell",
+    "remote-access",
+    "tailscale",
+    "task-scheduler",
+    "vpn",
+    "windows"
    ],
-   "releases": 251,
+   "releases": 11,
    "latestRelease": {
-    "tag": "v1.65.3",
-    "date": "2026-11-17T14:45:51Z",
-    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.65.3"
+    "tag": "v1.10.0",
+    "date": "2026-11-18T23:51:48Z",
+    "url": "https://github.com/jeiel85/tailscale-force-connect/releases/tag/v1.10.0"
    },
-   "commits": 562,
-   "workflows": 2,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/claude-usage-tray-windows/master/docs/screenshot.png",
-     "alt": "Claude Usage Tray 스크린샷"
-    }
-   ],
-   "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
-  },
-  {
-   "name": "doran",
-   "description": "도란 — 가족 공동 가계부. 카드·은행 알림이 오면 바로 장부에, 배우자 폰에는 \"남편이 현대카드로 12,300원 썼어요\" 알림. 부모님 카드 알림도 사람별로 합산, 달력·통계·자산·예산. Android, 종단 암호화(Cloudflare Worker + FCM)",
-   "url": "https://github.com/jeiel85/doran",
-   "homepage": "https://jeiel85.github.io/doran/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-11-17T11:37:58Z",
-   "pushedAt": "2026-11-17T14:27:17Z",
-   "archived": false,
-   "sizeKb": 15943,
-   "license": null,
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 479837
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 55725
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 11028
-    },
-    {
-     "name": "Shell",
-     "color": "#89e051",
-     "bytes": 8277
-    }
-   ],
-   "topics": [
-    "android",
-    "budget",
-    "cloudflare-workers",
-    "family",
-    "jetpack-compose",
-    "kotlin",
-    "cloudflare-d1",
-    "end-to-end-encryption",
-    "expense-tracker",
-    "family-sharing",
-    "firebase-cloud-messaging",
-    "household-budget",
-    "korean",
-    "notification-listener",
-    "personal-finance",
-    "privacy",
-    "qr-code",
-    "self-update",
-    "sms-parser"
-   ],
-   "releases": 3,
-   "latestRelease": {
-    "tag": "v0.1.2",
-    "date": "2026-11-17T12:22:36Z",
-    "url": "https://github.com/jeiel85/doran/releases/tag/v0.1.2"
-   },
-   "commits": 16,
+   "commits": 14,
    "workflows": 0,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/home.webp",
-     "alt": "홈"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/calendar.webp",
-     "alt": "달력"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/stats.webp",
-     "alt": "통계"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/assets.webp",
-     "alt": "자산"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/entry.webp",
-     "alt": "입력"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/onboarding.webp",
-     "alt": "시작"
-    }
-   ],
-   "excerpt": "카드 알림이 오면 바로 장부에, 가족 모두의 폰에 도란도란. 부부가 같은 장부를 실시간으로 쓰고, 부모님 카드 알림도 사람별로 받아 합계에 더하는 가족용 Android 가계부."
-  },
-  {
-   "name": "find-my-wife-phone",
-   "description": "포너디 — “폰 어디?” 소파 밑 폰도 버튼 한 번에. 무음·방해 금지여도 울리고, 찾으면 원래대로. 받는 사람이 거절할 수 있는 가족용 Android 앱 (E2E 암호화, Cloudflare Worker + FCM)",
-   "url": "https://github.com/jeiel85/find-my-wife-phone",
-   "homepage": "https://jeiel85.github.io/find-my-wife-phone/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-11-15T06:18:39Z",
-   "pushedAt": "2026-11-17T08:12:31Z",
-   "archived": false,
-   "sizeKb": 4870,
-   "license": "MIT",
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 281983
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 24749
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 11346
-    },
-    {
-     "name": "Shell",
-     "color": "#89e051",
-     "bytes": 6300
-    }
-   ],
-   "topics": [
-    "android",
-    "cloudflare-workers",
-    "do-not-disturb",
-    "end-to-end-encryption",
-    "family",
-    "find-my-phone",
-    "firebase-cloud-messaging",
-    "jetpack-compose",
-    "korean",
-    "kotlin",
-    "privacy",
-    "qr-code"
-   ],
-   "releases": 7,
-   "latestRelease": {
-    "tag": "v0.3.3",
-    "date": "2026-11-17T08:12:31Z",
-    "url": "https://github.com/jeiel85/find-my-wife-phone/releases/tag/v0.3.3"
-   },
-   "commits": 32,
-   "workflows": 0,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/home.webp",
-     "alt": "홈: 울리기 버튼"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/ringing.webp",
-     "alt": "단계별 진행 상황"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/countdown.webp",
-     "alt": "10초 거절 창"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/found-me.webp",
-     "alt": "여기 있어요"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/map.webp",
-     "alt": "위치 지도"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/history.webp",
-     "alt": "기록"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/empty.webp",
-     "alt": "처음 화면"
-    }
-   ],
-   "excerpt": "“폰 어디?” — 소파 밑에 있어도, 버튼 한 번이면 울려요. 무음·방해 금지여도 크게 울리고, 찾으면 소리 설정이 원래대로 돌아가는 가족용 Android 앱."
+   "images": [],
+   "excerpt": "Windows PC에서 재부팅할 때마다 Tailscale을 연결 상태로 되돌립니다. 직접 끊을 수도 있지만, 끊은 상태는 1시간(바꿀 수 있음)까지만 유지되고 그 뒤에는 자동으로 다시 연결됩니다."
   },
   {
    "name": "badasugi",
@@ -384,9 +356,9 @@
    "stars": 1,
    "forks": 0,
    "createdAt": "2026-11-12T09:49:33Z",
-   "pushedAt": "2026-11-17T07:30:50Z",
+   "pushedAt": "2026-11-18T23:46:42Z",
    "archived": false,
-   "sizeKb": 6602,
+   "sizeKb": 6700,
    "license": "MIT",
    "primaryLanguage": "Rust",
    "languages": [
@@ -439,7 +411,7 @@
     "date": "2026-11-17T07:30:50Z",
     "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.11"
    },
-   "commits": 35,
+   "commits": 36,
    "workflows": 0,
    "images": [
     {
@@ -454,6 +426,171 @@
    "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
   },
   {
+   "name": "eiketsuden-reloaded",
+   "description": "삼국지 영걸전(1995)을 원작대로 돌리는 오픈소스 엔진 — 가지고 있는 원작을 읽어 Windows/macOS/Linux에서 플레이 (Rust + macroquad). Open-source engine that runs your own copy of Sangokushi Eiketsuden on modern systems, OpenRCT2-style.",
+   "url": "https://github.com/jeiel85/eiketsuden-reloaded",
+   "homepage": "https://jeiel85.github.io/eiketsuden-reloaded/",
+   "stars": 6,
+   "forks": 0,
+   "createdAt": "2026-09-26T11:15:29Z",
+   "pushedAt": "2026-11-18T15:05:54Z",
+   "archived": false,
+   "sizeKb": 29842,
+   "license": "GPL-3.0",
+   "primaryLanguage": "Rust",
+   "languages": [
+    {
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 3668362
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 239288
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 85309
+    },
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 22557
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 6659
+    },
+    {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 2523
+    }
+   ],
+   "topics": [
+    "eiketsuden",
+    "game",
+    "gamedev",
+    "korean",
+    "macroquad",
+    "open-source-game",
+    "pixel-art",
+    "reimplementation",
+    "romance-of-the-three-kingdoms",
+    "rust",
+    "srpg",
+    "tactical-rpg",
+    "three-kingdoms",
+    "dos-games",
+    "game-engine",
+    "koei",
+    "retro-gaming",
+    "reverse-engineering"
+   ],
+   "releases": 11,
+   "latestRelease": {
+    "tag": "v0.8.1",
+    "date": "2026-11-18T15:12:12Z",
+    "url": "https://github.com/jeiel85/eiketsuden-reloaded/releases/tag/v0.8.1"
+   },
+   "commits": 582,
+   "workflows": 3,
+   "images": [],
+   "excerpt": "삼국지 영걸전(1995)을 현대 시스템에서 원작대로 돌리는 오픈소스 엔진 An open-source engine that runs your copy of the classic Three Kingdoms tactics RPG \"Sangokushi Eiketsuden\" on modern systems"
+  },
+  {
+   "name": "find-my-wife-phone",
+   "description": "포너디 — “폰 어디?” 소파 밑 폰도 버튼 한 번에. 무음·방해 금지여도 울리고, 찾으면 원래대로. 받는 사람이 거절할 수 있는 가족용 Android 앱 (E2E 암호화, Cloudflare Worker + FCM)",
+   "url": "https://github.com/jeiel85/find-my-wife-phone",
+   "homepage": "https://jeiel85.github.io/find-my-wife-phone/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-15T06:18:39Z",
+   "pushedAt": "2026-11-18T13:33:16Z",
+   "archived": false,
+   "sizeKb": 4898,
+   "license": "MIT",
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 291932
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 24749
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 11346
+    },
+    {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 6300
+    }
+   ],
+   "topics": [
+    "android",
+    "cloudflare-workers",
+    "do-not-disturb",
+    "end-to-end-encryption",
+    "family",
+    "find-my-phone",
+    "firebase-cloud-messaging",
+    "jetpack-compose",
+    "korean",
+    "kotlin",
+    "privacy",
+    "qr-code"
+   ],
+   "releases": 8,
+   "latestRelease": {
+    "tag": "v0.3.4",
+    "date": "2026-11-18T13:33:17Z",
+    "url": "https://github.com/jeiel85/find-my-wife-phone/releases/tag/v0.3.4"
+   },
+   "commits": 36,
+   "workflows": 0,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/home.webp",
+     "alt": "홈: 울리기 버튼"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/ringing.webp",
+     "alt": "단계별 진행 상황"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/countdown.webp",
+     "alt": "10초 거절 창"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/found-me.webp",
+     "alt": "여기 있어요"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/map.webp",
+     "alt": "위치 지도"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/history.webp",
+     "alt": "기록"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/empty.webp",
+     "alt": "처음 화면"
+    }
+   ],
+   "excerpt": "“폰 어디?” — 소파 밑에 있어도, 버튼 한 번이면 울려요. 무음·방해 금지여도 크게 울리고, 찾으면 소리 설정이 원래대로 돌아가는 가족용 Android 앱."
+  },
+  {
    "name": "jeiel85",
    "description": "프로필 꾸미기",
    "url": "https://github.com/jeiel85/jeiel85",
@@ -461,7 +598,7 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-04-28T08:26:05Z",
-   "pushedAt": "2026-11-17T05:05:41Z",
+   "pushedAt": "2026-11-18T04:25:40Z",
    "archived": false,
    "sizeKb": 50,
    "license": null,
@@ -476,62 +613,6 @@
    "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
   },
   {
-   "name": "tailscale-force-connect",
-   "description": "Reconnect Tailscale on every Windows boot, even if you clicked Disconnect before shutting down. PowerShell + Task Scheduler, runs as SYSTEM before login.",
-   "url": "https://github.com/jeiel85/tailscale-force-connect",
-   "homepage": "https://jeiel85.github.io/tailscale-force-connect/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-11-11T06:09:06Z",
-   "pushedAt": "2026-11-17T05:02:27Z",
-   "archived": false,
-   "sizeKb": 663,
-   "license": "MIT",
-   "primaryLanguage": "PowerShell",
-   "languages": [
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 104209
-    },
-    {
-     "name": "Rust",
-     "color": "#dea584",
-     "bytes": 80757
-    },
-    {
-     "name": "Slint",
-     "color": "#2379F4",
-     "bytes": 41201
-    },
-    {
-     "name": "Batchfile",
-     "color": "#C1F12E",
-     "bytes": 440
-    }
-   ],
-   "topics": [
-    "autostart",
-    "homelab",
-    "powershell",
-    "remote-access",
-    "tailscale",
-    "task-scheduler",
-    "vpn",
-    "windows"
-   ],
-   "releases": 10,
-   "latestRelease": {
-    "tag": "v1.9.0",
-    "date": "2026-11-17T05:05:21Z",
-    "url": "https://github.com/jeiel85/tailscale-force-connect/releases/tag/v1.9.0"
-   },
-   "commits": 13,
-   "workflows": 0,
-   "images": [],
-   "excerpt": "Windows PC에서 재부팅할 때마다 Tailscale을 연결 상태로 되돌립니다. 직접 끊을 수도 있지만, 끊은 상태는 1시간(바꿀 수 있음)까지만 유지되고 그 뒤에는 자동으로 다시 연결됩니다."
-  },
-  {
    "name": "jeiel85.github.io",
    "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
    "url": "https://github.com/jeiel85/jeiel85.github.io",
@@ -539,16 +620,16 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-17T03:20:49Z",
+   "pushedAt": "2026-11-18T02:42:29Z",
    "archived": false,
-   "sizeKb": 15606,
+   "sizeKb": 15781,
    "license": null,
    "primaryLanguage": "HTML",
    "languages": [
     {
      "name": "HTML",
      "color": "#e34c26",
-     "bytes": 401507
+     "bytes": 404014
     },
     {
      "name": "JavaScript",
@@ -571,7 +652,7 @@
    ],
    "releases": 0,
    "latestRelease": null,
-   "commits": 109,
+   "commits": 110,
    "workflows": 1,
    "images": [],
    "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
@@ -749,82 +830,6 @@
     }
    ],
    "excerpt": "노트북 Fn 키, 이제 외우지 마세요. 왼쪽 Ctrl을 길게 누르면 내 노트북 모델의 Fn 키 기능이 화면에 떠요. 손을 떼면 사라져요."
-  },
-  {
-   "name": "eiketsuden-reloaded",
-   "description": "삼국지 영걸전(1995)을 원작대로 돌리는 오픈소스 엔진 — 가지고 있는 원작을 읽어 Windows/macOS/Linux에서 플레이 (Rust + macroquad). Open-source engine that runs your own copy of Sangokushi Eiketsuden on modern systems, OpenRCT2-style.",
-   "url": "https://github.com/jeiel85/eiketsuden-reloaded",
-   "homepage": "https://jeiel85.github.io/eiketsuden-reloaded/",
-   "stars": 6,
-   "forks": 0,
-   "createdAt": "2026-09-26T11:15:29Z",
-   "pushedAt": "2026-11-13T12:37:07Z",
-   "archived": false,
-   "sizeKb": 29790,
-   "license": "GPL-3.0",
-   "primaryLanguage": "Rust",
-   "languages": [
-    {
-     "name": "Rust",
-     "color": "#dea584",
-     "bytes": 3659918
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 239288
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 85309
-    },
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 22557
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 6659
-    },
-    {
-     "name": "Shell",
-     "color": "#89e051",
-     "bytes": 2523
-    }
-   ],
-   "topics": [
-    "eiketsuden",
-    "game",
-    "gamedev",
-    "korean",
-    "macroquad",
-    "open-source-game",
-    "pixel-art",
-    "reimplementation",
-    "romance-of-the-three-kingdoms",
-    "rust",
-    "srpg",
-    "tactical-rpg",
-    "three-kingdoms",
-    "dos-games",
-    "game-engine",
-    "koei",
-    "retro-gaming",
-    "reverse-engineering"
-   ],
-   "releases": 10,
-   "latestRelease": {
-    "tag": "v0.8.0",
-    "date": "2026-11-13T12:41:37Z",
-    "url": "https://github.com/jeiel85/eiketsuden-reloaded/releases/tag/v0.8.0"
-   },
-   "commits": 580,
-   "workflows": 3,
-   "images": [],
-   "excerpt": "삼국지 영걸전(1995)을 현대 시스템에서 원작대로 돌리는 오픈소스 엔진 An open-source engine that runs your copy of the classic Three Kingdoms tactics RPG \"Sangokushi Eiketsuden\" on modern systems"
   },
   {
    "name": "Madang",
@@ -10166,8 +10171,8 @@
  ],
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
-  "followers": 23,
-  "total": 12185,
+  "followers": 22,
+  "total": 12330,
   "days": [
    {
     "date": "2025-11-16",
@@ -11387,7 +11392,7 @@
    },
    {
     "date": "2026-09-16",
-    "count": 55
+    "count": 54
    },
    {
     "date": "2026-09-17",
@@ -11639,7 +11644,11 @@
    },
    {
     "date": "2026-11-18",
-    "count": 3
+    "count": 76
+   },
+   {
+    "date": "2026-11-19",
+    "count": 73
    }
   ]
  }
