@@ -315,7 +315,7 @@ function renderOps(model) {
 
   const tiles = [
     { channel: 'play', value: stats.playLive, unit: '개 앱', title: 'Google Play 출시', text: '누구나 스토어에서 설치할 수 있는 앱' },
-    { channel: 'testing', value: stats.playTesting, unit: '개 앱', title: 'Play 비공개 테스트', text: '테스터 그룹에 가입하면 누구나 설치' },
+    { channel: 'testing', value: stats.playTesting, unit: '개 앱', title: 'Play 비공개 테스트', text: model.developer.testerGroup ? '테스터 그룹에 가입하면 누구나 설치' : '출시 전 테스터 트랙에서 다듬는 중' },
     { channel: 'release', value: stats.releases, unit: '회', title: 'GitHub Releases', text: `${num(stats.releasedRepos)}개 레포에서 버전을 붙여 배포` },
     { channel: 'live', value: stats.liveSites, unit: '곳', title: '웹에서 바로 열기', text: '설치 없이 열리는 데모와 소개 페이지' },
     { channel: 'ci', value: stats.workflows, unit: '개', title: 'CI 워크플로', text: `${num(stats.ciRepos)}개 레포의 빌드·배포 자동화` },
