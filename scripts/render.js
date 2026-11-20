@@ -142,7 +142,12 @@ function langBar(languages, { legend = true } = {}) {
 function linkButtons(p, { primaryClass = 'btn btn-lamp' } = {}) {
   const out = [];
   const isAndroid = p.platform === 'android' || p.category === 'android';
-  if (p.links.play) out.push(`<a class="${primaryClass}" href="${esc(p.links.play)}" target="_blank" rel="noopener">Google Play에서 보기</a>`);
+  if (p.links.optIn) {
+    out.push(`<a class="${primaryClass}" href="${esc(p.links.optIn)}" target="_blank" rel="noopener">테스트 참여하기</a>`);
+    out.push(`<a class="btn btn-ghost" href="${esc(p.links.play)}" target="_blank" rel="noopener">Play에서 설치</a>`);
+  } else if (p.links.play) {
+    out.push(`<a class="${primaryClass}" href="${esc(p.links.play)}" target="_blank" rel="noopener">Google Play에서 설치</a>`);
+  }
   if (p.links.live) {
     const label = isAndroid ? '소개 페이지' : p.category === 'game' ? '바로 플레이' : p.category === 'desktop' ? '홈페이지' : '라이브 데모 열기';
     out.push(`<a class="${out.length ? 'btn btn-ghost' : primaryClass}" href="${esc(p.links.live)}" target="_blank" rel="noopener">${label}</a>`);
@@ -227,6 +232,81 @@ function renderFeatured(projects) {
   </section>`;
 }
 
+// ─── Google Play ────────────────────────────────────
+function playRow(p) {
+  const testing = Boolean(p.links.optIn);
+  const icon = p.icon
+    ? `<img src="${esc(p.icon)}" alt="" width="48" height="48" loading="lazy" />`
+    : esc(p.title.charAt(0));
+  const install = `<a class="btn btn-sm ${testing ? 'btn-ghost' : 'btn-lamp'}" href="${esc(p.links.play)}" target="_blank" rel="noopener" aria-label="${esc(p.title)} Google Play에서 설치">${testing ? 'Play에서 설치' : 'Google Play에서 설치'}</a>`;
+  const optIn = testing
+    ? `<a class="btn btn-sm btn-lamp" href="${esc(p.links.optIn)}" target="_blank" rel="noopener" aria-label="${esc(p.title)} 테스트 참여">테스트 참여</a>`
+    : '';
+  return `
+          <li class="play-app">
+            <a class="play-app-main" href="#project/${esc(p.id)}" data-open="${esc(p.id)}">
+              <span class="play-app-icon">${icon}</span>
+              <span class="play-app-text"><b>${esc(p.title)}</b><span>${esc(p.description)}</span></span>
+            </a>
+            <div class="play-app-actions">${optIn}${install}</div>
+          </li>`;
+}
+
+function renderPlay(model) {
+  const apps = model.projects.filter(p => p.links.play);
+  if (!apps.length) return '';
+  const byRecent = (a, b) => (Date.parse(b.pushedAt || 0) || 0) - (Date.parse(a.pushedAt || 0) || 0);
+  const live = apps.filter(p => !p.links.optIn).sort(byRecent);
+  const testing = apps.filter(p => p.links.optIn).sort(byRecent);
+  const group = model.developer.testerGroup;
+
+  const liveBlock = live.length ? `
+      <div class="play-block">
+        <h3 class="play-heading">출시 <span>${num(live.length)}</span></h3>
+        <p class="play-note">누구나 Google Play에서 바로 설치할 수 있습니다.</p>
+        <ul class="play-list">${live.map(playRow).join('')}</ul>
+      </div>` : '';
+
+  const steps = group ? `
+        <ol class="play-steps">
+          <li>
+            <b>테스터 그룹 가입</b>
+            <span>설치할 휴대폰의 Google 계정으로 <a href="${esc(group.joinUrl)}" target="_blank" rel="noopener">${esc(group.email)}</a> 그룹에 가입합니다. 한 번만 하면 아래 앱 전부에 적용됩니다.</span>
+            <a class="btn btn-sm btn-lamp" href="${esc(group.joinUrl)}" target="_blank" rel="noopener">그룹 가입하기</a>
+          </li>
+          <li>
+            <b>테스트 참여</b>
+            <span>앱마다 <em>테스트 참여</em>를 누르고, 같은 계정으로 “테스터 되기”를 누릅니다.</span>
+          </li>
+          <li>
+            <b>Play에서 설치</b>
+            <span><em>Play에서 설치</em>를 누르면 스토어 페이지가 열립니다. 참여 직후에는 설치 버튼이 보이기까지 몇 분 걸릴 수 있습니다.</span>
+          </li>
+        </ol>` : `
+        <p class="play-note">초대받은 테스터 계정으로만 설치할 수 있습니다.</p>`;
+
+  const testingBlock = testing.length ? `
+      <div class="play-block">
+        <h3 class="play-heading">비공개 테스트 <span>${num(testing.length)}</span></h3>
+        <p class="play-note">출시 전 버전이라 Play 검색에는 나오지 않습니다. 세 단계를 거치면 일반 앱처럼 설치하고 업데이트를 받습니다.</p>
+        ${steps}
+        <ul class="play-list">${testing.map(playRow).join('')}</ul>
+      </div>` : '';
+
+  return `
+  <section class="section" id="play" aria-labelledby="play-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Google Play</p>
+        <h2 class="section-title" id="play-title">Play 스토어에서 받기</h2>
+        <p class="section-sub">출시한 앱 ${num(live.length)}개와 비공개 테스트 중인 앱 ${num(testing.length)}개입니다. 앱 이름을 누르면 스크린샷과 소스 링크가 열립니다.</p>
+      </header>
+      ${liveBlock}
+      ${testingBlock}
+    </div>
+  </section>`;
+}
+
 // ─── Operations ─────────────────────────────────────
 function renderOps(model) {
   const { stats, months, projects } = model;
@@ -235,7 +315,7 @@ function renderOps(model) {
 
   const tiles = [
     { channel: 'play', value: stats.playLive, unit: '개 앱', title: 'Google Play 출시', text: '누구나 스토어에서 설치할 수 있는 앱' },
-    { channel: 'testing', value: stats.playTesting, unit: '개 앱', title: 'Play 비공개 테스트', text: '출시 전 테스터 트랙에서 다듬는 중' },
+    { channel: 'testing', value: stats.playTesting, unit: '개 앱', title: 'Play 비공개 테스트', text: model.developer.testerGroup ? '테스터 그룹에 가입하면 누구나 설치' : '출시 전 테스터 트랙에서 다듬는 중' },
     { channel: 'release', value: stats.releases, unit: '회', title: 'GitHub Releases', text: `${num(stats.releasedRepos)}개 레포에서 버전을 붙여 배포` },
     { channel: 'live', value: stats.liveSites, unit: '곳', title: '웹에서 바로 열기', text: '설치 없이 열리는 데모와 소개 페이지' },
     { channel: 'ci', value: stats.workflows, unit: '개', title: 'CI 워크플로', text: `${num(stats.ciRepos)}개 레포의 빌드·배포 자동화` },
@@ -426,6 +506,7 @@ function renderHero(model) {
 function serializeModel(model) {
   const data = {
     generatedAt: model.generatedAt,
+    testerGroup: model.developer.testerGroup || null,
     projects: model.projects.map(p => ({ ...p })),
     labels: { category: Object.fromEntries(Object.entries(CATEGORY).map(([k, v]) => [k, v.label])), channel: CHANNEL },
   };
@@ -472,6 +553,7 @@ function renderPage(model) {
       <a class="nav-brand" href="#top"><img src="brand/el-studio-mark.svg" alt="" width="24" height="24" />${esc(developer.name)}</a>
       <div class="nav-links">
         <a href="#featured">대표작</a>
+        <a href="#play">Play 앱</a>
         <a href="#ops">운영</a>
         <a href="#stack">기술</a>
         <a href="#projects">전체</a>
@@ -484,6 +566,7 @@ function renderPage(model) {
 
   <main>
     ${renderFeatured(model.projects)}
+    ${renderPlay(model)}
     ${renderOps(model)}
     ${renderStack(model)}
     ${renderExplorer(model)}

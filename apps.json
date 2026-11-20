@@ -3,6 +3,7 @@
     "name": "EL Studio",
     "accountId": "6375329746023339599",
     "githubUsername": "jeiel85",
+    "testerGroup": "sitdory-tester@googlegroups.com",
     "description": "Android, Web & Desktop Developer",
     "tagline": "낮에는 9 to 6 직장인이자 두 아들의 아빠, 밤에는 바이브코딩으로 아이디어를 끝까지 만들어 배포하는 개발자입니다."
   },
@@ -122,10 +123,43 @@
       "iconUrl": "icons/com.jeiel85.breathspace.png"
     },
     {
+      "name": "둥지 — 우리 가족 가계부",
+      "package": "com.jeiel85.doran",
+      "platform": "android",
+      "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/doran",
+      "iconUrl": "icons/com.jeiel85.doran.png"
+    },
+    {
+      "name": "Homebase",
+      "package": "io.github.jeiel85.homebase",
+      "platform": "android",
+      "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/homebase",
+      "iconUrl": "icons/io.github.jeiel85.homebase.png"
+    },
+    {
+      "name": "포너디 — 폰 어디?",
+      "package": "com.jeiel85.ponerdi",
+      "platform": "android",
+      "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/find-my-wife-phone",
+      "iconUrl": "icons/com.jeiel85.ponerdi.png"
+    },
+    {
+      "name": "AI 사용량",
+      "package": "com.jeiel85.aiusage",
+      "platform": "android",
+      "status": "closed_testing",
+      "githubUrl": "https://github.com/jeiel85/claude-usage-tray-windows",
+      "description": "PC의 Claude·Codex 사용량과 한도 알림을 휴대폰에서 바로 확인하는 Claude Usage Tray의 Android 앱.",
+      "iconUrl": "icons/com.jeiel85.aiusage.png"
+    },
+    {
       "name": "아빠 용돈 — Daddy Pocket",
       "package": "com.jeiel85.daddypocket",
       "platform": "android",
-      "status": "closed_testing",
+      "status": "github_only",
       "description": "4050 아빠들을 위한 쉽고 간편한 용돈 및 카드 지출 정리 가계부 앱.",
       "url": "https://jeiel85.github.io/daddy-easy-pocket-money/",
       "githubUrl": "https://github.com/jeiel85/daddy-easy-pocket-money",

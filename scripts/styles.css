@@ -201,6 +201,35 @@ main { padding-bottom: 120px; }
 .btn-lamp:hover { background: #ffd174; transform: translateY(-1px); }
 .btn-ghost { background: transparent; color: var(--moon); border-color: var(--line); }
 .btn-ghost:hover { border-color: var(--fog); background: rgba(255, 255, 255, 0.03); }
+.btn-sm { padding: 7px 12px; font-size: 0.8rem; white-space: nowrap; }
+
+/* ── Google Play ── */
+.play-block + .play-block { margin-top: 48px; }
+.play-heading { font-family: var(--f-display); font-size: 1.3rem; font-weight: 700; display: flex; align-items: baseline; gap: 10px; }
+.play-heading span { font-family: var(--f-mono); font-size: 0.9rem; font-weight: 500; color: var(--lamp); }
+.play-note { color: var(--fog); font-size: 0.92rem; margin: 6px 0 18px; max-width: 680px; }
+.play-steps { list-style: none; counter-reset: step; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 18px; }
+.play-steps li { counter-increment: step; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; background: var(--dusk); border: 1px solid var(--line-soft); border-radius: var(--r-md); padding: 18px 18px 18px 56px; position: relative; }
+.play-steps li::before { content: counter(step); position: absolute; left: 18px; top: 16px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--lamp-soft); color: var(--lamp); font-family: var(--f-mono); font-weight: 600; font-size: 0.82rem; }
+.play-steps b { font-weight: 600; }
+.play-steps span { color: var(--fog); font-size: 0.86rem; }
+.play-steps em { font-style: normal; color: var(--moon); }
+.play-steps a:not(.btn) { color: var(--lamp); }
+.play-steps .btn { margin-top: 6px; }
+.play-list { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.play-app { display: flex; align-items: center; gap: 12px; background: var(--dusk); border: 1px solid var(--line-soft); border-radius: var(--r-md); padding: 12px 14px; min-width: 0; transition: border-color 0.2s; }
+.play-app:hover { border-color: var(--line); }
+.play-app-main { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; text-decoration: none; }
+.play-app-icon { flex: none; width: 48px; height: 48px; border-radius: 12px; background: var(--dusk-2); display: grid; place-items: center; overflow: hidden; font-family: var(--f-display); font-weight: 700; color: var(--fog); }
+.play-app-icon img { width: 100%; height: 100%; object-fit: cover; }
+.play-app-text { min-width: 0; display: flex; flex-direction: column; }
+.play-app-text b { font-weight: 600; font-size: 0.94rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.play-app-text span { color: var(--haze); font-size: 0.8rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.45; }
+.play-app-main:hover b { color: var(--lamp); }
+.play-app-actions { flex: none; display: flex; gap: 6px; }
+.testing-note { margin-top: 18px; padding: 12px 14px; border-radius: var(--r-sm); background: var(--lamp-soft); border: 1px solid rgba(255, 194, 75, 0.3); color: var(--moon); font-size: 0.86rem; }
+.testing-note a { color: var(--lamp); }
+.testing-note + .actions { padding-top: 14px; }
 
 /* ── Operations ── */
 .channels { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
@@ -366,6 +395,8 @@ main { padding-bottom: 120px; }
   .feature-stage { min-height: 260px; }
   .channels { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .ops-grid, .stack-grid { grid-template-columns: 1fr; }
+  .play-list { grid-template-columns: 1fr; }
+  .play-steps { grid-template-columns: 1fr; }
   .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .kpis div:nth-child(4) { padding-left: 0; border-left: 0; }
 }
@@ -388,6 +419,9 @@ main { padding-bottom: 120px; }
   .detail { width: 100vw; max-height: 100vh; height: 100%; border-radius: 0; }
   .detail-body { padding: 22px 18px 28px; }
   .actions .btn { flex: 1 1 auto; }
+  .play-app { flex-wrap: wrap; }
+  .play-app-actions { width: 100%; padding-left: 60px; }
+  .play-app-actions .btn { flex: 1 1 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
