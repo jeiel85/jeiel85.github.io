@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-19T02:09:53.662Z",
+ "fetchedAt": "2026-11-20T01:57:58.569Z",
  "repos": [
   {
    "name": "homebase",
@@ -9,31 +9,31 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-07-07T05:48:11Z",
-   "pushedAt": "2026-11-19T02:09:50Z",
+   "pushedAt": "2026-11-20T01:54:00Z",
    "archived": false,
-   "sizeKb": 3154,
+   "sizeKb": 4634,
    "license": "MIT",
    "primaryLanguage": "C#",
    "languages": [
     {
      "name": "C#",
      "color": "#7355dd",
-     "bytes": 1700689
+     "bytes": 2268118
     },
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 695733
+     "bytes": 1086919
     },
     {
      "name": "PowerShell",
      "color": "#012456",
-     "bytes": 50162
+     "bytes": 52059
     },
     {
      "name": "Inno Setup",
      "color": "#264b99",
-     "bytes": 3967
+     "bytes": 4311
     }
    ],
    "topics": [
@@ -54,35 +54,112 @@
     "tailscale",
     "unifiedpush"
    ],
-   "releases": 69,
+   "releases": 78,
    "latestRelease": {
-    "tag": "v0.45.0",
-    "date": "2026-11-19T01:58:34Z",
-    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.45.0"
+    "tag": "v0.54.0",
+    "date": "2026-11-19T23:53:09Z",
+    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.54.0"
    },
-   "commits": 115,
+   "commits": 127,
    "workflows": 4,
    "images": [],
    "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
   },
   {
+   "name": "badasugi",
+   "description": "🎙️ 말하는 사람을 구분해 실시간으로 받아 적는 가볍고 빠른 Windows 회의 전사 앱 · Rust + Tauri · whisper.cpp 로컬 AI / Groq·OpenAI API · 화자 분리 · AI 회의록 요약",
+   "url": "https://github.com/jeiel85/badasugi",
+   "homepage": "https://jeiel85.github.io/badasugi/",
+   "stars": 1,
+   "forks": 0,
+   "createdAt": "2026-11-12T09:49:33Z",
+   "pushedAt": "2026-11-20T01:51:35Z",
+   "archived": false,
+   "sizeKb": 6592,
+   "license": "MIT",
+   "primaryLanguage": "Rust",
+   "languages": [
+    {
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 749526
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 223527
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 73125
+    },
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 45642
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 8620
+    }
+   ],
+   "topics": [
+    "dictation",
+    "korean",
+    "meeting-notes",
+    "onnx",
+    "rust",
+    "silero-vad",
+    "speaker-diarization",
+    "speech-to-text",
+    "stt",
+    "tauri",
+    "transcription",
+    "tray-app",
+    "whisper",
+    "whisper-cpp",
+    "windows"
+   ],
+   "releases": 39,
+   "latestRelease": {
+    "tag": "v0.4.23",
+    "date": "2026-11-20T01:51:36Z",
+    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.23"
+   },
+   "commits": 50,
+   "workflows": 0,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-dark.png",
+     "alt": "받아쓰기 화면 (어두운 테마)"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-light.png",
+     "alt": "받아쓰기 화면 (밝은 테마)"
+    }
+   ],
+   "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
+  },
+  {
    "name": "doran",
-   "description": "도란 — 가족 공동 가계부. 카드·은행 알림이 오면 바로 장부에, 배우자 폰에는 \"남편이 현대카드로 12,300원 썼어요\" 알림. 부모님 카드 알림도 사람별로 합산, 달력·통계·자산·예산. Android, 종단 암호화(Cloudflare Worker + FCM)",
+   "description": "둥지 — 가족 공동 가계부. 카드·은행 알림이 오면 바로 장부에, 배우자 폰에는 \"남편이 현대카드로 12,300원 썼어요\" 알림. 부모님 카드 알림도 사람별로 합산, 달력·통계·자산·예산. Android, 종단 암호화(Cloudflare Worker + FCM)",
    "url": "https://github.com/jeiel85/doran",
    "homepage": "https://jeiel85.github.io/doran/",
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-11-17T11:37:58Z",
-   "pushedAt": "2026-11-19T02:09:00Z",
+   "pushedAt": "2026-11-20T01:50:26Z",
    "archived": false,
-   "sizeKb": 16323,
+   "sizeKb": 19294,
    "license": null,
    "primaryLanguage": "Kotlin",
    "languages": [
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 562378
+     "bytes": 660948
     },
     {
      "name": "JavaScript",
@@ -92,12 +169,12 @@
     {
      "name": "Python",
      "color": "#3572A5",
-     "bytes": 11028
+     "bytes": 12030
     },
     {
      "name": "Shell",
      "color": "#89e051",
-     "bytes": 10799
+     "bytes": 11756
     }
    ],
    "topics": [
@@ -127,7 +204,7 @@
     "date": "2026-11-18T10:04:04Z",
     "url": "https://github.com/jeiel85/doran/releases/tag/v0.1.4"
    },
-   "commits": 32,
+   "commits": 51,
    "workflows": 0,
    "images": [
     {
@@ -155,7 +232,7 @@
      "alt": "시작"
     }
    ],
-   "excerpt": "카드 알림이 오면 바로 장부에, 가족 모두의 폰에 도란도란. 부부가 같은 장부를 실시간으로 쓰고, 부모님 카드 알림도 사람별로 받아 합계에 더하는 가족용 Android 가계부."
+   "excerpt": "카드 알림이 오면 바로 장부에, 가족 모두의 폰에. 부부가 같은 장부를 실시간으로 쓰고, 부모님 카드 알림도 사람별로 받아 합계에 더하는 가족용 Android 가계부."
   },
   {
    "name": "claude-usage-tray-windows",
@@ -165,26 +242,26 @@
    "stars": 2,
    "forks": 0,
    "createdAt": "2026-03-27T03:55:01Z",
-   "pushedAt": "2026-11-19T02:07:32Z",
+   "pushedAt": "2026-11-20T01:36:56Z",
    "archived": false,
-   "sizeKb": 5905,
+   "sizeKb": 6186,
    "license": "MIT",
    "primaryLanguage": "C#",
    "languages": [
     {
      "name": "C#",
      "color": "#7355dd",
-     "bytes": 1814476
+     "bytes": 2036365
     },
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 383114
+     "bytes": 404027
     },
     {
      "name": "PowerShell",
      "color": "#012456",
-     "bytes": 7079
+     "bytes": 7827
     },
     {
      "name": "Batchfile",
@@ -205,13 +282,13 @@
     "windows",
     "wpf"
    ],
-   "releases": 259,
+   "releases": 273,
    "latestRelease": {
-    "tag": "v1.68.2",
-    "date": "2026-11-19T01:57:30Z",
-    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.68.2"
+    "tag": "v1.72.8",
+    "date": "2026-11-20T01:41:22Z",
+    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.72.8"
    },
-   "commits": 597,
+   "commits": 636,
    "workflows": 2,
    "images": [
     {
@@ -222,6 +299,159 @@
    "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
   },
   {
+   "name": "find-my-wife-phone",
+   "description": "포너디 — “폰 어디?” 소파 밑 폰도 버튼 한 번에. 무음·방해 금지여도 울리고, 찾으면 원래대로. 받는 사람이 거절할 수 있는 가족용 Android 앱 (E2E 암호화, Cloudflare Worker + FCM)",
+   "url": "https://github.com/jeiel85/find-my-wife-phone",
+   "homepage": "https://jeiel85.github.io/find-my-wife-phone/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-15T06:18:39Z",
+   "pushedAt": "2026-11-19T22:19:13Z",
+   "archived": false,
+   "sizeKb": 4987,
+   "license": "MIT",
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 327147
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 31675
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 11346
+    },
+    {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 6913
+    }
+   ],
+   "topics": [
+    "android",
+    "cloudflare-workers",
+    "do-not-disturb",
+    "end-to-end-encryption",
+    "family",
+    "find-my-phone",
+    "firebase-cloud-messaging",
+    "jetpack-compose",
+    "korean",
+    "kotlin",
+    "privacy",
+    "qr-code"
+   ],
+   "releases": 10,
+   "latestRelease": {
+    "tag": "v0.3.6",
+    "date": "2026-11-19T22:19:14Z",
+    "url": "https://github.com/jeiel85/find-my-wife-phone/releases/tag/v0.3.6"
+   },
+   "commits": 42,
+   "workflows": 1,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/home.webp",
+     "alt": "홈: 울리기 버튼"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/ringing.webp",
+     "alt": "단계별 진행 상황"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/countdown.webp",
+     "alt": "10초 거절 창"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/found-me.webp",
+     "alt": "여기 있어요"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/map.webp",
+     "alt": "위치 지도"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/history.webp",
+     "alt": "기록"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/empty.webp",
+     "alt": "처음 화면"
+    }
+   ],
+   "excerpt": "“폰 어디?” — 소파 밑에 있어도, 버튼 한 번이면 울려요. 무음·방해 금지여도 크게 울리고, 찾으면 소리 설정이 원래대로 돌아가는 가족용 Android 앱."
+  },
+  {
+   "name": "minebombers-reloaded",
+   "description": "Port of the 1995 MS-DOS game Mine Bombers 3.11 to modern systems: a Rust/SDL2 native engine and a browser edition. Code: MIT OR Apache-2.0. Bring your own copy of the game files.",
+   "url": "https://github.com/jeiel85/minebombers-reloaded",
+   "homepage": "https://jeiel85.github.io/minebombers-reloaded/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-09-20T07:44:52Z",
+   "pushedAt": "2026-11-19T15:44:13Z",
+   "archived": false,
+   "sizeKb": 3442,
+   "license": "Apache-2.0",
+   "primaryLanguage": "Rust",
+   "languages": [
+    {
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 679448
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 114671
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 28763
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 25696
+    },
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 23966
+    }
+   ],
+   "topics": [
+    "arcade",
+    "game",
+    "retro-gaming",
+    "rust",
+    "sdl2",
+    "wasm",
+    "webassembly",
+    "mine-bombers",
+    "dos-game",
+    "game-port",
+    "reimplementation"
+   ],
+   "releases": 13,
+   "latestRelease": {
+    "tag": "v0.3.4",
+    "date": "2026-11-19T15:42:30Z",
+    "url": "https://github.com/jeiel85/minebombers-reloaded/releases/tag/v0.3.4"
+   },
+   "commits": 102,
+   "workflows": 3,
+   "images": [],
+   "excerpt": "1995년 MS-DOS 아케이드 게임 Mine Bombers 3.11(Skitso Productions)을 최신 Windows와 Linux에서 DOSBox 없이 실행하기 위한 Rust 엔진입니다. OpenRCT2와 같은 방식으로, 이 프로젝트는 엔진이고 게임 데이터는 사용자가 자기 사본을 준비합니다. 원작 3.11은 무료(프리웨어)입니다. 브라우저에서 실행하는 부가 에디션도 있습니다."
+  },
+  {
    "name": "markleaf-android",
    "description": "A lightweight, local-first Markdown note app for Android.",
    "url": "https://github.com/jeiel85/markleaf-android",
@@ -229,9 +459,9 @@
    "stars": 154,
    "forks": 16,
    "createdAt": "2026-04-29T00:51:29Z",
-   "pushedAt": "2026-11-18T23:57:45Z",
+   "pushedAt": "2026-11-19T14:39:39Z",
    "archived": false,
-   "sizeKb": 114466,
+   "sizeKb": 114467,
    "license": "Apache-2.0",
    "primaryLanguage": "Kotlin",
    "languages": [
@@ -293,6 +523,149 @@
    "excerpt": "A local-first, minimal Markdown note app for Android"
   },
   {
+   "name": "eiketsuden-reloaded",
+   "description": "삼국지 영걸전(1995)을 원작대로 돌리는 오픈소스 엔진 — 가지고 있는 원작을 읽어 Windows/macOS/Linux에서 플레이 (Rust + macroquad). Open-source engine that runs your own copy of Sangokushi Eiketsuden on modern systems, OpenRCT2-style.",
+   "url": "https://github.com/jeiel85/eiketsuden-reloaded",
+   "homepage": "https://jeiel85.github.io/eiketsuden-reloaded/",
+   "stars": 6,
+   "forks": 0,
+   "createdAt": "2026-09-26T11:15:29Z",
+   "pushedAt": "2026-11-19T07:39:35Z",
+   "archived": false,
+   "sizeKb": 30282,
+   "license": "GPL-3.0",
+   "primaryLanguage": "Rust",
+   "languages": [
+    {
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 3777333
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 239288
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 89598
+    },
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 22557
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 6659
+    },
+    {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 2523
+    }
+   ],
+   "topics": [
+    "eiketsuden",
+    "game",
+    "gamedev",
+    "korean",
+    "macroquad",
+    "open-source-game",
+    "pixel-art",
+    "reimplementation",
+    "romance-of-the-three-kingdoms",
+    "rust",
+    "srpg",
+    "tactical-rpg",
+    "three-kingdoms",
+    "dos-games",
+    "game-engine",
+    "koei",
+    "retro-gaming",
+    "reverse-engineering"
+   ],
+   "releases": 12,
+   "latestRelease": {
+    "tag": "v0.9.0",
+    "date": "2026-11-19T07:43:45Z",
+    "url": "https://github.com/jeiel85/eiketsuden-reloaded/releases/tag/v0.9.0"
+   },
+   "commits": 588,
+   "workflows": 3,
+   "images": [],
+   "excerpt": "삼국지 영걸전(1995)을 현대 시스템에서 원작대로 돌리는 오픈소스 엔진 An open-source engine that runs your copy of the classic Three Kingdoms tactics RPG \"Sangokushi Eiketsuden\" on modern systems"
+  },
+  {
+   "name": "jeiel85",
+   "description": "프로필 꾸미기",
+   "url": "https://github.com/jeiel85/jeiel85",
+   "homepage": "",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-04-28T08:26:05Z",
+   "pushedAt": "2026-11-19T04:13:31Z",
+   "archived": false,
+   "sizeKb": 50,
+   "license": null,
+   "primaryLanguage": null,
+   "languages": [],
+   "topics": [],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 51,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
+  },
+  {
+   "name": "jeiel85.github.io",
+   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
+   "url": "https://github.com/jeiel85/jeiel85.github.io",
+   "homepage": "https://jeiel85.github.io/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-05-26T06:40:18Z",
+   "pushedAt": "2026-11-19T02:10:56Z",
+   "archived": false,
+   "sizeKb": 15789,
+   "license": null,
+   "primaryLanguage": "HTML",
+   "languages": [
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 404435
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 83349
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 23383
+    }
+   ],
+   "topics": [
+    "android",
+    "closed-testing",
+    "github-actions",
+    "google-play",
+    "play-store",
+    "portfolio"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 111,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
+  },
+  {
    "name": "tailscale-force-connect",
    "description": "Reconnect Tailscale on every Windows boot, even if you clicked Disconnect before shutting down. PowerShell + Task Scheduler, runs as SYSTEM before login.",
    "url": "https://github.com/jeiel85/tailscale-force-connect",
@@ -347,315 +720,6 @@
    "workflows": 0,
    "images": [],
    "excerpt": "Windows PC에서 재부팅할 때마다 Tailscale을 연결 상태로 되돌립니다. 직접 끊을 수도 있지만, 끊은 상태는 1시간(바꿀 수 있음)까지만 유지되고 그 뒤에는 자동으로 다시 연결됩니다."
-  },
-  {
-   "name": "badasugi",
-   "description": "🎙️ 말하는 사람을 구분해 실시간으로 받아 적는 가볍고 빠른 Windows 회의 전사 앱 · Rust + Tauri · whisper.cpp 로컬 AI / Groq·OpenAI API · 화자 분리 · AI 회의록 요약",
-   "url": "https://github.com/jeiel85/badasugi",
-   "homepage": "https://jeiel85.github.io/badasugi/",
-   "stars": 1,
-   "forks": 0,
-   "createdAt": "2026-11-12T09:49:33Z",
-   "pushedAt": "2026-11-18T23:46:42Z",
-   "archived": false,
-   "sizeKb": 6700,
-   "license": "MIT",
-   "primaryLanguage": "Rust",
-   "languages": [
-    {
-     "name": "Rust",
-     "color": "#dea584",
-     "bytes": 609105
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 150164
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 56400
-    },
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 36959
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 8620
-    }
-   ],
-   "topics": [
-    "dictation",
-    "korean",
-    "meeting-notes",
-    "onnx",
-    "rust",
-    "silero-vad",
-    "speaker-diarization",
-    "speech-to-text",
-    "stt",
-    "tauri",
-    "transcription",
-    "tray-app",
-    "whisper",
-    "whisper-cpp",
-    "windows"
-   ],
-   "releases": 27,
-   "latestRelease": {
-    "tag": "v0.4.11",
-    "date": "2026-11-17T07:30:50Z",
-    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.11"
-   },
-   "commits": 36,
-   "workflows": 0,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-dark.png",
-     "alt": "받아쓰기 화면 (어두운 테마)"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-light.png",
-     "alt": "받아쓰기 화면 (밝은 테마)"
-    }
-   ],
-   "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
-  },
-  {
-   "name": "eiketsuden-reloaded",
-   "description": "삼국지 영걸전(1995)을 원작대로 돌리는 오픈소스 엔진 — 가지고 있는 원작을 읽어 Windows/macOS/Linux에서 플레이 (Rust + macroquad). Open-source engine that runs your own copy of Sangokushi Eiketsuden on modern systems, OpenRCT2-style.",
-   "url": "https://github.com/jeiel85/eiketsuden-reloaded",
-   "homepage": "https://jeiel85.github.io/eiketsuden-reloaded/",
-   "stars": 6,
-   "forks": 0,
-   "createdAt": "2026-09-26T11:15:29Z",
-   "pushedAt": "2026-11-18T15:05:54Z",
-   "archived": false,
-   "sizeKb": 29842,
-   "license": "GPL-3.0",
-   "primaryLanguage": "Rust",
-   "languages": [
-    {
-     "name": "Rust",
-     "color": "#dea584",
-     "bytes": 3668362
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 239288
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 85309
-    },
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 22557
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 6659
-    },
-    {
-     "name": "Shell",
-     "color": "#89e051",
-     "bytes": 2523
-    }
-   ],
-   "topics": [
-    "eiketsuden",
-    "game",
-    "gamedev",
-    "korean",
-    "macroquad",
-    "open-source-game",
-    "pixel-art",
-    "reimplementation",
-    "romance-of-the-three-kingdoms",
-    "rust",
-    "srpg",
-    "tactical-rpg",
-    "three-kingdoms",
-    "dos-games",
-    "game-engine",
-    "koei",
-    "retro-gaming",
-    "reverse-engineering"
-   ],
-   "releases": 11,
-   "latestRelease": {
-    "tag": "v0.8.1",
-    "date": "2026-11-18T15:12:12Z",
-    "url": "https://github.com/jeiel85/eiketsuden-reloaded/releases/tag/v0.8.1"
-   },
-   "commits": 582,
-   "workflows": 3,
-   "images": [],
-   "excerpt": "삼국지 영걸전(1995)을 현대 시스템에서 원작대로 돌리는 오픈소스 엔진 An open-source engine that runs your copy of the classic Three Kingdoms tactics RPG \"Sangokushi Eiketsuden\" on modern systems"
-  },
-  {
-   "name": "find-my-wife-phone",
-   "description": "포너디 — “폰 어디?” 소파 밑 폰도 버튼 한 번에. 무음·방해 금지여도 울리고, 찾으면 원래대로. 받는 사람이 거절할 수 있는 가족용 Android 앱 (E2E 암호화, Cloudflare Worker + FCM)",
-   "url": "https://github.com/jeiel85/find-my-wife-phone",
-   "homepage": "https://jeiel85.github.io/find-my-wife-phone/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-11-15T06:18:39Z",
-   "pushedAt": "2026-11-18T13:33:16Z",
-   "archived": false,
-   "sizeKb": 4898,
-   "license": "MIT",
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 291932
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 24749
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 11346
-    },
-    {
-     "name": "Shell",
-     "color": "#89e051",
-     "bytes": 6300
-    }
-   ],
-   "topics": [
-    "android",
-    "cloudflare-workers",
-    "do-not-disturb",
-    "end-to-end-encryption",
-    "family",
-    "find-my-phone",
-    "firebase-cloud-messaging",
-    "jetpack-compose",
-    "korean",
-    "kotlin",
-    "privacy",
-    "qr-code"
-   ],
-   "releases": 8,
-   "latestRelease": {
-    "tag": "v0.3.4",
-    "date": "2026-11-18T13:33:17Z",
-    "url": "https://github.com/jeiel85/find-my-wife-phone/releases/tag/v0.3.4"
-   },
-   "commits": 36,
-   "workflows": 0,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/home.webp",
-     "alt": "홈: 울리기 버튼"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/ringing.webp",
-     "alt": "단계별 진행 상황"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/countdown.webp",
-     "alt": "10초 거절 창"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/found-me.webp",
-     "alt": "여기 있어요"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/map.webp",
-     "alt": "위치 지도"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/history.webp",
-     "alt": "기록"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/empty.webp",
-     "alt": "처음 화면"
-    }
-   ],
-   "excerpt": "“폰 어디?” — 소파 밑에 있어도, 버튼 한 번이면 울려요. 무음·방해 금지여도 크게 울리고, 찾으면 소리 설정이 원래대로 돌아가는 가족용 Android 앱."
-  },
-  {
-   "name": "jeiel85",
-   "description": "프로필 꾸미기",
-   "url": "https://github.com/jeiel85/jeiel85",
-   "homepage": "",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-04-28T08:26:05Z",
-   "pushedAt": "2026-11-18T04:25:40Z",
-   "archived": false,
-   "sizeKb": 50,
-   "license": null,
-   "primaryLanguage": null,
-   "languages": [],
-   "topics": [],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 51,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
-  },
-  {
-   "name": "jeiel85.github.io",
-   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
-   "url": "https://github.com/jeiel85/jeiel85.github.io",
-   "homepage": "https://jeiel85.github.io/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-18T02:42:29Z",
-   "archived": false,
-   "sizeKb": 15781,
-   "license": null,
-   "primaryLanguage": "HTML",
-   "languages": [
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 404014
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 83349
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 23383
-    }
-   ],
-   "topics": [
-    "android",
-    "closed-testing",
-    "github-actions",
-    "google-play",
-    "play-store",
-    "portfolio"
-   ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 110,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
   },
   {
    "name": "celestial-blades",
@@ -7404,70 +7468,6 @@
    "excerpt": "일하고, 배우고, 만들고, 만납니다. 변화하는 생활과 뜻밖의 사건 속에서, 당신만의 삶을 이어갑니다."
   },
   {
-   "name": "minebombers-reloaded",
-   "description": "Port of the 1995 MS-DOS game Mine Bombers 3.11 to modern systems: a Rust/SDL2 native engine and a browser edition. Code: MIT OR Apache-2.0. Bring your own copy of the game files.",
-   "url": "https://github.com/jeiel85/minebombers-reloaded",
-   "homepage": "https://jeiel85.github.io/minebombers-reloaded/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-09-20T07:44:52Z",
-   "pushedAt": "2026-10-13T02:50:58Z",
-   "archived": false,
-   "sizeKb": 3414,
-   "license": "Apache-2.0",
-   "primaryLanguage": "Rust",
-   "languages": [
-    {
-     "name": "Rust",
-     "color": "#dea584",
-     "bytes": 669342
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 114671
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 28763
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 24299
-    },
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 23966
-    }
-   ],
-   "topics": [
-    "arcade",
-    "game",
-    "retro-gaming",
-    "rust",
-    "sdl2",
-    "wasm",
-    "webassembly",
-    "mine-bombers",
-    "dos-game",
-    "game-port",
-    "reimplementation"
-   ],
-   "releases": 12,
-   "latestRelease": {
-    "tag": "v0.3.3",
-    "date": "2026-10-13T02:55:54Z",
-    "url": "https://github.com/jeiel85/minebombers-reloaded/releases/tag/v0.3.3"
-   },
-   "commits": 100,
-   "workflows": 3,
-   "images": [],
-   "excerpt": "1995년 MS-DOS 아케이드 게임 Mine Bombers 3.11(Skitso Productions)을 최신 Windows와 Linux에서 DOSBox 없이 실행하기 위한 Rust 엔진입니다. OpenRCT2와 같은 방식으로, 이 프로젝트는 엔진이고 게임 데이터는 사용자가 자기 사본을 준비합니다. 원작 3.11은 무료(프리웨어)입니다. 브라우저에서 실행하는 부가 에디션도 있습니다."
-  },
-  {
    "name": "my-farm-flutter",
    "description": "🌾 위에서 내려다본 농장 지도로 작물·가축·물주기·수확·재고를 관리하는 Flutter 앱 · Android/Windows/Web · 라이브 데모 제공",
    "url": "https://github.com/jeiel85/my-farm-flutter",
@@ -10171,8 +10171,8 @@
  ],
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
-  "followers": 22,
-  "total": 12330,
+  "followers": 21,
+  "total": 12510,
   "days": [
    {
     "date": "2025-11-16",
@@ -11356,7 +11356,7 @@
    },
    {
     "date": "2026-09-07",
-    "count": 100
+    "count": 101
    },
    {
     "date": "2026-09-08",
@@ -11648,7 +11648,11 @@
    },
    {
     "date": "2026-11-19",
-    "count": 73
+    "count": 177
+   },
+   {
+    "date": "2026-11-20",
+    "count": 75
    }
   ]
  }
