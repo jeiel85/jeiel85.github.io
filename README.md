@@ -11,6 +11,7 @@ EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 
 | --- | --- | --- |
 | 히어로 스카이라인 | 지난 1년 기여 기록. 창문 하나가 하루, 건물 하나가 한 달이고 건물 높이는 그 달의 기여량 | GitHub 기여 캘린더 |
 | 대표작 | `featured: true` 프로젝트의 스크린샷, 설치 수, ★, 커밋, 릴리스, 언어 구성 | GitHub + Google Play |
+| Play 스토어에서 받기 | 출시 앱(바로 설치)과 비공개 테스트 앱(테스터 그룹 가입 → 테스트 참여 → Play 설치 3단계 안내) | `apps.json` |
 | 운영 | 배포 채널별 개수(Play 출시/비공개 테스트, Releases, 웹, CI), 월별 새 레포, 최근 활동 | GitHub + `apps.json` |
 | 기술 | 언어별 코드 비중(바이트), 레포 토픽. 누르면 아래 목록이 그 기술로 필터링됨 | GitHub |
 | 전체 프로젝트 | 공개 레포 전체 + `apps.json` 큐레이션. 검색·분류·채널·정렬, 카드를 누르면 상세(README 스크린샷 갤러리, 지표, 링크) | 전부 |
@@ -29,6 +30,7 @@ Google Play 스토어 페이지 ┘        │
 
 - **GitHub (`scripts/github.js`)**: GraphQL 한 번의 페이지네이션으로 공개·비포크 레포 전체의 언어, 토픽, ★, 커밋 수, 릴리스, `.github/workflows` 개수, README 이미지(배지·로고·SVG 제외)와 첫 문단을 가져오고, 기여 캘린더를 따로 가져옵니다. **토큰이 필요합니다**(`GITHUB_TOKEN` 또는 `GH_TOKEN`).
 - **Google Play**: 출시된 앱은 스토어 페이지에서 아이콘·요약·스크린샷·다운로드 수를 읽습니다. 비공개 테스트 앱은 스토어에 공개 페이지가 생기면 자동으로 `production`으로 승격됩니다.
+- **비공개 테스트 설치 경로**: 비공개 테스트 앱마다 참여 링크(`https://play.google.com/apps/testing/<패키지>`)와 스토어 링크를 붙입니다. 방문자는 `developer.testerGroup` 그룹에 가입해야 참여할 수 있으므로, Play Console에서 각 비공개 테스트 트랙의 테스터를 **Google 그룹스 → 이 그룹**으로 지정해 두어야 합니다(이메일 목록 방식이면 초대받은 사람만 설치 가능).
 - **실패 처리**: GitHub 또는 Play 호출이 실패하면 경고를 남기고 직전 캐시로 빌드합니다. 캐시도 없으면 해당 섹션만 빠집니다.
 - **비공개 레포**: `apps.json`의 `githubUrl`이 공개 레포가 아니면 GitHub 버튼을 숨기고 빌드 로그에 경고를 남깁니다.
 
@@ -65,6 +67,7 @@ GitHub의 공개 레포는 `apps.json`에 없어도 전체 프로젝트 목록�
     "name": "EL Studio",
     "accountId": "6375329746023339599",
     "githubUsername": "jeiel85",
+    "testerGroup": "sitdory-tester@googlegroups.com",
     "description": "Android, Web & Desktop Developer",
     "tagline": "낮에는 9 to 6 직장인이자 두 아들의 아빠, 밤에는 ..."
   },
@@ -86,12 +89,14 @@ GitHub의 공개 레포는 `apps.json`에 없어도 전체 프로젝트 목록�
 | 필드 | 설명 |
 | --- | --- |
 | `platform` | `android` · `web` · `desktop` |
-| `status` | Android: `production`(Play 출시) · `closed_testing`(비공개 테스트) · `github_only`. 그 외: `production` |
+| `status` | Android: `production`(Play 출시) · `closed_testing`(비공개 테스트) · `github_only`. 그 외: `production`. Play Console의 실제 트랙과 맞춰 둡니다 |
+| `optInUrl` | 비공개 테스트 참여 링크를 바꿀 때만 지정. 없으면 `https://play.google.com/apps/testing/<package>` |
 | `githubUrl` | 연결할 레포. 공개 레포면 커밋·릴리스·스크린샷·언어가 자동으로 붙습니다 |
 | `url` | 라이브 데모·소개 페이지. 없으면 레포의 homepage를 씁니다 |
 | `featured` | 대표작 섹션에 크게 노출 |
 | `description` | 직접 쓴 한 줄 설명. 없으면 Play 요약 → 레포 설명 순으로 씁니다 |
 | `hidden` | 목록에서 숨김 |
+| `developer.testerGroup` | 비공개 테스트 트랙에 연결한, 누구나 가입할 수 있는 Google 그룹 주소(`@googlegroups.com`). 페이지의 "그룹 가입하기" 링크가 됩니다 |
 | `hiddenRepos` (최상위) | `apps.json`에 없는 공개 레포 중 목록에서 뺄 레포 이름 |
 
 Android 패키지명은 `build.js`의 `LOCKED_ANDROID_PACKAGES`로 잠겨 있어, 등록된 패키지를 바꾸거나 지우면 빌드가 실패합니다.

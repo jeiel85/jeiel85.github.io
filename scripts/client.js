@@ -7,6 +7,7 @@
   var PROJECTS = DATA.projects;
   var CAT = DATA.labels.category;
   var CHANNEL = DATA.labels.channel;
+  var TESTER_GROUP = DATA.testerGroup;
   var byId = {};
   PROJECTS.forEach(function (p) { byId[p.id] = p; });
 
@@ -250,14 +251,26 @@
   function linksHTML(p) {
     var out = [];
     var android = p.platform === 'android' || p.category === 'android';
-    if (p.links.play) out.push('<a class="btn btn-lamp" href="' + esc(p.links.play) + '" target="_blank" rel="noopener">Google Play에서 보기</a>');
+    if (p.links.optIn) {
+      out.push('<a class="btn btn-lamp" href="' + esc(p.links.optIn) + '" target="_blank" rel="noopener">테스트 참여하기</a>');
+      out.push('<a class="btn btn-ghost" href="' + esc(p.links.play) + '" target="_blank" rel="noopener">Play에서 설치</a>');
+    } else if (p.links.play) {
+      out.push('<a class="btn btn-lamp" href="' + esc(p.links.play) + '" target="_blank" rel="noopener">Google Play에서 설치</a>');
+    }
     if (p.links.live) {
       var label = android ? '소개 페이지' : p.category === 'game' ? '바로 플레이' : p.category === 'desktop' ? '홈페이지' : '라이브 데모 열기';
       out.push('<a class="btn ' + (out.length ? 'btn-ghost' : 'btn-lamp') + '" href="' + esc(p.links.live) + '" target="_blank" rel="noopener">' + label + '</a>');
     }
     if (p.links.releases) out.push('<a class="btn btn-ghost" href="' + esc(p.links.releases) + '" target="_blank" rel="noopener">' + (p.latestRelease ? esc(p.latestRelease.tag) + ' 내려받기' : '릴리스') + '</a>');
     if (p.links.github) out.push('<a class="btn btn-ghost" href="' + esc(p.links.github) + '" target="_blank" rel="noopener">GitHub 레포</a>');
-    return out.length ? '<div class="actions">' + out.join('') + '</div>' : '';
+    return out.length ? testingNote(p) + '<div class="actions">' + out.join('') + '</div>' : '';
+  }
+
+  // Closed testing installs need the tester group first; say so next to the buttons.
+  function testingNote(p) {
+    if (!p.links.optIn) return '';
+    if (!TESTER_GROUP) return '<p class="testing-note">비공개 테스트 중입니다. 초대받은 테스터 계정으로만 설치할 수 있습니다.</p>';
+    return '<p class="testing-note">비공개 테스트 중입니다. 먼저 <a href="' + esc(TESTER_GROUP.joinUrl) + '" target="_blank" rel="noopener">테스터 그룹</a>에 가입한 뒤, 같은 계정으로 테스트에 참여하면 Play에서 설치할 수 있습니다.</p>';
   }
 
   function galleryHTML(p) {

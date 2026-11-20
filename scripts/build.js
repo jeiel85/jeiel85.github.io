@@ -41,6 +41,10 @@ const LOCKED_ANDROID_PACKAGES = {
   "com.jeiel85.daddypocket": "아빠 용돈 — Daddy Pocket",
   "com.flux.hourglass": "아워 글래스 — Flux Hourglass",
   "com.jeiel85.retropixelracer": "Retro Pixel Racer — 레트로 픽셀 레이서",
+  "com.jeiel85.doran": "둥지 — 우리 가족 가계부",
+  "io.github.jeiel85.homebase": "Homebase",
+  "com.jeiel85.ponerdi": "포너디 — 폰 어디?",
+  "com.jeiel85.aiusage": "AI 사용량",
   "com.dualframe.recorder": "DualFrame Recorder",
   "com.jeiel85.daybits": "DayBits — 1일 1클립 비디오 다이어리",
   "com.jeiel85.forestpetgarden": "Forest Pet Garden — 포레스트 펫 가든",
@@ -332,7 +336,7 @@ function playScreenshotUrl(url) {
   return url.includes('=') ? url.replace(/=[^=]*$/, '=h720') : `${url}=h720`;
 }
 
-function buildProject({ project, repo, scraped, developer }) {
+function buildProject({ project, repo, scraped, developer, sharedRepo = false }) {
   const isAndroid = project && (project.platform === 'android' || !project.platform);
   const category = categorize(project, repo);
   const title = project ? project.name : repoDisplayName(repo.name);
@@ -349,11 +353,16 @@ function buildProject({ project, repo, scraped, developer }) {
   const homepage = (project && project.url) || (repo && repo.homepage) || '';
   const live = isHttpsUrl(homepage) && !/github\.com\//i.test(homepage) ? homepage : '';
 
+  // Closed testing apps install from the same store URL, but only after the
+  // visitor joins the tester group and opts in on the testing page.
+  const onPlay = isAndroid && (project.status === 'production' || project.status === 'closed_testing');
   const links = {
     live,
     github: repo ? repo.url : '',
-    play: isAndroid && project.status === 'production' ? `https://play.google.com/store/apps/details?id=${project.package}` : '',
-    optIn: isAndroid && project.optInUrl ? project.optInUrl : '',
+    play: onPlay ? `https://play.google.com/store/apps/details?id=${project.package}` : '',
+    optIn: isAndroid && project.status === 'closed_testing'
+      ? project.optInUrl || `https://play.google.com/apps/testing/${project.package}`
+      : '',
     releases: repo && repo.releases > 0 ? `${repo.url}/releases` : '',
   };
 
@@ -370,7 +379,11 @@ function buildProject({ project, repo, scraped, developer }) {
   if (project && project.iconUrl && fs.existsSync(path.join(ROOT, project.iconUrl))) icon = project.iconUrl;
   else if (scraped && isHttpsUrl(scraped.icon)) icon = scraped.icon;
 
-  const id = repo ? repo.name.toLowerCase() : (project.package || title).toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  // A repository shared by several curated projects (a desktop app and its
+  // Android companion) keeps the repo id for the non-Android project only.
+  const id = repo && !(sharedRepo && isAndroid)
+    ? repo.name.toLowerCase()
+    : (project.package || title).toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
   return {
     id,
@@ -406,6 +419,14 @@ function buildProject({ project, repo, scraped, developer }) {
       genre: scraped.genre || null,
     } : null,
   };
+}
+
+// Closed testing tracks admit members of this Google Group; anyone can join it.
+function testerGroup(email) {
+  if (!email) return null;
+  const m = /^([a-z0-9._-]+)@googlegroups\.com$/i.exec(email);
+  if (!m) throw new Error(`[Validation Error] developer.testerGroup must be a @googlegroups.com address, got "${email}".`);
+  return { email, joinUrl: `https://groups.google.com/g/${m[1]}` };
 }
 
 function computeCalendarStats(calendar) {
@@ -449,6 +470,11 @@ function buildModel(config, playCache, snapshot) {
 
   const projects = [];
   const usedRepos = new Set();
+  const repoRefs = new Map();
+  for (const project of config.projects.filter(p => !p.hidden)) {
+    const name = repoNameFromUrl(project.githubUrl);
+    if (name) repoRefs.set(name, (repoRefs.get(name) || 0) + 1);
+  }
   for (const project of config.projects.filter(p => !p.hidden)) {
     const repoName = repoNameFromUrl(project.githubUrl);
     const repo = repoName ? repoByName.get(repoName) || null : null;
@@ -456,7 +482,8 @@ function buildModel(config, playCache, snapshot) {
       console.warn(`  ⚠ ${project.name}: ${project.githubUrl} is not a public repository; GitHub link hidden.`);
     }
     if (repo) usedRepos.add(repo.name.toLowerCase());
-    projects.push(buildProject({ project, repo, scraped: playCache[project.package] || null, developer }));
+    const sharedRepo = Boolean(repoName && repoRefs.get(repoName) > 1);
+    projects.push(buildProject({ project, repo, scraped: playCache[project.package] || null, developer, sharedRepo }));
   }
   for (const repo of repos) {
     const key = repo.name.toLowerCase();
@@ -541,6 +568,7 @@ function buildModel(config, playCache, snapshot) {
       github: `https://github.com/${developer.githubUsername}`,
       githubUsername: developer.githubUsername,
       play: `https://play.google.com/store/apps/dev?id=${developer.accountId}`,
+      testerGroup: testerGroup(developer.testerGroup),
     },
     generatedAt: new Date().toISOString(),
     snapshotAt: snapshot ? snapshot.fetchedAt : null,
