@@ -404,6 +404,32 @@
     });
   }
 
+  // ─── nav: highlight the section in view ───────────
+  var navLinks = document.getElementById('nav-links');
+  if (navLinks && 'IntersectionObserver' in window) {
+    var linkFor = {};
+    navLinks.querySelectorAll('a[href^="#"]').forEach(function (a) { linkFor[a.getAttribute('href').slice(1)] = a; });
+    var current = null;
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var a = linkFor[en.target.id];
+        if (!a || a === current) return;
+        if (current) current.removeAttribute('aria-current');
+        current = a;
+        a.setAttribute('aria-current', 'true');
+        // On phones the links scroll sideways; keep the active one visible.
+        if (navLinks.scrollWidth > navLinks.clientWidth) {
+          navLinks.scrollTo({ left: a.offsetLeft - navLinks.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' });
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(linkFor).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) spy.observe(el);
+    });
+  }
+
   hydrateTimes();
   render();
   syncHash();
