@@ -550,8 +550,8 @@ function renderPage(model) {
   <a class="skip" href="#projects">전체 프로젝트로 건너뛰기</a>
   <nav class="nav" aria-label="주요 메뉴">
     <div class="container nav-inner">
-      <a class="nav-brand" href="#top"><img src="brand/el-studio-mark.svg" alt="" width="24" height="24" />${esc(developer.name)}</a>
-      <div class="nav-links">
+      <a class="nav-brand" href="#top" aria-label="${esc(developer.name)} 맨 위로"><img src="brand/el-studio-mark.svg" alt="" width="24" height="24" /><span class="nav-brand-name">${esc(developer.name)}</span></a>
+      <div class="nav-links" id="nav-links">
         <a href="#featured">대표작</a>
         <a href="#play">Play 앱</a>
         <a href="#ops">운영</a>
