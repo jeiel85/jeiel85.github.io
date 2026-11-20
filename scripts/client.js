@@ -410,7 +410,7 @@
     var linkFor = {};
     navLinks.querySelectorAll('a[href^="#"]').forEach(function (a) { linkFor[a.getAttribute('href').slice(1)] = a; });
     var current = null;
-    var spy = new IntersectionObserver(function (entries) {
+    var onIntersect = function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
         var a = linkFor[en.target.id];
@@ -423,10 +423,24 @@
           navLinks.scrollTo({ left: a.offsetLeft - navLinks.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' });
         }
       });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    Object.keys(linkFor).forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) spy.observe(el);
+    };
+    // Watch a thin band just above mid-screen. Margins are in pixels because
+    // percentage root margins are not resolved against the height everywhere.
+    var spy = null;
+    var watch = function () {
+      if (spy) spy.disconnect();
+      var h = window.innerHeight;
+      spy = new IntersectionObserver(onIntersect, { rootMargin: -Math.round(h * 0.45) + 'px 0px ' + -Math.round(h * 0.5) + 'px 0px' });
+      Object.keys(linkFor).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) spy.observe(el);
+      });
+    };
+    watch();
+    var resizeTimer = null;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(watch, 200);
     });
   }
 
