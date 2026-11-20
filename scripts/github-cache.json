@@ -1,146 +1,93 @@
 {
- "fetchedAt": "2026-11-20T01:57:58.569Z",
+ "fetchedAt": "2026-11-20T06:32:55.095Z",
  "repos": [
   {
-   "name": "homebase",
-   "description": "Watch your Windows PCs live from an Android app — open windows, per-app CPU/RAM, end-to-end encrypted push alerts, notifications shared between your PCs and phones. No open ports. Built with .NET and Kotlin.",
-   "url": "https://github.com/jeiel85/homebase",
-   "homepage": "https://jeiel85.github.io/homebase/",
+   "name": "jeiel85.github.io",
+   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
+   "url": "https://github.com/jeiel85/jeiel85.github.io",
+   "homepage": "https://jeiel85.github.io/",
    "stars": 0,
    "forks": 0,
-   "createdAt": "2026-07-07T05:48:11Z",
-   "pushedAt": "2026-11-20T01:54:00Z",
+   "createdAt": "2026-05-26T06:40:18Z",
+   "pushedAt": "2026-11-20T06:32:36Z",
    "archived": false,
-   "sizeKb": 4634,
-   "license": "MIT",
-   "primaryLanguage": "C#",
+   "sizeKb": 15964,
+   "license": null,
+   "primaryLanguage": "HTML",
    "languages": [
     {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 2268118
-    },
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 1086919
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 52059
-    },
-    {
-     "name": "Inno Setup",
-     "color": "#264b99",
-     "bytes": 4311
-    }
-   ],
-   "topics": [
-    "bot",
-    "csharp",
-    "dotnet",
-    "monitoring",
-    "pc-monitoring",
-    "sqlite",
-    "telegram",
-    "windows",
-    "windows-service",
-    "wpf",
-    "android",
-    "jetpack-compose",
-    "kotlin",
-    "push-notifications",
-    "tailscale",
-    "unifiedpush"
-   ],
-   "releases": 78,
-   "latestRelease": {
-    "tag": "v0.54.0",
-    "date": "2026-11-19T23:53:09Z",
-    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.54.0"
-   },
-   "commits": 127,
-   "workflows": 4,
-   "images": [],
-   "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
-  },
-  {
-   "name": "badasugi",
-   "description": "🎙️ 말하는 사람을 구분해 실시간으로 받아 적는 가볍고 빠른 Windows 회의 전사 앱 · Rust + Tauri · whisper.cpp 로컬 AI / Groq·OpenAI API · 화자 분리 · AI 회의록 요약",
-   "url": "https://github.com/jeiel85/badasugi",
-   "homepage": "https://jeiel85.github.io/badasugi/",
-   "stars": 1,
-   "forks": 0,
-   "createdAt": "2026-11-12T09:49:33Z",
-   "pushedAt": "2026-11-20T01:51:35Z",
-   "archived": false,
-   "sizeKb": 6592,
-   "license": "MIT",
-   "primaryLanguage": "Rust",
-   "languages": [
-    {
-     "name": "Rust",
-     "color": "#dea584",
-     "bytes": 749526
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 404545
     },
     {
      "name": "JavaScript",
      "color": "#f1e05a",
-     "bytes": 223527
+     "bytes": 83349
     },
     {
      "name": "CSS",
      "color": "#663399",
-     "bytes": 73125
-    },
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 45642
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 8620
+     "bytes": 23383
     }
    ],
    "topics": [
-    "dictation",
-    "korean",
-    "meeting-notes",
-    "onnx",
-    "rust",
-    "silero-vad",
-    "speaker-diarization",
-    "speech-to-text",
-    "stt",
-    "tauri",
-    "transcription",
-    "tray-app",
-    "whisper",
-    "whisper-cpp",
-    "windows"
+    "android",
+    "closed-testing",
+    "github-actions",
+    "google-play",
+    "play-store",
+    "portfolio"
    ],
-   "releases": 39,
-   "latestRelease": {
-    "tag": "v0.4.23",
-    "date": "2026-11-20T01:51:36Z",
-    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.23"
-   },
-   "commits": 50,
-   "workflows": 0,
-   "images": [
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 113,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
+  },
+  {
+   "name": "dusk-patrol",
+   "description": "DUSK PATROL - 노을진 해안 도시 상공의 픽셀 아트 전투기 게임. 360도 루프, 조종석 1인칭, 120초 드론 격추. 단일 HTML, 외부 에셋 0, 브라우저에서 바로 플레이",
+   "url": "https://github.com/jeiel85/dusk-patrol",
+   "homepage": "https://jeiel85.github.io/dusk-patrol/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-20T05:11:24Z",
+   "pushedAt": "2026-11-20T06:26:29Z",
+   "archived": false,
+   "sizeKb": 37,
+   "license": null,
+   "primaryLanguage": "HTML",
+   "languages": [
     {
-     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-dark.png",
-     "alt": "받아쓰기 화면 (어두운 테마)"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-light.png",
-     "alt": "받아쓰기 화면 (밝은 테마)"
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 101500
     }
    ],
-   "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
+   "topics": [
+    "arcade",
+    "browser-game",
+    "flight-simulator",
+    "game",
+    "html5",
+    "javascript",
+    "korean",
+    "pixel-art",
+    "procedural-generation",
+    "retro-games",
+    "single-file",
+    "web-audio",
+    "webgl",
+    "webgl2"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 7,
+   "workflows": 0,
+   "images": [],
+   "excerpt": "노을진 해안 도시 상공을 비행하는 도트 그래픽 풍 3D 전투기 게임입니다. index.html 하나에 모든 코드·에셋이 들어 있으며, 외부 라이브러리나 이미지 파일을 사용하지 않습니다."
   },
   {
    "name": "doran",
@@ -150,21 +97,21 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-11-17T11:37:58Z",
-   "pushedAt": "2026-11-20T01:50:26Z",
+   "pushedAt": "2026-11-20T06:25:02Z",
    "archived": false,
-   "sizeKb": 19294,
+   "sizeKb": 18815,
    "license": null,
    "primaryLanguage": "Kotlin",
    "languages": [
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 660948
+     "bytes": 773626
     },
     {
      "name": "JavaScript",
      "color": "#f1e05a",
-     "bytes": 65624
+     "bytes": 67306
     },
     {
      "name": "Python",
@@ -204,7 +151,7 @@
     "date": "2026-11-18T10:04:04Z",
     "url": "https://github.com/jeiel85/doran/releases/tag/v0.1.4"
    },
-   "commits": 51,
+   "commits": 62,
    "workflows": 0,
    "images": [
     {
@@ -235,6 +182,213 @@
    "excerpt": "카드 알림이 오면 바로 장부에, 가족 모두의 폰에. 부부가 같은 장부를 실시간으로 쓰고, 부모님 카드 알림도 사람별로 받아 합계에 더하는 가족용 Android 가계부."
   },
   {
+   "name": "homebase",
+   "description": "Watch your Windows PCs live from an Android app — open windows, per-app CPU/RAM, end-to-end encrypted push alerts, notifications shared between your PCs and phones. No open ports. Built with .NET and Kotlin.",
+   "url": "https://github.com/jeiel85/homebase",
+   "homepage": "https://jeiel85.github.io/homebase/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-07-07T05:48:11Z",
+   "pushedAt": "2026-11-20T05:58:34Z",
+   "archived": false,
+   "sizeKb": 5003,
+   "license": "MIT",
+   "primaryLanguage": "C#",
+   "languages": [
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 2277676
+    },
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 1106340
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 52059
+    },
+    {
+     "name": "Inno Setup",
+     "color": "#264b99",
+     "bytes": 4311
+    }
+   ],
+   "topics": [
+    "bot",
+    "csharp",
+    "dotnet",
+    "monitoring",
+    "pc-monitoring",
+    "sqlite",
+    "telegram",
+    "windows",
+    "windows-service",
+    "wpf",
+    "android",
+    "jetpack-compose",
+    "kotlin",
+    "push-notifications",
+    "tailscale",
+    "unifiedpush"
+   ],
+   "releases": 83,
+   "latestRelease": {
+    "tag": "v0.56.1",
+    "date": "2026-11-20T06:07:11Z",
+    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.56.1"
+   },
+   "commits": 131,
+   "workflows": 4,
+   "images": [],
+   "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
+  },
+  {
+   "name": "badasugi",
+   "description": "🎙️ 말하는 사람을 구분해 실시간으로 받아 적는 가볍고 빠른 Windows 회의 전사 앱 · Rust + Tauri · whisper.cpp 로컬 AI / Groq·OpenAI API · 화자 분리 · AI 회의록 요약",
+   "url": "https://github.com/jeiel85/badasugi",
+   "homepage": "https://jeiel85.github.io/badasugi/",
+   "stars": 1,
+   "forks": 0,
+   "createdAt": "2026-11-12T09:49:33Z",
+   "pushedAt": "2026-11-20T05:33:45Z",
+   "archived": false,
+   "sizeKb": 5974,
+   "license": "MIT",
+   "primaryLanguage": "Rust",
+   "languages": [
+    {
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 864203
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 250541
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 77322
+    },
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 49432
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 8620
+    }
+   ],
+   "topics": [
+    "dictation",
+    "korean",
+    "meeting-notes",
+    "onnx",
+    "rust",
+    "silero-vad",
+    "speaker-diarization",
+    "speech-to-text",
+    "stt",
+    "tauri",
+    "transcription",
+    "tray-app",
+    "whisper",
+    "whisper-cpp",
+    "windows"
+   ],
+   "releases": 43,
+   "latestRelease": {
+    "tag": "v0.4.28",
+    "date": "2026-11-20T05:33:46Z",
+    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.28"
+   },
+   "commits": 55,
+   "workflows": 0,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-dark.png",
+     "alt": "받아쓰기 화면 (어두운 테마)"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-light.png",
+     "alt": "받아쓰기 화면 (밝은 테마)"
+    }
+   ],
+   "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
+  },
+  {
+   "name": "jeiel85",
+   "description": "프로필 꾸미기",
+   "url": "https://github.com/jeiel85/jeiel85",
+   "homepage": "",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-04-28T08:26:05Z",
+   "pushedAt": "2026-11-20T03:59:56Z",
+   "archived": false,
+   "sizeKb": 51,
+   "license": null,
+   "primaryLanguage": null,
+   "languages": [],
+   "topics": [],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 51,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
+  },
+  {
+   "name": "m365-license-check",
+   "description": "Microsoft 365 구독 중인데 Word에 '정기 가입이 취소되었습니다'가 뜰 때 — Office 라이선스를 진단하고 캐시를 초기화하는 Windows 단일 파일 도구 (irm | iex 한 줄 실행)",
+   "url": "https://github.com/jeiel85/m365-license-check",
+   "homepage": "https://jeiel85.github.io/m365-license-check/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-20T02:40:31Z",
+   "pushedAt": "2026-11-20T02:50:29Z",
+   "archived": false,
+   "sizeKb": 56,
+   "license": "MIT",
+   "primaryLanguage": "HTML",
+   "languages": [
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 17999
+    },
+    {
+     "name": "Batchfile",
+     "color": "#C1F12E",
+     "bytes": 13640
+    }
+   ],
+   "topics": [
+    "activation",
+    "batch-script",
+    "korean",
+    "license",
+    "microsoft-365",
+    "office",
+    "office365",
+    "powershell",
+    "troubleshooting",
+    "windows"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 2,
+   "workflows": 0,
+   "images": [],
+   "excerpt": "Microsoft 365(개인·Family)를 구독 중인데 Word·Excel에 \"정기 가입이 취소되었습니다\" 가 뜰 때, 원인을 진단하고 라이선스 캐시를 초기화하는 Windows용 단일 파일 도구입니다."
+  },
+  {
    "name": "claude-usage-tray-windows",
    "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
    "url": "https://github.com/jeiel85/claude-usage-tray-windows",
@@ -244,7 +398,7 @@
    "createdAt": "2026-03-27T03:55:01Z",
    "pushedAt": "2026-11-20T01:36:56Z",
    "archived": false,
-   "sizeKb": 6186,
+   "sizeKb": 6344,
    "license": "MIT",
    "primaryLanguage": "C#",
    "languages": [
@@ -597,73 +751,6 @@
    "workflows": 3,
    "images": [],
    "excerpt": "삼국지 영걸전(1995)을 현대 시스템에서 원작대로 돌리는 오픈소스 엔진 An open-source engine that runs your copy of the classic Three Kingdoms tactics RPG \"Sangokushi Eiketsuden\" on modern systems"
-  },
-  {
-   "name": "jeiel85",
-   "description": "프로필 꾸미기",
-   "url": "https://github.com/jeiel85/jeiel85",
-   "homepage": "",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-04-28T08:26:05Z",
-   "pushedAt": "2026-11-19T04:13:31Z",
-   "archived": false,
-   "sizeKb": 50,
-   "license": null,
-   "primaryLanguage": null,
-   "languages": [],
-   "topics": [],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 51,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
-  },
-  {
-   "name": "jeiel85.github.io",
-   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
-   "url": "https://github.com/jeiel85/jeiel85.github.io",
-   "homepage": "https://jeiel85.github.io/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-19T02:10:56Z",
-   "archived": false,
-   "sizeKb": 15789,
-   "license": null,
-   "primaryLanguage": "HTML",
-   "languages": [
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 404435
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 83349
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 23383
-    }
-   ],
-   "topics": [
-    "android",
-    "closed-testing",
-    "github-actions",
-    "google-play",
-    "play-store",
-    "portfolio"
-   ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 111,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
   },
   {
    "name": "tailscale-force-connect",
@@ -10172,7 +10259,7 @@
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
   "followers": 21,
-  "total": 12510,
+  "total": 12572,
   "days": [
    {
     "date": "2025-11-16",
@@ -11396,11 +11483,11 @@
    },
    {
     "date": "2026-09-17",
-    "count": 79
+    "count": 78
    },
    {
     "date": "2026-09-18",
-    "count": 124
+    "count": 122
    },
    {
     "date": "2026-09-19",
@@ -11652,7 +11739,7 @@
    },
    {
     "date": "2026-11-20",
-    "count": 75
+    "count": 140
    }
   ]
  }
