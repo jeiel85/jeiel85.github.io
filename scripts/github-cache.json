@@ -1,6 +1,416 @@
 {
- "fetchedAt": "2026-11-21T14:16:34.579Z",
+ "fetchedAt": "2026-11-21T16:10:52.754Z",
  "repos": [
+  {
+   "name": "badasugi",
+   "description": "🎙️ 말하는 사람을 구분해 실시간으로 받아 적는 가볍고 빠른 Windows 회의 전사 앱 · Rust + Tauri · whisper.cpp 로컬 AI / Groq·OpenAI API · 화자 분리 · AI 회의록 요약",
+   "url": "https://github.com/jeiel85/badasugi",
+   "homepage": "https://jeiel85.github.io/badasugi/",
+   "stars": 1,
+   "forks": 0,
+   "createdAt": "2026-11-12T09:49:33Z",
+   "pushedAt": "2026-11-21T16:05:42Z",
+   "archived": false,
+   "sizeKb": 7544,
+   "license": "MIT",
+   "primaryLanguage": "Rust",
+   "languages": [
+    {
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 1155726
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 284540
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 84154
+    },
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 57401
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 13741
+    }
+   ],
+   "topics": [
+    "dictation",
+    "korean",
+    "meeting-notes",
+    "onnx",
+    "rust",
+    "silero-vad",
+    "speaker-diarization",
+    "speech-to-text",
+    "stt",
+    "tauri",
+    "transcription",
+    "tray-app",
+    "whisper",
+    "whisper-cpp",
+    "windows"
+   ],
+   "releases": 49,
+   "latestRelease": {
+    "tag": "v0.4.37",
+    "date": "2026-11-21T14:35:30Z",
+    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.37"
+   },
+   "commits": 65,
+   "workflows": 0,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-dark.png",
+     "alt": "받아쓰기 화면 (어두운 테마)"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-light.png",
+     "alt": "받아쓰기 화면 (밝은 테마)"
+    }
+   ],
+   "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
+  },
+  {
+   "name": "bebecup-android",
+   "description": "베베컵 · Bebecup — 직접 고른 아기 사진으로 만드는 가족 사진 월드컵 Android 앱",
+   "url": "https://github.com/jeiel85/bebecup-android",
+   "homepage": "https://jeiel85.github.io/bebecup-android/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-05-23T04:55:14Z",
+   "pushedAt": "2026-11-21T16:04:58Z",
+   "archived": false,
+   "sizeKb": 13021,
+   "license": null,
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 332006
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 25653
+    },
+    {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 5748
+    }
+   ],
+   "topics": [
+    "android",
+    "baby",
+    "family",
+    "jetpack-compose",
+    "kotlin",
+    "material3",
+    "on-device",
+    "parenting",
+    "photo",
+    "privacy-friendly",
+    "room",
+    "tournament"
+   ],
+   "releases": 6,
+   "latestRelease": {
+    "tag": "v0.8.0",
+    "date": "2026-11-21T10:08:29Z",
+    "url": "https://github.com/jeiel85/bebecup-android/releases/tag/v0.8.0"
+   },
+   "commits": 39,
+   "workflows": 1,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/1_home.png",
+     "alt": "홈 화면"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/2_hall_of_fame.png",
+     "alt": "명예의 전당"
+    }
+   ],
+   "excerpt": "직접 고른 아기 사진으로 만드는 가족 사진 월드컵 A family photo tournament made from baby photos you choose."
+  },
+  {
+   "name": "homebase",
+   "description": "Watch your Windows PCs live from an Android app — open windows, per-app CPU/RAM, end-to-end encrypted push alerts, notifications shared between your PCs and phones. No open ports. Built with .NET and Kotlin.",
+   "url": "https://github.com/jeiel85/homebase",
+   "homepage": "https://jeiel85.github.io/homebase/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-07-07T05:48:11Z",
+   "pushedAt": "2026-11-21T15:55:04Z",
+   "archived": false,
+   "sizeKb": 3394,
+   "license": "MIT",
+   "primaryLanguage": "C#",
+   "languages": [
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 2309137
+    },
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 1121384
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 52059
+    },
+    {
+     "name": "Inno Setup",
+     "color": "#264b99",
+     "bytes": 4311
+    }
+   ],
+   "topics": [
+    "bot",
+    "csharp",
+    "dotnet",
+    "monitoring",
+    "pc-monitoring",
+    "sqlite",
+    "telegram",
+    "windows",
+    "windows-service",
+    "wpf",
+    "android",
+    "jetpack-compose",
+    "kotlin",
+    "push-notifications",
+    "tailscale",
+    "unifiedpush"
+   ],
+   "releases": 87,
+   "latestRelease": {
+    "tag": "v0.58.0",
+    "date": "2026-11-21T07:50:11Z",
+    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.58.0"
+   },
+   "commits": 135,
+   "workflows": 4,
+   "images": [],
+   "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
+  },
+  {
+   "name": "find-my-wife-phone",
+   "description": "포너디 — “폰 어디?” 소파 밑 폰도 버튼 한 번에. 무음·방해 금지여도 울리고, 찾으면 원래대로. 받는 사람이 거절할 수 있는 가족용 Android 앱 (E2E 암호화, Cloudflare Worker + FCM)",
+   "url": "https://github.com/jeiel85/find-my-wife-phone",
+   "homepage": "https://jeiel85.github.io/find-my-wife-phone/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-15T06:18:39Z",
+   "pushedAt": "2026-11-21T14:17:41Z",
+   "archived": false,
+   "sizeKb": 4877,
+   "license": "MIT",
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 370642
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 31675
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 11346
+    },
+    {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 6913
+    }
+   ],
+   "topics": [
+    "android",
+    "cloudflare-workers",
+    "do-not-disturb",
+    "end-to-end-encryption",
+    "family",
+    "find-my-phone",
+    "firebase-cloud-messaging",
+    "jetpack-compose",
+    "korean",
+    "kotlin",
+    "privacy",
+    "qr-code"
+   ],
+   "releases": 12,
+   "latestRelease": {
+    "tag": "v0.5.0",
+    "date": "2026-11-21T08:12:29Z",
+    "url": "https://github.com/jeiel85/find-my-wife-phone/releases/tag/v0.5.0"
+   },
+   "commits": 50,
+   "workflows": 1,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/home.webp",
+     "alt": "홈: 울리기 버튼"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/ringing.webp",
+     "alt": "단계별 진행 상황"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/countdown.webp",
+     "alt": "10초 거절 창"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/found-me.webp",
+     "alt": "여기 있어요"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/map.webp",
+     "alt": "위치 지도"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/history.webp",
+     "alt": "기록"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/empty.webp",
+     "alt": "처음 화면"
+    }
+   ],
+   "excerpt": "“폰 어디?” — 소파 밑에 있어도, 버튼 한 번이면 울려요. 무음·방해 금지여도 크게 울리고, 찾으면 소리 설정이 원래대로 돌아가는 가족용 Android 앱."
+  },
+  {
+   "name": "jeiel85.github.io",
+   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
+   "url": "https://github.com/jeiel85/jeiel85.github.io",
+   "homepage": "https://jeiel85.github.io/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-05-26T06:40:18Z",
+   "pushedAt": "2026-11-21T14:17:10Z",
+   "archived": false,
+   "sizeKb": 16580,
+   "license": null,
+   "primaryLanguage": "HTML",
+   "languages": [
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 446866
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 94483
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 32037
+    }
+   ],
+   "topics": [
+    "android",
+    "closed-testing",
+    "github-actions",
+    "google-play",
+    "play-store",
+    "portfolio"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 119,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
+  },
+  {
+   "name": "markleaf-android",
+   "description": "A lightweight, local-first Markdown note app for Android.",
+   "url": "https://github.com/jeiel85/markleaf-android",
+   "homepage": "https://jeiel85.github.io/markleaf-android/",
+   "stars": 155,
+   "forks": 17,
+   "createdAt": "2026-04-29T00:51:29Z",
+   "pushedAt": "2026-11-21T13:40:35Z",
+   "archived": false,
+   "sizeKb": 114468,
+   "license": "Apache-2.0",
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 2776814
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 90054
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 5014
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 2903
+    }
+   ],
+   "topics": [
+    "android",
+    "fdroid",
+    "jetpack-compose",
+    "kotlin",
+    "local-first",
+    "markdown",
+    "markdown-editor",
+    "material3",
+    "note-taking",
+    "notes",
+    "offline-first",
+    "privacy-first",
+    "room",
+    "sqlite"
+   ],
+   "releases": 160,
+   "latestRelease": {
+    "tag": "v2.74.0",
+    "date": "2026-11-19T00:39:44Z",
+    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.74.0"
+   },
+   "commits": 1168,
+   "workflows": 5,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-demo.gif",
+     "alt": "Typing / in the Markleaf editor opens the quick-insert palette; choosing Checklist inserts plain Markdown, and the previ"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-tablet-en.gif",
+     "alt": "Markleaf on a tablet: the tag rail, note list and editor share one screen while a Markdown table, checklist and callout "
+    }
+   ],
+   "excerpt": "A local-first, minimal Markdown note app for Android"
+  },
   {
    "name": "doran",
    "description": "둥지 — 가족 공동 가계부. 카드·은행 알림이 오면 바로 장부에, 배우자 폰에는 \"남편이 현대카드로 12,300원 썼어요\" 알림. 부모님 카드 알림도 사람별로 합산, 달력·통계·자산·예산. Android, 종단 암호화(Cloudflare Worker + FCM)",
@@ -9,16 +419,16 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-11-17T11:37:58Z",
-   "pushedAt": "2026-11-21T00:39:05Z",
+   "pushedAt": "2026-11-21T08:21:38Z",
    "archived": false,
-   "sizeKb": 19516,
+   "sizeKb": 19772,
    "license": null,
    "primaryLanguage": "Kotlin",
    "languages": [
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 861300
+     "bytes": 884707
     },
     {
      "name": "JavaScript",
@@ -57,13 +467,13 @@
     "self-update",
     "sms-parser"
    ],
-   "releases": 7,
+   "releases": 9,
    "latestRelease": {
-    "tag": "v0.3.4",
-    "date": "2026-11-21T00:30:28Z",
-    "url": "https://github.com/jeiel85/doran/releases/tag/v0.3.4"
+    "tag": "v0.3.6",
+    "date": "2026-11-21T08:07:31Z",
+    "url": "https://github.com/jeiel85/doran/releases/tag/v0.3.6"
    },
-   "commits": 70,
+   "commits": 74,
    "workflows": 0,
    "images": [
     {
@@ -94,68 +504,26 @@
    "excerpt": "카드 알림이 오면 바로 장부에, 가족 모두의 폰에. 부부가 같은 장부를 실시간으로 쓰고, 부모님 카드 알림도 사람별로 받아 합계에 더하는 가족용 Android 가계부."
   },
   {
-   "name": "bebecup-android",
-   "description": "베베컵 · Bebecup — 직접 고른 아기 사진으로 만드는 가족 사진 월드컵 Android 앱",
-   "url": "https://github.com/jeiel85/bebecup-android",
-   "homepage": "https://jeiel85.github.io/bebecup-android/",
+   "name": "jeiel85",
+   "description": "프로필 꾸미기",
+   "url": "https://github.com/jeiel85/jeiel85",
+   "homepage": "",
    "stars": 0,
    "forks": 0,
-   "createdAt": "2026-05-23T04:55:14Z",
-   "pushedAt": "2026-11-21T00:00:59Z",
+   "createdAt": "2026-04-28T08:26:05Z",
+   "pushedAt": "2026-11-21T03:59:44Z",
    "archived": false,
-   "sizeKb": 12946,
+   "sizeKb": 50,
    "license": null,
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 291099
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 25653
-    },
-    {
-     "name": "Shell",
-     "color": "#89e051",
-     "bytes": 5748
-    }
-   ],
-   "topics": [
-    "android",
-    "baby",
-    "family",
-    "jetpack-compose",
-    "kotlin",
-    "material3",
-    "on-device",
-    "parenting",
-    "photo",
-    "privacy-friendly",
-    "room",
-    "tournament"
-   ],
-   "releases": 4,
-   "latestRelease": {
-    "tag": "v0.7.1",
-    "date": "2026-11-20T17:18:20Z",
-    "url": "https://github.com/jeiel85/bebecup-android/releases/tag/v0.7.1"
-   },
-   "commits": 26,
+   "primaryLanguage": null,
+   "languages": [],
+   "topics": [],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 51,
    "workflows": 1,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/1_home.png",
-     "alt": "홈 화면"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/2_hall_of_fame.png",
-     "alt": "명예의 전당"
-    }
-   ],
-   "excerpt": "직접 고른 아기 사진으로 만드는 가족 사진 월드컵 A family photo tournament made from baby photos you choose."
+   "images": [],
+   "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
   },
   {
    "name": "bangchi-knight",
@@ -283,218 +651,6 @@
    "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
   },
   {
-   "name": "homebase",
-   "description": "Watch your Windows PCs live from an Android app — open windows, per-app CPU/RAM, end-to-end encrypted push alerts, notifications shared between your PCs and phones. No open ports. Built with .NET and Kotlin.",
-   "url": "https://github.com/jeiel85/homebase",
-   "homepage": "https://jeiel85.github.io/homebase/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-07-07T05:48:11Z",
-   "pushedAt": "2026-11-20T17:07:57Z",
-   "archived": false,
-   "sizeKb": 3095,
-   "license": "MIT",
-   "primaryLanguage": "C#",
-   "languages": [
-    {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 2296621
-    },
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 1121384
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 52059
-    },
-    {
-     "name": "Inno Setup",
-     "color": "#264b99",
-     "bytes": 4311
-    }
-   ],
-   "topics": [
-    "bot",
-    "csharp",
-    "dotnet",
-    "monitoring",
-    "pc-monitoring",
-    "sqlite",
-    "telegram",
-    "windows",
-    "windows-service",
-    "wpf",
-    "android",
-    "jetpack-compose",
-    "kotlin",
-    "push-notifications",
-    "tailscale",
-    "unifiedpush"
-   ],
-   "releases": 86,
-   "latestRelease": {
-    "tag": "v0.57.1",
-    "date": "2026-11-20T17:15:19Z",
-    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.57.1"
-   },
-   "commits": 134,
-   "workflows": 4,
-   "images": [],
-   "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
-  },
-  {
-   "name": "markleaf-android",
-   "description": "A lightweight, local-first Markdown note app for Android.",
-   "url": "https://github.com/jeiel85/markleaf-android",
-   "homepage": "https://jeiel85.github.io/markleaf-android/",
-   "stars": 154,
-   "forks": 16,
-   "createdAt": "2026-04-29T00:51:29Z",
-   "pushedAt": "2026-11-20T14:18:57Z",
-   "archived": false,
-   "sizeKb": 114467,
-   "license": "Apache-2.0",
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 2776814
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 90054
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 5014
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 2903
-    }
-   ],
-   "topics": [
-    "android",
-    "fdroid",
-    "jetpack-compose",
-    "kotlin",
-    "local-first",
-    "markdown",
-    "markdown-editor",
-    "material3",
-    "note-taking",
-    "notes",
-    "offline-first",
-    "privacy-first",
-    "room",
-    "sqlite"
-   ],
-   "releases": 160,
-   "latestRelease": {
-    "tag": "v2.74.0",
-    "date": "2026-11-19T00:39:44Z",
-    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.74.0"
-   },
-   "commits": 1168,
-   "workflows": 5,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-demo.gif",
-     "alt": "Typing / in the Markleaf editor opens the quick-insert palette; choosing Checklist inserts plain Markdown, and the previ"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-tablet-en.gif",
-     "alt": "Markleaf on a tablet: the tag rail, note list and editor share one screen while a Markdown table, checklist and callout "
-    }
-   ],
-   "excerpt": "A local-first, minimal Markdown note app for Android"
-  },
-  {
-   "name": "badasugi",
-   "description": "🎙️ 말하는 사람을 구분해 실시간으로 받아 적는 가볍고 빠른 Windows 회의 전사 앱 · Rust + Tauri · whisper.cpp 로컬 AI / Groq·OpenAI API · 화자 분리 · AI 회의록 요약",
-   "url": "https://github.com/jeiel85/badasugi",
-   "homepage": "https://jeiel85.github.io/badasugi/",
-   "stars": 1,
-   "forks": 0,
-   "createdAt": "2026-11-12T09:49:33Z",
-   "pushedAt": "2026-11-20T10:50:32Z",
-   "archived": false,
-   "sizeKb": 7315,
-   "license": "MIT",
-   "primaryLanguage": "Rust",
-   "languages": [
-    {
-     "name": "Rust",
-     "color": "#dea584",
-     "bytes": 1148737
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 283001
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 84154
-    },
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 57401
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 13741
-    }
-   ],
-   "topics": [
-    "dictation",
-    "korean",
-    "meeting-notes",
-    "onnx",
-    "rust",
-    "silero-vad",
-    "speaker-diarization",
-    "speech-to-text",
-    "stt",
-    "tauri",
-    "transcription",
-    "tray-app",
-    "whisper",
-    "whisper-cpp",
-    "windows"
-   ],
-   "releases": 48,
-   "latestRelease": {
-    "tag": "v0.4.36",
-    "date": "2026-11-20T10:50:32Z",
-    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.36"
-   },
-   "commits": 62,
-   "workflows": 0,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-dark.png",
-     "alt": "받아쓰기 화면 (어두운 테마)"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-light.png",
-     "alt": "받아쓰기 화면 (밝은 테마)"
-    }
-   ],
-   "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
-  },
-  {
    "name": "dusk-patrol",
    "description": "DUSK PATROL - 노을진 해안 도시 상공의 픽셀 아트 전투기 게임. 360도 루프, 조종석 1인칭, 120초 드론 격추. 단일 HTML, 외부 에셋 0, 브라우저에서 바로 플레이",
    "url": "https://github.com/jeiel85/dusk-patrol",
@@ -548,73 +704,6 @@
    "excerpt": "노을진 해안 도시 상공을 비행하는 도트 그래픽 풍 3D 전투기 게임입니다. 배포되는 게임은 game/index.html 파일 하나에 모든 코드·에셋이 들어 있으며, 외부 라이브러리나 이미지 파일을 사용하지 않습니다. 소스는 역할별로 game/src/에 나뉘어 있고, 빌드 스크립트가 이를 한 파일로 합칩니다."
   },
   {
-   "name": "jeiel85.github.io",
-   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
-   "url": "https://github.com/jeiel85/jeiel85.github.io",
-   "homepage": "https://jeiel85.github.io/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-20T07:01:16Z",
-   "archived": false,
-   "sizeKb": 16390,
-   "license": null,
-   "primaryLanguage": "HTML",
-   "languages": [
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 444896
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 92103
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 32037
-    }
-   ],
-   "topics": [
-    "android",
-    "closed-testing",
-    "github-actions",
-    "google-play",
-    "play-store",
-    "portfolio"
-   ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 116,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
-  },
-  {
-   "name": "jeiel85",
-   "description": "프로필 꾸미기",
-   "url": "https://github.com/jeiel85/jeiel85",
-   "homepage": "",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-04-28T08:26:05Z",
-   "pushedAt": "2026-11-20T03:59:56Z",
-   "archived": false,
-   "sizeKb": 51,
-   "license": null,
-   "primaryLanguage": null,
-   "languages": [],
-   "topics": [],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 51,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
-  },
-  {
    "name": "m365-license-check",
    "description": "Microsoft 365 구독 중인데 Word에 '정기 가입이 취소되었습니다'가 뜰 때 — Office 라이선스를 진단하고 캐시를 초기화하는 Windows 단일 파일 도구 (irm | iex 한 줄 실행)",
    "url": "https://github.com/jeiel85/m365-license-check",
@@ -657,95 +746,6 @@
    "workflows": 0,
    "images": [],
    "excerpt": "Microsoft 365(개인·Family)를 구독 중인데 Word·Excel에 \"정기 가입이 취소되었습니다\" 가 뜰 때, 원인을 진단하고 라이선스 캐시를 초기화하는 Windows용 단일 파일 도구입니다."
-  },
-  {
-   "name": "find-my-wife-phone",
-   "description": "포너디 — “폰 어디?” 소파 밑 폰도 버튼 한 번에. 무음·방해 금지여도 울리고, 찾으면 원래대로. 받는 사람이 거절할 수 있는 가족용 Android 앱 (E2E 암호화, Cloudflare Worker + FCM)",
-   "url": "https://github.com/jeiel85/find-my-wife-phone",
-   "homepage": "https://jeiel85.github.io/find-my-wife-phone/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-11-15T06:18:39Z",
-   "pushedAt": "2026-11-19T22:19:13Z",
-   "archived": false,
-   "sizeKb": 4987,
-   "license": "MIT",
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 327147
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 31675
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 11346
-    },
-    {
-     "name": "Shell",
-     "color": "#89e051",
-     "bytes": 6913
-    }
-   ],
-   "topics": [
-    "android",
-    "cloudflare-workers",
-    "do-not-disturb",
-    "end-to-end-encryption",
-    "family",
-    "find-my-phone",
-    "firebase-cloud-messaging",
-    "jetpack-compose",
-    "korean",
-    "kotlin",
-    "privacy",
-    "qr-code"
-   ],
-   "releases": 10,
-   "latestRelease": {
-    "tag": "v0.3.6",
-    "date": "2026-11-19T22:19:14Z",
-    "url": "https://github.com/jeiel85/find-my-wife-phone/releases/tag/v0.3.6"
-   },
-   "commits": 42,
-   "workflows": 1,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/home.webp",
-     "alt": "홈: 울리기 버튼"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/ringing.webp",
-     "alt": "단계별 진행 상황"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/countdown.webp",
-     "alt": "10초 거절 창"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/found-me.webp",
-     "alt": "여기 있어요"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/map.webp",
-     "alt": "위치 지도"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/history.webp",
-     "alt": "기록"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/empty.webp",
-     "alt": "처음 화면"
-    }
-   ],
-   "excerpt": "“폰 어디?” — 소파 밑에 있어도, 버튼 한 번이면 울려요. 무음·방해 금지여도 크게 울리고, 찾으면 소리 설정이 원래대로 돌아가는 가족용 Android 앱."
   },
   {
    "name": "minebombers-reloaded",
@@ -10334,8 +10334,8 @@
  ],
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
-  "followers": 21,
-  "total": 12713,
+  "followers": 20,
+  "total": 12716,
   "days": [
    {
     "date": "2025-11-16",
@@ -11819,7 +11819,7 @@
    },
    {
     "date": "2026-11-21",
-    "count": 87
+    "count": 90
    }
   ]
  }
