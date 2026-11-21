@@ -2,8 +2,9 @@ name: Update Portfolio
 
 on:
   schedule:
-    # UTC 21:00 = KST 06:00 (매일 한국시간 오전 6시)
-    - cron: '0 21 * * *'
+    # UTC 20:47 = KST 05:47. 정각은 GitHub 스케줄 실행이 몰려 몇 시간씩 밀리므로
+    # 정각을 피한 분에 둔다(0 21 * * * 일 때 실제 실행은 KST 10:50 전후였음).
+    - cron: '47 20 * * *'
   workflow_dispatch:
   push:
     branches: [main]
