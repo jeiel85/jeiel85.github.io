@@ -1,94 +1,6 @@
 {
- "fetchedAt": "2026-11-20T07:00:53.066Z",
+ "fetchedAt": "2026-11-21T01:53:51.234Z",
  "repos": [
-  {
-   "name": "jeiel85.github.io",
-   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
-   "url": "https://github.com/jeiel85/jeiel85.github.io",
-   "homepage": "https://jeiel85.github.io/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-20T06:32:36Z",
-   "archived": false,
-   "sizeKb": 15964,
-   "license": null,
-   "primaryLanguage": "HTML",
-   "languages": [
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 404545
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 83349
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 23383
-    }
-   ],
-   "topics": [
-    "android",
-    "closed-testing",
-    "github-actions",
-    "google-play",
-    "play-store",
-    "portfolio"
-   ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 113,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
-  },
-  {
-   "name": "dusk-patrol",
-   "description": "DUSK PATROL - 노을진 해안 도시 상공의 픽셀 아트 전투기 게임. 360도 루프, 조종석 1인칭, 120초 드론 격추. 단일 HTML, 외부 에셋 0, 브라우저에서 바로 플레이",
-   "url": "https://github.com/jeiel85/dusk-patrol",
-   "homepage": "https://jeiel85.github.io/dusk-patrol/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-11-20T05:11:24Z",
-   "pushedAt": "2026-11-20T06:26:29Z",
-   "archived": false,
-   "sizeKb": 37,
-   "license": null,
-   "primaryLanguage": "HTML",
-   "languages": [
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 101500
-    }
-   ],
-   "topics": [
-    "arcade",
-    "browser-game",
-    "flight-simulator",
-    "game",
-    "html5",
-    "javascript",
-    "korean",
-    "pixel-art",
-    "procedural-generation",
-    "retro-games",
-    "single-file",
-    "web-audio",
-    "webgl",
-    "webgl2"
-   ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 7,
-   "workflows": 0,
-   "images": [],
-   "excerpt": "노을진 해안 도시 상공을 비행하는 도트 그래픽 풍 3D 전투기 게임입니다. index.html 하나에 모든 코드·에셋이 들어 있으며, 외부 라이브러리나 이미지 파일을 사용하지 않습니다."
-  },
   {
    "name": "doran",
    "description": "둥지 — 가족 공동 가계부. 카드·은행 알림이 오면 바로 장부에, 배우자 폰에는 \"남편이 현대카드로 12,300원 썼어요\" 알림. 부모님 카드 알림도 사람별로 합산, 달력·통계·자산·예산. Android, 종단 암호화(Cloudflare Worker + FCM)",
@@ -97,16 +9,16 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-11-17T11:37:58Z",
-   "pushedAt": "2026-11-20T06:25:02Z",
+   "pushedAt": "2026-11-21T00:39:05Z",
    "archived": false,
-   "sizeKb": 18815,
+   "sizeKb": 19516,
    "license": null,
    "primaryLanguage": "Kotlin",
    "languages": [
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 773626
+     "bytes": 861300
     },
     {
      "name": "JavaScript",
@@ -116,7 +28,7 @@
     {
      "name": "Python",
      "color": "#3572A5",
-     "bytes": 12030
+     "bytes": 13386
     },
     {
      "name": "Shell",
@@ -145,13 +57,13 @@
     "self-update",
     "sms-parser"
    ],
-   "releases": 5,
+   "releases": 7,
    "latestRelease": {
-    "tag": "v0.1.4",
-    "date": "2026-11-18T10:04:04Z",
-    "url": "https://github.com/jeiel85/doran/releases/tag/v0.1.4"
+    "tag": "v0.3.4",
+    "date": "2026-11-21T00:30:28Z",
+    "url": "https://github.com/jeiel85/doran/releases/tag/v0.3.4"
    },
-   "commits": 62,
+   "commits": 70,
    "workflows": 0,
    "images": [
     {
@@ -182,6 +94,195 @@
    "excerpt": "카드 알림이 오면 바로 장부에, 가족 모두의 폰에. 부부가 같은 장부를 실시간으로 쓰고, 부모님 카드 알림도 사람별로 받아 합계에 더하는 가족용 Android 가계부."
   },
   {
+   "name": "bebecup-android",
+   "description": "베베컵 · Bebecup — 직접 고른 아기 사진으로 만드는 가족 사진 월드컵 Android 앱",
+   "url": "https://github.com/jeiel85/bebecup-android",
+   "homepage": "https://jeiel85.github.io/bebecup-android/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-05-23T04:55:14Z",
+   "pushedAt": "2026-11-21T00:00:59Z",
+   "archived": false,
+   "sizeKb": 12946,
+   "license": null,
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 291099
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 25653
+    },
+    {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 5748
+    }
+   ],
+   "topics": [
+    "android",
+    "baby",
+    "family",
+    "jetpack-compose",
+    "kotlin",
+    "material3",
+    "on-device",
+    "parenting",
+    "photo",
+    "privacy-friendly",
+    "room",
+    "tournament"
+   ],
+   "releases": 4,
+   "latestRelease": {
+    "tag": "v0.7.1",
+    "date": "2026-11-20T17:18:20Z",
+    "url": "https://github.com/jeiel85/bebecup-android/releases/tag/v0.7.1"
+   },
+   "commits": 26,
+   "workflows": 1,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/1_home.png",
+     "alt": "홈 화면"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/2_hall_of_fame.png",
+     "alt": "명예의 전당"
+    }
+   ],
+   "excerpt": "직접 고른 아기 사진으로 만드는 가족 사진 월드컵 A family photo tournament made from baby photos you choose."
+  },
+  {
+   "name": "bangchi-knight",
+   "description": "🛡️ 방치 나이트 (Bangchi Knight) — 3종 전술 진형, 실시간 대장간 장비 단조, 원정대 동료 합류를 브라우저에서 바로 즐기는 16-bit 픽셀 방치형 원정 RPG (Web-First → Native)",
+   "url": "https://github.com/jeiel85/bangchi-knight",
+   "homepage": "https://jeiel85.github.io/bangchi-knight/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-20T07:31:12Z",
+   "pushedAt": "2026-11-20T17:20:57Z",
+   "archived": false,
+   "sizeKb": 400,
+   "license": "MIT",
+   "primaryLanguage": "Python",
+   "languages": [
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 204412
+    },
+    {
+     "name": "TypeScript",
+     "color": "#3178c6",
+     "bytes": 196766
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 42199
+    },
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 1323
+    }
+   ],
+   "topics": [
+    "auto-battler",
+    "browser-game",
+    "capacitor",
+    "game",
+    "github-pages",
+    "html5-canvas",
+    "idle-rpg",
+    "korean",
+    "pixel-art",
+    "pwa",
+    "typescript",
+    "vite",
+    "web-audio",
+    "crafting",
+    "expedition",
+    "idle-game",
+    "rpg"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 9,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "16-bit 픽셀 원정 방치형 RPG — 3종 전술 진형 · 실시간 대장간 단조 · 원정대 동료 합류 · 왕국 귀환 설치 없이 브라우저에서 바로 출정하고, 향후 모바일 네이티브 앱까지 확장하는 웹 퍼스트 프로젝트"
+  },
+  {
+   "name": "claude-usage-tray-windows",
+   "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
+   "url": "https://github.com/jeiel85/claude-usage-tray-windows",
+   "homepage": "https://jeiel85.github.io/claude-usage-tray-windows/",
+   "stars": 2,
+   "forks": 0,
+   "createdAt": "2026-03-27T03:55:01Z",
+   "pushedAt": "2026-11-20T17:09:20Z",
+   "archived": false,
+   "sizeKb": 6612,
+   "license": "MIT",
+   "primaryLanguage": "C#",
+   "languages": [
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 2036365
+    },
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 404027
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 7827
+    },
+    {
+     "name": "Batchfile",
+     "color": "#C1F12E",
+     "bytes": 4101
+    }
+   ],
+   "topics": [
+    "claude-ai",
+    "codex",
+    "dotnet",
+    "gemini-cli",
+    "github-pages",
+    "ntfy",
+    "opencode",
+    "system-tray",
+    "usage-monitor",
+    "windows",
+    "wpf"
+   ],
+   "releases": 274,
+   "latestRelease": {
+    "tag": "v1.72.9",
+    "date": "2026-11-20T17:13:12Z",
+    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.72.9"
+   },
+   "commits": 639,
+   "workflows": 2,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/claude-usage-tray-windows/master/docs/screenshot.png",
+     "alt": "Claude Usage Tray 스크린샷"
+    }
+   ],
+   "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
+  },
+  {
    "name": "homebase",
    "description": "Watch your Windows PCs live from an Android app — open windows, per-app CPU/RAM, end-to-end encrypted push alerts, notifications shared between your PCs and phones. No open ports. Built with .NET and Kotlin.",
    "url": "https://github.com/jeiel85/homebase",
@@ -189,21 +290,21 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-07-07T05:48:11Z",
-   "pushedAt": "2026-11-20T05:58:34Z",
+   "pushedAt": "2026-11-20T17:07:57Z",
    "archived": false,
-   "sizeKb": 5003,
+   "sizeKb": 3095,
    "license": "MIT",
    "primaryLanguage": "C#",
    "languages": [
     {
      "name": "C#",
      "color": "#7355dd",
-     "bytes": 2277676
+     "bytes": 2296621
     },
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 1106340
+     "bytes": 1121384
     },
     {
      "name": "PowerShell",
@@ -234,16 +335,87 @@
     "tailscale",
     "unifiedpush"
    ],
-   "releases": 83,
+   "releases": 86,
    "latestRelease": {
-    "tag": "v0.56.1",
-    "date": "2026-11-20T06:07:11Z",
-    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.56.1"
+    "tag": "v0.57.1",
+    "date": "2026-11-20T17:15:19Z",
+    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.57.1"
    },
-   "commits": 131,
+   "commits": 134,
    "workflows": 4,
    "images": [],
    "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
+  },
+  {
+   "name": "markleaf-android",
+   "description": "A lightweight, local-first Markdown note app for Android.",
+   "url": "https://github.com/jeiel85/markleaf-android",
+   "homepage": "https://jeiel85.github.io/markleaf-android/",
+   "stars": 154,
+   "forks": 16,
+   "createdAt": "2026-04-29T00:51:29Z",
+   "pushedAt": "2026-11-20T14:18:57Z",
+   "archived": false,
+   "sizeKb": 114467,
+   "license": "Apache-2.0",
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 2776814
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 90054
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 5014
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 2903
+    }
+   ],
+   "topics": [
+    "android",
+    "fdroid",
+    "jetpack-compose",
+    "kotlin",
+    "local-first",
+    "markdown",
+    "markdown-editor",
+    "material3",
+    "note-taking",
+    "notes",
+    "offline-first",
+    "privacy-first",
+    "room",
+    "sqlite"
+   ],
+   "releases": 160,
+   "latestRelease": {
+    "tag": "v2.74.0",
+    "date": "2026-11-19T00:39:44Z",
+    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.74.0"
+   },
+   "commits": 1168,
+   "workflows": 5,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-demo.gif",
+     "alt": "Typing / in the Markleaf editor opens the quick-insert palette; choosing Checklist inserts plain Markdown, and the previ"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-tablet-en.gif",
+     "alt": "Markleaf on a tablet: the tag rail, note list and editor share one screen while a Markdown table, checklist and callout "
+    }
+   ],
+   "excerpt": "A local-first, minimal Markdown note app for Android"
   },
   {
    "name": "badasugi",
@@ -253,36 +425,36 @@
    "stars": 1,
    "forks": 0,
    "createdAt": "2026-11-12T09:49:33Z",
-   "pushedAt": "2026-11-20T05:33:45Z",
+   "pushedAt": "2026-11-20T10:50:32Z",
    "archived": false,
-   "sizeKb": 5974,
+   "sizeKb": 7315,
    "license": "MIT",
    "primaryLanguage": "Rust",
    "languages": [
     {
      "name": "Rust",
      "color": "#dea584",
-     "bytes": 864203
+     "bytes": 1148737
     },
     {
      "name": "JavaScript",
      "color": "#f1e05a",
-     "bytes": 250541
+     "bytes": 283001
     },
     {
      "name": "CSS",
      "color": "#663399",
-     "bytes": 77322
+     "bytes": 84154
     },
     {
      "name": "HTML",
      "color": "#e34c26",
-     "bytes": 49432
+     "bytes": 57401
     },
     {
      "name": "PowerShell",
      "color": "#012456",
-     "bytes": 8620
+     "bytes": 13741
     }
    ],
    "topics": [
@@ -302,13 +474,13 @@
     "whisper-cpp",
     "windows"
    ],
-   "releases": 43,
+   "releases": 48,
    "latestRelease": {
-    "tag": "v0.4.28",
-    "date": "2026-11-20T05:33:46Z",
-    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.28"
+    "tag": "v0.4.36",
+    "date": "2026-11-20T10:50:32Z",
+    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.36"
    },
-   "commits": 55,
+   "commits": 62,
    "workflows": 0,
    "images": [
     {
@@ -321,6 +493,104 @@
     }
    ],
    "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
+  },
+  {
+   "name": "dusk-patrol",
+   "description": "DUSK PATROL - 노을진 해안 도시 상공의 픽셀 아트 전투기 게임. 360도 루프, 조종석 1인칭, 120초 드론 격추. 단일 HTML, 외부 에셋 0, 브라우저에서 바로 플레이",
+   "url": "https://github.com/jeiel85/dusk-patrol",
+   "homepage": "https://jeiel85.github.io/dusk-patrol/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-20T05:11:24Z",
+   "pushedAt": "2026-11-20T07:36:19Z",
+   "archived": false,
+   "sizeKb": 169,
+   "license": null,
+   "primaryLanguage": "HTML",
+   "languages": [
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 106837
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 95167
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 2411
+    }
+   ],
+   "topics": [
+    "arcade",
+    "browser-game",
+    "flight-simulator",
+    "game",
+    "html5",
+    "javascript",
+    "korean",
+    "pixel-art",
+    "procedural-generation",
+    "retro-games",
+    "single-file",
+    "web-audio",
+    "webgl",
+    "webgl2"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 13,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "노을진 해안 도시 상공을 비행하는 도트 그래픽 풍 3D 전투기 게임입니다. 배포되는 게임은 game/index.html 파일 하나에 모든 코드·에셋이 들어 있으며, 외부 라이브러리나 이미지 파일을 사용하지 않습니다. 소스는 역할별로 game/src/에 나뉘어 있고, 빌드 스크립트가 이를 한 파일로 합칩니다."
+  },
+  {
+   "name": "jeiel85.github.io",
+   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
+   "url": "https://github.com/jeiel85/jeiel85.github.io",
+   "homepage": "https://jeiel85.github.io/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-05-26T06:40:18Z",
+   "pushedAt": "2026-11-20T07:01:16Z",
+   "archived": false,
+   "sizeKb": 16390,
+   "license": null,
+   "primaryLanguage": "HTML",
+   "languages": [
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 444896
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 92103
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 32037
+    }
+   ],
+   "topics": [
+    "android",
+    "closed-testing",
+    "github-actions",
+    "google-play",
+    "play-store",
+    "portfolio"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 116,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
   },
   {
    "name": "jeiel85",
@@ -387,70 +657,6 @@
    "workflows": 0,
    "images": [],
    "excerpt": "Microsoft 365(개인·Family)를 구독 중인데 Word·Excel에 \"정기 가입이 취소되었습니다\" 가 뜰 때, 원인을 진단하고 라이선스 캐시를 초기화하는 Windows용 단일 파일 도구입니다."
-  },
-  {
-   "name": "claude-usage-tray-windows",
-   "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
-   "url": "https://github.com/jeiel85/claude-usage-tray-windows",
-   "homepage": "https://jeiel85.github.io/claude-usage-tray-windows/",
-   "stars": 2,
-   "forks": 0,
-   "createdAt": "2026-03-27T03:55:01Z",
-   "pushedAt": "2026-11-20T01:36:56Z",
-   "archived": false,
-   "sizeKb": 6344,
-   "license": "MIT",
-   "primaryLanguage": "C#",
-   "languages": [
-    {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 2036365
-    },
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 404027
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 7827
-    },
-    {
-     "name": "Batchfile",
-     "color": "#C1F12E",
-     "bytes": 4101
-    }
-   ],
-   "topics": [
-    "claude-ai",
-    "codex",
-    "dotnet",
-    "gemini-cli",
-    "github-pages",
-    "ntfy",
-    "opencode",
-    "system-tray",
-    "usage-monitor",
-    "windows",
-    "wpf"
-   ],
-   "releases": 273,
-   "latestRelease": {
-    "tag": "v1.72.8",
-    "date": "2026-11-20T01:41:22Z",
-    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.72.8"
-   },
-   "commits": 636,
-   "workflows": 2,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/claude-usage-tray-windows/master/docs/screenshot.png",
-     "alt": "Claude Usage Tray 스크린샷"
-    }
-   ],
-   "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
   },
   {
    "name": "find-my-wife-phone",
@@ -604,77 +810,6 @@
    "workflows": 3,
    "images": [],
    "excerpt": "1995년 MS-DOS 아케이드 게임 Mine Bombers 3.11(Skitso Productions)을 최신 Windows와 Linux에서 DOSBox 없이 실행하기 위한 Rust 엔진입니다. OpenRCT2와 같은 방식으로, 이 프로젝트는 엔진이고 게임 데이터는 사용자가 자기 사본을 준비합니다. 원작 3.11은 무료(프리웨어)입니다. 브라우저에서 실행하는 부가 에디션도 있습니다."
-  },
-  {
-   "name": "markleaf-android",
-   "description": "A lightweight, local-first Markdown note app for Android.",
-   "url": "https://github.com/jeiel85/markleaf-android",
-   "homepage": "https://jeiel85.github.io/markleaf-android/",
-   "stars": 154,
-   "forks": 16,
-   "createdAt": "2026-04-29T00:51:29Z",
-   "pushedAt": "2026-11-19T14:39:39Z",
-   "archived": false,
-   "sizeKb": 114467,
-   "license": "Apache-2.0",
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 2776814
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 90054
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 5014
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 2903
-    }
-   ],
-   "topics": [
-    "android",
-    "fdroid",
-    "jetpack-compose",
-    "kotlin",
-    "local-first",
-    "markdown",
-    "markdown-editor",
-    "material3",
-    "note-taking",
-    "notes",
-    "offline-first",
-    "privacy-first",
-    "room",
-    "sqlite"
-   ],
-   "releases": 160,
-   "latestRelease": {
-    "tag": "v2.74.0",
-    "date": "2026-11-19T00:39:44Z",
-    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.74.0"
-   },
-   "commits": 1168,
-   "workflows": 5,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-demo.gif",
-     "alt": "Typing / in the Markleaf editor opens the quick-insert palette; choosing Checklist inserts plain Markdown, and the previ"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-tablet-en.gif",
-     "alt": "Markleaf on a tablet: the tag rail, note list and editor share one screen while a Markdown table, checklist and callout "
-    }
-   ],
-   "excerpt": "A local-first, minimal Markdown note app for Android"
   },
   {
    "name": "eiketsuden-reloaded",
@@ -8180,65 +8315,6 @@
    "excerpt": "Revision: 1.3 final re-audited Target: Windows-first commercial remote-support platform Status: Implementation-ready contracts; production release remains conditional on goal evidence and release gates."
   },
   {
-   "name": "bebecup-android",
-   "description": "베베컵 · Bebecup — 직접 고른 아기 사진으로 만드는 가족 사진 월드컵 Android 앱",
-   "url": "https://github.com/jeiel85/bebecup-android",
-   "homepage": "https://jeiel85.github.io/bebecup-android/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-05-23T04:55:14Z",
-   "pushedAt": "2026-07-01T01:37:10Z",
-   "archived": false,
-   "sizeKb": 11900,
-   "license": null,
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 312301
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 6493
-    }
-   ],
-   "topics": [
-    "android",
-    "baby",
-    "family",
-    "jetpack-compose",
-    "kotlin",
-    "material3",
-    "on-device",
-    "parenting",
-    "photo",
-    "privacy-friendly",
-    "room",
-    "tournament"
-   ],
-   "releases": 2,
-   "latestRelease": {
-    "tag": "v0.6.1",
-    "date": "2026-05-30T02:55:43Z",
-    "url": "https://github.com/jeiel85/bebecup-android/releases/tag/v0.6.1"
-   },
-   "commits": 14,
-   "workflows": 1,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/1_home.png",
-     "alt": "홈 화면"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/2_hall_of_fame.png",
-     "alt": "명예의 전당"
-    }
-   ],
-   "excerpt": "직접 고른 아기 사진으로 만드는 가족 사진 월드컵 A family photo tournament made from baby photos you choose."
-  },
-  {
    "name": "push-server-client-windows",
    "description": "WebSocket 기반 실시간 푸시 알림 시스템 - 서버와 Windows Forms 클라이언트 샘플 프로젝트",
    "url": "https://github.com/jeiel85/push-server-client-windows",
@@ -10259,7 +10335,7 @@
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
   "followers": 21,
-  "total": 12580,
+  "total": 12656,
   "days": [
    {
     "date": "2025-11-16",
@@ -11495,7 +11571,7 @@
    },
    {
     "date": "2026-09-20",
-    "count": 58
+    "count": 57
    },
    {
     "date": "2026-09-21",
@@ -11739,7 +11815,11 @@
    },
    {
     "date": "2026-11-20",
-    "count": 148
+    "count": 197
+   },
+   {
+    "date": "2026-11-21",
+    "count": 28
    }
   ]
  }
