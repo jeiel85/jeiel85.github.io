@@ -30,13 +30,14 @@ Google Play 스토어 페이지 ┘        │
 
 - **GitHub (`scripts/github.js`)**: GraphQL 한 번의 페이지네이션으로 공개·비포크 레포 전체의 언어, 토픽, ★, 커밋 수, 릴리스, `.github/workflows` 개수, README 이미지(배지·로고·SVG 제외)와 첫 문단을 가져오고, 기여 캘린더를 따로 가져옵니다. **토큰이 필요합니다**(`GITHUB_TOKEN` 또는 `GH_TOKEN`).
 - **Google Play**: 출시된 앱은 스토어 페이지에서 아이콘·요약·스크린샷·다운로드 수를 읽습니다. 비공개 테스트 앱은 스토어에 공개 페이지가 생기면 자동으로 `production`으로 승격됩니다.
+- **Play 새 앱 발견**: 빌드마다 [개발자 페이지](https://play.google.com/store/apps/dev?id=6375329746023339599)의 출시 앱 목록을 읽습니다. `apps.json`에 없는 앱은 `production`으로 추가하고(이름은 스토어 제목, 아이콘은 `icons/<패키지>.png`로 내려받음), 목록에 있는데 `closed_testing`·`github_only`인 앱은 `production`으로 올립니다. 추가된 앱에는 `githubUrl`이 없으므로 Actions 실행 요약의 경고(`New Play app added`)를 보고 `githubUrl`을 적고 `LOCKED_ANDROID_PACKAGES`에 등록합니다. 비공개 테스트 앱은 공개 목록에 없어 직접 추가해야 합니다. 개발자 페이지를 못 읽으면 경고만 남기고 발견 단계를 건너뜁니다.
 - **비공개 테스트 설치 경로**: 비공개 테스트 앱마다 참여 링크(`https://play.google.com/apps/testing/<패키지>`)와 스토어 링크를 붙입니다. 방문자는 `developer.testerGroup` 그룹에 가입해야 참여할 수 있으므로, Play Console에서 각 비공개 테스트 트랙의 테스터를 **Google 그룹스 → 이 그룹**으로 지정해 두어야 합니다(이메일 목록 방식이면 초대받은 사람만 설치 가능).
 - **실패 처리**: GitHub 또는 Play 호출이 실패하면 경고를 남기고 직전 캐시로 빌드합니다. 캐시도 없으면 해당 섹션만 빠집니다.
 - **비공개 레포**: `apps.json`의 `githubUrl`이 공개 레포가 아니면 GitHub 버튼을 숨기고 빌드 로그에 경고를 남깁니다.
 
 ## 자동 배포
 
-`.github/workflows/update-portfolio.yml`이 매일 오전 6시(KST)와 `apps.json`·`scripts/**` 변경 시 빌드하고, 갱신된 `index.html`과 캐시를 커밋한 뒤 GitHub Pages로 배포합니다.
+`.github/workflows/update-portfolio.yml`이 매일 오전 5시 47분(KST, 정각 혼잡을 피한 시각. GitHub 스케줄은 수십 분 이상 늦게 시작될 수 있음)과 `apps.json`·`scripts/**` 변경 시 빌드하고, 갱신된 `index.html`과 캐시를 커밋한 뒤 GitHub Pages로 배포합니다.
 
 ## 로컬 빌드
 

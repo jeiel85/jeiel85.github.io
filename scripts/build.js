@@ -219,6 +219,60 @@ async function promotePublishedTestingApps(config, cache) {
   }
 }
 
+// The developer page lists every production app on the account. Apps missing
+// from apps.json are added; listed apps still marked closed_testing or
+// github_only are promoted. Closed testing apps have no public listing, so
+// they still have to be added by hand.
+async function discoverDeveloperApps(config) {
+  const devId = config.developer && config.developer.accountId;
+  if (!devId) return;
+
+  console.log('🛰  Scanning Play developer page for production apps...');
+  let listed;
+  try {
+    listed = await gplay.developer({ devId, lang: 'ko', country: 'kr', num: 200 });
+  } catch (err) {
+    console.warn(`  ⚠ Failed to read developer page ${devId}: ${err.message} (skipping discovery)\n`);
+    return;
+  }
+
+  const byPackage = new Map(config.projects.filter(p => p.package).map(p => [p.package, p]));
+  const added = [];
+  const promoted = [];
+  for (const app of listed) {
+    if (!app || !app.appId) continue;
+    const known = byPackage.get(app.appId);
+    if (!known) {
+      const project = {
+        name: app.title || app.appId,
+        package: app.appId,
+        platform: 'android',
+        status: 'production',
+        iconUrl: `icons/${app.appId}.png`,
+      };
+      config.projects.push(project);
+      byPackage.set(app.appId, project);
+      added.push(project.name);
+      console.log(`  + ${project.name} (${app.appId}) added — set githubUrl and add it to LOCKED_ANDROID_PACKAGES`);
+      // Surface the follow-up on the Actions run summary, not just in the log.
+      if (process.env.GITHUB_ACTIONS) {
+        console.log(`::warning title=New Play app added::${app.appId} was added to apps.json from the developer page. Set its githubUrl and add it to LOCKED_ANDROID_PACKAGES.`);
+      }
+    } else if (!known.hidden && (known.platform === 'android' || !known.platform) && known.status !== 'production') {
+      console.log(`  ↑ ${known.name} promoted to production (${known.status} → production)`);
+      known.status = 'production';
+      promoted.push(known.name);
+    }
+  }
+
+  if (added.length || promoted.length) {
+    fs.writeFileSync(APPS_JSON, JSON.stringify(config, null, 2) + '\n', 'utf-8');
+    console.log(`  Updated apps.json: ${added.length} added, ${promoted.length} promoted.\n`);
+  } else {
+    console.log(`  All ${listed.length} listed app(s) are already in apps.json.\n`);
+  }
+}
+
 // ─── Play cache & icons ──────────────────────────────
 function loadCache() {
   try {
@@ -594,6 +648,7 @@ async function main() {
   if (!snapshot) console.warn('  ⚠ No GitHub data available (no token and no cache). GitHub sections will be omitted.\n');
 
   const cache = loadCache();
+  await discoverDeveloperApps(config);
   const androidApps = config.projects.filter(p => (p.platform === 'android' || !p.platform) && !p.hidden);
   await promotePublishedTestingApps(config, cache);
 
