@@ -1,204 +1,50 @@
 {
- "fetchedAt": "2026-11-22T00:43:31.375Z",
+ "fetchedAt": "2026-11-22T08:49:22.360Z",
  "repos": [
   {
-   "name": "bebecup-android",
-   "description": "베베컵 · Bebecup — 직접 고른 아기 사진으로 만드는 가족 사진 월드컵 Android 앱",
-   "url": "https://github.com/jeiel85/bebecup-android",
-   "homepage": "https://jeiel85.github.io/bebecup-android/",
+   "name": "jeiel85.github.io",
+   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
+   "url": "https://github.com/jeiel85/jeiel85.github.io",
+   "homepage": "https://jeiel85.github.io/",
    "stars": 0,
    "forks": 0,
-   "createdAt": "2026-05-23T04:55:14Z",
-   "pushedAt": "2026-11-22T00:39:51Z",
+   "createdAt": "2026-05-26T06:40:18Z",
+   "pushedAt": "2026-11-22T08:49:07Z",
    "archived": false,
-   "sizeKb": 13106,
+   "sizeKb": 16776,
    "license": null,
-   "primaryLanguage": "Kotlin",
+   "primaryLanguage": "HTML",
    "languages": [
     {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 356355
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 25653
-    },
-    {
-     "name": "Shell",
-     "color": "#89e051",
-     "bytes": 5748
-    }
-   ],
-   "topics": [
-    "android",
-    "baby",
-    "family",
-    "jetpack-compose",
-    "kotlin",
-    "material3",
-    "on-device",
-    "parenting",
-    "photo",
-    "privacy-friendly",
-    "room",
-    "tournament"
-   ],
-   "releases": 8,
-   "latestRelease": {
-    "tag": "v0.10.0",
-    "date": "2026-11-22T00:32:52Z",
-    "url": "https://github.com/jeiel85/bebecup-android/releases/tag/v0.10.0"
-   },
-   "commits": 48,
-   "workflows": 1,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/1_home.png",
-     "alt": "홈 화면"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/2_hall_of_fame.png",
-     "alt": "명예의 전당"
-    }
-   ],
-   "excerpt": "직접 고른 아기 사진으로 만드는 가족 사진 월드컵 A family photo tournament made from baby photos you choose."
-  },
-  {
-   "name": "homebase",
-   "description": "Watch your Windows PCs live from an Android app — open windows, per-app CPU/RAM, end-to-end encrypted push alerts, notifications shared between your PCs and phones. No open ports. Built with .NET and Kotlin.",
-   "url": "https://github.com/jeiel85/homebase",
-   "homepage": "https://jeiel85.github.io/homebase/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-07-07T05:48:11Z",
-   "pushedAt": "2026-11-22T00:03:18Z",
-   "archived": false,
-   "sizeKb": 3927,
-   "license": "MIT",
-   "primaryLanguage": "C#",
-   "languages": [
-    {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 2316063
-    },
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 1125243
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 52059
-    },
-    {
-     "name": "Inno Setup",
-     "color": "#264b99",
-     "bytes": 4311
-    }
-   ],
-   "topics": [
-    "bot",
-    "csharp",
-    "dotnet",
-    "monitoring",
-    "pc-monitoring",
-    "sqlite",
-    "telegram",
-    "windows",
-    "windows-service",
-    "wpf",
-    "android",
-    "jetpack-compose",
-    "kotlin",
-    "push-notifications",
-    "tailscale",
-    "unifiedpush"
-   ],
-   "releases": 89,
-   "latestRelease": {
-    "tag": "v0.60.0",
-    "date": "2026-11-22T00:12:28Z",
-    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.60.0"
-   },
-   "commits": 137,
-   "workflows": 4,
-   "images": [],
-   "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
-  },
-  {
-   "name": "markleaf-android",
-   "description": "A lightweight, local-first Markdown note app for Android.",
-   "url": "https://github.com/jeiel85/markleaf-android",
-   "homepage": "https://jeiel85.github.io/markleaf-android/",
-   "stars": 156,
-   "forks": 17,
-   "createdAt": "2026-04-29T00:51:29Z",
-   "pushedAt": "2026-11-22T00:02:28Z",
-   "archived": false,
-   "sizeKb": 114903,
-   "license": "Apache-2.0",
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 2776814
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 90054
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 5014
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 446227
     },
     {
      "name": "JavaScript",
      "color": "#f1e05a",
-     "bytes": 2903
+     "bytes": 94483
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 32037
     }
    ],
    "topics": [
     "android",
-    "fdroid",
-    "jetpack-compose",
-    "kotlin",
-    "local-first",
-    "markdown",
-    "markdown-editor",
-    "material3",
-    "note-taking",
-    "notes",
-    "offline-first",
-    "privacy-first",
-    "room",
-    "sqlite"
+    "closed-testing",
+    "github-actions",
+    "google-play",
+    "play-store",
+    "portfolio"
    ],
-   "releases": 160,
-   "latestRelease": {
-    "tag": "v2.74.0",
-    "date": "2026-11-19T00:39:44Z",
-    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.74.0"
-   },
-   "commits": 1170,
-   "workflows": 5,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-demo.gif",
-     "alt": "Typing / in the Markleaf editor opens the quick-insert palette; choosing Checklist inserts plain Markdown, and the previ"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-tablet-en.gif",
-     "alt": "Markleaf on a tablet: the tag rail, note list and editor share one screen while a Markdown table, checklist and callout "
-    }
-   ],
-   "excerpt": "A local-first, minimal Markdown note app for Android"
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 122,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
   },
   {
    "name": "doran",
@@ -208,7 +54,7 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-11-17T11:37:58Z",
-   "pushedAt": "2026-11-21T17:07:54Z",
+   "pushedAt": "2026-11-22T08:45:02Z",
    "archived": false,
    "sizeKb": 19947,
    "license": null,
@@ -262,7 +108,7 @@
     "date": "2026-11-21T08:07:31Z",
     "url": "https://github.com/jeiel85/doran/releases/tag/v0.3.6"
    },
-   "commits": 74,
+   "commits": 75,
    "workflows": 0,
    "images": [
     {
@@ -291,6 +137,227 @@
     }
    ],
    "excerpt": "카드 알림이 오면 바로 장부에, 가족 모두의 폰에. 부부가 같은 장부를 실시간으로 쓰고, 부모님 카드 알림도 사람별로 받아 합계에 더하는 가족용 Android 가계부."
+  },
+  {
+   "name": "homebase",
+   "description": "Watch your Windows PCs live from an Android app — open windows, per-app CPU/RAM, end-to-end encrypted push alerts, notifications shared between your PCs and phones. No open ports. Built with .NET and Kotlin.",
+   "url": "https://github.com/jeiel85/homebase",
+   "homepage": "https://jeiel85.github.io/homebase/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-07-07T05:48:11Z",
+   "pushedAt": "2026-11-22T03:48:33Z",
+   "archived": false,
+   "sizeKb": 3936,
+   "license": "MIT",
+   "primaryLanguage": "C#",
+   "languages": [
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 2347373
+    },
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 1162243
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 52059
+    },
+    {
+     "name": "Inno Setup",
+     "color": "#264b99",
+     "bytes": 4311
+    }
+   ],
+   "topics": [
+    "bot",
+    "csharp",
+    "dotnet",
+    "monitoring",
+    "pc-monitoring",
+    "sqlite",
+    "telegram",
+    "windows",
+    "windows-service",
+    "wpf",
+    "android",
+    "jetpack-compose",
+    "kotlin",
+    "push-notifications",
+    "tailscale",
+    "unifiedpush"
+   ],
+   "releases": 90,
+   "latestRelease": {
+    "tag": "v0.60.1",
+    "date": "2026-11-22T03:57:53Z",
+    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.60.1"
+   },
+   "commits": 138,
+   "workflows": 4,
+   "images": [],
+   "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
+  },
+  {
+   "name": "jeiel85",
+   "description": "프로필 꾸미기",
+   "url": "https://github.com/jeiel85/jeiel85",
+   "homepage": "",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-04-28T08:26:05Z",
+   "pushedAt": "2026-11-22T03:13:12Z",
+   "archived": false,
+   "sizeKb": 50,
+   "license": null,
+   "primaryLanguage": null,
+   "languages": [],
+   "topics": [],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 51,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
+  },
+  {
+   "name": "bebecup-android",
+   "description": "베베컵 · Bebecup — 직접 고른 아기 사진으로 만드는 가족 사진 월드컵 Android 앱",
+   "url": "https://github.com/jeiel85/bebecup-android",
+   "homepage": "https://jeiel85.github.io/bebecup-android/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-05-23T04:55:14Z",
+   "pushedAt": "2026-11-22T00:44:52Z",
+   "archived": false,
+   "sizeKb": 12929,
+   "license": null,
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 387465
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 25653
+    },
+    {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 6640
+    }
+   ],
+   "topics": [
+    "android",
+    "baby",
+    "family",
+    "jetpack-compose",
+    "kotlin",
+    "material3",
+    "on-device",
+    "parenting",
+    "photo",
+    "privacy-friendly",
+    "room",
+    "tournament"
+   ],
+   "releases": 8,
+   "latestRelease": {
+    "tag": "v0.10.0",
+    "date": "2026-11-22T00:32:52Z",
+    "url": "https://github.com/jeiel85/bebecup-android/releases/tag/v0.10.0"
+   },
+   "commits": 50,
+   "workflows": 1,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/1_home.png",
+     "alt": "홈 화면"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/bebecup-android/main/fastlane/metadata/android/ko-KR/images/phoneScreenshots/2_hall_of_fame.png",
+     "alt": "명예의 전당"
+    }
+   ],
+   "excerpt": "직접 고른 아기 사진으로 만드는 가족 사진 월드컵 A family photo tournament made from baby photos you choose."
+  },
+  {
+   "name": "markleaf-android",
+   "description": "A lightweight, local-first Markdown note app for Android.",
+   "url": "https://github.com/jeiel85/markleaf-android",
+   "homepage": "https://jeiel85.github.io/markleaf-android/",
+   "stars": 156,
+   "forks": 17,
+   "createdAt": "2026-04-29T00:51:29Z",
+   "pushedAt": "2026-11-22T00:02:28Z",
+   "archived": false,
+   "sizeKb": 114904,
+   "license": "Apache-2.0",
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 2791476
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 90054
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 5014
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 2903
+    }
+   ],
+   "topics": [
+    "android",
+    "fdroid",
+    "jetpack-compose",
+    "kotlin",
+    "local-first",
+    "markdown",
+    "markdown-editor",
+    "material3",
+    "note-taking",
+    "notes",
+    "offline-first",
+    "privacy-first",
+    "room",
+    "sqlite"
+   ],
+   "releases": 160,
+   "latestRelease": {
+    "tag": "v2.74.0",
+    "date": "2026-11-19T00:39:44Z",
+    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.74.0"
+   },
+   "commits": 1170,
+   "workflows": 5,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-demo.gif",
+     "alt": "Typing / in the Markleaf editor opens the quick-insert palette; choosing Checklist inserts plain Markdown, and the previ"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-tablet-en.gif",
+     "alt": "Markleaf on a tablet: the tag rail, note list and editor share one screen while a Markdown table, checklist and callout "
+    }
+   ],
+   "excerpt": "A local-first, minimal Markdown note app for Android"
   },
   {
    "name": "find-my-wife-phone",
@@ -521,73 +588,6 @@
     }
    ],
    "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
-  },
-  {
-   "name": "jeiel85.github.io",
-   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
-   "url": "https://github.com/jeiel85/jeiel85.github.io",
-   "homepage": "https://jeiel85.github.io/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-21T16:11:43Z",
-   "archived": false,
-   "sizeKb": 16606,
-   "license": null,
-   "primaryLanguage": "HTML",
-   "languages": [
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 446833
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 94483
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 32037
-    }
-   ],
-   "topics": [
-    "android",
-    "closed-testing",
-    "github-actions",
-    "google-play",
-    "play-store",
-    "portfolio"
-   ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 120,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
-  },
-  {
-   "name": "jeiel85",
-   "description": "프로필 꾸미기",
-   "url": "https://github.com/jeiel85/jeiel85",
-   "homepage": "",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-04-28T08:26:05Z",
-   "pushedAt": "2026-11-21T03:59:44Z",
-   "archived": false,
-   "sizeKb": 50,
-   "license": null,
-   "primaryLanguage": null,
-   "languages": [],
-   "topics": [],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 51,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
   },
   {
    "name": "bangchi-knight",
@@ -10335,7 +10335,7 @@
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
   "followers": 20,
-  "total": 12755,
+  "total": 12764,
   "days": [
    {
     "date": "2025-11-23",
@@ -11795,7 +11795,7 @@
    },
    {
     "date": "2026-11-22",
-    "count": 37
+    "count": 46
    }
   ]
  }
