@@ -1,83 +1,6 @@
 {
- "fetchedAt": "2026-11-21T16:10:52.754Z",
+ "fetchedAt": "2026-11-22T00:43:31.375Z",
  "repos": [
-  {
-   "name": "badasugi",
-   "description": "🎙️ 말하는 사람을 구분해 실시간으로 받아 적는 가볍고 빠른 Windows 회의 전사 앱 · Rust + Tauri · whisper.cpp 로컬 AI / Groq·OpenAI API · 화자 분리 · AI 회의록 요약",
-   "url": "https://github.com/jeiel85/badasugi",
-   "homepage": "https://jeiel85.github.io/badasugi/",
-   "stars": 1,
-   "forks": 0,
-   "createdAt": "2026-11-12T09:49:33Z",
-   "pushedAt": "2026-11-21T16:05:42Z",
-   "archived": false,
-   "sizeKb": 7544,
-   "license": "MIT",
-   "primaryLanguage": "Rust",
-   "languages": [
-    {
-     "name": "Rust",
-     "color": "#dea584",
-     "bytes": 1155726
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 284540
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 84154
-    },
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 57401
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 13741
-    }
-   ],
-   "topics": [
-    "dictation",
-    "korean",
-    "meeting-notes",
-    "onnx",
-    "rust",
-    "silero-vad",
-    "speaker-diarization",
-    "speech-to-text",
-    "stt",
-    "tauri",
-    "transcription",
-    "tray-app",
-    "whisper",
-    "whisper-cpp",
-    "windows"
-   ],
-   "releases": 49,
-   "latestRelease": {
-    "tag": "v0.4.37",
-    "date": "2026-11-21T14:35:30Z",
-    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.37"
-   },
-   "commits": 65,
-   "workflows": 0,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-dark.png",
-     "alt": "받아쓰기 화면 (어두운 테마)"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-light.png",
-     "alt": "받아쓰기 화면 (밝은 테마)"
-    }
-   ],
-   "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
-  },
   {
    "name": "bebecup-android",
    "description": "베베컵 · Bebecup — 직접 고른 아기 사진으로 만드는 가족 사진 월드컵 Android 앱",
@@ -86,16 +9,16 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-05-23T04:55:14Z",
-   "pushedAt": "2026-11-21T16:04:58Z",
+   "pushedAt": "2026-11-22T00:39:51Z",
    "archived": false,
-   "sizeKb": 13021,
+   "sizeKb": 13106,
    "license": null,
    "primaryLanguage": "Kotlin",
    "languages": [
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 332006
+     "bytes": 356355
     },
     {
      "name": "Python",
@@ -122,13 +45,13 @@
     "room",
     "tournament"
    ],
-   "releases": 6,
+   "releases": 8,
    "latestRelease": {
-    "tag": "v0.8.0",
-    "date": "2026-11-21T10:08:29Z",
-    "url": "https://github.com/jeiel85/bebecup-android/releases/tag/v0.8.0"
+    "tag": "v0.10.0",
+    "date": "2026-11-22T00:32:52Z",
+    "url": "https://github.com/jeiel85/bebecup-android/releases/tag/v0.10.0"
    },
-   "commits": 39,
+   "commits": 48,
    "workflows": 1,
    "images": [
     {
@@ -150,21 +73,21 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-07-07T05:48:11Z",
-   "pushedAt": "2026-11-21T15:55:04Z",
+   "pushedAt": "2026-11-22T00:03:18Z",
    "archived": false,
-   "sizeKb": 3394,
+   "sizeKb": 3927,
    "license": "MIT",
    "primaryLanguage": "C#",
    "languages": [
     {
      "name": "C#",
      "color": "#7355dd",
-     "bytes": 2309137
+     "bytes": 2316063
     },
     {
      "name": "Kotlin",
      "color": "#A97BFF",
-     "bytes": 1121384
+     "bytes": 1125243
     },
     {
      "name": "PowerShell",
@@ -195,162 +118,28 @@
     "tailscale",
     "unifiedpush"
    ],
-   "releases": 87,
+   "releases": 89,
    "latestRelease": {
-    "tag": "v0.58.0",
-    "date": "2026-11-21T07:50:11Z",
-    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.58.0"
+    "tag": "v0.60.0",
+    "date": "2026-11-22T00:12:28Z",
+    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.60.0"
    },
-   "commits": 135,
+   "commits": 137,
    "workflows": 4,
    "images": [],
    "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
-  },
-  {
-   "name": "find-my-wife-phone",
-   "description": "포너디 — “폰 어디?” 소파 밑 폰도 버튼 한 번에. 무음·방해 금지여도 울리고, 찾으면 원래대로. 받는 사람이 거절할 수 있는 가족용 Android 앱 (E2E 암호화, Cloudflare Worker + FCM)",
-   "url": "https://github.com/jeiel85/find-my-wife-phone",
-   "homepage": "https://jeiel85.github.io/find-my-wife-phone/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-11-15T06:18:39Z",
-   "pushedAt": "2026-11-21T14:17:41Z",
-   "archived": false,
-   "sizeKb": 4877,
-   "license": "MIT",
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 370642
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 31675
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 11346
-    },
-    {
-     "name": "Shell",
-     "color": "#89e051",
-     "bytes": 6913
-    }
-   ],
-   "topics": [
-    "android",
-    "cloudflare-workers",
-    "do-not-disturb",
-    "end-to-end-encryption",
-    "family",
-    "find-my-phone",
-    "firebase-cloud-messaging",
-    "jetpack-compose",
-    "korean",
-    "kotlin",
-    "privacy",
-    "qr-code"
-   ],
-   "releases": 12,
-   "latestRelease": {
-    "tag": "v0.5.0",
-    "date": "2026-11-21T08:12:29Z",
-    "url": "https://github.com/jeiel85/find-my-wife-phone/releases/tag/v0.5.0"
-   },
-   "commits": 50,
-   "workflows": 1,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/home.webp",
-     "alt": "홈: 울리기 버튼"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/ringing.webp",
-     "alt": "단계별 진행 상황"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/countdown.webp",
-     "alt": "10초 거절 창"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/found-me.webp",
-     "alt": "여기 있어요"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/map.webp",
-     "alt": "위치 지도"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/history.webp",
-     "alt": "기록"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/empty.webp",
-     "alt": "처음 화면"
-    }
-   ],
-   "excerpt": "“폰 어디?” — 소파 밑에 있어도, 버튼 한 번이면 울려요. 무음·방해 금지여도 크게 울리고, 찾으면 소리 설정이 원래대로 돌아가는 가족용 Android 앱."
-  },
-  {
-   "name": "jeiel85.github.io",
-   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
-   "url": "https://github.com/jeiel85/jeiel85.github.io",
-   "homepage": "https://jeiel85.github.io/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-21T14:17:10Z",
-   "archived": false,
-   "sizeKb": 16580,
-   "license": null,
-   "primaryLanguage": "HTML",
-   "languages": [
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 446866
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 94483
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 32037
-    }
-   ],
-   "topics": [
-    "android",
-    "closed-testing",
-    "github-actions",
-    "google-play",
-    "play-store",
-    "portfolio"
-   ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 119,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
   },
   {
    "name": "markleaf-android",
    "description": "A lightweight, local-first Markdown note app for Android.",
    "url": "https://github.com/jeiel85/markleaf-android",
    "homepage": "https://jeiel85.github.io/markleaf-android/",
-   "stars": 155,
+   "stars": 156,
    "forks": 17,
    "createdAt": "2026-04-29T00:51:29Z",
-   "pushedAt": "2026-11-21T13:40:35Z",
+   "pushedAt": "2026-11-22T00:02:28Z",
    "archived": false,
-   "sizeKb": 114468,
+   "sizeKb": 114903,
    "license": "Apache-2.0",
    "primaryLanguage": "Kotlin",
    "languages": [
@@ -397,7 +186,7 @@
     "date": "2026-11-19T00:39:44Z",
     "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.74.0"
    },
-   "commits": 1168,
+   "commits": 1170,
    "workflows": 5,
    "images": [
     {
@@ -419,9 +208,9 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-11-17T11:37:58Z",
-   "pushedAt": "2026-11-21T08:21:38Z",
+   "pushedAt": "2026-11-21T17:07:54Z",
    "archived": false,
-   "sizeKb": 19772,
+   "sizeKb": 19947,
    "license": null,
    "primaryLanguage": "Kotlin",
    "languages": [
@@ -502,6 +291,281 @@
     }
    ],
    "excerpt": "카드 알림이 오면 바로 장부에, 가족 모두의 폰에. 부부가 같은 장부를 실시간으로 쓰고, 부모님 카드 알림도 사람별로 받아 합계에 더하는 가족용 Android 가계부."
+  },
+  {
+   "name": "find-my-wife-phone",
+   "description": "포너디 — “폰 어디?” 소파 밑 폰도 버튼 한 번에. 무음·방해 금지여도 울리고, 찾으면 원래대로. 받는 사람이 거절할 수 있는 가족용 Android 앱 (E2E 암호화, Cloudflare Worker + FCM)",
+   "url": "https://github.com/jeiel85/find-my-wife-phone",
+   "homepage": "https://jeiel85.github.io/find-my-wife-phone/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-15T06:18:39Z",
+   "pushedAt": "2026-11-21T16:45:49Z",
+   "archived": false,
+   "sizeKb": 4878,
+   "license": "MIT",
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 388896
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 31675
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 11346
+    },
+    {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 6913
+    }
+   ],
+   "topics": [
+    "android",
+    "cloudflare-workers",
+    "do-not-disturb",
+    "end-to-end-encryption",
+    "family",
+    "find-my-phone",
+    "firebase-cloud-messaging",
+    "jetpack-compose",
+    "korean",
+    "kotlin",
+    "privacy",
+    "qr-code"
+   ],
+   "releases": 13,
+   "latestRelease": {
+    "tag": "v0.5.1",
+    "date": "2026-11-21T16:45:49Z",
+    "url": "https://github.com/jeiel85/find-my-wife-phone/releases/tag/v0.5.1"
+   },
+   "commits": 53,
+   "workflows": 1,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/home.webp",
+     "alt": "홈: 울리기 버튼"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/ringing.webp",
+     "alt": "단계별 진행 상황"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/countdown.webp",
+     "alt": "10초 거절 창"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/found-me.webp",
+     "alt": "여기 있어요"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/map.webp",
+     "alt": "위치 지도"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/history.webp",
+     "alt": "기록"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/find-my-wife-phone/main/docs/assets/screens/empty.webp",
+     "alt": "처음 화면"
+    }
+   ],
+   "excerpt": "“폰 어디?” — 소파 밑에 있어도, 버튼 한 번이면 울려요. 무음·방해 금지여도 크게 울리고, 찾으면 소리 설정이 원래대로 돌아가는 가족용 Android 앱."
+  },
+  {
+   "name": "claude-usage-tray-windows",
+   "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
+   "url": "https://github.com/jeiel85/claude-usage-tray-windows",
+   "homepage": "https://jeiel85.github.io/claude-usage-tray-windows/",
+   "stars": 2,
+   "forks": 0,
+   "createdAt": "2026-03-27T03:55:01Z",
+   "pushedAt": "2026-11-21T16:44:27Z",
+   "archived": false,
+   "sizeKb": 6985,
+   "license": "MIT",
+   "primaryLanguage": "C#",
+   "languages": [
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 2061520
+    },
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 404027
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 7827
+    },
+    {
+     "name": "Batchfile",
+     "color": "#C1F12E",
+     "bytes": 4101
+    }
+   ],
+   "topics": [
+    "claude-ai",
+    "codex",
+    "dotnet",
+    "gemini-cli",
+    "github-pages",
+    "ntfy",
+    "opencode",
+    "system-tray",
+    "usage-monitor",
+    "windows",
+    "wpf"
+   ],
+   "releases": 275,
+   "latestRelease": {
+    "tag": "v1.72.10",
+    "date": "2026-11-21T16:47:38Z",
+    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.72.10"
+   },
+   "commits": 641,
+   "workflows": 2,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/claude-usage-tray-windows/master/docs/screenshot.png",
+     "alt": "Claude Usage Tray 스크린샷"
+    }
+   ],
+   "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
+  },
+  {
+   "name": "badasugi",
+   "description": "🎙️ 말하는 사람을 구분해 실시간으로 받아 적는 가볍고 빠른 Windows 회의 전사 앱 · Rust + Tauri · whisper.cpp 로컬 AI / Groq·OpenAI API · 화자 분리 · AI 회의록 요약",
+   "url": "https://github.com/jeiel85/badasugi",
+   "homepage": "https://jeiel85.github.io/badasugi/",
+   "stars": 1,
+   "forks": 0,
+   "createdAt": "2026-11-12T09:49:33Z",
+   "pushedAt": "2026-11-21T16:22:37Z",
+   "archived": false,
+   "sizeKb": 8088,
+   "license": "MIT",
+   "primaryLanguage": "Rust",
+   "languages": [
+    {
+     "name": "Rust",
+     "color": "#dea584",
+     "bytes": 1185517
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 285670
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 84154
+    },
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 59092
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 13741
+    }
+   ],
+   "topics": [
+    "dictation",
+    "korean",
+    "meeting-notes",
+    "onnx",
+    "rust",
+    "silero-vad",
+    "speaker-diarization",
+    "speech-to-text",
+    "stt",
+    "tauri",
+    "transcription",
+    "tray-app",
+    "whisper",
+    "whisper-cpp",
+    "windows"
+   ],
+   "releases": 50,
+   "latestRelease": {
+    "tag": "v0.4.38",
+    "date": "2026-11-21T16:22:37Z",
+    "url": "https://github.com/jeiel85/badasugi/releases/tag/v0.4.38"
+   },
+   "commits": 65,
+   "workflows": 0,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-dark.png",
+     "alt": "받아쓰기 화면 (어두운 테마)"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/badasugi/main/docs/assets/screenshot-light.png",
+     "alt": "받아쓰기 화면 (밝은 테마)"
+    }
+   ],
+   "excerpt": "말하는 사람을 구분해 실시간으로 받아 적는, 가볍고 빠른 Windows 회의 전사 앱"
+  },
+  {
+   "name": "jeiel85.github.io",
+   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
+   "url": "https://github.com/jeiel85/jeiel85.github.io",
+   "homepage": "https://jeiel85.github.io/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-05-26T06:40:18Z",
+   "pushedAt": "2026-11-21T16:11:43Z",
+   "archived": false,
+   "sizeKb": 16606,
+   "license": null,
+   "primaryLanguage": "HTML",
+   "languages": [
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 446833
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 94483
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 32037
+    }
+   ],
+   "topics": [
+    "android",
+    "closed-testing",
+    "github-actions",
+    "google-play",
+    "play-store",
+    "portfolio"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 120,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
   },
   {
    "name": "jeiel85",
@@ -585,70 +649,6 @@
    "workflows": 1,
    "images": [],
    "excerpt": "16-bit 픽셀 원정 방치형 RPG — 3종 전술 진형 · 실시간 대장간 단조 · 원정대 동료 합류 · 왕국 귀환 설치 없이 브라우저에서 바로 출정하고, 향후 모바일 네이티브 앱까지 확장하는 웹 퍼스트 프로젝트"
-  },
-  {
-   "name": "claude-usage-tray-windows",
-   "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
-   "url": "https://github.com/jeiel85/claude-usage-tray-windows",
-   "homepage": "https://jeiel85.github.io/claude-usage-tray-windows/",
-   "stars": 2,
-   "forks": 0,
-   "createdAt": "2026-03-27T03:55:01Z",
-   "pushedAt": "2026-11-20T17:09:20Z",
-   "archived": false,
-   "sizeKb": 6612,
-   "license": "MIT",
-   "primaryLanguage": "C#",
-   "languages": [
-    {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 2036365
-    },
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 404027
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 7827
-    },
-    {
-     "name": "Batchfile",
-     "color": "#C1F12E",
-     "bytes": 4101
-    }
-   ],
-   "topics": [
-    "claude-ai",
-    "codex",
-    "dotnet",
-    "gemini-cli",
-    "github-pages",
-    "ntfy",
-    "opencode",
-    "system-tray",
-    "usage-monitor",
-    "windows",
-    "wpf"
-   ],
-   "releases": 274,
-   "latestRelease": {
-    "tag": "v1.72.9",
-    "date": "2026-11-20T17:13:12Z",
-    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.72.9"
-   },
-   "commits": 639,
-   "workflows": 2,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/claude-usage-tray-windows/master/docs/screenshot.png",
-     "alt": "Claude Usage Tray 스크린샷"
-    }
-   ],
-   "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
   },
   {
    "name": "dusk-patrol",
@@ -10335,36 +10335,8 @@
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
   "followers": 20,
-  "total": 12716,
+  "total": 12755,
   "days": [
-   {
-    "date": "2025-11-16",
-    "count": 0
-   },
-   {
-    "date": "2025-11-17",
-    "count": 0
-   },
-   {
-    "date": "2025-11-18",
-    "count": 0
-   },
-   {
-    "date": "2025-11-19",
-    "count": 0
-   },
-   {
-    "date": "2025-11-20",
-    "count": 0
-   },
-   {
-    "date": "2025-11-21",
-    "count": 0
-   },
-   {
-    "date": "2025-11-22",
-    "count": 0
-   },
    {
     "date": "2025-11-23",
     "count": 0
@@ -11819,7 +11791,11 @@
    },
    {
     "date": "2026-11-21",
-    "count": 90
+    "count": 92
+   },
+   {
+    "date": "2026-11-22",
+    "count": 37
    }
   ]
  }
