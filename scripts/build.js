@@ -1,4 +1,5 @@
-const gplay = require('google-play-scraper');
+// google-play-scraper 10 is an ES module; require() returns its namespace (Node 22.12+).
+const gplay = require('google-play-scraper').default;
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
