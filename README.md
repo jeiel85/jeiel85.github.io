@@ -41,7 +41,7 @@ Google Play 스토어 페이지 ┘        │
 
 ## 로컬 빌드
 
-Node.js 20 이상이 필요합니다.
+Node.js 22.12 이상이 필요합니다(`google-play-scraper` 10은 ES 모듈이라 `require`로 불러오려면 이 버전부터 됩니다). CI는 Node 24를 씁니다.
 
 ```bash
 cd scripts
