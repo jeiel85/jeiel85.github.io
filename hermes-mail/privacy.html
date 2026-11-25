@@ -15,7 +15,7 @@
 </head>
 <body>
   <h1>hermes-mail 개인정보처리방침</h1>
-  <p class="muted">최종 수정일: 2026-11-25</p>
+  <p class="muted">최종 수정일: 2026-11-25 (알림 기록 추가)</p>
 
   <h2>1. 누가, 무엇을 위해 쓰는가</h2>
   <p>hermes-mail은 운영자(EL Studio, GitHub <a href="https://github.com/jeiel85">@jeiel85</a>)가 <strong>본인 소유의 Gmail 계정</strong>에서
@@ -34,7 +34,9 @@
     <li>위 정보를 Anthropic의 Claude API에 보내, 운영자의 조치가 필요한 메일인지 판단합니다.
       Anthropic은 API로 받은 데이터를 자사 모델 학습에 쓰지 않는다고 밝히고 있습니다.</li>
     <li>조치가 필요한 메일은 요약을 운영자 본인의 텔레그램으로 보냅니다.</li>
-    <li>같은 메일을 두 번 알리지 않도록 처리한 메일의 ID만 운영자의 서버에 보관합니다. 메일 본문은 저장하지 않습니다.</li>
+    <li>같은 메일을 두 번 알리지 않도록 처리한 메일의 ID를 운영자의 서버에 보관합니다.</li>
+    <li>운영자에게 보낸 알림의 내용(제목, 보낸 사람, 할 일 요약)을 운영자의 서버에 알림 기록으로 보관해,
+      운영자 본인의 개인 비서가 알림에 관한 질문에 답할 때 참고합니다. 메일 본문 전체는 저장하지 않습니다.</li>
   </ul>
 
   <h2>4. 공유·판매</h2>
@@ -44,7 +46,7 @@
   제한적 사용(Limited Use) 요구사항을 준수합니다.</p>
 
   <h2>5. 보관과 삭제</h2>
-  <p>처리한 메일 ID는 최대 30일 보관한 뒤 지웁니다. 운영자는 언제든
+  <p>처리한 메일 ID는 최대 30일, 알림 기록은 최대 90일 보관한 뒤 지웁니다. 운영자는 언제든
   <a href="https://myaccount.google.com/permissions">Google 계정의 타사 액세스</a>에서 권한을 철회할 수 있으며,
   철회하면 hermes-mail은 더 이상 메일을 읽을 수 없습니다.</p>
 
@@ -55,7 +57,9 @@
   <p lang="en" class="muted">English summary: hermes-mail is a private tool used only by its operator on the operator's own
   Gmail accounts. It uses the gmail.readonly scope to read sender, subject, date, snippet and labels of new messages, sends
   them to the Anthropic Claude API to decide whether the operator needs to act, and notifies the operator on Telegram. It
-  stores only processed message IDs (kept up to 30 days), never sells or shares Google user data beyond this processing, and
+  stores processed message IDs (kept up to 30 days) and the text of the alerts it sent to the operator (subject, sender and
+  action summary; kept up to 90 days) so the operator's own assistant can answer questions about them. It never sells or
+  shares Google user data beyond this processing, and
   its use of information received from Google APIs adheres to the Google API Services User Data Policy, including the
   Limited Use requirements.</p>
 </body>
