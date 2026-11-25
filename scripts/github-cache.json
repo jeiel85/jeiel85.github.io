@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-25T02:45:21.608Z",
+ "fetchedAt": "2026-11-25T03:48:24.606Z",
  "repos": [
   {
    "name": "jeiel85.github.io",
@@ -9,16 +9,16 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-25T02:45:06Z",
+   "pushedAt": "2026-11-25T02:46:09Z",
    "archived": false,
-   "sizeKb": 17202,
+   "sizeKb": 17367,
    "license": null,
    "primaryLanguage": "HTML",
    "languages": [
     {
      "name": "HTML",
      "color": "#e34c26",
-     "bytes": 454580
+     "bytes": 454581
     },
     {
      "name": "JavaScript",
@@ -41,7 +41,7 @@
    ],
    "releases": 0,
    "latestRelease": null,
-   "commits": 132,
+   "commits": 133,
    "workflows": 1,
    "images": [],
    "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
@@ -10409,7 +10409,7 @@
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
   "followers": 19,
-  "total": 13015,
+  "total": 13021,
   "days": [
    {
     "date": "2025-11-23",
@@ -11881,7 +11881,7 @@
    },
    {
     "date": "2026-11-25",
-    "count": 23
+    "count": 29
    }
   ]
  }
