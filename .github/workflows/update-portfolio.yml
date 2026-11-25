@@ -61,13 +61,9 @@ jobs:
     permissions:
       contents: write
       pages: write
-      id-token: write
     concurrency:
       group: "pages"
       cancel-in-progress: false
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -103,6 +99,24 @@ jobs:
         with:
           path: '.'
 
+  # Deploy in its own job, as in GitHub's Pages starter workflow. Deploying in
+  # the same job a second after the upload hit "Found 0 artifact(s)" twice on
+  # 2026-11-25: the artifact existed (API showed it) but was not yet listable
+  # from the run. A job boundary gives the artifact service time to settle.
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: "pages-deploy"
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
