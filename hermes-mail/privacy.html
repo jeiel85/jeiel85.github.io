@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>hermes-mail 개인정보처리방침</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    body { font-family: "IBM Plex Sans KR", system-ui, sans-serif; max-width: 680px; margin: 48px auto; padding: 0 16px; line-height: 1.7; color: #1d1d1f; background: #fafaf7; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.1rem; margin-top: 2rem; }
+    .muted { color: #666; }
+    a { color: #2b5bd7; }
+  </style>
+</head>
+<body>
+  <h1>hermes-mail 개인정보처리방침</h1>
+  <p class="muted">최종 수정일: 2026-11-25</p>
+
+  <h2>1. 누가, 무엇을 위해 쓰는가</h2>
+  <p>hermes-mail은 운영자(EL Studio, GitHub <a href="https://github.com/jeiel85">@jeiel85</a>)가 <strong>본인 소유의 Gmail 계정</strong>에서
+  본인이 직접 처리해야 하는 메일을 골라 본인에게 알리기 위해 만든 개인용 도구입니다. 다른 사람의 계정에는 접근하지 않으며,
+  일반 사용자에게 제공하지 않습니다.</p>
+
+  <h2>2. 접근하는 데이터</h2>
+  <ul>
+    <li>Google 권한: <code>https://www.googleapis.com/auth/gmail.readonly</code> (읽기 전용)</li>
+    <li>새로 도착한 메일의 보낸 사람, 제목, 날짜, Gmail이 제공하는 미리보기(snippet), 라벨</li>
+    <li>메일 발송·삭제·수정 권한은 요청하지 않으며, 그런 동작을 하지 않습니다.</li>
+  </ul>
+
+  <h2>3. 데이터를 쓰는 방법</h2>
+  <ul>
+    <li>위 정보를 Anthropic의 Claude API에 보내, 운영자의 조치가 필요한 메일인지 판단합니다.
+      Anthropic은 API로 받은 데이터를 자사 모델 학습에 쓰지 않는다고 밝히고 있습니다.</li>
+    <li>조치가 필요한 메일은 요약을 운영자 본인의 텔레그램으로 보냅니다.</li>
+    <li>같은 메일을 두 번 알리지 않도록 처리한 메일의 ID만 운영자의 서버에 보관합니다. 메일 본문은 저장하지 않습니다.</li>
+  </ul>
+
+  <h2>4. 공유·판매</h2>
+  <p>Google 사용자 데이터를 제3자에게 판매하거나 광고에 쓰지 않습니다. 위 3항의 처리(Anthropic API, 텔레그램 전송) 외에는 공유하지 않습니다.</p>
+  <p>hermes-mail이 Google API에서 받은 정보를 사용하고 다른 앱으로 전송하는 방식은
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>의
+  제한적 사용(Limited Use) 요구사항을 준수합니다.</p>
+
+  <h2>5. 보관과 삭제</h2>
+  <p>처리한 메일 ID는 최대 30일 보관한 뒤 지웁니다. 운영자는 언제든
+  <a href="https://myaccount.google.com/permissions">Google 계정의 타사 액세스</a>에서 권한을 철회할 수 있으며,
+  철회하면 hermes-mail은 더 이상 메일을 읽을 수 없습니다.</p>
+
+  <h2>6. 문의</h2>
+  <p>GitHub <a href="https://github.com/jeiel85">@jeiel85</a>로 문의해 주세요.</p>
+
+  <hr />
+  <p lang="en" class="muted">English summary: hermes-mail is a private tool used only by its operator on the operator's own
+  Gmail accounts. It uses the gmail.readonly scope to read sender, subject, date, snippet and labels of new messages, sends
+  them to the Anthropic Claude API to decide whether the operator needs to act, and notifies the operator on Telegram. It
+  stores only processed message IDs (kept up to 30 days), never sells or shares Google user data beyond this processing, and
+  its use of information received from Google APIs adheres to the Google API Services User Data Policy, including the
+  Limited Use requirements.</p>
+</body>
+</html>
