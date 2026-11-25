@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-25T01:15:23.707Z",
+ "fetchedAt": "2026-11-25T01:21:11.222Z",
  "repos": [
   {
    "name": "jeiel85.github.io",
@@ -9,7 +9,7 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-25T01:15:12Z",
+   "pushedAt": "2026-11-25T01:16:13Z",
    "archived": false,
    "sizeKb": 17005,
    "license": null,
@@ -41,7 +41,7 @@
    ],
    "releases": 0,
    "latestRelease": null,
-   "commits": 128,
+   "commits": 129,
    "workflows": 1,
    "images": [],
    "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
