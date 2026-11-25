@@ -14,6 +14,7 @@ on:
       - '!scripts/cache.json'
       - '!scripts/github-cache.json'
       - 'index.html'
+      - 'hermes-mail/**'
       - '.github/workflows/**'
   # PRs only verify that the build succeeds. The github-pages environment
   # accepts deployments from main only, so committing and deploying happen
@@ -25,6 +26,7 @@ on:
       - '!scripts/cache.json'
       - '!scripts/github-cache.json'
       - 'index.html'
+      - 'hermes-mail/**'
       - '.github/workflows/**'
 
 permissions:
