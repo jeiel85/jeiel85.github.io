@@ -1,6 +1,130 @@
 {
- "fetchedAt": "2026-11-25T13:33:56.028Z",
+ "fetchedAt": "2026-11-26T03:13:45.349Z",
  "repos": [
+  {
+   "name": "markleaf-android",
+   "description": "A lightweight, local-first Markdown note app for Android.",
+   "url": "https://github.com/jeiel85/markleaf-android",
+   "homepage": "https://jeiel85.github.io/markleaf-android/",
+   "stars": 158,
+   "forks": 17,
+   "createdAt": "2026-04-29T00:51:29Z",
+   "pushedAt": "2026-11-26T01:47:56Z",
+   "archived": false,
+   "sizeKb": 111044,
+   "license": "Apache-2.0",
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 2800907
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 90054
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 5014
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 2903
+    }
+   ],
+   "topics": [
+    "android",
+    "fdroid",
+    "jetpack-compose",
+    "kotlin",
+    "local-first",
+    "markdown",
+    "markdown-editor",
+    "material3",
+    "note-taking",
+    "notes",
+    "offline-first",
+    "privacy-first",
+    "room",
+    "sqlite"
+   ],
+   "releases": 161,
+   "latestRelease": {
+    "tag": "v2.75.0",
+    "date": "2026-11-26T02:10:35Z",
+    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.75.0"
+   },
+   "commits": 1180,
+   "workflows": 5,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-demo.gif",
+     "alt": "Typing / in the Markleaf editor opens the quick-insert palette; choosing Checklist inserts plain Markdown, and the previ"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-tablet-en.gif",
+     "alt": "Markleaf on a tablet: the tag rail, note list and editor share one screen while a Markdown table, checklist and callout "
+    }
+   ],
+   "excerpt": "A local-first, minimal Markdown note app for Android"
+  },
+  {
+   "name": "dusk-patrol",
+   "description": "DUSK PATROL - 노을진 해안 도시 상공의 픽셀 아트 전투기 게임. 360도 루프, 조종석 1인칭, 120초 드론 격추. 단일 HTML, 외부 에셋 0, 브라우저에서 바로 플레이",
+   "url": "https://github.com/jeiel85/dusk-patrol",
+   "homepage": "https://jeiel85.github.io/dusk-patrol/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-20T05:11:24Z",
+   "pushedAt": "2026-11-26T01:20:43Z",
+   "archived": false,
+   "sizeKb": 299,
+   "license": null,
+   "primaryLanguage": "HTML",
+   "languages": [
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 230280
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 184370
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 2968
+    }
+   ],
+   "topics": [
+    "arcade",
+    "browser-game",
+    "flight-simulator",
+    "game",
+    "html5",
+    "javascript",
+    "korean",
+    "pixel-art",
+    "procedural-generation",
+    "retro-games",
+    "single-file",
+    "web-audio",
+    "webgl",
+    "webgl2"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 24,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "노을진 해안 도시 상공을 누비는 도트 그래픽 풍 3D 전투기 게임입니다. 제한 시간 격추 미션을 무한 웨이브 캠페인으로 개편했습니다. 적 부대를 모두 지우면 다음 웨이브로 넘어가고, 웨이브마다 강화 카드 3장 중 1장을 골라 기체를 키웁니다. 5웨이브마다 항공모함 보스가 등장합니다."
+  },
   {
    "name": "jeiel85.github.io",
    "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
@@ -9,16 +133,16 @@
    "stars": 0,
    "forks": 0,
    "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-25T13:33:46Z",
+   "pushedAt": "2026-11-25T13:34:47Z",
    "archived": false,
-   "sizeKb": 17396,
+   "sizeKb": 17561,
    "license": null,
    "primaryLanguage": "HTML",
    "languages": [
     {
      "name": "HTML",
      "color": "#e34c26",
-     "bytes": 454581
+     "bytes": 455063
     },
     {
      "name": "JavaScript",
@@ -41,7 +165,7 @@
    ],
    "releases": 0,
    "latestRelease": null,
-   "commits": 136,
+   "commits": 137,
    "workflows": 1,
    "images": [],
    "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
@@ -133,77 +257,6 @@
    "excerpt": "직접 고른 아기 사진으로 만드는 가족 사진 월드컵 A family photo tournament made from baby photos you choose."
   },
   {
-   "name": "markleaf-android",
-   "description": "A lightweight, local-first Markdown note app for Android.",
-   "url": "https://github.com/jeiel85/markleaf-android",
-   "homepage": "https://jeiel85.github.io/markleaf-android/",
-   "stars": 157,
-   "forks": 17,
-   "createdAt": "2026-04-29T00:51:29Z",
-   "pushedAt": "2026-11-24T16:18:43Z",
-   "archived": false,
-   "sizeKb": 110814,
-   "license": "Apache-2.0",
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 2800907
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 90054
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 5014
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 2903
-    }
-   ],
-   "topics": [
-    "android",
-    "fdroid",
-    "jetpack-compose",
-    "kotlin",
-    "local-first",
-    "markdown",
-    "markdown-editor",
-    "material3",
-    "note-taking",
-    "notes",
-    "offline-first",
-    "privacy-first",
-    "room",
-    "sqlite"
-   ],
-   "releases": 160,
-   "latestRelease": {
-    "tag": "v2.74.0",
-    "date": "2026-11-19T00:39:44Z",
-    "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.74.0"
-   },
-   "commits": 1178,
-   "workflows": 5,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-demo.gif",
-     "alt": "Typing / in the Markleaf editor opens the quick-insert palette; choosing Checklist inserts plain Markdown, and the previ"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/markleaf-android/main/docs/assets/markleaf-tablet-en.gif",
-     "alt": "Markleaf on a tablet: the tag rail, note list and editor share one screen while a Markdown table, checklist and callout "
-    }
-   ],
-   "excerpt": "A local-first, minimal Markdown note app for Android"
-  },
-  {
    "name": "claude-usage-tray-windows",
    "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
    "url": "https://github.com/jeiel85/claude-usage-tray-windows",
@@ -266,59 +319,6 @@
     }
    ],
    "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
-  },
-  {
-   "name": "dusk-patrol",
-   "description": "DUSK PATROL - 노을진 해안 도시 상공의 픽셀 아트 전투기 게임. 360도 루프, 조종석 1인칭, 120초 드론 격추. 단일 HTML, 외부 에셋 0, 브라우저에서 바로 플레이",
-   "url": "https://github.com/jeiel85/dusk-patrol",
-   "homepage": "https://jeiel85.github.io/dusk-patrol/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-11-20T05:11:24Z",
-   "pushedAt": "2026-11-24T04:47:33Z",
-   "archived": false,
-   "sizeKb": 260,
-   "license": null,
-   "primaryLanguage": "HTML",
-   "languages": [
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 189199
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 174717
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 2968
-    }
-   ],
-   "topics": [
-    "arcade",
-    "browser-game",
-    "flight-simulator",
-    "game",
-    "html5",
-    "javascript",
-    "korean",
-    "pixel-art",
-    "procedural-generation",
-    "retro-games",
-    "single-file",
-    "web-audio",
-    "webgl",
-    "webgl2"
-   ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 18,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "노을진 해안 도시 상공을 누비는 도트 그래픽 풍 3D 전투기 게임입니다. 제한 시간 격추 미션을 무한 웨이브 캠페인으로 개편했습니다. 적 부대를 모두 지우면 다음 웨이브로 넘어가고, 웨이브마다 강화 카드 3장 중 1장을 골라 기체를 키웁니다. 5웨이브마다 항공모함 보스가 등장합니다."
   },
   {
    "name": "motion-pointer",
@@ -10409,7 +10409,7 @@
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
   "followers": 18,
-  "total": 13044,
+  "total": 13105,
   "days": [
    {
     "date": "2025-11-23",
@@ -11653,7 +11653,7 @@
    },
    {
     "date": "2026-09-29",
-    "count": 140
+    "count": 139
    },
    {
     "date": "2026-09-30",
@@ -11661,7 +11661,7 @@
    },
    {
     "date": "2026-10-01",
-    "count": 153
+    "count": 152
    },
    {
     "date": "2026-10-02",
@@ -11677,11 +11677,11 @@
    },
    {
     "date": "2026-10-05",
-    "count": 77
+    "count": 76
    },
    {
     "date": "2026-10-06",
-    "count": 187
+    "count": 186
    },
    {
     "date": "2026-10-07",
@@ -11881,7 +11881,11 @@
    },
    {
     "date": "2026-11-25",
-    "count": 54
+    "count": 70
+   },
+   {
+    "date": "2026-11-26",
+    "count": 49
    }
   ]
  }
