@@ -1,15 +1,235 @@
 {
- "fetchedAt": "2026-11-26T03:13:45.349Z",
+ "fetchedAt": "2026-11-27T03:18:13.508Z",
  "repos": [
+  {
+   "name": "doran",
+   "description": "둥지 — 가족 공동 가계부. 카드·은행 알림이 오면 바로 장부에, 배우자 폰에는 \"남편이 현대카드로 12,300원 썼어요\" 알림. 부모님 카드 알림도 사람별로 합산, 달력·통계·자산·예산. Android, 종단 암호화(Cloudflare Worker + FCM)",
+   "url": "https://github.com/jeiel85/doran",
+   "homepage": "https://jeiel85.github.io/doran/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-11-17T11:37:58Z",
+   "pushedAt": "2026-11-27T02:50:54Z",
+   "archived": false,
+   "sizeKb": 19815,
+   "license": null,
+   "primaryLanguage": "Kotlin",
+   "languages": [
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 1083198
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 68481
+    },
+    {
+     "name": "Python",
+     "color": "#3572A5",
+     "bytes": 15158
+    },
+    {
+     "name": "Shell",
+     "color": "#89e051",
+     "bytes": 15022
+    }
+   ],
+   "topics": [
+    "android",
+    "budget",
+    "cloudflare-workers",
+    "family",
+    "jetpack-compose",
+    "kotlin",
+    "cloudflare-d1",
+    "end-to-end-encryption",
+    "expense-tracker",
+    "family-sharing",
+    "firebase-cloud-messaging",
+    "household-budget",
+    "korean",
+    "notification-listener",
+    "personal-finance",
+    "privacy",
+    "qr-code",
+    "self-update",
+    "sms-parser"
+   ],
+   "releases": 15,
+   "latestRelease": {
+    "tag": "v0.3.12",
+    "date": "2026-11-27T01:29:28Z",
+    "url": "https://github.com/jeiel85/doran/releases/tag/v0.3.12"
+   },
+   "commits": 89,
+   "workflows": 0,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/home.webp",
+     "alt": "홈"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/calendar.webp",
+     "alt": "달력"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/stats.webp",
+     "alt": "통계"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/assets.webp",
+     "alt": "자산"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/entry.webp",
+     "alt": "입력"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/onboarding.webp",
+     "alt": "시작"
+    }
+   ],
+   "excerpt": "카드 알림이 오면 바로 장부에, 가족 모두의 폰에. 부부가 같은 장부를 실시간으로 쓰고, 부모님 카드 알림도 사람별로 받아 합계에 더하는 가족용 Android 가계부."
+  },
+  {
+   "name": "claude-usage-tray-windows",
+   "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
+   "url": "https://github.com/jeiel85/claude-usage-tray-windows",
+   "homepage": "https://jeiel85.github.io/claude-usage-tray-windows/",
+   "stars": 2,
+   "forks": 0,
+   "createdAt": "2026-03-27T03:55:01Z",
+   "pushedAt": "2026-11-27T02:42:24Z",
+   "archived": false,
+   "sizeKb": 5285,
+   "license": "MIT",
+   "primaryLanguage": "C#",
+   "languages": [
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 2180391
+    },
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 422783
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 47762
+    },
+    {
+     "name": "Batchfile",
+     "color": "#C1F12E",
+     "bytes": 4101
+    }
+   ],
+   "topics": [
+    "claude-ai",
+    "codex",
+    "dotnet",
+    "gemini-cli",
+    "github-pages",
+    "ntfy",
+    "opencode",
+    "system-tray",
+    "usage-monitor",
+    "windows",
+    "wpf"
+   ],
+   "releases": 281,
+   "latestRelease": {
+    "tag": "v1.73.1",
+    "date": "2026-11-24T05:50:41Z",
+    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.73.1"
+   },
+   "commits": 658,
+   "workflows": 3,
+   "images": [
+    {
+     "url": "https://raw.githubusercontent.com/jeiel85/claude-usage-tray-windows/master/docs/screenshot.png",
+     "alt": "Claude Usage Tray 스크린샷"
+    }
+   ],
+   "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
+  },
+  {
+   "name": "homebase",
+   "description": "Watch your Windows PCs live from an Android app — open windows, per-app CPU/RAM, end-to-end encrypted push alerts, notifications shared between your PCs and phones. No open ports. Built with .NET and Kotlin.",
+   "url": "https://github.com/jeiel85/homebase",
+   "homepage": "https://jeiel85.github.io/homebase/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-07-07T05:48:11Z",
+   "pushedAt": "2026-11-27T01:14:08Z",
+   "archived": false,
+   "sizeKb": 4436,
+   "license": "MIT",
+   "primaryLanguage": "C#",
+   "languages": [
+    {
+     "name": "C#",
+     "color": "#7355dd",
+     "bytes": 2398029
+    },
+    {
+     "name": "Kotlin",
+     "color": "#A97BFF",
+     "bytes": 1169113
+    },
+    {
+     "name": "PowerShell",
+     "color": "#012456",
+     "bytes": 55961
+    },
+    {
+     "name": "Inno Setup",
+     "color": "#264b99",
+     "bytes": 4363
+    }
+   ],
+   "topics": [
+    "bot",
+    "csharp",
+    "dotnet",
+    "monitoring",
+    "pc-monitoring",
+    "sqlite",
+    "telegram",
+    "windows",
+    "windows-service",
+    "wpf",
+    "android",
+    "jetpack-compose",
+    "kotlin",
+    "push-notifications",
+    "tailscale",
+    "unifiedpush"
+   ],
+   "releases": 93,
+   "latestRelease": {
+    "tag": "v0.60.4",
+    "date": "2026-11-27T01:21:41Z",
+    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.60.4"
+   },
+   "commits": 142,
+   "workflows": 4,
+   "images": [],
+   "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
+  },
   {
    "name": "markleaf-android",
    "description": "A lightweight, local-first Markdown note app for Android.",
    "url": "https://github.com/jeiel85/markleaf-android",
    "homepage": "https://jeiel85.github.io/markleaf-android/",
-   "stars": 158,
+   "stars": 160,
    "forks": 17,
    "createdAt": "2026-04-29T00:51:29Z",
-   "pushedAt": "2026-11-26T01:47:56Z",
+   "pushedAt": "2026-11-26T15:41:48Z",
    "archived": false,
    "sizeKb": 111044,
    "license": "Apache-2.0",
@@ -73,6 +293,73 @@
    "excerpt": "A local-first, minimal Markdown note app for Android"
   },
   {
+   "name": "jeiel85",
+   "description": "프로필 꾸미기",
+   "url": "https://github.com/jeiel85/jeiel85",
+   "homepage": "",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-04-28T08:26:05Z",
+   "pushedAt": "2026-11-26T05:07:14Z",
+   "archived": false,
+   "sizeKb": 51,
+   "license": null,
+   "primaryLanguage": null,
+   "languages": [],
+   "topics": [],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 51,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
+  },
+  {
+   "name": "jeiel85.github.io",
+   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
+   "url": "https://github.com/jeiel85/jeiel85.github.io",
+   "homepage": "https://jeiel85.github.io/",
+   "stars": 0,
+   "forks": 0,
+   "createdAt": "2026-05-26T06:40:18Z",
+   "pushedAt": "2026-11-26T03:14:39Z",
+   "archived": false,
+   "sizeKb": 17590,
+   "license": null,
+   "primaryLanguage": "HTML",
+   "languages": [
+    {
+     "name": "HTML",
+     "color": "#e34c26",
+     "bytes": 455189
+    },
+    {
+     "name": "JavaScript",
+     "color": "#f1e05a",
+     "bytes": 94581
+    },
+    {
+     "name": "CSS",
+     "color": "#663399",
+     "bytes": 32037
+    }
+   ],
+   "topics": [
+    "android",
+    "closed-testing",
+    "github-actions",
+    "google-play",
+    "play-store",
+    "portfolio"
+   ],
+   "releases": 0,
+   "latestRelease": null,
+   "commits": 138,
+   "workflows": 1,
+   "images": [],
+   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
+  },
+  {
    "name": "dusk-patrol",
    "description": "DUSK PATROL - 노을진 해안 도시 상공의 픽셀 아트 전투기 게임. 360도 루프, 조종석 1인칭, 120초 드론 격추. 단일 HTML, 외부 에셋 0, 브라우저에서 바로 플레이",
    "url": "https://github.com/jeiel85/dusk-patrol",
@@ -124,73 +411,6 @@
    "workflows": 1,
    "images": [],
    "excerpt": "노을진 해안 도시 상공을 누비는 도트 그래픽 풍 3D 전투기 게임입니다. 제한 시간 격추 미션을 무한 웨이브 캠페인으로 개편했습니다. 적 부대를 모두 지우면 다음 웨이브로 넘어가고, 웨이브마다 강화 카드 3장 중 1장을 골라 기체를 키웁니다. 5웨이브마다 항공모함 보스가 등장합니다."
-  },
-  {
-   "name": "jeiel85.github.io",
-   "description": "Android App Portfolio - Automatically updated dashboard of Sitdory Android apps (Production and Closed Testing)",
-   "url": "https://github.com/jeiel85/jeiel85.github.io",
-   "homepage": "https://jeiel85.github.io/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-05-26T06:40:18Z",
-   "pushedAt": "2026-11-25T13:34:47Z",
-   "archived": false,
-   "sizeKb": 17561,
-   "license": null,
-   "primaryLanguage": "HTML",
-   "languages": [
-    {
-     "name": "HTML",
-     "color": "#e34c26",
-     "bytes": 455063
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 94581
-    },
-    {
-     "name": "CSS",
-     "color": "#663399",
-     "bytes": 32037
-    }
-   ],
-   "topics": [
-    "android",
-    "closed-testing",
-    "github-actions",
-    "google-play",
-    "play-store",
-    "portfolio"
-   ],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 137,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "EL Studio(jeiel85)의 개발 포트폴리오입니다. 설명만 적는 대신, 레포와 스토어에서 가져온 실제 데이터(스크린샷, 언어 구성, 커밋·릴리스, CI, 배포 채널)를 한 페이지에 보여 줍니다."
-  },
-  {
-   "name": "jeiel85",
-   "description": "프로필 꾸미기",
-   "url": "https://github.com/jeiel85/jeiel85",
-   "homepage": "",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-04-28T08:26:05Z",
-   "pushedAt": "2026-11-25T05:27:09Z",
-   "archived": false,
-   "sizeKb": 50,
-   "license": null,
-   "primaryLanguage": null,
-   "languages": [],
-   "topics": [],
-   "releases": 0,
-   "latestRelease": null,
-   "commits": 51,
-   "workflows": 1,
-   "images": [],
-   "excerpt": "프라이버시를 우선하는 Android 앱과 실용적인 데스크톱 도구를 만듭니다. Kotlin · Compose · C# · Flutter · Godot · AI coding agents"
   },
   {
    "name": "bebecup-android",
@@ -257,70 +477,6 @@
    "excerpt": "직접 고른 아기 사진으로 만드는 가족 사진 월드컵 A family photo tournament made from baby photos you choose."
   },
   {
-   "name": "claude-usage-tray-windows",
-   "description": "Windows 트레이에서 Claude, Codex, Gemini CLI, OpenCode 사용량과 알림을 모니터링하는 WPF 앱",
-   "url": "https://github.com/jeiel85/claude-usage-tray-windows",
-   "homepage": "https://jeiel85.github.io/claude-usage-tray-windows/",
-   "stars": 2,
-   "forks": 0,
-   "createdAt": "2026-03-27T03:55:01Z",
-   "pushedAt": "2026-11-24T07:26:37Z",
-   "archived": false,
-   "sizeKb": 5285,
-   "license": "MIT",
-   "primaryLanguage": "C#",
-   "languages": [
-    {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 2180391
-    },
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 422783
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 47762
-    },
-    {
-     "name": "Batchfile",
-     "color": "#C1F12E",
-     "bytes": 4101
-    }
-   ],
-   "topics": [
-    "claude-ai",
-    "codex",
-    "dotnet",
-    "gemini-cli",
-    "github-pages",
-    "ntfy",
-    "opencode",
-    "system-tray",
-    "usage-monitor",
-    "windows",
-    "wpf"
-   ],
-   "releases": 281,
-   "latestRelease": {
-    "tag": "v1.73.1",
-    "date": "2026-11-24T05:50:41Z",
-    "url": "https://github.com/jeiel85/claude-usage-tray-windows/releases/tag/v1.73.1"
-   },
-   "commits": 658,
-   "workflows": 3,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/claude-usage-tray-windows/master/docs/screenshot.png",
-     "alt": "Claude Usage Tray 스크린샷"
-    }
-   ],
-   "excerpt": "Windows 시스템 트레이에서 Claude, Codex(ChatGPT), OpenCode, Antigravity AI 사용량과 날씨 알림을 함께 확인하는 통합 모니터링 앱입니다."
-  },
-  {
    "name": "motion-pointer",
    "description": "Use an Android phone as an air pointer — Bluetooth HID mouse or Windows companion app",
    "url": "https://github.com/jeiel85/motion-pointer",
@@ -361,162 +517,6 @@
    "workflows": 0,
    "images": [],
    "excerpt": "갤럭시 S24 같은 안드로이드 폰을 공중 포인터(에어 마우스) 로 씁니다. 패드를 누른 채 폰을 기울이면 커서가 움직이고, 화면 버튼으로 클릭·스크롤합니다."
-  },
-  {
-   "name": "doran",
-   "description": "둥지 — 가족 공동 가계부. 카드·은행 알림이 오면 바로 장부에, 배우자 폰에는 \"남편이 현대카드로 12,300원 썼어요\" 알림. 부모님 카드 알림도 사람별로 합산, 달력·통계·자산·예산. Android, 종단 암호화(Cloudflare Worker + FCM)",
-   "url": "https://github.com/jeiel85/doran",
-   "homepage": "https://jeiel85.github.io/doran/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-11-17T11:37:58Z",
-   "pushedAt": "2026-11-24T00:30:41Z",
-   "archived": false,
-   "sizeKb": 19555,
-   "license": null,
-   "primaryLanguage": "Kotlin",
-   "languages": [
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 1037055
-    },
-    {
-     "name": "JavaScript",
-     "color": "#f1e05a",
-     "bytes": 68481
-    },
-    {
-     "name": "Python",
-     "color": "#3572A5",
-     "bytes": 15158
-    },
-    {
-     "name": "Shell",
-     "color": "#89e051",
-     "bytes": 15022
-    }
-   ],
-   "topics": [
-    "android",
-    "budget",
-    "cloudflare-workers",
-    "family",
-    "jetpack-compose",
-    "kotlin",
-    "cloudflare-d1",
-    "end-to-end-encryption",
-    "expense-tracker",
-    "family-sharing",
-    "firebase-cloud-messaging",
-    "household-budget",
-    "korean",
-    "notification-listener",
-    "personal-finance",
-    "privacy",
-    "qr-code",
-    "self-update",
-    "sms-parser"
-   ],
-   "releases": 14,
-   "latestRelease": {
-    "tag": "v0.3.11",
-    "date": "2026-11-24T00:14:36Z",
-    "url": "https://github.com/jeiel85/doran/releases/tag/v0.3.11"
-   },
-   "commits": 87,
-   "workflows": 0,
-   "images": [
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/home.webp",
-     "alt": "홈"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/calendar.webp",
-     "alt": "달력"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/stats.webp",
-     "alt": "통계"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/assets.webp",
-     "alt": "자산"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/entry.webp",
-     "alt": "입력"
-    },
-    {
-     "url": "https://raw.githubusercontent.com/jeiel85/doran/main/docs/assets/screens/onboarding.webp",
-     "alt": "시작"
-    }
-   ],
-   "excerpt": "카드 알림이 오면 바로 장부에, 가족 모두의 폰에. 부부가 같은 장부를 실시간으로 쓰고, 부모님 카드 알림도 사람별로 받아 합계에 더하는 가족용 Android 가계부."
-  },
-  {
-   "name": "homebase",
-   "description": "Watch your Windows PCs live from an Android app — open windows, per-app CPU/RAM, end-to-end encrypted push alerts, notifications shared between your PCs and phones. No open ports. Built with .NET and Kotlin.",
-   "url": "https://github.com/jeiel85/homebase",
-   "homepage": "https://jeiel85.github.io/homebase/",
-   "stars": 0,
-   "forks": 0,
-   "createdAt": "2026-07-07T05:48:11Z",
-   "pushedAt": "2026-11-24T00:25:49Z",
-   "archived": false,
-   "sizeKb": 4160,
-   "license": "MIT",
-   "primaryLanguage": "C#",
-   "languages": [
-    {
-     "name": "C#",
-     "color": "#7355dd",
-     "bytes": 2383517
-    },
-    {
-     "name": "Kotlin",
-     "color": "#A97BFF",
-     "bytes": 1169113
-    },
-    {
-     "name": "PowerShell",
-     "color": "#012456",
-     "bytes": 55961
-    },
-    {
-     "name": "Inno Setup",
-     "color": "#264b99",
-     "bytes": 4363
-    }
-   ],
-   "topics": [
-    "bot",
-    "csharp",
-    "dotnet",
-    "monitoring",
-    "pc-monitoring",
-    "sqlite",
-    "telegram",
-    "windows",
-    "windows-service",
-    "wpf",
-    "android",
-    "jetpack-compose",
-    "kotlin",
-    "push-notifications",
-    "tailscale",
-    "unifiedpush"
-   ],
-   "releases": 91,
-   "latestRelease": {
-    "tag": "v0.60.2",
-    "date": "2026-11-24T00:35:11Z",
-    "url": "https://github.com/jeiel85/homebase/releases/tag/v0.60.2"
-   },
-   "commits": 140,
-   "workflows": 4,
-   "images": [],
-   "excerpt": "Claude Code·Codex 세션이 입력을 기다리거나 일을 마치면 휴대폰이 알려 주고, Claude Code의 권한 요청은 알림에서 바로 허용·거부합니다. 인터넷에 포트를 열지 않습니다. 휴대폰 앱은 같은 LAN(TLS)·Tailscale·Cloudflare Tunnel(outbound) 중 되는 경로로 연결하고, 푸시는 outbound HTTPS입니다. Telegram 봇은 선택해서 쓰는 대체 채널입니다."
   },
   {
    "name": "badasugi",
@@ -7369,7 +7369,7 @@
    "description": "🍃 Local-First Spatial Markdown Whiteboard with Auto-Wire WikiLinks & Infinite 2D Canvas (Heptabase/Obsidian alternative)",
    "url": "https://github.com/jeiel85/canvasleaf",
    "homepage": "https://jeiel85.github.io/canvasleaf/",
-   "stars": 1,
+   "stars": 2,
    "forks": 0,
    "createdAt": "2026-09-16T05:18:18Z",
    "pushedAt": "2026-10-20T05:12:37Z",
@@ -10409,7 +10409,7 @@
  "calendar": {
   "accountCreatedAt": "2013-10-24T04:49:02Z",
   "followers": 18,
-  "total": 13105,
+  "total": 13182,
   "days": [
    {
     "date": "2025-11-23",
@@ -11685,7 +11685,7 @@
    },
    {
     "date": "2026-10-07",
-    "count": 188
+    "count": 187
    },
    {
     "date": "2026-10-08",
@@ -11885,7 +11885,11 @@
    },
    {
     "date": "2026-11-26",
-    "count": 49
+    "count": 87
+   },
+   {
+    "date": "2026-11-27",
+    "count": 40
    }
   ]
  }
